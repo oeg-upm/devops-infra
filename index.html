@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Devops Infrastructure Ontology Catalogue</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This catalogue contains ontologies generated in the context of the collaboration between the Ontology Engineering Group at Universidad Politécnica de Madrid and Huawei Research Ireland for the representation of the domain of DevOps infrastructure.">
+    <meta name="language" content="English">
+    <meta name="author" content="Oscar Corcho">
+    
+    <link rel="stylesheet" href="vocab/themes/blue/style.css" type="text/css" media="print, projection, screen" />
+    <script src="vocab/js/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="vocab/js/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="vocab/js/jquery.stickytableheaders.js"></script>
+    <script type="text/javascript" src="vocab/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="vocab/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="vocab/css/jquery-ui.css"></link>
+    <script type="text/javascript" id="js">
+	    $(document).ready(function() 
+		    { 
+		    	$("#tablesorter-demo").tablesorter(); 
+		    	$("#tablesorter-demo").stickyTableHeaders(); 
+		    	$('[data-toggle="tooltip"]').tooltip(); 
+		    } 
+	    ); 
+    </script>
+
+    <!-- Le styles -->
+    <link href="vocab/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="vocab/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+  </head>
+
+  <body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Ontologies</a></li>
+        <li><a href="skos.html">SKOS codelists</a></li>
+        <!--<li><a href="report.html">Ontology test reports</a></li>-->
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+ </div>
+    <div class="container">
+
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1>Devops Infrastructure Ontology Catalogue</h1>
+        <p class="lead">This page contains the list of ontologies for the description of the DevOps infrastructure domain developed jointly by the <a href="http://www.oeg-upm.net">Ontology Engineering Group (OEG)</a> and Huawei Research Ireland.</a></p>
+      </div>
+      <hr>
+<div class="row"> 
+<div class="ui-widget">
+<!--<div class="col-md-3" > 
+<p class="text-right"><label for="tags">Filter by title or domain: </label></p>
+</div>
+
+<div class="col-md-8" > 
+<input class="form-control" id="tags" >
+<button id="remButt" class="label label-default" onclick="showRows();" style="font-size: 75%; font-weight: bold; line-height: 1; display: none;"><span class="submit glyphicon glyphicon-remove"></span>  Remove filter</button>
+</div>
+-->
+</div>
+</div>
+<br>
+<table id="tablesorter-demo" class="tablesorter table table-hover table-responsive">
+<thead>
+<tr>
+<th class="col-md-2">Ontology</th>
+<th class="col-md-2">Serialization</th>
+<th class="col-md-1">License</th>
+<th class="col-md-1">Language</th>
+<th class="col-md-2">Links</th>
+<th class="col-md-4">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr id="tr1">
+<td><a href = "http://w3id.org/devops-infra/core" target="_blank">Core ontology</a> <a href = "../documentation/core/index-en.html" target="_blank"><span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="bottom" title="More information about this ontology"/></a></td>
+<td>
+<span class="label label-primary">rdf+xml</span>
+<span class="label label-primary">html</span>
+</td>
+<td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">CC-BY</span> </a></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<!--<td><span class="label label-primary">devops</span></td>-->
+<td><img src="vocab/img/repo.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/tree/master/ontology">Repository</a><br><img src="vocab/img/issue-opened.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/issues?q=is%3Aissue+is%3Aopen+label%3Acore">Issues</a><br><img src="vocab/img/tasklist.svg" alt="repository"/><span style="padding-left:18px"><a href="https://github.com/oeg-upm/huawei-devops/blob/master/requirements/Requirements.xlsx">Requirements</a>
+</td>
+
+<td>
+Core ontology used for the whole ontology network, which defines the general concepts of Resource and Resource Groups</td>
+<input type="hidden" name="inp1" id="inp1" value="Core ontology"/></tr>
+
+<tr id="tr2">
+<td><a href = "http://w3id.org/devops-infra/organisation" target="_blank">Organisation Ontology</a> <a href = "../documentation/organisation/index-en.html" target="_blank"><span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="bottom" title="More information about this ontology"/></a></td>
+<td>
+<span class="label label-primary">rdf+xml</span>
+<span class="label label-primary">html</span>
+</td>
+<td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">CC-BY</span> </a></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<!-- <td><span class="label label-primary">devops</span>
+<span class="label label-primary">organisation</span>
+</td> -->
+<td><img src="vocab/img/repo.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/tree/master/ontology"> Repository</a><br><img src="vocab/img/issue-opened.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/issues?q=is%3Aissue+is%3Aopen+label%3Aorganisation">Issues</a><br><img src="vocab/img/tasklist.svg" alt="repository"/><span style="padding-left:18px"><a href="https://github.com/oeg-upm/huawei-devops/blob/master/requirements/Requirements.xlsx">Requirements</a>
+</td>
+<td>
+<p id="collapse2" data-toggle="collapse" >
+ Ontology for describing organisational aspects of the DevOps infrastructure ...<a class="more2">See more</a>
+</p>
+<script>
+$('#collapse2').click(function () {
+if($('a').hasClass('more2'))
+{
+$('#collapse2').html(' Ontology for describing organisational aspects of the DevOps infrastructure, including classes such as Site, Tenent, Scope, Department, etc.  <a class="less2">See less<a>'); 
+}
+else
+{      
+$('#collapse2').html(' Ontology for describing organisational aspects of the DevOps infrastructure ...  <a  class="more2">See more</a>'); 
+}
+}); 
+</script>
+</td>
+<input type="hidden" name="inp2" id="inp2" value="Organisation Ontology"/></tr>
+    
+    
+    <tr id="tr3">
+<td><a href = "http://w3id.org/devops-infra/product" target="_blank">Business Product ontology</a> <a href = "../documentation/product/index-en.html" target="_blank"><span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="bottom" title="More information about this ontology"/></a></td>
+<td>
+<span class="label label-primary">rdf+xml</span>
+<span class="label label-primary">html</span>
+</td>
+<td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">CC-BY</span> </a></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<!--<td><span class="label label-primary">devops</span></td>-->
+<td><img src="vocab/img/repo.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/tree/master/ontology">Repository</a><br><img src="vocab/img/issue-opened.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/issues?q=is%3Aissue+is%3Aopen+label%3Aproduct">Issues</a><br><img src="vocab/img/tasklist.svg" alt="repository"/><span style="padding-left:18px"><a href="https://github.com/oeg-upm/huawei-devops/blob/master/requirements/Requirements.xlsx">Requirements</a>
+</td>
+
+<td>
+Business Product ontology, which defines the business offering of a company, including the offered services and microservices</td>
+<input type="hidden" name="inp1" id="inp1" value="Business Product ontology"/></tr>
+
+<!--    
+    <tr id="tr4">
+<td><a href = "http://w3id.org/devops-infra/service" target="_blank">Service ontology</a> <a href = "../documentation/service/index-en.html" target="_blank"><span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="bottom" title="More information about this ontology"/></a></td>
+<td>
+<span class="label label-primary">rdf+xml</span>
+<span class="label label-primary">html</span>
+</td>
+<td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">CC-BY</span> </a></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<td><img src="vocab/img/repo.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/tree/master/ontology">Repository</a><br><img src="vocab/img/issue-opened.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/issues?q=is%3Aissue+is%3Aopen+label%3Aservice">Issues</a><br><img src="vocab/img/tasklist.svg" alt="repository"/><span style="padding-left:18px"><a href="https://github.com/oeg-upm/huawei-devops/blob/master/requirements/Requirements.xlsx">Requirements</a>
+</td>
+
+<td>
+Service ontology, used to describe information about services, including their different types and their grouping into clusters</td>
+<input type="hidden" name="inp1" id="inp1" value="Service ontology"/></tr>
+-->
+    
+<tr id="tr5">
+<td><a href = "http://w3id.org/devops-infra/data-center" target="_blank">Data Center ontology</a> <a href = "../documentation/data-center/index-en.html" target="_blank"><span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="bottom" title="More information about this ontology"/></a></td>
+<td>
+<span class="label label-primary">rdf+xml</span>
+<span class="label label-primary">html</span>
+</td>
+<td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">CC-BY</span> </a></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<!--<td><span class="label label-primary">devops</span></td>-->
+<td><img src="vocab/img/repo.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/tree/master/ontology">Repository</a><br><img src="vocab/img/issue-opened.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/issues?q=is%3Aissue+is%3Aopen+label%3Adatacenter">Issues</a><br><img src="vocab/img/tasklist.svg" alt="repository"/><span style="padding-left:18px"><a href="https://github.com/oeg-upm/huawei-devops/blob/master/requirements/Requirements.xlsx">Requirements</a>
+</td>
+
+<td>
+Data Center ontology, used to describe all characteristics related to data centers, and their interconnections with the resources from other ontologies in the network</td>
+<input type="hidden" name="inp1" id="inp1" value="Data Center ontology"/></tr>
+    
+    
+<tr id="tr6">
+<td><a href = "http://w3id.org/devops-infra/server" target="_blank">Server Infrastructure ontology</a> <a href = "../documentation/server/index-en.html" target="_blank"><span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="bottom" title="More information about this ontology"/></a></td>
+<td>
+<span class="label label-primary">rdf+xml</span>
+<span class="label label-primary">html</span>
+</td>
+<td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">CC-BY</span> </a></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<!--<td><span class="label label-primary">devops</span></td>-->
+<td><img src="vocab/img/repo.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/tree/master/ontology">Repository</a><br><img src="vocab/img/issue-opened.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/issues?q=is%3Aissue+is%3Aopen+label%3Aserver">Issues</a><br><img src="vocab/img/tasklist.svg" alt="repository"/><span style="padding-left:18px"><a href="https://github.com/oeg-upm/huawei-devops/blob/master/requirements/Requirements.xlsx">Requirements</a>
+</td>
+
+<td>
+Server ontology, used to describe the different types of servers (virtual and physical) that are used in the context of the infrastructure</td>
+<input type="hidden" name="inp1" id="inp1" value="Server Infrastructure ontology"/></tr>
+    
+<tr id="tr7">
+<td><a href = "http://w3id.org/devops-infra/network" target="_blank">Network Infrastructure ontology</a> <a href = "../documentation/network/index-en.html" target="_blank"><span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="bottom" title="More information about this ontology"/></a></td>
+<td>
+<span class="label label-primary">rdf+xml</span>
+<span class="label label-primary">html</span>
+</td>
+<td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">CC-BY</span> </a></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<!--<td><span class="label label-primary">devops</span></td>-->
+<td><img src="vocab/img/repo.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/tree/master/ontology">Repository</a><br><img src="vocab/img/issue-opened.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/issues?q=is%3Aissue+is%3Aopen+label%3Anetwork">Issues</a><br><img src="vocab/img/tasklist.svg" alt="repository"/><span style="padding-left:18px"><a href="https://github.com/oeg-upm/huawei-devops/blob/master/requirements/Requirements.xlsx">Requirements</a>
+</td>
+
+<td>
+Network Infrastructure ontology, used to describe all aspects related to networks (IP addresses, domains, DNS, firewalls, etc.)</td>
+<input type="hidden" name="inp1" id="inp1" value="Network Infrastructure ontology"/></tr>
+    
+
+    <tr id="tr8">
+<td><a href = "http://w3id.org/devops-infra/software" target="_blank">Software ontology</a> <a href = "../documentation/software/index-en.html" target="_blank"><span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="bottom" title="More information about this ontology"/></a></td>
+<td>
+<span class="label label-primary">rdf+xml</span>
+<span class="label label-primary">html</span>
+</td>
+<td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">CC-BY</span> </a></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<!--<td><span class="label label-primary">devops</span></td>-->
+<td><img src="vocab/img/repo.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/tree/master/ontology">Repository</a><br><img src="vocab/img/issue-opened.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/issues?q=is%3Aissue+is%3Aopen+label%3Asoftware">Issues</a><br><img src="vocab/img/tasklist.svg" alt="repository"/><span style="padding-left:18px"><a href="https://github.com/oeg-upm/huawei-devops/blob/master/requirements/Requirements.xlsx">Requirements</a>
+</td>
+
+<td>
+Software ontology used to describe different types of software items, including files, packages, patches, etc., and the directories where they are located</td>
+<input type="hidden" name="inp1" id="inp1" value="Software ontology"/></tr>
+
+    <tr id="tr9">
+<td><a href = "http://w3id.org/devops-infra/database" target="_blank">Database ontology</a> <a href = "../documentation/database/index-en.html" target="_blank"><span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="bottom" title="More information about this ontology"/></a></td>
+<td>
+<span class="label label-primary">rdf+xml</span>
+<span class="label label-primary">html</span>
+</td>
+<td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">CC-BY</span> </a></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<!--<td><span class="label label-primary">devops</span></td>-->
+<td><img src="vocab/img/repo.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/tree/master/ontology">Repository</a><br><img src="vocab/img/issue-opened.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/issues?q=is%3Aissue+is%3Aopen+label%3Adatabase">Issues</a><br><img src="vocab/img/tasklist.svg" alt="repository"/><span style="padding-left:18px"><a href="https://github.com/oeg-upm/huawei-devops/blob/master/requirements/Requirements.xlsx">Requirements</a>
+</td>
+
+<td>
+Database ontology, used to describe all aspects related to databases, including their instances, replicas, big tables, etc.</td>
+<input type="hidden" name="inp1" id="inp1" value="Database ontology"/></tr>
+
+    
+    <tr id="tr10">
+<td><a href = "http://w3id.org/devops-infra/hardware" target="_blank">Hardware ontology</a> <a href = "../documentation/hardware/index-en.html" target="_blank"><span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="bottom" title="More information about this ontology"/></a></td>
+<td>
+<span class="label label-primary">rdf+xml</span>
+<span class="label label-primary">html</span>
+</td>
+<td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">CC-BY</span> </a></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<!--<td><span class="label label-primary">devops</span></td>-->
+<td><img src="vocab/img/repo.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/tree/master/ontology">Repository</a><br><img src="vocab/img/issue-opened.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/issues?q=is%3Aissue+is%3Aopen+label%3Ahardware">Issues</a><br><img src="vocab/img/tasklist.svg" alt="repository"/><span style="padding-left:18px"><a href="https://github.com/oeg-upm/huawei-devops/blob/master/requirements/Requirements.xlsx">Requirements</a>
+</td>
+
+<td>
+Hardware ontology, used to describe information related to the hardware infrastructure that supports the DevOps infrastructure deployments, including frames, switches, netcards, etc.</td>
+<input type="hidden" name="inp1" id="inp1" value="Hardware ontology"/></tr>
+
+       <tr id="tr11">
+<td><a href = "http://w3id.org/devops-infra/certificate" target="_blank">Certificate ontology</a> <a href = "../documentation/certificate/index-en.html" target="_blank"><span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="bottom" title="More information about this ontology"/></a></td>
+<td>
+<span class="label label-primary">rdf+xml</span>
+<span class="label label-primary">html</span>
+</td>
+<td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">CC-BY</span> </a></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<!--<td><span class="label label-primary">devops</span></td>-->
+<td><img src="vocab/img/repo.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/tree/master/ontology">Repository</a><br><img src="vocab/img/issue-opened.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/issues?q=is%3Aissue+is%3Aopen+label%3Acertificate">Issues</a><br><img src="vocab/img/tasklist.svg" alt="repository"/><span style="padding-left:18px"><a href="https://github.com/oeg-upm/huawei-devops/blob/master/requirements/Requirements.xlsx">Requirements</a>
+</td>
+
+<td>
+Certificate ontology, used to describe information about certificates used for security purposes (e.g., SSL and CFCA certificates)</td>
+<input type="hidden" name="inp1" id="inp1" value="Certificate ontology"/></tr>
+
+       <tr id="tr12">
+<td><a href = "http://w3id.org/devops-infra/resource-req" target="_blank">Resource Requirement ontology</a> <a href = "../documentation/resource-req/index-en.html" target="_blank"><span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="bottom" title="More information about this ontology"/></a></td>
+<td>
+<span class="label label-primary">rdf+xml</span>
+<span class="label label-primary">html</span>
+</td>
+<td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">CC-BY</span> </a></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<!--<td><span class="label label-primary">devops</span></td>-->
+<td><img src="vocab/img/repo.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/tree/master/ontology">Repository</a><br><img src="vocab/img/issue-opened.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/issues?q=is%3Aissue+is%3Aopen+label%3Aresource-req">Issues</a><br><img src="vocab/img/tasklist.svg" alt="repository"/><span style="padding-left:18px"><a href="https://github.com/oeg-upm/huawei-devops/blob/master/requirements/Requirements.xlsx">Requirements</a>
+</td>
+
+<td>
+Resource requirement ontology, used to describe requirements associated to resources that are being requested for different purposes</td>
+<input type="hidden" name="inp1" id="inp1" value="Resource Requirement ontology"/></tr>
+
+       <tr id="tr13">
+<td><a href = "http://w3id.org/devops-infra/network-security-load-balancing" target="_blank">Network Security and Load Balancing ontology</a> <a href = "../documentation/network-security-load-balancing/index-en.html" target="_blank"><span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="bottom" title="More information about this ontology"/></a></td>
+<td>
+<span class="label label-primary">rdf+xml</span>
+<span class="label label-primary">html</span>
+</td>
+<td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">CC-BY</span> </a></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<!--<td><span class="label label-primary">devops</span></td>-->
+<td><img src="vocab/img/repo.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/tree/master/ontology">Repository</a><br><img src="vocab/img/issue-opened.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/issues?q=is%3Aissue+is%3Aopen+label%3Anetwork-security-load-balancing">Issues</a><br><img src="vocab/img/tasklist.svg" alt="repository"/><span style="padding-left:18px"><a href="https://github.com/oeg-upm/huawei-devops/blob/master/requirements/Requirements.xlsx">Requirements</a>
+</td>
+
+<td>
+Network Security and Load Balancing ontology, used to describe those components that are usually setup for these purposes (pools, load balancers, etc.). F5 deployments are an example of these</td>
+<input type="hidden" name="inp1" id="inp1" value="Network Security and Load Balancing ontology"/></tr>
+
+<!--          <tr id="tr14">
+<td><a href = "http://w3id.org/devops-infra/hws" target="_blank">HWS Infrastructure ontology</a> <a href = "../documentation/hws/index-en.html" target="_blank"><span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="bottom" title="More information about this ontology"/></a></td>
+<td>
+<span class="label label-primary">rdf+xml</span>
+<span class="label label-primary">html</span>
+</td>
+<td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">CC-BY</span> </a></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<!--<td><span class="label label-primary">devops</span></td>-->
+<!--<td><img src="vocab/img/repo.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/tree/master/ontology">Repository</a><br><img src="vocab/img/issue-opened.svg" alt="repository"/><span style="padding-left:20px"><a href="https://github.com/oeg-upm/huawei-devops/issues?q=is%3Aissue+is%3Aopen+label%3Ahws">Issues</a><br><img src="vocab/img/tasklist.svg" alt="repository"/><span style="padding-left:18px"><a href="https://github.com/oeg-upm/huawei-devops/blob/master/requirements/Requirements.xlsx">Requirements</a>
+</td>
+
+<td>
+HWS ontology that specialises all concepts defined in the ontology network for the case of the HWS infrastructure. Other providers may generate similar ontologies based on this structure</td>
+<input type="hidden" name="inp1" id="inp1" value="HWS ontology"/></tr>
+-->    
+    </tbody></table>
+<hr>
+      <footer class="footer">
+            <div class="row">
+    	<div class="col-md-9">
+    		Catalogue developed by 	        <a href = "https://oeg.fi.upm.es" target="_blank">Ontology Engineering Group</a>
+	        <br>
+    	Built with <a target="_blank" href="http://getbootstrap.com/">Bootstrap</a>
+    	Icons from <a target="_blank" href="http://glyphicons.com/">Glyphicons</a>
+ 	        <br>
+	        Latest revision January, 2021
+        </div>
+    	<div class="col-md-3">
+    		<a href="https://oeg.fi.upm.es/" target="_blank"><img src="vocab/img/logo-oeg.gif" alt="OEG logo" class="img-rounded" class="img-responsive" /></a>
+    		<a href="https://ie.linkedin.com/company/huawei-ireland-research-center" target="_blank"><img src="vocab/img/logo-huawei.jpeg" alt="Huawei Research logo" class="img-rounded" class="img-responsive" /></a>
+    	</div>
+      </div>
+      </footer>
+    </div> <!-- /container -->
+<script>
+$(function() {
+var availableTags = ["DevOps", "core", "organisation", "network", "business product", "data center", "server", "software", "database", "hardware", "certificate", "resource requirement"];
+$( "#tags" ).autocomplete({
+source: availableTags,
+select: function(event, ui) {
+hideRows(ui.item.value);
+}
+});
+});
+</script>
+<script>
+function hideRows(text) {
+index = 1;
+tr = document.getElementById('tr'+index);
+while (tr!=null){
+valores = document.getElementById('inp'+index).value;
+if (valores.indexOf(text+'--')==-1){
+tr.style.display='none';
+}
+index++;
+tr = document.getElementById('tr'+index);
+}
+document.getElementById('remButt').style.display='';
+}
+
+function showRows() {	
+index = 1;
+tr = document.getElementById('tr'+index);
+while (tr!=null){
+tr.style.display='';
+index++;
+tr = document.getElementById('tr'+index);
+}
+butt = document.getElementById('remButt').style.display='none';
+}
+</script>
+<!--<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-48904250-1', 'linkeddata.es');
+ga('send', 'pageview');
+</script>-->
+  </body>
+</html>
