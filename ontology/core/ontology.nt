@@ -1,0 +1,180 @@
+<http://w3id.org/devops-infra/core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/devops-infra/core> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/devops-infra/core/0.0.1> .
+<http://w3id.org/devops-infra/core> <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/core> <http://purl.org/dc/elements/1.1/creator> "Hu Peng (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/core> <http://purl.org/dc/elements/1.1/creator> "Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/core> <http://purl.org/dc/elements/1.1/creator> "José Mora (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/core> <http://purl.org/dc/elements/1.1/creator> "Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/core> <http://purl.org/dc/elements/1.1/creator> "Mingxue Wang (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/core> <http://purl.org/dc/elements/1.1/creator> "Nicholas Burrett (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/core> <http://purl.org/dc/elements/1.1/creator> "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/core> <http://purl.org/dc/elements/1.1/creator> "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/core> <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/core" .
+<http://w3id.org/devops-infra/core> <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of core elements like resources in the DevOps ontology network" .
+<http://w3id.org/devops-infra/core> <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/core.owl" .
+<http://w3id.org/devops-infra/core> <http://purl.org/dc/terms/issued> "2020-10-14" .
+<http://w3id.org/devops-infra/core> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" .
+<http://w3id.org/devops-infra/core> <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopscore" .
+<http://w3id.org/devops-infra/core> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/core#" .
+<http://w3id.org/devops-infra/core> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" .
+<http://w3id.org/devops-infra/core> <http://www.w3.org/2002/07/owl#versionInfo> "Initial version to act as a placeholder" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/hasFormat
+<http://purl.org/dc/terms/hasFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/devops-infra/core#belongsToResourceGroup
+<http://w3id.org/devops-infra/core#belongsToResourceGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/core#belongsToResourceGroup> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/core#belongsToResourceGroup> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/core#ResourceGroup> .
+<http://w3id.org/devops-infra/core#belongsToResourceGroup> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to resource group"@en .
+# 
+# http://w3id.org/devops-infra/core#parentResourceGroup
+<http://w3id.org/devops-infra/core#parentResourceGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/core#parentResourceGroup> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/core#ResourceGroup> .
+<http://w3id.org/devops-infra/core#parentResourceGroup> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/core#ResourceGroup> .
+<http://w3id.org/devops-infra/core#parentResourceGroup> <http://www.w3.org/2000/01/rdf-schema#label> "parent Resource Group"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/devops-infra/core#createTime
+<http://w3id.org/devops-infra/core#createTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/core#createTime> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/core#Resource> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/core#ResourceGroup> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/devops-infra/core#createTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/devops-infra/core#createTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Date and time when a Resource or Resource Group is created"@en .
+<http://w3id.org/devops-infra/core#createTime> <http://www.w3.org/2000/01/rdf-schema#label> "create time"@en .
+# 
+# http://w3id.org/devops-infra/core#updateTime
+<http://w3id.org/devops-infra/core#updateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/core#updateTime> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/core#Resource> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/core#ResourceGroup> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/devops-infra/core#updateTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/devops-infra/core#updateTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The date and time when a Resource or Resource Group is updated"@en .
+<http://w3id.org/devops-infra/core#updateTime> <http://www.w3.org/2000/01/rdf-schema#label> "update time"@en .
+# 
+# http://w3id.org/devops-infra/core#version
+<http://w3id.org/devops-infra/core#version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/core#version> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/core#Resource> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/core#ResourceGroup> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/devops-infra/core#version> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/core#version> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows representing the version of any entity (Resource or ResourceGroup)"@en .
+<http://w3id.org/devops-infra/core#version> <http://www.w3.org/2000/01/rdf-schema#label> "version"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/devops-infra/core#Resource
+<http://w3id.org/devops-infra/core#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/core#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/core#belongsToResourceGroup> .
+_:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/core#ResourceGroup> .
+<http://w3id.org/devops-infra/core#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/core#createTime> .
+_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/devops-infra/core#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/core#updateTime> .
+_:genid12 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/devops-infra/core#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/core#version> .
+_:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/core#Resource> <http://www.w3.org/2000/01/rdf-schema#comment> "A Resource is any relevant entity that is managed in the context of a DevOps infrastructure in this ontology network"@en .
+<http://w3id.org/devops-infra/core#Resource> <http://www.w3.org/2000/01/rdf-schema#label> "Resource"@en .
+# 
+# http://w3id.org/devops-infra/core#ResourceGroup
+<http://w3id.org/devops-infra/core#ResourceGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/core#ResourceGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/core#parentResourceGroup> .
+_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/core#ResourceGroup> .
+<http://w3id.org/devops-infra/core#ResourceGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/core#createTime> .
+_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/devops-infra/core#ResourceGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/core#updateTime> .
+_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/devops-infra/core#ResourceGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/core#version> .
+_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/core#ResourceGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "A Resource Group identifies a grouping of entities (resources) that are managed in the context of a DevOps infrastructure in this ontology network"@en .
+<http://w3id.org/devops-infra/core#ResourceGroup> <http://www.w3.org/2000/01/rdf-schema#label> "Resource Group"@en .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
