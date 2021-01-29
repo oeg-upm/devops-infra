@@ -1,0 +1,517 @@
+<http://w3id.org/devops-infra/certificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/devops-infra/certificate> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/devops-infra/certificate/0.0.1> .
+<http://w3id.org/devops-infra/certificate> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/devops-infra/core> .
+<http://w3id.org/devops-infra/certificate> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
+<http://w3id.org/devops-infra/certificate> <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/certificate> <http://purl.org/dc/elements/1.1/creator> "Hu Peng (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/certificate> <http://purl.org/dc/elements/1.1/creator> "Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/certificate> <http://purl.org/dc/elements/1.1/creator> "José Mora (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/certificate> <http://purl.org/dc/elements/1.1/creator> "Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/certificate> <http://purl.org/dc/elements/1.1/creator> "Mingxue Wang (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/certificate> <http://purl.org/dc/elements/1.1/creator> "Nicholas Burrett (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/certificate> <http://purl.org/dc/elements/1.1/creator> "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/certificate> <http://purl.org/dc/elements/1.1/creator> "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/certificate> <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/certificate" .
+<http://w3id.org/devops-infra/certificate> <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of aspects related to certificates (SSL, CFCA, etc.)"@en .
+<http://w3id.org/devops-infra/certificate> <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/certificate.owl" .
+<http://w3id.org/devops-infra/certificate> <http://purl.org/dc/terms/issued> "2020-12-10" .
+<http://w3id.org/devops-infra/certificate> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" .
+<http://w3id.org/devops-infra/certificate> <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopscert" .
+<http://w3id.org/devops-infra/certificate> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/certificate#" .
+<http://w3id.org/devops-infra/certificate> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" .
+<http://w3id.org/devops-infra/certificate> <http://www.w3.org/2002/07/owl#versionInfo> "Initial version"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/hasFormat
+<http://purl.org/dc/terms/hasFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/devops-infra/certificate#containsCertificate
+<http://w3id.org/devops-infra/certificate#containsCertificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/certificate#containsCertificate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/certificate#DigitalCertificateBundle> .
+<http://w3id.org/devops-infra/certificate#containsCertificate> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#containsCertificate> <http://www.w3.org/2000/01/rdf-schema#comment> "A Digital Certificate Bundle contains several Digital Certificates"@en .
+<http://w3id.org/devops-infra/certificate#containsCertificate> <http://www.w3.org/2000/01/rdf-schema#label> "contains certificate"@en .
+# 
+# http://w3id.org/devops-infra/certificate#hasCertificateDeployment
+<http://w3id.org/devops-infra/certificate#hasCertificateDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/certificate#hasCertificateDeployment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#hasCertificateDeployment> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/certificate#DigitalCertificateDeployment> .
+<http://w3id.org/devops-infra/certificate#hasCertificateDeployment> <http://www.w3.org/2000/01/rdf-schema#comment> "A digital certificate can be deployed somewhere, and this is registered as a Digital Certificate Deployment"@en .
+<http://w3id.org/devops-infra/certificate#hasCertificateDeployment> <http://www.w3.org/2000/01/rdf-schema#label> "has certificate deployment"@en .
+# 
+# http://w3id.org/devops-infra/certificate#hasCertificateSigningRequest
+<http://w3id.org/devops-infra/certificate#hasCertificateSigningRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/certificate#hasCertificateSigningRequest> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#hasCertificateSigningRequest> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/certificate#CertificateSigningRequest> .
+<http://w3id.org/devops-infra/certificate#hasCertificateSigningRequest> <http://www.w3.org/2000/01/rdf-schema#comment> "A Digital Certificate is obtained after a Certificate Signing Request"@en .
+<http://w3id.org/devops-infra/certificate#hasCertificateSigningRequest> <http://www.w3.org/2000/01/rdf-schema#label> "has certificate signing request"@en .
+# 
+# http://w3id.org/devops-infra/certificate#usesDigitalCertificate
+<http://w3id.org/devops-infra/certificate#usesDigitalCertificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/certificate#usesDigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#usesDigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#comment> "Different types of entities (domains, servers, etc.) make use of one or several digital certificates"@en .
+<http://w3id.org/devops-infra/certificate#usesDigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#label> "uses digital certificate"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/devops-infra/certificate#certApplyPerson
+<http://w3id.org/devops-infra/certificate#certApplyPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#certApplyPerson> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#certApplyPerson> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#certApplyPerson> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#certApplyPerson> <http://www.w3.org/2000/01/rdf-schema#comment> "The person in charge of the certificate application"@en .
+<http://w3id.org/devops-infra/certificate#certApplyPerson> <http://www.w3.org/2000/01/rdf-schema#label> "certificate application person"@en .
+# 
+# http://w3id.org/devops-infra/certificate#certDeployPerson
+<http://w3id.org/devops-infra/certificate#certDeployPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#certDeployPerson> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#certDeployPerson> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#certDeployPerson> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#certDeployPerson> <http://www.w3.org/2000/01/rdf-schema#comment> "The person in charge of the certificate deployment"@en .
+<http://w3id.org/devops-infra/certificate#certDeployPerson> <http://www.w3.org/2000/01/rdf-schema#label> "certificate deployment person"@en .
+# 
+# http://w3id.org/devops-infra/certificate#certDeployRegion
+<http://w3id.org/devops-infra/certificate#certDeployRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#certDeployRegion> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#certDeployRegion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#certDeployRegion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#certDeployRegion> <http://www.w3.org/2000/01/rdf-schema#comment> "The region for the certificate deployment"@en .
+<http://w3id.org/devops-infra/certificate#certDeployRegion> <http://www.w3.org/2000/01/rdf-schema#label> "certificate deployment region"@en .
+# 
+# http://w3id.org/devops-infra/certificate#certPurchaseNumber
+<http://w3id.org/devops-infra/certificate#certPurchaseNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#certPurchaseNumber> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#certPurchaseNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#certPurchaseNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#certPurchaseNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "The purchase number of the certificate"@en .
+<http://w3id.org/devops-infra/certificate#certPurchaseNumber> <http://www.w3.org/2000/01/rdf-schema#label> "certificate purchase number"@en .
+# 
+# http://w3id.org/devops-infra/certificate#certType
+<http://w3id.org/devops-infra/certificate#certType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#certType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#certType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#certType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#certType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of certificate"@en .
+<http://w3id.org/devops-infra/certificate#certType> <http://www.w3.org/2000/01/rdf-schema#label> "certificate type"@en .
+# 
+# http://w3id.org/devops-infra/certificate#certificateContent
+<http://w3id.org/devops-infra/certificate#certificateContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#certificateContent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#certificateContent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#certificateContent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#certificateContent> <http://www.w3.org/2000/01/rdf-schema#comment> "The content of the certificate"@en .
+<http://w3id.org/devops-infra/certificate#certificateContent> <http://www.w3.org/2000/01/rdf-schema#label> "certificate content"@en .
+# 
+# http://w3id.org/devops-infra/certificate#domain
+<http://w3id.org/devops-infra/certificate#domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#domain> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#domain> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#domain> <http://www.w3.org/2000/01/rdf-schema#comment> "Also referred to as common name (CN). It is the fully qualified domain name for the certificate, the deployment of the certificate, or the certificate signing request. For example, *.example.org"@en .
+<http://w3id.org/devops-infra/certificate#domain> <http://www.w3.org/2000/01/rdf-schema#label> "domain"@en .
+# 
+# http://w3id.org/devops-infra/certificate#expiryDate
+<http://w3id.org/devops-infra/certificate#expiryDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#expiryDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#expiryDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#expiryDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/devops-infra/certificate#expiryDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The expiry date of the certificate"@en .
+<http://w3id.org/devops-infra/certificate#expiryDate> <http://www.w3.org/2000/01/rdf-schema#label> "expiry date"@en .
+# 
+# http://w3id.org/devops-infra/certificate#issuer
+<http://w3id.org/devops-infra/certificate#issuer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#issuer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#issuer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#issuer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#issuer> <http://www.w3.org/2000/01/rdf-schema#comment> "The issuer of the certificate, also known as issuer common name"@en .
+<http://w3id.org/devops-infra/certificate#issuer> <http://www.w3.org/2000/01/rdf-schema#label> "issuer"@en .
+# 
+# http://w3id.org/devops-infra/certificate#issuerOrganisation
+<http://w3id.org/devops-infra/certificate#issuerOrganisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#issuerOrganisation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#issuerOrganisation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#issuerOrganisation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#issuerOrganisation> <http://www.w3.org/2000/01/rdf-schema#comment> "The organisation that issues the certificate"@en .
+<http://w3id.org/devops-infra/certificate#issuerOrganisation> <http://www.w3.org/2000/01/rdf-schema#label> "issuer organisation"@en .
+# 
+# http://w3id.org/devops-infra/certificate#issuerOrganisationUnit
+<http://w3id.org/devops-infra/certificate#issuerOrganisationUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#issuerOrganisationUnit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#issuerOrganisationUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#issuerOrganisationUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#issuerOrganisationUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "The organisational unit that issues the certificate"@en .
+<http://w3id.org/devops-infra/certificate#issuerOrganisationUnit> <http://www.w3.org/2000/01/rdf-schema#label> "issuer organisation unit"@en .
+# 
+# http://w3id.org/devops-infra/certificate#privateKey
+<http://w3id.org/devops-infra/certificate#privateKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#privateKey> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#privateKey> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#privateKey> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#privateKey> <http://www.w3.org/2000/01/rdf-schema#comment> "The private key of the certificate or the certificate signing request"@en .
+<http://w3id.org/devops-infra/certificate#privateKey> <http://www.w3.org/2000/01/rdf-schema#label> "private key"@en .
+# 
+# http://w3id.org/devops-infra/certificate#publicKey
+<http://w3id.org/devops-infra/certificate#publicKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#publicKey> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#publicKey> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/certificate#CertificateSigningRequest> .
+<http://w3id.org/devops-infra/certificate#publicKey> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#publicKey> <http://www.w3.org/2000/01/rdf-schema#comment> "The public key of the certificate signing request"@en .
+<http://w3id.org/devops-infra/certificate#publicKey> <http://www.w3.org/2000/01/rdf-schema#label> "public key"@en .
+# 
+# http://w3id.org/devops-infra/certificate#realSerialNumber
+<http://w3id.org/devops-infra/certificate#realSerialNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#realSerialNumber> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#realSerialNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#realSerialNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#realSerialNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "The real serial number of the certificate"@en .
+<http://w3id.org/devops-infra/certificate#realSerialNumber> <http://www.w3.org/2000/01/rdf-schema#label> "real serial number"@en .
+# 
+# http://w3id.org/devops-infra/certificate#region
+<http://w3id.org/devops-infra/certificate#region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#region> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#region> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#region> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#region> <http://www.w3.org/2000/01/rdf-schema#comment> "The region for the certificate, the deployment of the certificate, etc."@en .
+<http://w3id.org/devops-infra/certificate#region> <http://www.w3.org/2000/01/rdf-schema#label> "region"@en .
+# 
+# http://w3id.org/devops-infra/certificate#serialNumber
+<http://w3id.org/devops-infra/certificate#serialNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#serialNumber> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#serialNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#serialNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#serialNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "The serial number of the certificate"@en .
+<http://w3id.org/devops-infra/certificate#serialNumber> <http://www.w3.org/2000/01/rdf-schema#label> "serial number"@en .
+# 
+# http://w3id.org/devops-infra/certificate#service
+<http://w3id.org/devops-infra/certificate#service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#service> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#service> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/certificate#DigitalCertificateDeployment> .
+<http://w3id.org/devops-infra/certificate#service> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#service> <http://www.w3.org/2000/01/rdf-schema#comment> "The service for which the Digital Certificate is deployed"@en .
+<http://w3id.org/devops-infra/certificate#service> <http://www.w3.org/2000/01/rdf-schema#label> "service"@en .
+# 
+# http://w3id.org/devops-infra/certificate#site
+<http://w3id.org/devops-infra/certificate#site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#site> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#site> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/certificate#DigitalCertificateDeployment> .
+<http://w3id.org/devops-infra/certificate#site> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#site> <http://www.w3.org/2000/01/rdf-schema#comment> "The site for which the Digital Certificate is deployed"@en .
+<http://w3id.org/devops-infra/certificate#site> <http://www.w3.org/2000/01/rdf-schema#label> "site"@en .
+# 
+# http://w3id.org/devops-infra/certificate#startDate
+<http://w3id.org/devops-infra/certificate#startDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#startDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#startDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#startDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/devops-infra/certificate#startDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The start date of the certificate"@en .
+<http://w3id.org/devops-infra/certificate#startDate> <http://www.w3.org/2000/01/rdf-schema#label> "start date"@en .
+# 
+# http://w3id.org/devops-infra/certificate#user
+<http://w3id.org/devops-infra/certificate#user> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#user> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#user> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#user> <http://www.w3.org/2000/01/rdf-schema#comment> "The user of the certificate or certificate signing request, also known as user common name"@en .
+<http://w3id.org/devops-infra/certificate#user> <http://www.w3.org/2000/01/rdf-schema#label> "user"@en .
+# 
+# http://w3id.org/devops-infra/certificate#userOrganisation
+<http://w3id.org/devops-infra/certificate#userOrganisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#userOrganisation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#userOrganisation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#userOrganisation> <http://www.w3.org/2000/01/rdf-schema#comment> "Also known as Organization Name (O). It is usually the legal name of a company or entity that is using the certificate, or has made the certificate signing request, and should commonly include any suffixes such as Ltd., Inc., or Corp. For example, Example Organisation, Ltd"@en .
+<http://w3id.org/devops-infra/certificate#userOrganisation> <http://www.w3.org/2000/01/rdf-schema#label> "user organisation"@en .
+# 
+# http://w3id.org/devops-infra/certificate#userOrganisationCountry
+<http://w3id.org/devops-infra/certificate#userOrganisationCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#userOrganisationCountry> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#userOrganisationCountry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#userOrganisationCountry> <http://www.w3.org/2000/01/rdf-schema#comment> "Also referred to as country (C). The two-letter ISO code for the country of the organisation that uses the Digital Certificate or has made the Certificate Signing Request. For instance, ES"@en .
+<http://w3id.org/devops-infra/certificate#userOrganisationCountry> <http://www.w3.org/2000/01/rdf-schema#label> "user organisation country"@en .
+# 
+# http://w3id.org/devops-infra/certificate#userOrganisationEmail
+<http://w3id.org/devops-infra/certificate#userOrganisationEmail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#userOrganisationEmail> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#userOrganisationEmail> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#userOrganisationEmail> <http://www.w3.org/2000/01/rdf-schema#comment> "Also referred to as email address (EMAIL). The email contact (usually the certificate administrator or IT department) for the country of the organisation that uses the Digital Certificate or has made the Certificate Signing Request. For instance, info@example.org"@en .
+<http://w3id.org/devops-infra/certificate#userOrganisationEmail> <http://www.w3.org/2000/01/rdf-schema#label> "user organisation email"@en .
+# 
+# http://w3id.org/devops-infra/certificate#userOrganisationLocality
+<http://w3id.org/devops-infra/certificate#userOrganisationLocality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#userOrganisationLocality> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#userOrganisationLocality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#userOrganisationLocality> <http://www.w3.org/2000/01/rdf-schema#comment> "Also referred to as locality (L). The name of the locality (town, city, village, etc.) of the organisation that uses the Digital Certificate or has made the Certificate Signing Request. For instance, Boadilla del Monte"@en .
+<http://w3id.org/devops-infra/certificate#userOrganisationLocality> <http://www.w3.org/2000/01/rdf-schema#label> "user organisation locality"@en .
+# 
+# http://w3id.org/devops-infra/certificate#userOrganisationState
+<http://w3id.org/devops-infra/certificate#userOrganisationState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#userOrganisationState> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#userOrganisationState> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#userOrganisationState> <http://www.w3.org/2000/01/rdf-schema#comment> "Also referred to as state (S). The name of the locality (province, region, county or state) of the organisation that uses the Digital Certificate or has made the Certificate Signing Requestte or Certificate Signing Request. For instance, Comunidad de Madrid"@en .
+<http://w3id.org/devops-infra/certificate#userOrganisationState> <http://www.w3.org/2000/01/rdf-schema#label> "user organisation state"@en .
+# 
+# http://w3id.org/devops-infra/certificate#userOrganisationUnit
+<http://w3id.org/devops-infra/certificate#userOrganisationUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#userOrganisationUnit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#userOrganisationUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#userOrganisationUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Also known as Organizational Unit (OU). It is the organisational unit of the user of the certificate or certificate signing request. It is an internal  department/division name. For example, IT Support"@en .
+<http://w3id.org/devops-infra/certificate#userOrganisationUnit> <http://www.w3.org/2000/01/rdf-schema#label> "user organisation unit"@en .
+# 
+# http://w3id.org/devops-infra/certificate#valid
+<http://w3id.org/devops-infra/certificate#valid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#valid> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#valid> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#valid> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://w3id.org/devops-infra/certificate#valid> <http://www.w3.org/2000/01/rdf-schema#comment> "It determines whether the certificate is valid"@en .
+<http://w3id.org/devops-infra/certificate#valid> <http://www.w3.org/2000/01/rdf-schema#label> "valid"@en .
+# 
+# http://w3id.org/devops-infra/certificate#vendor
+<http://w3id.org/devops-infra/certificate#vendor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/certificate#vendor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/certificate#vendor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#vendor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#vendor> <http://www.w3.org/2000/01/rdf-schema#comment> "The vendor for the certificate"@en .
+<http://w3id.org/devops-infra/certificate#vendor> <http://www.w3.org/2000/01/rdf-schema#label> "vendor"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/devops-infra/certificate#CFCACertificate
+<http://w3id.org/devops-infra/certificate#CFCACertificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/certificate#CFCACertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#CFCACertificate> <http://www.w3.org/2000/01/rdf-schema#comment> "CFCA is a national Authority safety Certification organization which is established by the people's bank of China. CFCA certificates are issued by this organisation"@en .
+<http://w3id.org/devops-infra/certificate#CFCACertificate> <http://www.w3.org/2000/01/rdf-schema#label> "CFCA (China Financial Certification Authority) Certificate"@en .
+# 
+# http://w3id.org/devops-infra/certificate#CertificateSigningRequest
+<http://w3id.org/devops-infra/certificate#CertificateSigningRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/certificate#CertificateSigningRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/certificate#CertificateSigningRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#privateKey> .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#CertificateSigningRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#publicKey> .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#CertificateSigningRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#user> .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#CertificateSigningRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#userOrganisation> .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#CertificateSigningRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#userOrganisationCountry> .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#CertificateSigningRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#userOrganisationEmail> .
+_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#CertificateSigningRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#userOrganisationLocality> .
+_:genid7 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#CertificateSigningRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#userOrganisationState> .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#CertificateSigningRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#userOrganisationUnit> .
+_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#CertificateSigningRequest> <http://www.w3.org/2000/01/rdf-schema#comment> "A Certificate Signing Request (also known as CSR or certification request) is a message sent from an applicant to a registration authority of the public key infrastructure in order to apply for a digital identity certificate. It usually contains the public key for which the certificate should be issued, identifying information (such as a domain name) and integrity protection (e.g., a digital signature). The most common format for CSRs is the PKCS #10 specification; another is the Signed Public Key and Challenge SPKAC format generated by some web browsers."@en .
+<http://w3id.org/devops-infra/certificate#CertificateSigningRequest> <http://www.w3.org/2000/01/rdf-schema#label> "Certificate Signing Request"@en .
+# 
+# http://w3id.org/devops-infra/certificate#DigitalCertificate
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#hasCertificateSigningRequest> .
+_:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/certificate#CertificateSigningRequest> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#certApplyPerson> .
+_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#certDeployPerson> .
+_:genid12 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#certDeployRegion> .
+_:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#certPurchaseNumber> .
+_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#certType> .
+_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#certificateContent> .
+_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#domain> .
+_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#expiryDate> .
+_:genid18 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#issuer> .
+_:genid19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#issuerOrganisation> .
+_:genid20 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#issuerOrganisationUnit> .
+_:genid21 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#privateKey> .
+_:genid22 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#realSerialNumber> .
+_:genid23 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#region> .
+_:genid24 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#serialNumber> .
+_:genid25 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#startDate> .
+_:genid26 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#user> .
+_:genid27 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#userOrganisation> .
+_:genid28 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#userOrganisationUnit> .
+_:genid29 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#valid> .
+_:genid30 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#vendor> .
+_:genid31 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#comment> "Digital Certificates are electronic credentials that bind the identity of the certificate owner to a pair of electronic encryption keys, (one public and one private), that can be used to encrypt and sign information digitally."@en .
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> <http://www.w3.org/2000/01/rdf-schema#label> "Digital Certificate"@en .
+# 
+# http://w3id.org/devops-infra/certificate#DigitalCertificateBundle
+<http://w3id.org/devops-infra/certificate#DigitalCertificateBundle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificateBundle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificateBundle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#containsCertificate> .
+_:genid32 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificateBundle> <http://www.w3.org/2000/01/rdf-schema#comment> "A digital certificate bundle is a file that contains root and intermediate certificates."@en .
+<http://w3id.org/devops-infra/certificate#DigitalCertificateBundle> <http://www.w3.org/2000/01/rdf-schema#label> "Digital Certificate Bundle"@en .
+# 
+# http://w3id.org/devops-infra/certificate#DigitalCertificateDeployment
+<http://w3id.org/devops-infra/certificate#DigitalCertificateDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificateDeployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificateDeployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#domain> .
+_:genid33 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificateDeployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#service> .
+_:genid34 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificateDeployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/certificate#site> .
+_:genid35 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/certificate#DigitalCertificateDeployment> <http://www.w3.org/2000/01/rdf-schema#comment> "A Digital Certificate Deployment is the result of deploying a digital certificate in a specific domain and for a specific service on a site."@en .
+<http://w3id.org/devops-infra/certificate#DigitalCertificateDeployment> <http://www.w3.org/2000/01/rdf-schema#label> "Digital Certificate Deployment"@en .
+# 
+# http://w3id.org/devops-infra/certificate#SSLCertificate
+<http://w3id.org/devops-infra/certificate#SSLCertificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/certificate#SSLCertificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
+<http://w3id.org/devops-infra/certificate#SSLCertificate> <http://www.w3.org/2000/01/rdf-schema#comment> "An SSL certificate is a data file hosted in a website's origin server. SSL certificates make SSL/TLS encryption possible, and they contain the website's public key and the website's identity, along with related information. Devices attempting to communicate with the origin server will reference this file to obtain the public key and verify the server's identity. The private key is kept secret and secure."@en .
+<http://w3id.org/devops-infra/certificate#SSLCertificate> <http://www.w3.org/2000/01/rdf-schema#label> "SSL Certificate"@en .
+# 
+# http://w3id.org/devops-infra/core#Resource
+<http://w3id.org/devops-infra/core#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

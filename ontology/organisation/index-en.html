@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Ontology for the representation of the organisation-related part of DevOps</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://w3id.org/devops-infra/organization","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://w3id.org/devops-infra/organization","name":"Ontology for the representation of the organisation-related part of DevOps", "headline":"This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland", "datePublished":"2020-11-06", "version":"Initial version", "license":"https://creativecommons.org/licenses/by/4.0", "author":[{"@type":"Person","name":"Oscar Corcho"},{"@type":"Person","name":"Raúl Alcázar"},{"@type":"Person","name":"David Chaves-Fraga"},{"@type":"Person","name":"Jhon Toledo"},{"@type":"Person","name":"Julián Arenas"},{"@type":"Person","name":"Mingxue Wang"},{"@type":"Person","name":"Hu Peng"},{"@type":"Person","name":"Nicholas Burrett"},{"@type":"Person","name":"José Mora"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+ $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ };    $(function(){
+      $("#abstract").load("sections/abstract-en.html"); 
+      $("#introduction").load("sections/introduction-en.html"); 
+      $("#overview").load("sections/overview-en.html"); 
+      $("#description").load("sections/description-en.html"); 
+      $("#references").load("sections/references-en.html"); 
+      $("#crossref").load("sections/crossref-en.html", null, loadHash); 
+    });
+    </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Ontology for the representation of the organisation-related part of DevOps</h1>
+<h2>Release  2020-11-06</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="http://w3id.org/devops-infra/organization/0.0.1">http://w3id.org/devops-infra/organization/0.0.1</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://w3id.org/devops-infra/organization">http://w3id.org/devops-infra/organization</a></dd>
+<dt>Revision:</dt>
+<dd>Initial version</dd>
+<dt>Authors:</dt>
+<dd>Oscar Corcho, (<a href="https://oeg.fi.upm.es/">Ontology Engineering Group - Universidad Politécnica de Madrid</a>)</dd><dd>Raúl Alcázar, (<a href="https://oeg.fi.upm.es/">Ontology Engineering Group - Universidad Politécnica de Madrid</a>)</dd><dd>David Chaves-Fraga, (<a href="https://oeg.fi.upm.es/">Ontology Engineering Group - Universidad Politécnica de Madrid</a>)</dd><dd>Jhon Toledo, (<a href="https://oeg.fi.upm.es/">Ontology Engineering Group - Universidad Politécnica de Madrid</a>)</dd><dd>Julián Arenas, (<a href="https://oeg.fi.upm.es/">Ontology Engineering Group - Universidad Politécnica de Madrid</a>)</dd><dd>Mingxue Wang, Huawei Research Ireland</dd><dd>Hu Peng, Huawei Research Ireland</dd><dd>Nicholas Burrett, Huawei Research Ireland</dd><dd>José Mora, Huawei Research Ireland</dd>
+
+<dt>Publisher:</dt>
+<dd><a href="https://oeg.fi.upm.es/">Ontology Engineering Group</a>, (<a href="http://www.upm.es/">Universidad Politécnica de Madrid</a>)</dd>
+<dt>Imported Ontologies:</dt>
+<dd><a href="http://w3id.org/devops-infra/core#">devopscore</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="https://creativecommons.org/licenses/by/4.0" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0-blue.svg" alt="https://creativecommons.org/licenses/by/4.0" /></a>
+<a href="https://creativecommons.org/licenses/by/4.0" rel="license" target="_blank">
+<img src="https://i.creativecommons.org/l/by/4.0/88x31.png" style="border-width:0" alt="License" />
+</a>
+<br/></dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/OOPSeval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Oscar Corcho, Raúl Alcazar, David Chaves-Fraga, Jhon Toledo, Julián Arenas, Mingxue Wang, Hu Peng, Nicholas Burrett, José Mora. Ontology for the representation of the organisation-related part of DevOps. Revision: Initial version. Retrieved from: http://w3id.org/devops-infra/organization</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification</span>
+</div>
+</div>     <div id="abstract"></div>
+<div id="toc"></div>     <div id="introduction"></div>
+     <div id="overview"></div>
+     <div id="description"></div>
+     <div id="crossref"></div>
+     <div id="references"></div>
+<div id="acknowledgements">
+<h2 id="ack" class="list">Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

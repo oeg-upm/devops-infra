@@ -1,0 +1,936 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://w3id.org/devops-infra/product#"
+     xml:base="http://w3id.org/devops-infra/product"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://w3id.org/devops-infra/product">
+        <owl:versionIRI rdf:resource="http://w3id.org/devops-infra/product/0.0.1"/>
+        <owl:imports rdf:resource="http://w3id.org/devops-infra/core"/>
+        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <dc:creator>David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator>Hu Peng (Huawei Research Ireland)</dc:creator>
+        <dc:creator>Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator>José Mora (Huawei Research Ireland)</dc:creator>
+        <dc:creator>Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator>Mingxue Wang (Huawei Research Ireland)</dc:creator>
+        <dc:creator>Nicholas Burrett (Huawei Research Ireland)</dc:creator>
+        <dc:creator>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator>Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:identifier>http://w3id.org/devops-infra/product</dc:identifier>
+        <dc:title xml:lang="en">Ontology for the representation of the business offering of a company, including the offered services and microservices</dc:title>
+        <terms:hasFormat>http://w3id.org/devops-infra/product.owl</terms:hasFormat>
+        <terms:issued>2020-11-19</terms:issued>
+        <terms:license>https://creativecommons.org/licenses/by/4.0</terms:license>
+        <vann:preferredNamespacePrefix>devopsprod</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://w3id.org/devops-infra/product#</vann:preferredNamespaceUri>
+        <rdfs:comment>This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland</rdfs:comment>
+        <owl:versionInfo xml:lang="en">Initial version</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasFormat -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasFormat"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/devops-infra/organisation#domain -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/organisation#domain"/>
+    
+
+
+    <!-- http://w3id.org/devops-infra/organisation#site -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/organisation#site"/>
+    
+
+
+    <!-- http://w3id.org/devops-infra/organisation#stage -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/organisation#stage"/>
+    
+
+
+    <!-- http://w3id.org/devops-infra/organisation#tenant -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/organisation#tenant"/>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#autoScalingHostConfig -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/product#autoScalingHostConfig">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/product#MicroService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Auto scaling host configuration for a microservice</rdfs:comment>
+        <rdfs:label xml:lang="en">autoscaling host config</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#calls -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/product#calls">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/devops-infra/product#dependsOn"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/product#Service"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/devops-infra/product#MicroService"/>
+                    <rdf:Description rdf:about="http://w3id.org/devops-infra/product#Service"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">A service may call other services or microservices</rdfs:comment>
+        <rdfs:label xml:lang="en">calls</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#clusterType -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/product#clusterType">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/product#ServiceCluster"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:hasValue rdf:resource="http://w3id.org/devops-infra/kos/cluster-type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#dependsOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/product#dependsOn">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/product#Product"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/devops-infra/product#MicroService"/>
+                    <rdf:Description rdf:about="http://w3id.org/devops-infra/product#Service"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">A product depends on services and microservices in order to run</rdfs:comment>
+        <rdfs:label xml:lang="en">depends on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#deployedInstanceOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/product#deployedInstanceOf">
+        <rdfs:comment xml:lang="en">A microservice instance, a service instance or a business product instance are instances of microservices, services or business products deployed in some infrastructure</rdfs:comment>
+        <rdfs:label xml:lang="en">deployed instance of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#hasOffering -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/product#hasOffering">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/product#Product"/>
+        <rdfs:range rdf:resource="http://w3id.org/devops-infra/product#ProductOffering"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#hasProductVersion -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/product#hasProductVersion">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/product#ProductOffering"/>
+        <rdfs:range rdf:resource="http://w3id.org/devops-infra/product#ProductVersion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#hasResourceRequirements -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/product#hasResourceRequirements">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/product#BusinessProduct"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">The resource requirements neede by a business product</rdfs:comment>
+        <rdfs:label xml:lang="en">has resource requirements</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#offeredBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/product#offeredBy">
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Business products, product offerings and services are offered by a scope (and its corresponding business department)</rdfs:comment>
+        <rdfs:label xml:lang="en">offered by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#runsInServiceCluster -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/product#runsInServiceCluster">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/product#MicroService"/>
+        <rdfs:range rdf:resource="http://w3id.org/devops-infra/product#ServiceCluster"/>
+        <rdfs:comment xml:lang="en">A Microservice may run in a service cluster</rdfs:comment>
+        <rdfs:label xml:lang="en">runs in service cluster</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#serviceType -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/product#serviceType">
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:hasValue rdf:resource="http://w3id.org/devops-infra/kos/service-type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">The type of a service. It can be any of the following, according to the corresponding SKOS Concept Scheme: common, middleware, HWS</rdfs:comment>
+        <rdfs:label xml:lang="en">service type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#uses -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/product#uses">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/devops-infra/product#dependsOn"/>
+        <rdfs:range rdf:resource="http://w3id.org/devops-infra/product#Service"/>
+        <rdfs:comment xml:lang="en">A Product Offering or a Business Product use services</rdfs:comment>
+        <rdfs:label xml:lang="en">uses</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#usesResourceCapacity -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/product#usesResourceCapacity">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/product#BusinessProduct"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">The resource capacity required by a business product</rdfs:label>
+        <rdfs:label xml:lang="en">uses resource capacity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#usesServiceModule -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/product#usesServiceModule">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/product#MicroService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">The service modules that are being used by a product, a product offering, a service or a microservice</rdfs:comment>
+        <rdfs:label xml:lang="en">uses service module</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#usesServiceModuleVersion -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/product#usesServiceModuleVersion">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/product#ProductVersion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">A product version may use several versions of the service modules that are being used by the product</rdfs:comment>
+        <rdfs:label xml:lang="en">uses service module version</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/server#balancedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/server#balancedBy"/>
+    
+
+
+    <!-- http://w3id.org/devops-infra/server#deployedInServer -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/server#deployedInServer"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#ip -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/product#ip">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/product#MicroServiceRunningInstanceDeployment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">IP address where a microservice instance is running</rdfs:comment>
+        <rdfs:label xml:lang="en">IP</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#isDeleted -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/product#isDeleted">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Property used to determine whether a (business) product offering, a service or a microservice are currently running or available, or they have been deleted from the corresponding catalogues and/or infrastructure</rdfs:comment>
+        <rdfs:label xml:lang="en">is deleted</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#key -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/product#key">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/product#InfrastructureEncryptedItemDeployment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Key of a TerraFormInfraEncryptedItem</rdfs:comment>
+        <rdfs:label>key</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#port -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/product#port">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/product#MicroServiceRunningInstanceDeployment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Port where a microservice instance is running</rdfs:comment>
+        <rdfs:label xml:lang="en">port</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#status -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/product#status">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/product#MicroServiceRunningInstanceDeployment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Status of a running instance of a microservice in the TerraForm infrastructure</rdfs:comment>
+        <rdfs:label xml:lang="en">status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#value -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/product#value">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/product#InfrastructureEncryptedItemDeployment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">value for the corresponding key of the TerraForm Encrypted Value</rdfs:comment>
+        <rdfs:label xml:lang="en">value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/devops-infra/core#Resource -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/core#Resource"/>
+    
+
+
+    <!-- http://w3id.org/devops-infra/organisation#Domain -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/organisation#Domain"/>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#BusinessProduct -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/product#BusinessProduct">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#offeredBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#isDeleted"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Business Product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#BusinessProductInstance -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/product#BusinessProductInstance">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#deployedInstanceOf"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/devops-infra/product#BusinessProduct"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#deployedInstanceOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://w3id.org/devops-infra/product#BusinessProduct"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#isDeleted"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Business Product Instance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#BusinessProductInstanceDeployment -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/product#BusinessProductInstanceDeployment">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/product#BusinessProductInstance"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/organisation#site"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/organisation#stage"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/organisation#tenant"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Instance of a business product running/deployed on a specific infrastructure (e.g., TerraForm)</rdfs:comment>
+        <rdfs:label xml:lang="en">Business Product Instance Deployment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#InfrastructureEncryptedItemDeployment -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/product#InfrastructureEncryptedItemDeployment">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+        <rdfs:comment xml:lang="en">Deployment of an Infrastructure Encrypted Item (e.g., in TerraForm)</rdfs:comment>
+        <rdfs:label xml:lang="en">Infrastructure Encrypted Item Deployment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#MicroService -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/product#MicroService">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#runsInServiceCluster"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#isDeleted"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Microservice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#MicroServiceInstance -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/product#MicroServiceInstance">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#deployedInstanceOf"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/devops-infra/product#MicroService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#runsInServiceCluster"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/devops-infra/product#ServiceCluster"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#deployedInstanceOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://w3id.org/devops-infra/product#MicroService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#isDeleted"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Microservice Instance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#MicroServiceInstanceDeployment -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/product#MicroServiceInstanceDeployment">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/product#MicroServiceInstance"/>
+        <rdfs:comment xml:lang="en">Instance of a microservice running/deployed on a specifid infrastructure (e.g., Terraform)</rdfs:comment>
+        <rdfs:label xml:lang="en">Microservice Instance Deployment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#MicroServiceRunningInstanceDeployment -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/product#MicroServiceRunningInstanceDeployment">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+        <rdfs:comment xml:lang="en">Instance of a microservice running/deployed on a specific infrastructure (e.g., TerraForm)</rdfs:comment>
+        <rdfs:label xml:lang="en">Microservice Running Instance Deployment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#Product -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/product#Product">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#dependsOn"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/devops-infra/product#MicroService"/>
+                            <rdf:Description rdf:about="http://w3id.org/devops-infra/product#Service"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#hasOffering"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/devops-infra/product#ProductOffering"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#usesServiceModule"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#ProductOffering -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/product#ProductOffering">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#hasProductVersion"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/devops-infra/product#ProductVersion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#offeredBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#uses"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/devops-infra/product#Service"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#usesServiceModule"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#isDeleted"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Product Offering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#ProductVersion -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/product#ProductVersion">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#usesServiceModuleVersion"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Product Version</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#Service -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/product#Service">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#calls"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/devops-infra/product#MicroService"/>
+                            <rdf:Description rdf:about="http://w3id.org/devops-infra/product#Service"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#offeredBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#serviceType"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                                <owl:hasValue rdf:resource="http://w3id.org/devops-infra/kos/service-type"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#usesServiceModule"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#isDeleted"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#ServiceCluster -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/product#ServiceCluster">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/organisation#domain"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/devops-infra/organisation#Domain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#clusterType"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                                <owl:hasValue rdf:resource="http://w3id.org/devops-infra/kos/cluster-type"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/server#balancedBy"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/devops-infra/server#ServerLoadBalancer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/server#deployedInServer"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/devops-infra/server#Server"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Service Cluster is a logical cluster that provides high availability to services</rdfs:comment>
+        <rdfs:label xml:lang="en">Service Cluster</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#ServiceInstance -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/product#ServiceInstance">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#deployedInstanceOf"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/devops-infra/product#Service"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#deployedInstanceOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://w3id.org/devops-infra/product#Service"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/product#isDeleted"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Service Instance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/product#ServiceInstanceDeployment -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/product#ServiceInstanceDeployment">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/product#ServiceInstance"/>
+        <rdfs:comment xml:lang="en">Instance of a service running/deployed on a specific infrastructure (e.g., TerraForm)</rdfs:comment>
+        <rdfs:label xml:lang="en">Service Instance Deployment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/server#Server -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/server#Server">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/server#ServerLoadBalancer -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/server#ServerLoadBalancer">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/devops-infra/kos/cluster-type -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/devops-infra/kos/cluster-type">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/devops-infra/kos/service-type -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/devops-infra/kos/service-type">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+

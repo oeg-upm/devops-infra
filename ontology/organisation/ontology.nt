@@ -1,0 +1,265 @@
+<http://w3id.org/devops-infra/organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/devops-infra/organization> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/devops-infra/organization/0.0.1> .
+<http://w3id.org/devops-infra/organization> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/devops-infra/core> .
+<http://w3id.org/devops-infra/organization> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
+<http://w3id.org/devops-infra/organization> <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/organization> <http://purl.org/dc/elements/1.1/creator> "Hu Peng (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/organization> <http://purl.org/dc/elements/1.1/creator> "Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/organization> <http://purl.org/dc/elements/1.1/creator> "José Mora (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/organization> <http://purl.org/dc/elements/1.1/creator> "Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/organization> <http://purl.org/dc/elements/1.1/creator> "Mingxue Wang (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/organization> <http://purl.org/dc/elements/1.1/creator> "Nicholas Burrett (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/organization> <http://purl.org/dc/elements/1.1/creator> "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/organization> <http://purl.org/dc/elements/1.1/creator> "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/organization> <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/organization" .
+<http://w3id.org/devops-infra/organization> <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of the organisation-related part of DevOps" .
+<http://w3id.org/devops-infra/organization> <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/organization.owl" .
+<http://w3id.org/devops-infra/organization> <http://purl.org/dc/terms/issued> "2020-10-14" .
+<http://w3id.org/devops-infra/organization> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" .
+<http://w3id.org/devops-infra/organization> <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopsorg" .
+<http://w3id.org/devops-infra/organization> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/organization#" .
+<http://w3id.org/devops-infra/organization> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" .
+<http://w3id.org/devops-infra/organization> <http://www.w3.org/2002/07/owl#versionInfo> "Initial version"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/hasFormat
+<http://purl.org/dc/terms/hasFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/devops-infra/organization#managedBy
+<http://w3id.org/devops-infra/organization#managedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/organization#managedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/organization#Scope> .
+<http://w3id.org/devops-infra/organization#managedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/organization#Department> .
+<http://w3id.org/devops-infra/organization#managedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A scope may be managed by a department"@en .
+<http://w3id.org/devops-infra/organization#managedBy> <http://www.w3.org/2000/01/rdf-schema#label> "managed by"@en .
+# 
+# http://w3id.org/devops-infra/organization#scopeType
+<http://w3id.org/devops-infra/organization#scopeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/organization#scopeType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/organization#Scope> .
+<http://w3id.org/devops-infra/organization#scopeType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/scope-type> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/organization#scopeType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of scope. It can be any of the following, according to the corresponding SKOS Concept Scheme: area, biz, resource, common"@en .
+<http://w3id.org/devops-infra/organization#scopeType> <http://www.w3.org/2000/01/rdf-schema#label> "scope type"@en .
+# 
+# http://w3id.org/devops-infra/organization#tenantType
+<http://w3id.org/devops-infra/organization#tenantType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/organization#tenantType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/organization#Tenant> .
+<http://w3id.org/devops-infra/organization#tenantType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid7 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/tenant-type> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/organization#tenantType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of tenant. It can be any of the following, according to the corresponding SKOS Concept Scheme: HWS, AWS, ENABLE, DISABLE, CHINA, EUROPE, RUSSIA, A2, AP, RUSSIA_2, CHINA_NOT_CLOUDSERVICE, FRANCE"@en .
+<http://w3id.org/devops-infra/organization#tenantType> <http://www.w3.org/2000/01/rdf-schema#label> "tenant type"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/devops-infra/organization#account
+<http://w3id.org/devops-infra/organization#account> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/organization#account> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/organization#Tenant> .
+<http://w3id.org/devops-infra/organization#account> <http://www.w3.org/2000/01/rdf-schema#label> "account"@en .
+# 
+# http://w3id.org/devops-infra/organization#default
+<http://w3id.org/devops-infra/organization#default> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/organization#default> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/organization#Scope> .
+<http://w3id.org/devops-infra/organization#default> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://w3id.org/devops-infra/organization#password
+<http://w3id.org/devops-infra/organization#password> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/organization#password> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/organization#password> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/organization#Tenant> .
+<http://w3id.org/devops-infra/organization#password> <http://www.w3.org/2000/01/rdf-schema#label> "password"@en .
+# 
+# http://w3id.org/devops-infra/organization#priority
+<http://w3id.org/devops-infra/organization#priority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/organization#priority> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/organization#Scope> .
+<http://w3id.org/devops-infra/organization#priority> <http://www.w3.org/2000/01/rdf-schema#label> "priority"@en .
+# 
+# http://w3id.org/devops-infra/organization#status
+<http://w3id.org/devops-infra/organization#status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/organization#status> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/organization#Tenant> .
+<http://w3id.org/devops-infra/organization#status> <http://www.w3.org/2000/01/rdf-schema#label> "status"@en .
+# 
+# http://w3id.org/devops-infra/organization#timeZone
+<http://w3id.org/devops-infra/organization#timeZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/organization#timeZone> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/organization#Site> .
+<http://w3id.org/devops-infra/organization#timeZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Time Zone applicable to a Site"@en .
+<http://w3id.org/devops-infra/organization#timeZone> <http://www.w3.org/2000/01/rdf-schema#label> "time zone"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/devops-infra/core#Resource
+<http://w3id.org/devops-infra/core#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/devops-infra/organization#Department
+<http://w3id.org/devops-infra/organization#Department> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/organization#Department> <http://www.w3.org/2000/01/rdf-schema#label> "Department"@en .
+<http://w3id.org/devops-infra/organization#Department> <http://www.w3.org/2000/01/rdf-schema#label> "部门"@cn .
+# 
+# http://w3id.org/devops-infra/organization#Scope
+<http://w3id.org/devops-infra/organization#Scope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/organization#Scope> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/organization#managedBy> .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/devops-infra/organization#Department> .
+<http://w3id.org/devops-infra/organization#Scope> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/organization#scopeType> .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid13 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/scope-type> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/organization#Scope> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/organization#default> .
+_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://w3id.org/devops-infra/organization#Scope> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/organization#priority> .
+_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/organization#Scope> <http://www.w3.org/2000/01/rdf-schema#label> "Scope"@en .
+<http://w3id.org/devops-infra/organization#Scope> <http://www.w3.org/2000/01/rdf-schema#label> "领域"@cn .
+# 
+# http://w3id.org/devops-infra/organization#Site
+<http://w3id.org/devops-infra/organization#Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/organization#Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/organization#Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/organization#timeZone> .
+_:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/organization#Site> <http://www.w3.org/2000/01/rdf-schema#label> "Site"@en .
+<http://w3id.org/devops-infra/organization#Site> <http://www.w3.org/2000/01/rdf-schema#label> "站点"@cn .
+# 
+# http://w3id.org/devops-infra/organization#Stage
+<http://w3id.org/devops-infra/organization#Stage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/organization#Stage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/organization#Stage> <http://www.w3.org/2000/01/rdf-schema#label> "Stage"@en .
+<http://w3id.org/devops-infra/organization#Stage> <http://www.w3.org/2000/01/rdf-schema#label> "部署阶段"@cn .
+# 
+# http://w3id.org/devops-infra/organization#Tenant
+<http://w3id.org/devops-infra/organization#Tenant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/organization#Tenant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/organization#Tenant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/organization#tenantType> .
+_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid21 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/tenant-type> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/organization#Tenant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/organization#status> .
+_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/organization#Tenant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/organization#account> .
+_:genid24 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/organization#Tenant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/organization#password> .
+_:genid25 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/organization#Tenant> <http://www.w3.org/2000/01/rdf-schema#comment> "A tenant is defined as XXXX"@en .
+<http://w3id.org/devops-infra/organization#Tenant> <http://www.w3.org/2000/01/rdf-schema#label> "Tenant"@en .
+<http://w3id.org/devops-infra/organization#Tenant> <http://www.w3.org/2000/01/rdf-schema#label> "租户"@cn .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/devops-infra/kos/scope-type
+<http://w3id.org/devops-infra/kos/scope-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/devops-infra/kos/scope-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+# 
+# http://w3id.org/devops-infra/kos/tenant-type
+<http://w3id.org/devops-infra/kos/tenant-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/devops-infra/kos/tenant-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

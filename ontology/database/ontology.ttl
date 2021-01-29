@@ -1,0 +1,550 @@
+@prefix : <http://w3id.org/devops-infra/database#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://w3id.org/devops-infra/database> .
+
+<http://w3id.org/devops-infra/database> rdf:type owl:Ontology ;
+                                         owl:versionIRI <http://w3id.org/devops-infra/database/0.0.1> ;
+                                         owl:imports <http://w3id.org/devops-infra/core> ,
+                                                     <http://www.w3.org/2004/02/skos/core> ;
+                                         <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                   "Hu Peng (Huawei Research Ireland)" ,
+                                                                                   "Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                   "José Mora (Huawei Research Ireland)" ,
+                                                                                   "Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                   "Mingxue Wang (Huawei Research Ireland)" ,
+                                                                                   "Nicholas Burrett (Huawei Research Ireland)" ,
+                                                                                   "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                   "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)" ;
+                                         <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/database" ;
+                                         <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of the database-related infrastructure"@en ;
+                                         <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/database.owl" ;
+                                         <http://purl.org/dc/terms/issued> "2020-12-10" ;
+                                         <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" ;
+                                         <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopsdb" ;
+                                         <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/database#" ;
+                                         rdfs:comment "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" ;
+                                         owl:versionInfo "Initial version"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasFormat
+<http://purl.org/dc/terms/hasFormat> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://w3id.org/devops-infra/database#backupStatus
+:backupStatus rdf:type owl:ObjectProperty ;
+              rdfs:domain :DatabaseScanReport ;
+              rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                  owl:hasValue <http://w3id.org/devops-infra/kos/status>
+                                                ]
+                                              ) ;
+                           rdf:type owl:Class
+                         ] ;
+              rdfs:comment "The status of a backup. It can be normal or abnormal."@en ;
+              rdfs:label "backup status"@en .
+
+
+###  http://w3id.org/devops-infra/database#belongsToDatabase
+:belongsToDatabase rdf:type owl:ObjectProperty ;
+                   rdfs:domain :DatabaseBigTable ;
+                   rdfs:range :Database ;
+                   rdfs:comment "The database to which the Big Table belongs"@en ;
+                   rdfs:label "belongs to database"@en .
+
+
+###  http://w3id.org/devops-infra/database#dbBinaryLogChangeStatus
+:dbBinaryLogChangeStatus rdf:type owl:ObjectProperty ;
+                         rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                             owl:hasValue <http://w3id.org/devops-infra/kos/status>
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                         rdfs:comment "The status of a binary log change for a Database Instance or a Database Scan Report, which may be normal or abnormal. The binary log contains a record of all changes to the databases, both data and structure. It consists of a set of binary log files and an index. It is necessary for replication, and can also be used to restore data after a backup."@en ;
+                         rdfs:label "binary log change status"@en .
+
+
+###  http://w3id.org/devops-infra/database#dbMonitorRole
+:dbMonitorRole rdf:type owl:ObjectProperty ;
+               rdfs:domain :DatabaseInstance ;
+               rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                   owl:hasValue <http://w3id.org/devops-infra/kos/db-monitor-role>
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] ;
+               rdfs:comment "The role of a DB monitor for a DB instance. It can be Master, Slave, MasterAndSlave, Read, Single. Database monitoring refers to the tasks associated with examining the operational status of a database, and is a vital activity for the maintenance of the performance and health of a database management system"@en ;
+               rdfs:label "database monitor role"@en .
+
+
+###  http://w3id.org/devops-infra/database#dbMonitorStatus
+:dbMonitorStatus rdf:type owl:ObjectProperty ;
+                 rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                     owl:hasValue <http://w3id.org/devops-infra/kos/status>
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+                 rdfs:comment "The status of a DB monitor for a DB instance or a DB Scan Report. It can be normal or abnormal. Database monitoring refers to the tasks associated with examining the operational status of a database, and is a vital activity for the maintenance of the performance and health of a database management system"@en ;
+                 rdfs:label "db monitor status"@en .
+
+
+###  http://w3id.org/devops-infra/database#dbStatus
+:dbStatus rdf:type owl:ObjectProperty ;
+          rdfs:domain :Database ;
+          rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                              owl:hasValue <http://w3id.org/devops-infra/kos/status>
+                                            ]
+                                          ) ;
+                       rdf:type owl:Class
+                     ] ;
+          rdfs:comment "The status of a DB. It can be normal or abnormal."@en ;
+          rdfs:label "db status"@en .
+
+
+###  http://w3id.org/devops-infra/database#dbType
+:dbType rdf:type owl:ObjectProperty ;
+        rdfs:domain :DatabaseInstance ;
+        rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                            owl:hasValue <http://w3id.org/devops-infra/kos/db-type>
+                                          ]
+                                        ) ;
+                     rdf:type owl:Class
+                   ] ;
+        rdfs:comment "The type of database instance, which can be Master, Slave, Read, Single, DRMaster, DRSlave."@en ;
+        rdfs:label "database type"@en .
+
+
+###  http://w3id.org/devops-infra/database#hasDatabaseInstance
+:hasDatabaseInstance rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Database ;
+                     rdfs:range :DatabaseInstance ;
+                     rdfs:comment "The instances that a DB has currently active"@en ;
+                     rdfs:label "has database instance"@en .
+
+
+###  http://w3id.org/devops-infra/database#mysqlversionStatus
+:mysqlversionStatus rdf:type owl:ObjectProperty ;
+                    rdfs:domain :DatabaseScanReport ;
+                    rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                        owl:hasValue <http://w3id.org/devops-infra/kos/status>
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+                    rdfs:comment "The status of a mySQL version. It can be normal or abnormal."@en ;
+                    rdfs:label "mysqlversion status"@en .
+
+
+###  http://w3id.org/devops-infra/database#tableStatus
+:tableStatus rdf:type owl:ObjectProperty ;
+             rdfs:domain :DatabaseScanReport ;
+             rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                 owl:hasValue <http://w3id.org/devops-infra/kos/status>
+                                               ]
+                                             ) ;
+                          rdf:type owl:Class
+                        ] ;
+             rdfs:comment "The status of a table. It can be normal or abnormal."@en ;
+             rdfs:label "table status"@en .
+
+
+###  http://w3id.org/devops-infra/server#hostedBy
+<http://w3id.org/devops-infra/server#hostedBy> rdf:type owl:ObjectProperty ;
+                                               rdfs:range <http://w3id.org/devops-infra/server#Server> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://w3id.org/devops-infra/core#createTime
+<http://w3id.org/devops-infra/core#createTime> rdf:type owl:DatatypeProperty .
+
+
+###  http://w3id.org/devops-infra/core#updateTime
+<http://w3id.org/devops-infra/core#updateTime> rdf:type owl:DatatypeProperty .
+
+
+###  http://w3id.org/devops-infra/database#dbInstanceVersion
+:dbInstanceVersion rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :DatabaseInstance ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "The version of the database instance"@en ;
+                   rdfs:label "database instance version"@en .
+
+
+###  http://w3id.org/devops-infra/database#dbName
+:dbName rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Database ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Name of the database"@en ;
+        rdfs:label "dbName"@en .
+
+
+###  http://w3id.org/devops-infra/database#dbSize
+:dbSize rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty ;
+        rdfs:domain :Database ;
+        rdfs:range xsd:string ;
+        rdfs:comment "The size of the database"@en ;
+        rdfs:label "database size"@en .
+
+
+###  http://w3id.org/devops-infra/database#masterIP
+:masterIP rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :DatabaseReplica ;
+          rdfs:range xsd:string ;
+          rdfs:comment "IP address of the server with the database that is acting as a master"@en ;
+          rdfs:label "master IP"@en .
+
+
+###  http://w3id.org/devops-infra/database#scanDate
+:scanDate rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :DatabaseScanReport ;
+          rdfs:range xsd:dateTime ;
+          rdfs:comment "date when the database scan was performed"@en ;
+          rdfs:label "scan date"@en .
+
+
+###  http://w3id.org/devops-infra/database#serverIP
+:serverIP rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :DatabaseBigTable ;
+          rdfs:range xsd:string ;
+          rdfs:comment "IP address of the server where the Big Table, or the Database Replica, or the DBScanReport is located"@en ;
+          rdfs:label "server IP"@en .
+
+
+###  http://w3id.org/devops-infra/database#tableName
+:tableName rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :DatabaseBigTable ;
+           rdfs:range xsd:string ;
+           rdfs:comment "The name of the Big Table"@en ;
+           rdfs:label "table name"@en .
+
+
+###  http://w3id.org/devops-infra/database#tableRows
+:tableRows rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :DatabaseBigTable ;
+           rdfs:range xsd:integer ;
+           rdfs:comment "The number of rows of the Big Table"@en ;
+           rdfs:label "table rows"@en .
+
+
+###  http://w3id.org/devops-infra/database#tableSize
+:tableSize rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :DatabaseBigTable ;
+           rdfs:range xsd:string ;
+           rdfs:comment "The size of the Big Table"@en ;
+           rdfs:label "table size"@en .
+
+
+###  http://w3id.org/devops-infra/network#ipAddress
+<http://w3id.org/devops-infra/network#ipAddress> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://w3id.org/devops-infra/core#Resource
+<http://w3id.org/devops-infra/core#Resource> rdf:type owl:Class .
+
+
+###  http://w3id.org/devops-infra/database#Database
+:Database rdf:type owl:Class ;
+          rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :dbStatus ;
+                            owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                       owl:hasValue <http://w3id.org/devops-infra/kos/status>
+                                                                     ]
+                                                                   ) ;
+                                                rdf:type owl:Class
+                                              ]
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasDatabaseInstance ;
+                            owl:allValuesFrom :DatabaseInstance
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :dbName ;
+                            owl:allValuesFrom xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :dbSize ;
+                            owl:allValuesFrom xsd:string
+                          ] ;
+          rdfs:label "Database"@en .
+
+
+###  http://w3id.org/devops-infra/database#DatabaseBigTable
+:DatabaseBigTable rdf:type owl:Class ;
+                  rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty <http://w3id.org/devops-infra/core#updateTime> ;
+                                    owl:allValuesFrom xsd:dateTime
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :serverIP ;
+                                    owl:allValuesFrom xsd:string
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :tableName ;
+                                    owl:allValuesFrom xsd:string
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :tableRows ;
+                                    owl:allValuesFrom xsd:int
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :tableSize ;
+                                    owl:allValuesFrom xsd:string
+                                  ] ;
+                  rdfs:label "Database Big Table"@en .
+
+
+###  http://w3id.org/devops-infra/database#DatabaseInstance
+:DatabaseInstance rdf:type owl:Class ;
+                  rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :dbBinaryLogChangeStatus ;
+                                    owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                               owl:hasValue <http://w3id.org/devops-infra/kos/status>
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :dbMonitorRole ;
+                                    owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                               owl:hasValue <http://w3id.org/devops-infra/kos/db-monitor-role>
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :dbMonitorStatus ;
+                                    owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                               owl:hasValue <http://w3id.org/devops-infra/kos/status>
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :dbType ;
+                                    owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                               owl:hasValue <http://w3id.org/devops-infra/kos/db-type>
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty <http://w3id.org/devops-infra/server#hostedBy> ;
+                                    owl:allValuesFrom <http://w3id.org/devops-infra/server#Server>
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty <http://w3id.org/devops-infra/core#createTime> ;
+                                    owl:allValuesFrom xsd:dateTime
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :dbInstanceVersion ;
+                                    owl:allValuesFrom xsd:string
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :serverIP ;
+                                    owl:allValuesFrom xsd:string
+                                  ] ;
+                  rdfs:label "Database Instance"@en .
+
+
+###  http://w3id.org/devops-infra/database#DatabaseReplica
+:DatabaseReplica rdf:type owl:Class ;
+                 rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :masterIP ;
+                                   owl:allValuesFrom xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :serverIP ;
+                                   owl:allValuesFrom xsd:string
+                                 ] ;
+                 rdfs:label "Database Replica"@en .
+
+
+###  http://w3id.org/devops-infra/database#DatabaseScanReport
+:DatabaseScanReport rdf:type owl:Class ;
+                    rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :backupStatus ;
+                                      owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                 owl:hasValue <http://w3id.org/devops-infra/kos/status>
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :dbBinaryLogChangeStatus ;
+                                      owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                 owl:hasValue <http://w3id.org/devops-infra/kos/status>
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :dbMonitorStatus ;
+                                      owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                 owl:hasValue <http://w3id.org/devops-infra/kos/status>
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :mysqlversionStatus ;
+                                      owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                 owl:hasValue <http://w3id.org/devops-infra/kos/status>
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :tableStatus ;
+                                      owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                 owl:hasValue <http://w3id.org/devops-infra/kos/status>
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :scanDate ;
+                                      owl:allValuesFrom xsd:dateTime
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :serverIP ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ;
+                    rdfs:label "Database Scan Report"@en .
+
+
+###  http://w3id.org/devops-infra/server#Server
+<http://w3id.org/devops-infra/server#Server> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://w3id.org/devops-infra/kos/db-monitor-role
+<http://w3id.org/devops-infra/kos/db-monitor-role> rdf:type owl:NamedIndividual ,
+                                                            <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  http://w3id.org/devops-infra/kos/db-type
+<http://w3id.org/devops-infra/kos/db-type> rdf:type owl:NamedIndividual ,
+                                                    <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  http://w3id.org/devops-infra/kos/status
+<http://w3id.org/devops-infra/kos/status> rdf:type owl:NamedIndividual ,
+                                                   <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

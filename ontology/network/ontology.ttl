@@ -1,0 +1,535 @@
+@prefix : <http://w3id.org/devops-infra/network#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://w3id.org/devops-infra/network> .
+
+<http://w3id.org/devops-infra/network> rdf:type owl:Ontology ;
+                                        owl:versionIRI <http://w3id.org/devops-infra/network/0.0.1> ;
+                                        owl:imports <http://w3id.org/devops-infra/core> ,
+                                                    <http://www.w3.org/2004/02/skos/core> ;
+                                        <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                  "Hu Peng (Huawei Research Ireland)" ,
+                                                                                  "Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                  "José Mora (Huawei Research Ireland)" ,
+                                                                                  "Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                  "Mingxue Wang (Huawei Research Ireland)" ,
+                                                                                  "Nicholas Burrett (Huawei Research Ireland)" ,
+                                                                                  "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                  "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)" ;
+                                        <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/network" ;
+                                        <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of the network-related parts of a DevOps infrastructure"@en ;
+                                        <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/network.owl" ;
+                                        <http://purl.org/dc/terms/issued> "2020-12-29" ;
+                                        <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" ;
+                                        <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopsnet" ;
+                                        <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/network#" ;
+                                        rdfs:comment "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" ;
+                                        owl:versionInfo "Initial version"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasFormat
+<http://purl.org/dc/terms/hasFormat> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://w3id.org/devops-infra/network#belongsToIPNetwork
+:belongsToIPNetwork rdf:type owl:ObjectProperty ;
+                    rdfs:domain :IPAddress ;
+                    rdfs:range :IPNetwork ;
+                    rdfs:comment "An IP address belongs to an IP network"@en ;
+                    rdfs:label "belongs to IP network"@en .
+
+
+###  http://w3id.org/devops-infra/network#containsFirewall
+:containsFirewall rdf:type owl:ObjectProperty ;
+                  rdfs:domain :FirewallCluster ;
+                  rdfs:range :Firewall ;
+                  rdfs:comment "A firewall cluster contains firewalls"@en ;
+                  rdfs:label "contains firewall"@en .
+
+
+###  http://w3id.org/devops-infra/network#exposesIPAddress
+:exposesIPAddress rdf:type owl:ObjectProperty ;
+                  rdfs:domain :PublicNATEntry ;
+                  rdfs:range :PublicIPAddress ;
+                  rdfs:comment "A public NAT Entry exposes a public IP address"@en ;
+                  rdfs:label "exposes IP Address"@en .
+
+
+###  http://w3id.org/devops-infra/network#hasDNSIPAddress
+:hasDNSIPAddress rdf:type owl:ObjectProperty ;
+                 rdfs:domain :DNSDomain ;
+                 rdfs:range :DNSIPAddress ;
+                 rdfs:comment "A DNS Domain has a DNS IP Address associated to it"@en ;
+                 rdfs:label "has DNS IP Address"@en .
+
+
+###  http://w3id.org/devops-infra/network#hasDNSProfile
+:hasDNSProfile rdf:type owl:ObjectProperty ;
+               rdfs:domain :DNSRecordConfiguration ;
+               rdfs:range :DNSConfigurationProfile ;
+               rdfs:comment "A DNS Record Configuration follows a DNS Configuration Profile"@en ;
+               rdfs:label "has DNS profile"@en .
+
+
+###  http://w3id.org/devops-infra/network#hasPrivateIP
+:hasPrivateIP rdf:type owl:ObjectProperty ;
+              rdfs:domain :VirtualFloatingIPAddress ;
+              rdfs:range :PrivateIPAddress ;
+              rdfs:comment "A virtual floating IP address has a private IP"@en ;
+              rdfs:label "has private IP"@en .
+
+
+###  http://w3id.org/devops-infra/network#inDataCenter
+:inDataCenter rdf:type owl:ObjectProperty ;
+              rdfs:range <http://w3id.org/devops-infra/data-center#DataCenter> ;
+              rdfs:comment "SSH Channels, Network Segments, public IP addresses, etc., can be provided by a data center"@en ;
+              rdfs:label "in data center"@en .
+
+
+###  http://w3id.org/devops-infra/network#ipStatus
+:ipStatus rdf:type owl:ObjectProperty ;
+          rdfs:domain :IPAddress ;
+          rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
+          rdfs:comment "The status of an IP address, normally associated to private and virtual IP addresses"@en ;
+          rdfs:label "IP status"@en .
+
+
+###  http://w3id.org/devops-infra/network#partOfIPNetwork
+:partOfIPNetwork rdf:type owl:ObjectProperty ;
+                 rdfs:domain :NetworkSegment ;
+                 rdfs:range :IPNetwork ;
+                 rdfs:comment "A network segment is part of an IP network"@en ;
+                 rdfs:label "part of an IP network"@en .
+
+
+###  http://w3id.org/devops-infra/network#providesAccessToIPNetwork
+:providesAccessToIPNetwork rdf:type owl:ObjectProperty ;
+                           rdfs:domain :SSHChannel ;
+                           rdfs:range :IPNetwork ;
+                           rdfs:comment "An SSH Channel provides access to an IP network"@en ;
+                           rdfs:label "provides access to IP network"@en .
+
+
+###  http://w3id.org/devops-infra/network#sshStatus
+:sshStatus rdf:type owl:ObjectProperty ;
+           rdfs:domain :IPAddress ;
+           rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
+           rdfs:comment "The status of an SSH connection associated to an IP address (nromally a private or virutal one)"@en ;
+           rdfs:label "SSH status"@en .
+
+
+###  http://w3id.org/devops-infra/network#translatesIntoPublicNATEntry
+:translatesIntoPublicNATEntry rdf:type owl:ObjectProperty ;
+                              rdfs:domain :FirewallCluster ;
+                              rdfs:range :PublicNATEntry ;
+                              rdfs:comment "A firewall cluster translates into a public NAT Entry"@en ;
+                              rdfs:label "translated into a public NAT entry"@en .
+
+
+###  http://w3id.org/devops-infra/network#usedForDNSDomain
+:usedForDNSDomain rdf:type owl:ObjectProperty ;
+                  rdfs:domain :DNSRecordConfiguration ;
+                  rdfs:range :DNSDomain ;
+                  rdfs:comment "A DNS Record Configuration is used for a DNS Domain"@en ;
+                  rdfs:label "used in DNS domain"@en .
+
+
+###  http://w3id.org/devops-infra/network#usesCertificate
+:usesCertificate rdf:type owl:ObjectProperty ;
+                 rdfs:domain :DNSIPAddress ;
+                 rdfs:range <http://w3id.org/devops-infra/certificate#DigitalCertificate> ;
+                 rdfs:comment "A DNS IP uses a certificate"@en ;
+                 rdfs:label "uses certificate"@en .
+
+
+###  http://w3id.org/devops-infra/organisation#site
+<http://w3id.org/devops-infra/organisation#site> rdf:type owl:ObjectProperty .
+
+
+###  http://w3id.org/devops-infra/product#serviceInstanceDeployment
+<http://w3id.org/devops-infra/product#serviceInstanceDeployment> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://w3id.org/devops-infra/network#class
+:class rdf:type owl:DatatypeProperty ;
+       rdfs:domain :DNSRecord ;
+       rdfs:range xsd:string ;
+       rdfs:comment "standard DNS class field (this is always IN)"@en ;
+       rdfs:label "DNS class"@en .
+
+
+###  http://w3id.org/devops-infra/network#destinationIP
+:destinationIP rdf:type owl:DatatypeProperty ;
+               rdfs:domain :PublicNATEntry ;
+               rdfs:range xsd:string ;
+               rdfs:comment "For a Public NAT Entry, this property determines the destination IP address for the translation"@en ;
+               rdfs:label "destination IP"@en .
+
+
+###  http://w3id.org/devops-infra/network#destinationPort
+:destinationPort rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :PublicNATEntry ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "For a Public NAT Entry, this property determines the port of the destination IP address for the translation"@en ;
+                 rdfs:label "destination port"@en .
+
+
+###  http://w3id.org/devops-infra/network#domainName
+:domainName rdf:type owl:DatatypeProperty ;
+            rdfs:domain :DNSDomain ;
+            rdfs:range xsd:string ;
+            rdfs:comment "For a DNS domain, the name"@en ;
+            rdfs:label "domain name"@en .
+
+
+###  http://w3id.org/devops-infra/network#enabled
+:enabled rdf:type owl:DatatypeProperty ;
+         rdfs:domain :DNSRecord ;
+         rdfs:range xsd:boolean ;
+         rdfs:comment "It determines whether a DNS Record is enabled"@en ;
+         rdfs:label "enabled"@en .
+
+
+###  http://w3id.org/devops-infra/network#ipAddress
+:ipAddress rdf:type owl:DatatypeProperty ;
+           rdfs:domain :IPAddress ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Specific IP address (xx.xx.xx.xx) for any IP Address resource"@en ;
+           rdfs:label "IP address"@en .
+
+
+###  http://w3id.org/devops-infra/network#ipAddressVersion
+:ipAddressVersion rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :IPAddress ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Version of the IP address (e.g., 4, 6)"@en ;
+                  rdfs:label "IP address version"@en .
+
+
+###  http://w3id.org/devops-infra/network#isMainMac
+:isMainMac rdf:type owl:DatatypeProperty ;
+           rdfs:domain :IPAddress ;
+           rdfs:range xsd:boolean ;
+           rdfs:comment "It determines whether the MAC address corresponds to the main MAC address"@en ;
+           rdfs:label "is main MAC"@en .
+
+
+###  http://w3id.org/devops-infra/network#macAddress
+:macAddress rdf:type owl:DatatypeProperty ;
+            rdfs:domain :IPAddress ;
+            rdfs:range xsd:string ;
+            rdfs:comment "MAC address associated to an IP address (normally a private or virtual address)"@en ;
+            rdfs:label "MAC address"@en .
+
+
+###  http://w3id.org/devops-infra/network#managementIP
+:managementIP rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Firewall ;
+              rdfs:range xsd:string ;
+              rdfs:comment "For a Firewall, the IP address where it can be managed"@en ;
+              rdfs:label "management IP"@en .
+
+
+###  http://w3id.org/devops-infra/network#networkIP
+:networkIP rdf:type owl:DatatypeProperty ;
+           rdfs:domain :IPNetwork ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Network IP address (xx.xx.xx.xx)"@en ;
+           rdfs:label "network IP"@en .
+
+
+###  http://w3id.org/devops-infra/network#networkMask
+:networkMask rdf:type owl:DatatypeProperty ;
+             rdfs:domain :IPNetwork ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Mask of an IP network"@en ;
+             rdfs:label "network mask"@en .
+
+
+###  http://w3id.org/devops-infra/network#port
+:port rdf:type owl:DatatypeProperty ;
+      rdfs:domain :DNSDomain ;
+      rdfs:range xsd:string ;
+      rdfs:comment "For a DNS domain, the port where it can be reached"@en ;
+      rdfs:label "port"@en .
+
+
+###  http://w3id.org/devops-infra/network#priority
+:priority rdf:type owl:DatatypeProperty ;
+          rdfs:domain :DNSRecord ;
+          rdfs:range xsd:float ;
+          rdfs:comment "The priority of the target host, lower value means more preferred"@en ;
+          rdfs:label "priority"@en .
+
+
+###  http://w3id.org/devops-infra/network#protocol
+:protocol rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:string ;
+          rdfs:comment "The protocol associated to a network element (e.g., a Public NAT entry, a DNS record, etc.). It is usually TCP or UDP"@en ;
+          rdfs:label "protocol"@en .
+
+
+###  http://w3id.org/devops-infra/network#recordType
+:recordType rdf:type owl:DatatypeProperty ;
+            rdfs:domain :DNSRecord ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Type of Record (this is always SRV)"@en ;
+            rdfs:label "type of record"@en .
+
+
+###  http://w3id.org/devops-infra/network#region
+:region rdf:type owl:DatatypeProperty ;
+        rdfs:domain :DNSIPAddress ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Region where a DNS IP operates"@en ;
+        rdfs:label "region"@en .
+
+
+###  http://w3id.org/devops-infra/network#service
+:service rdf:type owl:DatatypeProperty ;
+         rdfs:domain :DNSRecord ;
+         rdfs:range xsd:string ;
+         rdfs:comment "The symbolic name of the desired service"@en ;
+         rdfs:label "service"@en .
+
+
+###  http://w3id.org/devops-infra/network#sourceIP
+:sourceIP rdf:type owl:DatatypeProperty ;
+          rdfs:domain :PublicNATEntry ;
+          rdfs:range xsd:string ;
+          rdfs:comment "For a Public NAT Entry, this property determines the source IP address for the translation"@en ;
+          rdfs:label "source IP"@en .
+
+
+###  http://w3id.org/devops-infra/network#sourcePort
+:sourcePort rdf:type owl:DatatypeProperty ;
+            rdfs:domain :PublicNATEntry ;
+            rdfs:range xsd:string ;
+            rdfs:comment "For a Public NAT Entry, this property determines the port of the source IP address for the translation"@en ;
+            rdfs:label "source port"@en .
+
+
+###  http://w3id.org/devops-infra/network#supplier
+:supplier rdf:type owl:DatatypeProperty ;
+          rdfs:domain :PublicIPAddress ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Supplier of a public IP address"@en ;
+          rdfs:label "supplier"@en .
+
+
+###  http://w3id.org/devops-infra/network#target
+:target rdf:type owl:DatatypeProperty ;
+        rdfs:domain :DNSRecord ;
+        rdfs:range xsd:string ;
+        rdfs:comment "the canonical hostname of the machine providing the service"@en ;
+        rdfs:label "target"@en .
+
+
+###  http://w3id.org/devops-infra/network#ttl
+:ttl rdf:type owl:DatatypeProperty ;
+     rdfs:domain :DNSRecord ;
+     rdfs:range xsd:int ;
+     rdfs:comment "standard DNS time to live field"@en ;
+     rdfs:label "time to live"@en .
+
+
+###  http://w3id.org/devops-infra/network#usedTime
+:usedTime rdf:type owl:DatatypeProperty ;
+          rdfs:domain :PublicIPAddress ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Used time for a public IP address"@en ;
+          rdfs:label "used time"@en .
+
+
+###  http://w3id.org/devops-infra/network#vendor
+:vendor rdf:type owl:DatatypeProperty ;
+        rdfs:domain :IPAddress ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Vendor that provides an IP address (normally a private or virtual address)"@en ;
+        rdfs:label "vendor"@en .
+
+
+###  http://w3id.org/devops-infra/network#weight
+:weight rdf:type owl:DatatypeProperty ;
+        rdfs:domain :DNSRecord ;
+        rdfs:range xsd:float ;
+        rdfs:comment "A relative weight for records with the same priority, higher value means higher chance of getting picked"@en ;
+        rdfs:label "weight"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://w3id.org/devops-infra/certificate#DigitalCertificate
+<http://w3id.org/devops-infra/certificate#DigitalCertificate> rdf:type owl:Class .
+
+
+###  http://w3id.org/devops-infra/core#Resource
+<http://w3id.org/devops-infra/core#Resource> rdf:type owl:Class .
+
+
+###  http://w3id.org/devops-infra/data-center#DataCenter
+<http://w3id.org/devops-infra/data-center#DataCenter> rdf:type owl:Class .
+
+
+###  http://w3id.org/devops-infra/network#DNSConfigurationProfile
+:DNSConfigurationProfile rdf:type owl:Class .
+
+
+###  http://w3id.org/devops-infra/network#DNSDomain
+:DNSDomain rdf:type owl:Class ;
+           rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ;
+           rdfs:comment "A DNS is a directory of domain names that align with IP addresses (so called DNS IP in this ontology)"@en ;
+           rdfs:label "DNS Domain"@en .
+
+
+###  http://w3id.org/devops-infra/network#DNSIPAddress
+:DNSIPAddress rdf:type owl:Class ;
+              rdfs:subClassOf :IPAddress ;
+              rdfs:comment "The IP address of a DNS."@en ;
+              rdfs:label "DNS IP Address"@en .
+
+
+###  http://w3id.org/devops-infra/network#DNSPodDomain
+:DNSPodDomain rdf:type owl:Class ;
+              rdfs:subClassOf :DNSDomain ;
+              rdfs:comment "A DNS Pod domain"@en ;
+              rdfs:label "DNS Pod Domain"@en .
+
+
+###  http://w3id.org/devops-infra/network#DNSPodRecord
+:DNSPodRecord rdf:type owl:Class ;
+              rdfs:subClassOf :DNSRecord ;
+              rdfs:comment "A DNS Pod domain record."@en ;
+              rdfs:label "DNS Pod Record"@en .
+
+
+###  http://w3id.org/devops-infra/network#DNSRecord
+:DNSRecord rdf:type owl:Class ;
+           rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ;
+           rdfs:comment "A DNS record, which can be an A/AAAA record or a service (SRV) record, is a specification of data in the Domain Name System defining the location, i.e., the hostname and port number, of servers for specified services. It is defined in RFC 2782, and its type code is 33. Some Internet protocols such as the Session Initiation Protocol (SIP) and the Extensible Messaging and Presence Protocol (XMPP) often require SRV support by network elements."@en ;
+           rdfs:label "DNS Record"@en .
+
+
+###  http://w3id.org/devops-infra/network#DNSRecordConfiguration
+:DNSRecordConfiguration rdf:type owl:Class .
+
+
+###  http://w3id.org/devops-infra/network#Firewall
+:Firewall rdf:type owl:Class ;
+          rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ;
+          rdfs:comment "A firewall is a network security device that monitors incoming and outgoing network traffic and permits or blocks data packets based on a set of security rules."@en ;
+          rdfs:label "Firewall"@en .
+
+
+###  http://w3id.org/devops-infra/network#FirewallCluster
+:FirewallCluster rdf:type owl:Class ;
+                 rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ;
+                 rdfs:comment "A firewall cluster is a logical cluster of firewalls to allow high availability."@en ;
+                 rdfs:label "Firewall Cluster"@en .
+
+
+###  http://w3id.org/devops-infra/network#IPAddress
+:IPAddress rdf:type owl:Class ;
+           rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ;
+           rdfs:comment "An Internet Protocol address (IP address) is a numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication. An IP address serves two main functions: host or network interface identification and location addressing."@en ;
+           rdfs:label "IP Address"@en .
+
+
+###  http://w3id.org/devops-infra/network#IPNetwork
+:IPNetwork rdf:type owl:Class ;
+           rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ;
+           rdfs:comment "An IP network is a communication network that uses Internet Protocol (IP) to send and receive messages between one or more computers. As one of the most commonly used global networks, an IP network is implemented in Internet networks, local area networks (LAN) and enterprise networks. An IP network requires that all hosts or network nodes be configured with the TCP/IP suite."@en ;
+           rdfs:label "IP Network"@en .
+
+
+###  http://w3id.org/devops-infra/network#NetworkSegment
+:NetworkSegment rdf:type owl:Class ;
+                rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ;
+                rdfs:comment "A network segment is a portion of a computer network. The nature and extent of a segment depends on the nature of the network and the device or devices used to interconnect end stations."@en ;
+                rdfs:label "Network Segment"@en .
+
+
+###  http://w3id.org/devops-infra/network#PrivateIPAddress
+:PrivateIPAddress rdf:type owl:Class ;
+                  rdfs:subClassOf :IPAddress ;
+                  rdfs:comment "A private IP address is an internal address that is not routed on the Internet, working on a local network."@en ;
+                  rdfs:label "Private IP Address"@en .
+
+
+###  http://w3id.org/devops-infra/network#PublicIPAddress
+:PublicIPAddress rdf:type owl:Class ;
+                 rdfs:subClassOf :IPAddress ;
+                 rdfs:comment "A public IP address, in common parlance, is a globally routable unicast IP address, meaning that the address is not an address reserved for use in private networks, such as those reserved by RFC 1918, or the various IPv6 address formats of local scope or site-local scope, for example for link-local addressing. Public IP addresses may be used for communication between hosts on the global Internet."@en ;
+                 rdfs:label "Public IP Address"@en .
+
+
+###  http://w3id.org/devops-infra/network#PublicNATEntry
+:PublicNATEntry rdf:type owl:Class ;
+                rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ;
+                rdfs:comment "Network address translation (NAT) is a method of remapping an IP address space into another by modifying network address information in the IP header of packets while they are in transit across a traffic routing device. A Public NAT Entry contains information about the wahy in which a source IP address and port is transformed into a destination IP address and port"@en ;
+                rdfs:label "Public NAT Entry"@en .
+
+
+###  http://w3id.org/devops-infra/network#SSHChannel
+:SSHChannel rdf:type owl:Class ;
+            rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ;
+            rdfs:comment "A secure channel over an unsecured network by using a client–server architecture, connecting an SSH client application with an SSH server"@en ;
+            rdfs:label "SSH Channel"@en .
+
+
+###  http://w3id.org/devops-infra/network#VirtualFloatingIPAddress
+:VirtualFloatingIPAddress rdf:type owl:Class ;
+                          rdfs:subClassOf :IPAddress ;
+                          rdfs:comment "A virtual (floating) IP address is an IP address that doesn't correspond to an actual physical network interface. Uses for VIPs include network address translation (especially, one-to-many NAT), fault-tolerance, and mobility."@en ;
+                          rdfs:label "Virtual Floating IP Address"@en .
+
+
+###  http://w3id.org/devops-infra/organisation#Site
+<http://w3id.org/devops-infra/organisation#Site> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

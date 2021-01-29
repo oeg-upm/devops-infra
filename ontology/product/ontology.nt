@@ -1,0 +1,576 @@
+<http://w3id.org/devops-infra/product> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/devops-infra/product> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/devops-infra/product/0.0.1> .
+<http://w3id.org/devops-infra/product> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/devops-infra/core> .
+<http://w3id.org/devops-infra/product> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
+<http://w3id.org/devops-infra/product> <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/product> <http://purl.org/dc/elements/1.1/creator> "Hu Peng (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/product> <http://purl.org/dc/elements/1.1/creator> "Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/product> <http://purl.org/dc/elements/1.1/creator> "José Mora (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/product> <http://purl.org/dc/elements/1.1/creator> "Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/product> <http://purl.org/dc/elements/1.1/creator> "Mingxue Wang (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/product> <http://purl.org/dc/elements/1.1/creator> "Nicholas Burrett (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/product> <http://purl.org/dc/elements/1.1/creator> "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/product> <http://purl.org/dc/elements/1.1/creator> "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/product> <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/product" .
+<http://w3id.org/devops-infra/product> <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of the business offering of a company, including the offered services and microservices"@en .
+<http://w3id.org/devops-infra/product> <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/product.owl" .
+<http://w3id.org/devops-infra/product> <http://purl.org/dc/terms/issued> "2020-11-19" .
+<http://w3id.org/devops-infra/product> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" .
+<http://w3id.org/devops-infra/product> <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopsprod" .
+<http://w3id.org/devops-infra/product> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/product#" .
+<http://w3id.org/devops-infra/product> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" .
+<http://w3id.org/devops-infra/product> <http://www.w3.org/2002/07/owl#versionInfo> "Initial version"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/hasFormat
+<http://purl.org/dc/terms/hasFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/devops-infra/organisation#domain
+<http://w3id.org/devops-infra/organisation#domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://w3id.org/devops-infra/organisation#site
+<http://w3id.org/devops-infra/organisation#site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://w3id.org/devops-infra/organisation#stage
+<http://w3id.org/devops-infra/organisation#stage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://w3id.org/devops-infra/organisation#tenant
+<http://w3id.org/devops-infra/organisation#tenant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://w3id.org/devops-infra/product#autoScalingHostConfig
+<http://w3id.org/devops-infra/product#autoScalingHostConfig> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/product#autoScalingHostConfig> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/product#MicroService> .
+<http://w3id.org/devops-infra/product#autoScalingHostConfig> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<http://w3id.org/devops-infra/product#autoScalingHostConfig> <http://www.w3.org/2000/01/rdf-schema#comment> "Auto scaling host configuration for a microservice"@en .
+<http://w3id.org/devops-infra/product#autoScalingHostConfig> <http://www.w3.org/2000/01/rdf-schema#label> "autoscaling host config"@en .
+# 
+# http://w3id.org/devops-infra/product#calls
+<http://w3id.org/devops-infra/product#calls> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/product#calls> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/devops-infra/product#dependsOn> .
+<http://w3id.org/devops-infra/product#calls> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/product#Service> .
+<http://w3id.org/devops-infra/product#calls> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/product#MicroService> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/product#Service> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/devops-infra/product#calls> <http://www.w3.org/2000/01/rdf-schema#comment> "A service may call other services or microservices"@en .
+<http://w3id.org/devops-infra/product#calls> <http://www.w3.org/2000/01/rdf-schema#label> "calls"@en .
+# 
+# http://w3id.org/devops-infra/product#clusterType
+<http://w3id.org/devops-infra/product#clusterType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/product#clusterType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/product#ServiceCluster> .
+<http://w3id.org/devops-infra/product#clusterType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid6 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/cluster-type> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/devops-infra/product#dependsOn
+<http://w3id.org/devops-infra/product#dependsOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/product#dependsOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/product#Product> .
+<http://w3id.org/devops-infra/product#dependsOn> <http://www.w3.org/2000/01/rdf-schema#range> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid8 <http://www.w3.org/2002/07/owl#unionOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/product#MicroService> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/product#Service> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/devops-infra/product#dependsOn> <http://www.w3.org/2000/01/rdf-schema#comment> "A product depends on services and microservices in order to run"@en .
+<http://w3id.org/devops-infra/product#dependsOn> <http://www.w3.org/2000/01/rdf-schema#label> "depends on"@en .
+# 
+# http://w3id.org/devops-infra/product#deployedInstanceOf
+<http://w3id.org/devops-infra/product#deployedInstanceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/product#deployedInstanceOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A microservice instance, a service instance or a business product instance are instances of microservices, services or business products deployed in some infrastructure"@en .
+<http://w3id.org/devops-infra/product#deployedInstanceOf> <http://www.w3.org/2000/01/rdf-schema#label> "deployed instance of"@en .
+# 
+# http://w3id.org/devops-infra/product#hasOffering
+<http://w3id.org/devops-infra/product#hasOffering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/product#hasOffering> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/product#Product> .
+<http://w3id.org/devops-infra/product#hasOffering> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/product#ProductOffering> .
+# 
+# http://w3id.org/devops-infra/product#hasProductVersion
+<http://w3id.org/devops-infra/product#hasProductVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/product#hasProductVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/product#ProductOffering> .
+<http://w3id.org/devops-infra/product#hasProductVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/product#ProductVersion> .
+# 
+# http://w3id.org/devops-infra/product#hasResourceRequirements
+<http://w3id.org/devops-infra/product#hasResourceRequirements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/product#hasResourceRequirements> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/product#BusinessProduct> .
+<http://w3id.org/devops-infra/product#hasResourceRequirements> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<http://w3id.org/devops-infra/product#hasResourceRequirements> <http://www.w3.org/2000/01/rdf-schema#comment> "The resource requirements neede by a business product"@en .
+<http://w3id.org/devops-infra/product#hasResourceRequirements> <http://www.w3.org/2000/01/rdf-schema#label> "has resource requirements"@en .
+# 
+# http://w3id.org/devops-infra/product#offeredBy
+<http://w3id.org/devops-infra/product#offeredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/product#offeredBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<http://w3id.org/devops-infra/product#offeredBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Business products, product offerings and services are offered by a scope (and its corresponding business department)"@en .
+<http://w3id.org/devops-infra/product#offeredBy> <http://www.w3.org/2000/01/rdf-schema#label> "offered by"@en .
+# 
+# http://w3id.org/devops-infra/product#runsInServiceCluster
+<http://w3id.org/devops-infra/product#runsInServiceCluster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/product#runsInServiceCluster> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/product#MicroService> .
+<http://w3id.org/devops-infra/product#runsInServiceCluster> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/product#ServiceCluster> .
+<http://w3id.org/devops-infra/product#runsInServiceCluster> <http://www.w3.org/2000/01/rdf-schema#comment> "A Microservice may run in a service cluster"@en .
+<http://w3id.org/devops-infra/product#runsInServiceCluster> <http://www.w3.org/2000/01/rdf-schema#label> "runs in service cluster"@en .
+# 
+# http://w3id.org/devops-infra/product#serviceType
+<http://w3id.org/devops-infra/product#serviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/product#serviceType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid13 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/service-type> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/product#serviceType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of a service. It can be any of the following, according to the corresponding SKOS Concept Scheme: common, middleware, HWS"@en .
+<http://w3id.org/devops-infra/product#serviceType> <http://www.w3.org/2000/01/rdf-schema#label> "service type"@en .
+# 
+# http://w3id.org/devops-infra/product#uses
+<http://w3id.org/devops-infra/product#uses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/product#uses> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/devops-infra/product#dependsOn> .
+<http://w3id.org/devops-infra/product#uses> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/product#Service> .
+<http://w3id.org/devops-infra/product#uses> <http://www.w3.org/2000/01/rdf-schema#comment> "A Product Offering or a Business Product use services"@en .
+<http://w3id.org/devops-infra/product#uses> <http://www.w3.org/2000/01/rdf-schema#label> "uses"@en .
+# 
+# http://w3id.org/devops-infra/product#usesResourceCapacity
+<http://w3id.org/devops-infra/product#usesResourceCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/product#usesResourceCapacity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/product#BusinessProduct> .
+<http://w3id.org/devops-infra/product#usesResourceCapacity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<http://w3id.org/devops-infra/product#usesResourceCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "The resource capacity required by a business product"@en .
+<http://w3id.org/devops-infra/product#usesResourceCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "uses resource capacity"@en .
+# 
+# http://w3id.org/devops-infra/product#usesServiceModule
+<http://w3id.org/devops-infra/product#usesServiceModule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/product#usesServiceModule> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/product#MicroService> .
+<http://w3id.org/devops-infra/product#usesServiceModule> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<http://w3id.org/devops-infra/product#usesServiceModule> <http://www.w3.org/2000/01/rdf-schema#comment> "The service modules that are being used by a product, a product offering, a service or a microservice"@en .
+<http://w3id.org/devops-infra/product#usesServiceModule> <http://www.w3.org/2000/01/rdf-schema#label> "uses service module"@en .
+# 
+# http://w3id.org/devops-infra/product#usesServiceModuleVersion
+<http://w3id.org/devops-infra/product#usesServiceModuleVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/product#usesServiceModuleVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/product#ProductVersion> .
+<http://w3id.org/devops-infra/product#usesServiceModuleVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<http://w3id.org/devops-infra/product#usesServiceModuleVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "A product version may use several versions of the service modules that are being used by the product"@en .
+<http://w3id.org/devops-infra/product#usesServiceModuleVersion> <http://www.w3.org/2000/01/rdf-schema#label> "uses service module version"@en .
+# 
+# http://w3id.org/devops-infra/server#balancedBy
+<http://w3id.org/devops-infra/server#balancedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://w3id.org/devops-infra/server#deployedInServer
+<http://w3id.org/devops-infra/server#deployedInServer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/devops-infra/product#ip
+<http://w3id.org/devops-infra/product#ip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/product#ip> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/product#MicroServiceRunningInstanceDeployment> .
+<http://w3id.org/devops-infra/product#ip> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/product#ip> <http://www.w3.org/2000/01/rdf-schema#comment> "IP address where a microservice instance is running"@en .
+<http://w3id.org/devops-infra/product#ip> <http://www.w3.org/2000/01/rdf-schema#label> "IP"@en .
+# 
+# http://w3id.org/devops-infra/product#isDeleted
+<http://w3id.org/devops-infra/product#isDeleted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/product#isDeleted> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://w3id.org/devops-infra/product#isDeleted> <http://www.w3.org/2000/01/rdf-schema#comment> "Property used to determine whether a (business) product offering, a service or a microservice are currently running or available, or they have been deleted from the corresponding catalogues and/or infrastructure"@en .
+<http://w3id.org/devops-infra/product#isDeleted> <http://www.w3.org/2000/01/rdf-schema#label> "is deleted"@en .
+# 
+# http://w3id.org/devops-infra/product#key
+<http://w3id.org/devops-infra/product#key> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/product#key> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/product#InfrastructureEncryptedItemDeployment> .
+<http://w3id.org/devops-infra/product#key> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/product#key> <http://www.w3.org/2000/01/rdf-schema#comment> "Key of a TerraFormInfraEncryptedItem" .
+<http://w3id.org/devops-infra/product#key> <http://www.w3.org/2000/01/rdf-schema#label> "key" .
+# 
+# http://w3id.org/devops-infra/product#port
+<http://w3id.org/devops-infra/product#port> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/product#port> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/product#MicroServiceRunningInstanceDeployment> .
+<http://w3id.org/devops-infra/product#port> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/product#port> <http://www.w3.org/2000/01/rdf-schema#comment> "Port where a microservice instance is running"@en .
+<http://w3id.org/devops-infra/product#port> <http://www.w3.org/2000/01/rdf-schema#label> "port"@en .
+# 
+# http://w3id.org/devops-infra/product#status
+<http://w3id.org/devops-infra/product#status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/product#status> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/product#MicroServiceRunningInstanceDeployment> .
+<http://w3id.org/devops-infra/product#status> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/product#status> <http://www.w3.org/2000/01/rdf-schema#comment> "Status of a running instance of a microservice in the TerraForm infrastructure"@en .
+<http://w3id.org/devops-infra/product#status> <http://www.w3.org/2000/01/rdf-schema#label> "status"@en .
+# 
+# http://w3id.org/devops-infra/product#value
+<http://w3id.org/devops-infra/product#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/product#value> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/product#InfrastructureEncryptedItemDeployment> .
+<http://w3id.org/devops-infra/product#value> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/product#value> <http://www.w3.org/2000/01/rdf-schema#comment> "value for the corresponding key of the TerraForm Encrypted Value"@en .
+<http://w3id.org/devops-infra/product#value> <http://www.w3.org/2000/01/rdf-schema#label> "value"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/devops-infra/core#Resource
+<http://w3id.org/devops-infra/core#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/devops-infra/organisation#Domain
+<http://w3id.org/devops-infra/organisation#Domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/devops-infra/product#BusinessProduct
+<http://w3id.org/devops-infra/product#BusinessProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/product#BusinessProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/product#BusinessProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#offeredBy> .
+_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<http://w3id.org/devops-infra/product#BusinessProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#isDeleted> .
+_:genid16 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid16 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://w3id.org/devops-infra/product#BusinessProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Business Product"@en .
+# 
+# http://w3id.org/devops-infra/product#BusinessProductInstance
+<http://w3id.org/devops-infra/product#BusinessProductInstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/product#BusinessProductInstance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/product#BusinessProductInstance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#deployedInstanceOf> .
+_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/product#BusinessProduct> .
+<http://w3id.org/devops-infra/product#BusinessProductInstance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#deployedInstanceOf> .
+_:genid18 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid18 <http://www.w3.org/2002/07/owl#onClass> <http://w3id.org/devops-infra/product#BusinessProduct> .
+<http://w3id.org/devops-infra/product#BusinessProductInstance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#isDeleted> .
+_:genid19 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid19 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://w3id.org/devops-infra/product#BusinessProductInstance> <http://www.w3.org/2000/01/rdf-schema#label> "Business Product Instance"@en .
+# 
+# http://w3id.org/devops-infra/product#BusinessProductInstanceDeployment
+<http://w3id.org/devops-infra/product#BusinessProductInstanceDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/product#BusinessProductInstanceDeployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/product#BusinessProductInstance> .
+<http://w3id.org/devops-infra/product#BusinessProductInstanceDeployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/organisation#site> .
+_:genid20 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<http://w3id.org/devops-infra/product#BusinessProductInstanceDeployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/organisation#stage> .
+_:genid21 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<http://w3id.org/devops-infra/product#BusinessProductInstanceDeployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/organisation#tenant> .
+_:genid22 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<http://w3id.org/devops-infra/product#BusinessProductInstanceDeployment> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of a business product running/deployed on a specific infrastructure (e.g., TerraForm)"@en .
+<http://w3id.org/devops-infra/product#BusinessProductInstanceDeployment> <http://www.w3.org/2000/01/rdf-schema#label> "Business Product Instance Deployment"@en .
+# 
+# http://w3id.org/devops-infra/product#InfrastructureEncryptedItemDeployment
+<http://w3id.org/devops-infra/product#InfrastructureEncryptedItemDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/product#InfrastructureEncryptedItemDeployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/product#InfrastructureEncryptedItemDeployment> <http://www.w3.org/2000/01/rdf-schema#comment> "Deployment of an Infrastructure Encrypted Item (e.g., in TerraForm)"@en .
+<http://w3id.org/devops-infra/product#InfrastructureEncryptedItemDeployment> <http://www.w3.org/2000/01/rdf-schema#label> "Infrastructure Encrypted Item Deployment"@en .
+# 
+# http://w3id.org/devops-infra/product#MicroService
+<http://w3id.org/devops-infra/product#MicroService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/product#MicroService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/product#MicroService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#runsInServiceCluster> .
+_:genid23 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<http://w3id.org/devops-infra/product#MicroService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#isDeleted> .
+_:genid24 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid24 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://w3id.org/devops-infra/product#MicroService> <http://www.w3.org/2000/01/rdf-schema#label> "Microservice"@en .
+# 
+# http://w3id.org/devops-infra/product#MicroServiceInstance
+<http://w3id.org/devops-infra/product#MicroServiceInstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/product#MicroServiceInstance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/product#MicroServiceInstance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#deployedInstanceOf> .
+_:genid25 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/product#MicroService> .
+<http://w3id.org/devops-infra/product#MicroServiceInstance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#runsInServiceCluster> .
+_:genid26 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/product#ServiceCluster> .
+<http://w3id.org/devops-infra/product#MicroServiceInstance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#deployedInstanceOf> .
+_:genid27 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid27 <http://www.w3.org/2002/07/owl#onClass> <http://w3id.org/devops-infra/product#MicroService> .
+<http://w3id.org/devops-infra/product#MicroServiceInstance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#isDeleted> .
+_:genid28 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid28 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://w3id.org/devops-infra/product#MicroServiceInstance> <http://www.w3.org/2000/01/rdf-schema#label> "Microservice Instance"@en .
+# 
+# http://w3id.org/devops-infra/product#MicroServiceInstanceDeployment
+<http://w3id.org/devops-infra/product#MicroServiceInstanceDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/product#MicroServiceInstanceDeployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/product#MicroServiceInstance> .
+<http://w3id.org/devops-infra/product#MicroServiceInstanceDeployment> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of a microservice running/deployed on a specifid infrastructure (e.g., Terraform)"@en .
+<http://w3id.org/devops-infra/product#MicroServiceInstanceDeployment> <http://www.w3.org/2000/01/rdf-schema#label> "Microservice Instance Deployment"@en .
+# 
+# http://w3id.org/devops-infra/product#MicroServiceRunningInstanceDeployment
+<http://w3id.org/devops-infra/product#MicroServiceRunningInstanceDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/product#MicroServiceRunningInstanceDeployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/product#MicroServiceRunningInstanceDeployment> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of a microservice running/deployed on a specific infrastructure (e.g., TerraForm)"@en .
+<http://w3id.org/devops-infra/product#MicroServiceRunningInstanceDeployment> <http://www.w3.org/2000/01/rdf-schema#label> "Microservice Running Instance Deployment"@en .
+# 
+# http://w3id.org/devops-infra/product#Product
+<http://w3id.org/devops-infra/product#Product> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/product#Product> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/product#Product> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#dependsOn> .
+_:genid29 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid30 <http://www.w3.org/2002/07/owl#unionOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/product#MicroService> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/product#Service> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/devops-infra/product#Product> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#hasOffering> .
+_:genid33 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/product#ProductOffering> .
+<http://w3id.org/devops-infra/product#Product> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#usesServiceModule> .
+_:genid34 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<http://w3id.org/devops-infra/product#Product> <http://www.w3.org/2000/01/rdf-schema#label> "Product"@en .
+# 
+# http://w3id.org/devops-infra/product#ProductOffering
+<http://w3id.org/devops-infra/product#ProductOffering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/product#ProductOffering> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/product#ProductOffering> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#hasProductVersion> .
+_:genid35 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/product#ProductVersion> .
+<http://w3id.org/devops-infra/product#ProductOffering> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#offeredBy> .
+_:genid36 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<http://w3id.org/devops-infra/product#ProductOffering> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#uses> .
+_:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/product#Service> .
+<http://w3id.org/devops-infra/product#ProductOffering> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#usesServiceModule> .
+_:genid38 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<http://w3id.org/devops-infra/product#ProductOffering> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#isDeleted> .
+_:genid39 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid39 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://w3id.org/devops-infra/product#ProductOffering> <http://www.w3.org/2000/01/rdf-schema#label> "Product Offering"@en .
+# 
+# http://w3id.org/devops-infra/product#ProductVersion
+<http://w3id.org/devops-infra/product#ProductVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/product#ProductVersion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/product#ProductVersion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#usesServiceModuleVersion> .
+_:genid40 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<http://w3id.org/devops-infra/product#ProductVersion> <http://www.w3.org/2000/01/rdf-schema#label> "Product Version"@en .
+# 
+# http://w3id.org/devops-infra/product#Service
+<http://w3id.org/devops-infra/product#Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/product#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/product#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#calls> .
+_:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid42 <http://www.w3.org/2002/07/owl#unionOf> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/product#MicroService> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/product#Service> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/devops-infra/product#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#offeredBy> .
+_:genid45 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<http://w3id.org/devops-infra/product#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#serviceType> .
+_:genid46 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid47 .
+_:genid47 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid49 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/service-type> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/product#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#usesServiceModule> .
+_:genid51 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<http://w3id.org/devops-infra/product#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#isDeleted> .
+_:genid52 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid52 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://w3id.org/devops-infra/product#Service> <http://www.w3.org/2000/01/rdf-schema#label> "Service"@en .
+# 
+# http://w3id.org/devops-infra/product#ServiceCluster
+<http://w3id.org/devops-infra/product#ServiceCluster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/product#ServiceCluster> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/product#ServiceCluster> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/organisation#domain> .
+_:genid53 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/organisation#Domain> .
+<http://w3id.org/devops-infra/product#ServiceCluster> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#clusterType> .
+_:genid54 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid55 .
+_:genid55 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid57 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/cluster-type> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/product#ServiceCluster> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#balancedBy> .
+_:genid59 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/server#ServerLoadBalancer> .
+<http://w3id.org/devops-infra/product#ServiceCluster> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid60 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#deployedInServer> .
+_:genid60 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/server#Server> .
+<http://w3id.org/devops-infra/product#ServiceCluster> <http://www.w3.org/2000/01/rdf-schema#comment> "A Service Cluster is a logical cluster that provides high availability to services"@en .
+<http://w3id.org/devops-infra/product#ServiceCluster> <http://www.w3.org/2000/01/rdf-schema#label> "Service Cluster"@en .
+# 
+# http://w3id.org/devops-infra/product#ServiceInstance
+<http://w3id.org/devops-infra/product#ServiceInstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/product#ServiceInstance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/product#ServiceInstance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid61 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#deployedInstanceOf> .
+_:genid61 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/product#Service> .
+<http://w3id.org/devops-infra/product#ServiceInstance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid62 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#deployedInstanceOf> .
+_:genid62 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid62 <http://www.w3.org/2002/07/owl#onClass> <http://w3id.org/devops-infra/product#Service> .
+<http://w3id.org/devops-infra/product#ServiceInstance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid63 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/product#isDeleted> .
+_:genid63 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid63 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://w3id.org/devops-infra/product#ServiceInstance> <http://www.w3.org/2000/01/rdf-schema#label> "Service Instance"@en .
+# 
+# http://w3id.org/devops-infra/product#ServiceInstanceDeployment
+<http://w3id.org/devops-infra/product#ServiceInstanceDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/product#ServiceInstanceDeployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/product#ServiceInstance> .
+<http://w3id.org/devops-infra/product#ServiceInstanceDeployment> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of a service running/deployed on a specific infrastructure (e.g., TerraForm)"@en .
+<http://w3id.org/devops-infra/product#ServiceInstanceDeployment> <http://www.w3.org/2000/01/rdf-schema#label> "Service Instance Deployment"@en .
+# 
+# http://w3id.org/devops-infra/server#Server
+<http://w3id.org/devops-infra/server#Server> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/server#Server> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+# 
+# http://w3id.org/devops-infra/server#ServerLoadBalancer
+<http://w3id.org/devops-infra/server#ServerLoadBalancer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/server#ServerLoadBalancer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/devops-infra/kos/cluster-type
+<http://w3id.org/devops-infra/kos/cluster-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/devops-infra/kos/cluster-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+# 
+# http://w3id.org/devops-infra/kos/service-type
+<http://w3id.org/devops-infra/kos/service-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/devops-infra/kos/service-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

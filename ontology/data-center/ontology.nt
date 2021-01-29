@@ -1,0 +1,583 @@
+<http://w3id.org/devops-infra/data-center> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/devops-infra/data-center> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/devops-infra/data-center/0.0.1> .
+<http://w3id.org/devops-infra/data-center> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/devops-infra/core> .
+<http://w3id.org/devops-infra/data-center> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
+<http://w3id.org/devops-infra/data-center> <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/data-center> <http://purl.org/dc/elements/1.1/creator> "Hu Peng (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/data-center> <http://purl.org/dc/elements/1.1/creator> "Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/data-center> <http://purl.org/dc/elements/1.1/creator> "José Mora (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/data-center> <http://purl.org/dc/elements/1.1/creator> "Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/data-center> <http://purl.org/dc/elements/1.1/creator> "Mingxue Wang (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/data-center> <http://purl.org/dc/elements/1.1/creator> "Nicholas Burrett (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/data-center> <http://purl.org/dc/elements/1.1/creator> "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/data-center> <http://purl.org/dc/elements/1.1/creator> "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/data-center> <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/database" .
+<http://w3id.org/devops-infra/data-center> <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of data centers"@en .
+<http://w3id.org/devops-infra/data-center> <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/data-center.owl" .
+<http://w3id.org/devops-infra/data-center> <http://purl.org/dc/terms/issued> "2020-12-30" .
+<http://w3id.org/devops-infra/data-center> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" .
+<http://w3id.org/devops-infra/data-center> <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopsdc" .
+<http://w3id.org/devops-infra/data-center> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/data-center#" .
+<http://w3id.org/devops-infra/data-center> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" .
+<http://w3id.org/devops-infra/data-center> <http://www.w3.org/2002/07/owl#versionInfo> "Initial version"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/hasFormat
+<http://purl.org/dc/terms/hasFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/devops-infra/data-center#allowsConnectionVia
+<http://w3id.org/devops-infra/data-center#allowsConnectionVia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/data-center#allowsConnectionVia> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#allowsConnectionVia> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/data-center#DataCenterConnection> .
+<http://w3id.org/devops-infra/data-center#allowsConnectionVia> <http://www.w3.org/2000/01/rdf-schema#comment> "The Data Center can be connected through a Data Center Connection"@en .
+<http://w3id.org/devops-infra/data-center#allowsConnectionVia> <http://www.w3.org/2000/01/rdf-schema#label> "allows connection via"@en .
+# 
+# http://w3id.org/devops-infra/data-center#connectionType
+<http://w3id.org/devops-infra/data-center#connectionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/data-center#connectionType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#DataCenterConnection> .
+<http://w3id.org/devops-infra/data-center#connectionType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/connection-type> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/data-center#connectionType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of connection established to a Data Center. It can be MSTP (Multiple Spanning Tree Protocol), IPSecVPN, etc."@en .
+<http://w3id.org/devops-infra/data-center#connectionType> <http://www.w3.org/2000/01/rdf-schema#label> "connection type"@en .
+# 
+# http://w3id.org/devops-infra/data-center#dataCenterConnectionType
+<http://w3id.org/devops-infra/data-center#dataCenterConnectionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://w3id.org/devops-infra/data-center#dataCenterType
+<http://w3id.org/devops-infra/data-center#dataCenterType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://w3id.org/devops-infra/data-center#datacenterType
+<http://w3id.org/devops-infra/data-center#datacenterType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/data-center#datacenterType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#datacenterType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid7 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/data-center-type> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/data-center#datacenterType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of a Data Center. For example, it may be and Internet Data Center (IDC) or a Virtual Data Center providing Infrastructure as a Service (IAAS)."@en .
+<http://w3id.org/devops-infra/data-center#datacenterType> <http://www.w3.org/2000/01/rdf-schema#label> "data center type"@en .
+# 
+# http://w3id.org/devops-infra/data-center#endInternetDataCenter
+<http://w3id.org/devops-infra/data-center#endInternetDataCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://w3id.org/devops-infra/data-center#hosts
+<http://w3id.org/devops-infra/data-center#hosts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/data-center#hosts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#hosts> <http://www.w3.org/2000/01/rdf-schema#range> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid9 <http://www.w3.org/2002/07/owl#unionOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/core#Resource> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/core#ResourceGroup> .
+<http://w3id.org/devops-infra/core#ResourceGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/devops-infra/data-center#hosts> <http://www.w3.org/2000/01/rdf-schema#comment> "A Data Center may host a number of physical and logical items (frames, servers, service clusters, BGPAS, etc.)"@en .
+<http://w3id.org/devops-infra/data-center#hosts> <http://www.w3.org/2000/01/rdf-schema#label> "hosts"@en .
+# 
+# http://w3id.org/devops-infra/data-center#locatedIn
+<http://w3id.org/devops-infra/data-center#locatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/data-center#locatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#locatedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/data-center#Location> .
+<http://w3id.org/devops-infra/data-center#locatedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "The Data Center is placed in a Location, with a specific GPS position, city, region and timezone"@en .
+<http://w3id.org/devops-infra/data-center#locatedIn> <http://www.w3.org/2000/01/rdf-schema#label> "located In"@en .
+# 
+# http://w3id.org/devops-infra/data-center#locatedInSite
+<http://w3id.org/devops-infra/data-center#locatedInSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/data-center#locatedInSite> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#locatedInSite> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/organisation#Site> .
+<http://w3id.org/devops-infra/data-center#locatedInSite> <http://www.w3.org/2000/01/rdf-schema#comment> "The Data Center is located in a Site"@en .
+<http://w3id.org/devops-infra/data-center#locatedInSite> <http://www.w3.org/2000/01/rdf-schema#label> "located in site"@en .
+# 
+# http://w3id.org/devops-infra/data-center#offersIPAddress
+<http://w3id.org/devops-infra/data-center#offersIPAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/data-center#offersIPAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#offersIPAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/network#IPAddress> .
+<http://w3id.org/devops-infra/data-center#offersIPAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "The Data Center offers IP Addresses to its customers"@en .
+<http://w3id.org/devops-infra/data-center#offersIPAddress> <http://www.w3.org/2000/01/rdf-schema#label> "offers IP Address"@en .
+# 
+# http://w3id.org/devops-infra/data-center#offersIPNetwork
+<http://w3id.org/devops-infra/data-center#offersIPNetwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/data-center#offersIPNetwork> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#offersIPNetwork> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/network#IPNetwork> .
+<http://w3id.org/devops-infra/data-center#offersIPNetwork> <http://www.w3.org/2000/01/rdf-schema#comment> "The Data Center offers an IP Network to its customers"@en .
+<http://w3id.org/devops-infra/data-center#offersIPNetwork> <http://www.w3.org/2000/01/rdf-schema#label> "offers IP Network"@en .
+# 
+# http://w3id.org/devops-infra/data-center#offersNetworkSegment
+<http://w3id.org/devops-infra/data-center#offersNetworkSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/data-center#offersNetworkSegment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#offersNetworkSegment> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/network#NetworkSegment> .
+<http://w3id.org/devops-infra/data-center#offersNetworkSegment> <http://www.w3.org/2000/01/rdf-schema#comment> "The Data Center offers a Network Segment to its customers"@en .
+<http://w3id.org/devops-infra/data-center#offersNetworkSegment> <http://www.w3.org/2000/01/rdf-schema#label> "offers Network Segment"@en .
+# 
+# http://w3id.org/devops-infra/data-center#offersSSHChannel
+<http://w3id.org/devops-infra/data-center#offersSSHChannel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/data-center#offersSSHChannel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#offersSSHChannel> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/network#SSHChannel> .
+<http://w3id.org/devops-infra/data-center#offersSSHChannel> <http://www.w3.org/2000/01/rdf-schema#comment> "The Data Center offers an SSH Channel to its customers"@en .
+<http://w3id.org/devops-infra/data-center#offersSSHChannel> <http://www.w3.org/2000/01/rdf-schema#label> "offers SSH Channel"@en .
+# 
+# http://w3id.org/devops-infra/data-center#startInternetDataCenter
+<http://w3id.org/devops-infra/data-center#startInternetDataCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://w3id.org/devops-infra/data-center#supports
+<http://w3id.org/devops-infra/data-center#supports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/data-center#supports> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#supports> <http://www.w3.org/2000/01/rdf-schema#range> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid12 <http://www.w3.org/2002/07/owl#unionOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/resource-requirement#ResourceCapacity> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/resource-requirement#ResourceRequirement> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/devops-infra/data-center#supports> <http://www.w3.org/2000/01/rdf-schema#comment> "The Data Center may support specific resource requirements or capacity"@en .
+<http://w3id.org/devops-infra/data-center#supports> <http://www.w3.org/2000/01/rdf-schema#label> "supports"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/devops-infra/core#createTime
+<http://w3id.org/devops-infra/core#createTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://w3id.org/devops-infra/core#updateTime
+<http://w3id.org/devops-infra/core#updateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://w3id.org/devops-infra/data-center#city
+<http://w3id.org/devops-infra/data-center#city> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/data-center#city> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#Location> .
+<http://w3id.org/devops-infra/data-center#city> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#city> <http://www.w3.org/2000/01/rdf-schema#comment> "The city where a location is"@en .
+<http://w3id.org/devops-infra/data-center#city> <http://www.w3.org/2000/01/rdf-schema#label> "city"@en .
+# 
+# http://w3id.org/devops-infra/data-center#cloudAvailabilityZone
+<http://w3id.org/devops-infra/data-center#cloudAvailabilityZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/data-center#cloudAvailabilityZone> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#cloudAvailabilityZone> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#cloudAvailabilityZone> <http://www.w3.org/2000/01/rdf-schema#comment> "The cloud availability zone for the Data Center"@en .
+<http://w3id.org/devops-infra/data-center#cloudAvailabilityZone> <http://www.w3.org/2000/01/rdf-schema#label> "cloud availability zone"@en .
+# 
+# http://w3id.org/devops-infra/data-center#cloudRegion
+<http://w3id.org/devops-infra/data-center#cloudRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/data-center#cloudRegion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#cloudRegion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#cloudRegion> <http://www.w3.org/2000/01/rdf-schema#comment> "The cloud region where the Data Center operates"@en .
+<http://w3id.org/devops-infra/data-center#cloudRegion> <http://www.w3.org/2000/01/rdf-schema#label> "cloud region"@en .
+# 
+# http://w3id.org/devops-infra/data-center#hostPrefix
+<http://w3id.org/devops-infra/data-center#hostPrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/data-center#hostPrefix> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#hostPrefix> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#hostPrefix> <http://www.w3.org/2000/01/rdf-schema#comment> "The host prefix for the Data Center"@en .
+<http://w3id.org/devops-infra/data-center#hostPrefix> <http://www.w3.org/2000/01/rdf-schema#label> "host prefix"@en .
+# 
+# http://w3id.org/devops-infra/data-center#linuxPrimaryDataCenterIP
+<http://w3id.org/devops-infra/data-center#linuxPrimaryDataCenterIP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/data-center#linuxPrimaryDataCenterIP> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#linuxPrimaryDataCenterIP> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#linuxPrimaryDataCenterIP> <http://www.w3.org/2000/01/rdf-schema#comment> "The IP address of the Linux primary Data Center"@en .
+<http://w3id.org/devops-infra/data-center#linuxPrimaryDataCenterIP> <http://www.w3.org/2000/01/rdf-schema#label> "Linux primary data center IP address"@en .
+# 
+# http://w3id.org/devops-infra/data-center#managementIP
+<http://w3id.org/devops-infra/data-center#managementIP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/data-center#managementIP> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#managementIP> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#managementIP> <http://www.w3.org/2000/01/rdf-schema#comment> "The IP address to manage the Data Center"@en .
+<http://w3id.org/devops-infra/data-center#managementIP> <http://www.w3.org/2000/01/rdf-schema#label> "management IP address"@en .
+# 
+# http://w3id.org/devops-infra/data-center#networkServiceProviderIP
+<http://w3id.org/devops-infra/data-center#networkServiceProviderIP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/data-center#networkServiceProviderIP> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#networkServiceProviderIP> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#networkServiceProviderIP> <http://www.w3.org/2000/01/rdf-schema#comment> "The IP address of the Network Service Provider of the Data Center"@en .
+<http://w3id.org/devops-infra/data-center#networkServiceProviderIP> <http://www.w3.org/2000/01/rdf-schema#label> "network service provider IP address"@en .
+# 
+# http://w3id.org/devops-infra/data-center#networkTimeProtocolIP
+<http://w3id.org/devops-infra/data-center#networkTimeProtocolIP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/data-center#networkTimeProtocolIP> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#networkTimeProtocolIP> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#networkTimeProtocolIP> <http://www.w3.org/2000/01/rdf-schema#comment> "The IP address of the Network Time Protocol used by the Data Center"@en .
+<http://w3id.org/devops-infra/data-center#networkTimeProtocolIP> <http://www.w3.org/2000/01/rdf-schema#label> "network time protocol IP address"@en .
+# 
+# http://w3id.org/devops-infra/data-center#primaryDataCenterHostname
+<http://w3id.org/devops-infra/data-center#primaryDataCenterHostname> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/data-center#primaryDataCenterHostname> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#primaryDataCenterHostname> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#primaryDataCenterHostname> <http://www.w3.org/2000/01/rdf-schema#comment> "The hostname of the primary Data Center"@en .
+<http://w3id.org/devops-infra/data-center#primaryDataCenterHostname> <http://www.w3.org/2000/01/rdf-schema#label> "primary data center hostname"@en .
+# 
+# http://w3id.org/devops-infra/data-center#primaryDataCenterIP
+<http://w3id.org/devops-infra/data-center#primaryDataCenterIP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/data-center#primaryDataCenterIP> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#primaryDataCenterIP> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#primaryDataCenterIP> <http://www.w3.org/2000/01/rdf-schema#comment> "The IP address of the primary Data Center"@en .
+<http://w3id.org/devops-infra/data-center#primaryDataCenterIP> <http://www.w3.org/2000/01/rdf-schema#label> "primary data center IP address"@en .
+# 
+# http://w3id.org/devops-infra/data-center#region
+<http://w3id.org/devops-infra/data-center#region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/data-center#region> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#Location> .
+<http://w3id.org/devops-infra/data-center#region> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#region> <http://www.w3.org/2000/01/rdf-schema#comment> "The region where a location is"@en .
+<http://w3id.org/devops-infra/data-center#region> <http://www.w3.org/2000/01/rdf-schema#label> "region"@en .
+# 
+# http://w3id.org/devops-infra/data-center#timezone
+<http://w3id.org/devops-infra/data-center#timezone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/data-center#timezone> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#Location> .
+<http://w3id.org/devops-infra/data-center#timezone> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#timezone> <http://www.w3.org/2000/01/rdf-schema#comment> "The timezone where a location is"@en .
+<http://w3id.org/devops-infra/data-center#timezone> <http://www.w3.org/2000/01/rdf-schema#label> "timezone"@en .
+# 
+# http://w3id.org/devops-infra/data-center#vendorAvailabilityZone
+<http://w3id.org/devops-infra/data-center#vendorAvailabilityZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/data-center#vendorAvailabilityZone> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#vendorAvailabilityZone> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#vendorAvailabilityZone> <http://www.w3.org/2000/01/rdf-schema#comment> "The vendor availability zone for the Data Center"@en .
+<http://w3id.org/devops-infra/data-center#vendorAvailabilityZone> <http://www.w3.org/2000/01/rdf-schema#label> "vendor availability zone"@en .
+# 
+# http://w3id.org/devops-infra/data-center#vendorRegion
+<http://w3id.org/devops-infra/data-center#vendorRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/data-center#vendorRegion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#vendorRegion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#vendorRegion> <http://www.w3.org/2000/01/rdf-schema#comment> "The vendor region where the Data Center operates"@en .
+<http://w3id.org/devops-infra/data-center#vendorRegion> <http://www.w3.org/2000/01/rdf-schema#label> "vendor region"@en .
+# 
+# http://w3id.org/devops-infra/data-center#windowsPrimaryDataCenterIP
+<http://w3id.org/devops-infra/data-center#windowsPrimaryDataCenterIP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/data-center#windowsPrimaryDataCenterIP> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#windowsPrimaryDataCenterIP> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#windowsPrimaryDataCenterIP> <http://www.w3.org/2000/01/rdf-schema#comment> "The IP address of the Windows primary Data Center"@en .
+<http://w3id.org/devops-infra/data-center#windowsPrimaryDataCenterIP> <http://www.w3.org/2000/01/rdf-schema#label> "Windows primary data center IP address"@en .
+# 
+# http://w3id.org/devops-infra/network#bandwidth
+<http://w3id.org/devops-infra/network#bandwidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://w3id.org/devops-infra/network#delay
+<http://w3id.org/devops-infra/network#delay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://w3id.org/devops-infra/network#packetLoss
+<http://w3id.org/devops-infra/network#packetLoss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/devops-infra/core#Resource
+<http://w3id.org/devops-infra/core#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/devops-infra/core#ResourceGroup
+# 
+# http://w3id.org/devops-infra/data-center#DataCenter
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#allowsConnectionVia> .
+_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/data-center#DataCenterConnection> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#dataCenterType> .
+_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid19 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/data-center-type> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#hosts> .
+_:genid21 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/server#Server> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#hosts> .
+_:genid22 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid23 <http://www.w3.org/2002/07/owl#unionOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/core#Resource> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/core#ResourceGroup> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#locatedIn> .
+_:genid26 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/data-center#Location> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#locatedInSite> .
+_:genid27 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/organisation#Site> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#offersIPAddress> .
+_:genid28 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/network#IPAddress> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#offersIPNetwork> .
+_:genid29 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/network#IPNetwork> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#offersNetworkSegment> .
+_:genid30 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/network#NetworkSegment> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#offersSSHChannel> .
+_:genid31 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/network#SSHChannel> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#supports> .
+_:genid32 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/resource-requirement#ResourceRequirement> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#supports> .
+_:genid33 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid34 <http://www.w3.org/2002/07/owl#unionOf> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/resource-requirement#ResourceCapacity> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/resource-requirement#ResourceRequirement> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#cloudAvailabilityZone> .
+_:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#cloudRegion> .
+_:genid38 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#hostPrefix> .
+_:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#linuxPrimaryDataCenterIP> .
+_:genid40 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#managementIP> .
+_:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#networkServiceProviderIP> .
+_:genid42 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#networkTimeProtocolIP> .
+_:genid43 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#primaryDataCenterHostname> .
+_:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#primaryDataCenterIP> .
+_:genid45 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#vendorAvailabilityZone> .
+_:genid46 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#vendorRegion> .
+_:genid47 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#windowsPrimaryDataCenterIP> .
+_:genid48 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/network#bandwidth> .
+_:genid49 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#comment> "A Data Center is a facility that centralizes an organization's shared IT operations and equipment for the purposes of storing, processing, and disseminating data and applications. Because they house an organization's most critical and proprietary assets, data centers are vital to the continuity of daily operations."@en .
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/2000/01/rdf-schema#label> "Data Center"@en .
+# 
+# http://w3id.org/devops-infra/data-center#DataCenterConnection
+<http://w3id.org/devops-infra/data-center#DataCenterConnection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/data-center#DataCenterConnection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/data-center#DataCenterConnection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#dataCenterConnectionType> .
+_:genid50 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid51 .
+_:genid51 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid53 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/connection-type> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/data-center#DataCenterConnection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#endInternetDataCenter> .
+_:genid55 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#DataCenterConnection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#startInternetDataCenter> .
+_:genid56 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/data-center#DataCenter> .
+<http://w3id.org/devops-infra/data-center#DataCenterConnection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/network#bandwidth> .
+_:genid57 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#DataCenterConnection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/network#delay> .
+_:genid58 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#DataCenterConnection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/network#packetLoss> .
+_:genid59 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#DataCenterConnection> <http://www.w3.org/2000/01/rdf-schema#comment> "A Data Center Connection describes the details of connections that may be established to a data center, including the protocol used, bandwidth available, packet loss data and delay data."@en .
+<http://w3id.org/devops-infra/data-center#DataCenterConnection> <http://www.w3.org/2000/01/rdf-schema#label> "Data Center Connection"@en .
+# 
+# http://w3id.org/devops-infra/data-center#Location
+<http://w3id.org/devops-infra/data-center#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/data-center#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/data-center#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid60 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#city> .
+_:genid60 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid61 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#region> .
+_:genid61 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid62 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/data-center#timezone> .
+_:genid62 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/data-center#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid63 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> .
+_:genid63 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#double> .
+<http://w3id.org/devops-infra/data-center#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid64 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2003/01/geo/wgs84_pos#long> .
+_:genid64 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#double> .
+<http://w3id.org/devops-infra/data-center#Location> <http://www.w3.org/2000/01/rdf-schema#comment> "A Location where a Data Center is placed. This may be substituted in the future by an equivalent class from a general ontology, such as schema.org"@en .
+<http://w3id.org/devops-infra/data-center#Location> <http://www.w3.org/2000/01/rdf-schema#label> "Location"@en .
+# 
+# http://w3id.org/devops-infra/network#IPAddress
+<http://w3id.org/devops-infra/network#IPAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/devops-infra/network#IPNetwork
+<http://w3id.org/devops-infra/network#IPNetwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/devops-infra/network#NetworkSegment
+<http://w3id.org/devops-infra/network#NetworkSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/devops-infra/network#SSHChannel
+<http://w3id.org/devops-infra/network#SSHChannel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/devops-infra/organisation#Site
+<http://w3id.org/devops-infra/organisation#Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/devops-infra/resource-requirement#ResourceCapacity
+<http://w3id.org/devops-infra/resource-requirement#ResourceCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/devops-infra/resource-requirement#ResourceRequirement
+<http://w3id.org/devops-infra/resource-requirement#ResourceRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/devops-infra/server#Server
+<http://w3id.org/devops-infra/server#Server> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/devops-infra/kos/connection-type
+<http://w3id.org/devops-infra/kos/connection-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/devops-infra/kos/connection-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+# 
+# http://w3id.org/devops-infra/kos/data-center-type
+<http://w3id.org/devops-infra/kos/data-center-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/devops-infra/kos/data-center-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

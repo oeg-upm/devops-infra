@@ -1,0 +1,851 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://w3id.org/devops-infra/certificate#"
+     xml:base="http://w3id.org/devops-infra/certificate"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://w3id.org/devops-infra/certificate">
+        <owl:versionIRI rdf:resource="http://w3id.org/devops-infra/certificate/0.0.1"/>
+        <owl:imports rdf:resource="http://w3id.org/devops-infra/core"/>
+        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <dc:creator>David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator>Hu Peng (Huawei Research Ireland)</dc:creator>
+        <dc:creator>Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator>José Mora (Huawei Research Ireland)</dc:creator>
+        <dc:creator>Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator>Mingxue Wang (Huawei Research Ireland)</dc:creator>
+        <dc:creator>Nicholas Burrett (Huawei Research Ireland)</dc:creator>
+        <dc:creator>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator>Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:identifier>http://w3id.org/devops-infra/certificate</dc:identifier>
+        <dc:title xml:lang="en">Ontology for the representation of aspects related to certificates (SSL, CFCA, etc.)</dc:title>
+        <terms:hasFormat>http://w3id.org/devops-infra/certificate.owl</terms:hasFormat>
+        <terms:issued>2020-12-10</terms:issued>
+        <terms:license>https://creativecommons.org/licenses/by/4.0</terms:license>
+        <vann:preferredNamespacePrefix>devopscert</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://w3id.org/devops-infra/certificate#</vann:preferredNamespaceUri>
+        <rdfs:comment>This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland</rdfs:comment>
+        <owl:versionInfo xml:lang="en">Initial version</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasFormat -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasFormat"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#containsCertificate -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/certificate#containsCertificate">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificateBundle"/>
+        <rdfs:range rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+        <rdfs:comment xml:lang="en">A Digital Certificate Bundle contains several Digital Certificates</rdfs:comment>
+        <rdfs:label xml:lang="en">contains certificate</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#hasCertificateDeployment -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/certificate#hasCertificateDeployment">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+        <rdfs:range rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificateDeployment"/>
+        <rdfs:comment xml:lang="en">A digital certificate can be deployed somewhere, and this is registered as a Digital Certificate Deployment</rdfs:comment>
+        <rdfs:label xml:lang="en">has certificate deployment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#hasCertificateSigningRequest -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/certificate#hasCertificateSigningRequest">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+        <rdfs:range rdf:resource="http://w3id.org/devops-infra/certificate#CertificateSigningRequest"/>
+        <rdfs:comment xml:lang="en">A Digital Certificate is obtained after a Certificate Signing Request</rdfs:comment>
+        <rdfs:label xml:lang="en">has certificate signing request</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#usesDigitalCertificate -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/certificate#usesDigitalCertificate">
+        <rdfs:range rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+        <rdfs:comment xml:lang="en">Different types of entities (domains, servers, etc.) make use of one or several digital certificates</rdfs:comment>
+        <rdfs:label xml:lang="en">uses digital certificate</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#certApplyPerson -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#certApplyPerson">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The person in charge of the certificate application</rdfs:comment>
+        <rdfs:label xml:lang="en">certificate application person</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#certDeployPerson -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#certDeployPerson">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The person in charge of the certificate deployment</rdfs:comment>
+        <rdfs:label xml:lang="en">certificate deployment person</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#certDeployRegion -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#certDeployRegion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The region for the certificate deployment</rdfs:comment>
+        <rdfs:label xml:lang="en">certificate deployment region</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#certPurchaseNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#certPurchaseNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The purchase number of the certificate</rdfs:comment>
+        <rdfs:label xml:lang="en">certificate purchase number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#certType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#certType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The type of certificate</rdfs:comment>
+        <rdfs:label xml:lang="en">certificate type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#certificateContent -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#certificateContent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The content of the certificate</rdfs:comment>
+        <rdfs:label xml:lang="en">certificate content</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#domain -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#domain">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Also referred to as common name (CN). It is the fully qualified domain name for the certificate, the deployment of the certificate, or the certificate signing request. For example, *.example.org</rdfs:comment>
+        <rdfs:label xml:lang="en">domain</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#expiryDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#expiryDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">The expiry date of the certificate</rdfs:comment>
+        <rdfs:label xml:lang="en">expiry date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#issuer -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#issuer">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The issuer of the certificate, also known as issuer common name</rdfs:comment>
+        <rdfs:label xml:lang="en">issuer</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#issuerOrganisation -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#issuerOrganisation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The organisation that issues the certificate</rdfs:comment>
+        <rdfs:label xml:lang="en">issuer organisation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#issuerOrganisationUnit -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#issuerOrganisationUnit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The organisational unit that issues the certificate</rdfs:comment>
+        <rdfs:label xml:lang="en">issuer organisation unit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#privateKey -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#privateKey">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The private key of the certificate or the certificate signing request</rdfs:comment>
+        <rdfs:label xml:lang="en">private key</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#publicKey -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#publicKey">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/certificate#CertificateSigningRequest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The public key of the certificate signing request</rdfs:comment>
+        <rdfs:label xml:lang="en">public key</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#realSerialNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#realSerialNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The real serial number of the certificate</rdfs:comment>
+        <rdfs:label xml:lang="en">real serial number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#region -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#region">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The region for the certificate, the deployment of the certificate, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">region</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#serialNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#serialNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The serial number of the certificate</rdfs:comment>
+        <rdfs:label xml:lang="en">serial number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#service -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#service">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificateDeployment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The service for which the Digital Certificate is deployed</rdfs:comment>
+        <rdfs:label xml:lang="en">service</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#site -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#site">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificateDeployment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The site for which the Digital Certificate is deployed</rdfs:comment>
+        <rdfs:label xml:lang="en">site</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#startDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#startDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">The start date of the certificate</rdfs:comment>
+        <rdfs:label xml:lang="en">start date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#user -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#user">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The user of the certificate or certificate signing request, also known as user common name</rdfs:comment>
+        <rdfs:label xml:lang="en">user</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#userOrganisation -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#userOrganisation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Also known as Organization Name (O). It is usually the legal name of a company or entity that is using the certificate, or has made the certificate signing request, and should commonly include any suffixes such as Ltd., Inc., or Corp. For example, Example Organisation, Ltd</rdfs:comment>
+        <rdfs:label xml:lang="en">user organisation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#userOrganisationCountry -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#userOrganisationCountry">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Also referred to as country (C). The two-letter ISO code for the country of the organisation that uses the Digital Certificate or has made the Certificate Signing Request. For instance, ES</rdfs:comment>
+        <rdfs:label xml:lang="en">user organisation country</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#userOrganisationEmail -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#userOrganisationEmail">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Also referred to as email address (EMAIL). The email contact (usually the certificate administrator or IT department) for the country of the organisation that uses the Digital Certificate or has made the Certificate Signing Request. For instance, info@example.org</rdfs:comment>
+        <rdfs:label xml:lang="en">user organisation email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#userOrganisationLocality -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#userOrganisationLocality">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Also referred to as locality (L). The name of the locality (town, city, village, etc.) of the organisation that uses the Digital Certificate or has made the Certificate Signing Request. For instance, Boadilla del Monte</rdfs:comment>
+        <rdfs:label xml:lang="en">user organisation locality</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#userOrganisationState -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#userOrganisationState">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Also referred to as state (S). The name of the locality (province, region, county or state) of the organisation that uses the Digital Certificate or has made the Certificate Signing Requestte or Certificate Signing Request. For instance, Comunidad de Madrid</rdfs:comment>
+        <rdfs:label xml:lang="en">user organisation state</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#userOrganisationUnit -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#userOrganisationUnit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Also known as Organizational Unit (OU). It is the organisational unit of the user of the certificate or certificate signing request. It is an internal  department/division name. For example, IT Support</rdfs:comment>
+        <rdfs:label xml:lang="en">user organisation unit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#valid -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#valid">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">It determines whether the certificate is valid</rdfs:comment>
+        <rdfs:label xml:lang="en">valid</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#vendor -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/certificate#vendor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The vendor for the certificate</rdfs:comment>
+        <rdfs:label xml:lang="en">vendor</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#CFCACertificate -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/certificate#CFCACertificate">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+        <rdfs:comment xml:lang="en">CFCA is a national Authority safety Certification organization which is established by the people&apos;s bank of China. CFCA certificates are issued by this organisation</rdfs:comment>
+        <rdfs:label xml:lang="en">CFCA (China Financial Certification Authority) Certificate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#CertificateSigningRequest -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/certificate#CertificateSigningRequest">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#privateKey"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#publicKey"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#user"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#userOrganisation"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#userOrganisationCountry"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#userOrganisationEmail"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#userOrganisationLocality"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#userOrganisationState"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#userOrganisationUnit"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Certificate Signing Request (also known as CSR or certification request) is a message sent from an applicant to a registration authority of the public key infrastructure in order to apply for a digital identity certificate. It usually contains the public key for which the certificate should be issued, identifying information (such as a domain name) and integrity protection (e.g., a digital signature). The most common format for CSRs is the PKCS #10 specification; another is the Signed Public Key and Challenge SPKAC format generated by some web browsers.</rdfs:comment>
+        <rdfs:label xml:lang="en">Certificate Signing Request</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#DigitalCertificate -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/certificate#DigitalCertificate">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#hasCertificateSigningRequest"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/devops-infra/certificate#CertificateSigningRequest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#certApplyPerson"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#certDeployPerson"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#certDeployRegion"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#certPurchaseNumber"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#certType"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#certificateContent"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#domain"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#expiryDate"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#issuer"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#issuerOrganisation"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#issuerOrganisationUnit"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#privateKey"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#realSerialNumber"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#region"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#serialNumber"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#startDate"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#user"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#userOrganisation"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#userOrganisationUnit"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#valid"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#vendor"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Digital Certificates are electronic credentials that bind the identity of the certificate owner to a pair of electronic encryption keys, (one public and one private), that can be used to encrypt and sign information digitally.</rdfs:comment>
+        <rdfs:label xml:lang="en">Digital Certificate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#DigitalCertificateBundle -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/certificate#DigitalCertificateBundle">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#containsCertificate"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A digital certificate bundle is a file that contains root and intermediate certificates.</rdfs:comment>
+        <rdfs:label xml:lang="en">Digital Certificate Bundle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#DigitalCertificateDeployment -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/certificate#DigitalCertificateDeployment">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#domain"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#service"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/certificate#site"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Digital Certificate Deployment is the result of deploying a digital certificate in a specific domain and for a specific service on a site.</rdfs:comment>
+        <rdfs:label xml:lang="en">Digital Certificate Deployment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/certificate#SSLCertificate -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/certificate#SSLCertificate">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
+        <rdfs:comment xml:lang="en">An SSL certificate is a data file hosted in a website&apos;s origin server. SSL certificates make SSL/TLS encryption possible, and they contain the website&apos;s public key and the website&apos;s identity, along with related information. Devices attempting to communicate with the origin server will reference this file to obtain the public key and verify the server&apos;s identity. The private key is kept secret and secure.</rdfs:comment>
+        <rdfs:label xml:lang="en">SSL Certificate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/core#Resource -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/core#Resource"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+

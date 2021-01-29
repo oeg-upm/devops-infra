@@ -1,0 +1,1078 @@
+<h2 id="crossreference" class="list">Cross reference for Ontology for the representation of the hardware items related to a DevOps infrastructure classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Ontology for the representation of the hardware items related to a DevOps infrastructure.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#F5Hardware" title="http://w3id.org/devops-infra/hardware#F5Hardware">F5 Hardware</a>
+      </li>
+      <li>
+         <a href="#Firewall" title="http://w3id.org/devops-infra/hardware#Firewall">Firewall</a>
+      </li>
+      <li>
+         <a href="#Frame" title="http://w3id.org/devops-infra/hardware#Frame">Frame</a>
+      </li>
+      <li>
+         <a href="#HardwareBatch"
+            title="http://w3id.org/devops-infra/hardware#HardwareBatch">Hardware Batch</a>
+      </li>
+      <li>
+         <a href="#HardwareItem"
+            title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+      </li>
+      <li>
+         <a href="#NetCard" title="http://w3id.org/devops-infra/hardware#NetCard">Net Card</a>
+      </li>
+      <li>
+         <a href="#Switch" title="http://w3id.org/devops-infra/hardware#Switch">Switch</a>
+      </li>
+   </ul>
+   <div class="entity" id="F5Hardware">
+      <h3>F5 Hardware<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#F5Hardware</p>
+      <div class="comment">
+         <span class="markdown">A specific type of hardware from the company F5.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#HardwareItem"
+               title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#f5Type" title="http://w3id.org/devops-infra/hardware#f5Type">F5 type</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#belongsToF5Cluster"
+               title="http://w3id.org/devops-infra/hardware#belongsToF5Cluster">belongs to F5 cluster</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Firewall">
+      <h3>Firewall<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#Firewall</p>
+      <div class="comment">
+         <span class="markdown">A specific type of hardware that (network security device) that monitors incoming and outgoing network traffic and permits or blocks data packets based on a set of security rules. Its purpose is to establish a barrier between the internal network and incoming traffic from external sources (such as the internet) in order to block malicious traffic like viruses and hackers.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#HardwareItem"
+               title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#belongsToFirewallCluster"
+               title="http://w3id.org/devops-infra/hardware#belongsToFirewallCluster">belongs to firewall cluster</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#firewallType"
+               title="http://w3id.org/devops-infra/hardware#firewallType">firewall type</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Frame">
+      <h3>Frame<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#Frame</p>
+      <div class="comment">
+         <span class="markdown">A frame, also known as rack, is a supporting framework that holds hardware modules. In this context, racks typically contain servers, hard disk drives and other computing equipment. Racks make it possible to contain a lot of equipment in a small physical footprint without requiring shelving.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#power" title="http://w3id.org/devops-infra/hardware#power">power</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hostedInFrame"
+               title="http://w3id.org/devops-infra/hardware#hostedInFrame">hosted in frame</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HardwareBatch">
+      <h3>Hardware Batch<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#HardwareBatch</p>
+      <div class="comment">
+         <span class="markdown">A Hardware Batch is a batch under which some hardware infrastructure was bought, kept for administrative purposes or to detect potential problems in the same batch</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#contractNumber"
+               title="http://w3id.org/devops-infra/hardware#contractNumber">contract number</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hardwareType"
+               title="http://w3id.org/devops-infra/hardware#hardwareType">hardware type</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#batch" title="http://w3id.org/devops-infra/hardware#batch">batch</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HardwareItem">
+      <h3>Hardware Item<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#HardwareItem</p>
+      <div class="comment">
+         <span class="markdown">A Hardware Item (also known as Server Hardware) is any type of hardware that can be found in a frame. It also includes firewalls, switches, F5 machines, etc.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#F5Hardware" title="http://w3id.org/devops-infra/hardware#F5Hardware">F5 Hardware</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Firewall" title="http://w3id.org/devops-infra/hardware#Firewall">Firewall</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Switch" title="http://w3id.org/devops-infra/hardware#Switch">Switch</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#batch" title="http://w3id.org/devops-infra/hardware#batch">batch</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#cabPosition"
+               title="http://w3id.org/devops-infra/hardware#cabPosition">cab position</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#dateEnabled"
+               title="http://w3id.org/devops-infra/hardware#dateEnabled">date enabled</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#dateOnShelf"
+               title="http://w3id.org/devops-infra/hardware#dateOnShelf">date on shelf</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#highAvailabilityStatus"
+               title="http://w3id.org/devops-infra/hardware#highAvailabilityStatus">high availability status</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hostedInFrame"
+               title="http://w3id.org/devops-infra/hardware#hostedInFrame">hosted in frame</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#machineType"
+               title="http://w3id.org/devops-infra/hardware#machineType">machine type</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#managementIP"
+               title="http://w3id.org/devops-infra/hardware#managementIP">management IP</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#managementLink"
+               title="http://w3id.org/devops-infra/hardware#managementLink">management link</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#managementPort"
+               title="http://w3id.org/devops-infra/hardware#managementPort">management port</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#status" title="http://w3id.org/devops-infra/hardware#status">status</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#unitPosition"
+               title="http://w3id.org/devops-infra/hardware#unitPosition">unit position</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NetCard">
+      <h3>Net Card<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#NetCard</p>
+      <div class="comment">
+         <span class="markdown">A network interface controller (NIC, also known as a network interface card, network adapter, LAN adapter or physical network interface, and by similar terms) is a computer hardware component that connects a computer to a computer network.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#vlanID" title="http://w3id.org/devops-infra/hardware#vlanID">VLAN ID</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#bandwidth" title="http://w3id.org/devops-infra/hardware#bandwidth">bandwidth</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#macAddress" title="http://w3id.org/devops-infra/hardware#macAddress">mac address</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#port" title="http://w3id.org/devops-infra/hardware#port">port</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#switch" title="http://w3id.org/devops-infra/hardware#switch">switch</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#networkCard"
+               title="http://w3id.org/devops-infra/hardware#networkCard">network card</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Switch">
+      <h3>Switch<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#Switch</p>
+      <div class="comment">
+         <span class="markdown">A network switch (also called switching hub, bridging hub, and, by the IEEE, MAC bridge) is networking hardware that connects devices on a computer network by using packet switching to receive and forward data to the destination device</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#HardwareItem"
+               title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#switchType" title="http://w3id.org/devops-infra/hardware#switchType">switch type</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#uplinkBandwidth"
+               title="http://w3id.org/devops-infra/hardware#uplinkBandwidth">uplink bandwidth</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#switch" title="http://w3id.org/devops-infra/hardware#switch">switch</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#batch" title="http://w3id.org/devops-infra/hardware#batch">batch</a>
+      </li>
+      <li>
+         <a href="#belongsToF5Cluster"
+            title="http://w3id.org/devops-infra/hardware#belongsToF5Cluster">belongs to F5 cluster</a>
+      </li>
+      <li>
+         <a href="#belongsToFirewallCluster"
+            title="http://w3id.org/devops-infra/hardware#belongsToFirewallCluster">belongs to firewall cluster</a>
+      </li>
+      <li>
+         <a href="#highAvailabilityStatus"
+            title="http://w3id.org/devops-infra/hardware#highAvailabilityStatus">high availability status</a>
+      </li>
+      <li>
+         <a href="#hostedInFrame"
+            title="http://w3id.org/devops-infra/hardware#hostedInFrame">hosted in frame</a>
+      </li>
+      <li>
+         <a href="#networkCard"
+            title="http://w3id.org/devops-infra/hardware#networkCard">network card</a>
+      </li>
+      <li>
+         <a href="#status" title="http://w3id.org/devops-infra/hardware#status">status</a>
+      </li>
+      <li>
+         <a href="#switch" title="http://w3id.org/devops-infra/hardware#switch">switch</a>
+      </li>
+   </ul>
+   <div class="entity" id="batch">
+      <h3>batch<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#batch</p>
+      <div class="comment">
+         <span class="markdown">Batch in which a hardware item was acquired</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#HardwareItem"
+                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#HardwareBatch"
+                  title="http://w3id.org/devops-infra/hardware#HardwareBatch">Hardware Batch</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="belongsToF5Cluster">
+      <h3>belongs to F5 cluster<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#belongsToF5Cluster</p>
+      <div class="comment">
+         <span class="markdown">An F5 Cluster to which an F5 hardware belongs</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#F5Hardware" title="http://w3id.org/devops-infra/hardware#F5Hardware">F5 Hardware</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://w3id.org/devops-infra/network-security-load-balancing#F5Cluster">f5 cluster</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="belongsToFirewallCluster">
+      <h3>belongs to firewall cluster<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#belongsToFirewallCluster</p>
+      <div class="comment">
+         <span class="markdown">A Firewall Cluster to which a Firewall belongs</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Firewall" title="http://w3id.org/devops-infra/hardware#Firewall">Firewall</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://w3id.org/devops-infra/network-security-load-balancing#FirewallCluster">firewall cluster</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="highAvailabilityStatus">
+      <h3>high availability status<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#highAvailabilityStatus</p>
+      <div class="comment">
+         <span class="markdown">It determines the status of high availability of any hardware item. Normally it will be Standby or Active</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#HardwareItem"
+                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hostedInFrame">
+      <h3>hosted in frame<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#hostedInFrame</p>
+      <div class="comment">
+         <span class="markdown">Frame where a Hardware Item is physically located</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#HardwareItem"
+                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Frame" title="http://w3id.org/devops-infra/hardware#Frame">Frame</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="networkCard">
+      <h3>network card<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#networkCard</p>
+      <div class="comment">
+         <span class="markdown">The network card to which an item (e.g., Switch, Physical Server, etc.) is connected</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#NetCard" title="http://w3id.org/devops-infra/hardware#NetCard">Net Card</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="status">
+      <h3>status<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#status</p>
+      <div class="comment">
+         <span class="markdown">Status of a Hardware Item</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#HardwareItem"
+                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="switch">
+      <h3>switch<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#switch</p>
+      <div class="comment">
+         <span class="markdown">A switch to which a network card is attached</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#NetCard" title="http://w3id.org/devops-infra/hardware#NetCard">Net Card</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Switch" title="http://w3id.org/devops-infra/hardware#Switch">Switch</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#bandwidth" title="http://w3id.org/devops-infra/hardware#bandwidth">bandwidth</a>
+      </li>
+      <li>
+         <a href="#cabPosition"
+            title="http://w3id.org/devops-infra/hardware#cabPosition">cab position</a>
+      </li>
+      <li>
+         <a href="#contractNumber"
+            title="http://w3id.org/devops-infra/hardware#contractNumber">contract number</a>
+      </li>
+      <li>
+         <a href="#dateEnabled"
+            title="http://w3id.org/devops-infra/hardware#dateEnabled">date enabled</a>
+      </li>
+      <li>
+         <a href="#dateOnShelf"
+            title="http://w3id.org/devops-infra/hardware#dateOnShelf">date on shelf</a>
+      </li>
+      <li>
+         <a href="#f5Type" title="http://w3id.org/devops-infra/hardware#f5Type">F5 type</a>
+      </li>
+      <li>
+         <a href="#firewallType"
+            title="http://w3id.org/devops-infra/hardware#firewallType">firewall type</a>
+      </li>
+      <li>
+         <a href="#hardwareType"
+            title="http://w3id.org/devops-infra/hardware#hardwareType">hardware type</a>
+      </li>
+      <li>
+         <a href="#macAddress" title="http://w3id.org/devops-infra/hardware#macAddress">mac address</a>
+      </li>
+      <li>
+         <a href="#machineType"
+            title="http://w3id.org/devops-infra/hardware#machineType">machine type</a>
+      </li>
+      <li>
+         <a href="#managementIP"
+            title="http://w3id.org/devops-infra/hardware#managementIP">management IP</a>
+      </li>
+      <li>
+         <a href="#managementLink"
+            title="http://w3id.org/devops-infra/hardware#managementLink">management link</a>
+      </li>
+      <li>
+         <a href="#managementPort"
+            title="http://w3id.org/devops-infra/hardware#managementPort">management port</a>
+      </li>
+      <li>
+         <a href="#port" title="http://w3id.org/devops-infra/hardware#port">port</a>
+      </li>
+      <li>
+         <a href="#power" title="http://w3id.org/devops-infra/hardware#power">power</a>
+      </li>
+      <li>
+         <a href="#serialNumber"
+            title="http://w3id.org/devops-infra/hardware#serialNumber">serial number</a>
+      </li>
+      <li>
+         <a href="#switchType" title="http://w3id.org/devops-infra/hardware#switchType">switch type</a>
+      </li>
+      <li>
+         <a href="#unitPosition"
+            title="http://w3id.org/devops-infra/hardware#unitPosition">unit position</a>
+      </li>
+      <li>
+         <a href="#unitPrice" title="http://w3id.org/devops-infra/hardware#unitPrice">unit price</a>
+      </li>
+      <li>
+         <a href="#uplinkBandwidth"
+            title="http://w3id.org/devops-infra/hardware#uplinkBandwidth">uplink bandwidth</a>
+      </li>
+      <li>
+         <a href="#vlanID" title="http://w3id.org/devops-infra/hardware#vlanID">VLAN ID</a>
+      </li>
+   </ul>
+   <div class="entity" id="bandwidth">
+      <h3>bandwidth<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#bandwidth</p>
+      <div class="comment">
+         <span class="markdown">Bandwidth associated to a Network Card</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#NetCard" title="http://w3id.org/devops-infra/hardware#NetCard">Net Card</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="cabPosition">
+      <h3>cab position<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#cabPosition</p>
+      <div class="comment">
+         <span class="markdown">Cabinet where the Hardware Item is</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#HardwareItem"
+                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="contractNumber">
+      <h3>contract number<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#contractNumber</p>
+      <div class="comment">
+         <span class="markdown">Contract number for a batch of hardware items</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#HardwareBatch"
+                  title="http://w3id.org/devops-infra/hardware#HardwareBatch">Hardware Batch</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="dateEnabled">
+      <h3>date enabled<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#dateEnabled</p>
+      <div class="comment">
+         <span class="markdown">Date and time when the Hardware Item was enabled</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#HardwareItem"
+                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="dateOnShelf">
+      <h3>date on shelf<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#dateOnShelf</p>
+      <div class="comment">
+         <span class="markdown">Date and time when the Hardware Item was put in a frame</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#HardwareItem"
+                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="f5Type">
+      <h3>F5 type<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#f5Type</p>
+      <div class="comment">
+         <span class="markdown">Type of F5 hardware</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#F5Hardware" title="http://w3id.org/devops-infra/hardware#F5Hardware">F5 Hardware</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="firewallType">
+      <h3>firewall type<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#firewallType</p>
+      <div class="comment">
+         <span class="markdown">Type of firewall</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Firewall" title="http://w3id.org/devops-infra/hardware#Firewall">Firewall</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hardwareType">
+      <h3>hardware type<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#hardwareType</p>
+      <div class="comment">
+         <span class="markdown">Type of hardware for a batch of hardware items</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#HardwareBatch"
+                  title="http://w3id.org/devops-infra/hardware#HardwareBatch">Hardware Batch</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="macAddress">
+      <h3>mac address<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#macAddress</p>
+      <div class="comment">
+         <span class="markdown">MAC address associated to a Network Card</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#NetCard" title="http://w3id.org/devops-infra/hardware#NetCard">Net Card</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="machineType">
+      <h3>machine type<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#machineType</p>
+      <div class="comment">
+         <span class="markdown">Type of machine</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#HardwareItem"
+                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="managementIP">
+      <h3>management IP<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#managementIP</p>
+      <div class="comment">
+         <span class="markdown">IP where management of the Hardware Item can be done</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#HardwareItem"
+                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="managementLink">
+      <h3>management link<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#managementLink</p>
+      <div class="comment">
+         <span class="markdown">Link (URL) where management of the Hardware Item can be done</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#HardwareItem"
+                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="managementPort">
+      <h3>management port<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#managementPort</p>
+      <div class="comment">
+         <span class="markdown">Port where management of the Hardware Item can be done</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#HardwareItem"
+                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="port">
+      <h3>port<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#port</p>
+      <div class="comment">
+         <span class="markdown">port associated to a Network Card</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#NetCard" title="http://w3id.org/devops-infra/hardware#NetCard">Net Card</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="power">
+      <h3>power<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#power</p>
+      <div class="comment">
+         <span class="markdown">Power connections for a frame</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Frame" title="http://w3id.org/devops-infra/hardware#Frame">Frame</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="serialNumber">
+      <h3>serial number<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#serialNumber</p>
+      <div class="comment">
+         <span class="markdown">Serial number of any item (hardware items, frames, etc.)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="switchType">
+      <h3>switch type<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#switchType</p>
+      <div class="comment">
+         <span class="markdown">Type of switch</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Switch" title="http://w3id.org/devops-infra/hardware#Switch">Switch</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="unitPosition">
+      <h3>unit position<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#unitPosition</p>
+      <div class="comment">
+         <span class="markdown">Unit where the Hardware Item is</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#HardwareItem"
+                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="unitPrice">
+      <h3>unit price<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#unitPrice</p>
+      <div class="comment">
+         <span class="markdown">Unit price for hardware items, frames, servers, etc.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="uplinkBandwidth">
+      <h3>uplink bandwidth<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#uplinkBandwidth</p>
+      <div class="comment">
+         <span class="markdown">Uplink bandwidth of a switch</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Switch" title="http://w3id.org/devops-infra/hardware#Switch">Switch</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="vlanID">
+      <h3>VLAN ID<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#vlanID</p>
+      <div class="comment">
+         <span class="markdown">ID of the VLAN associated to a Network Card</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#NetCard" title="http://w3id.org/devops-infra/hardware#NetCard">Net Card</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

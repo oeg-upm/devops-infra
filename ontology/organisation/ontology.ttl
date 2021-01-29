@@ -1,0 +1,258 @@
+@prefix : <http://w3id.org/devops-infra/organization#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://w3id.org/devops-infra/organization> .
+
+<http://w3id.org/devops-infra/organization> rdf:type owl:Ontology ;
+                                             owl:versionIRI <http://w3id.org/devops-infra/organization/0.0.1> ;
+                                             owl:imports <http://w3id.org/devops-infra/core> ,
+                                                         <http://www.w3.org/2004/02/skos/core> ;
+                                             <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                       "Hu Peng (Huawei Research Ireland)" ,
+                                                                                       "Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                       "José Mora (Huawei Research Ireland)" ,
+                                                                                       "Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                       "Mingxue Wang (Huawei Research Ireland)" ,
+                                                                                       "Nicholas Burrett (Huawei Research Ireland)" ,
+                                                                                       "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                       "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)" ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/organization" ;
+                                             <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of the organisation-related part of DevOps" ;
+                                             <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/organization.owl" ;
+                                             <http://purl.org/dc/terms/issued> "2020-10-14" ;
+                                             <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" ;
+                                             <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopsorg" ;
+                                             <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/organization#" ;
+                                             rdfs:comment "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" ;
+                                             owl:versionInfo "Initial version"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasFormat
+<http://purl.org/dc/terms/hasFormat> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://w3id.org/devops-infra/organization#managedBy
+:managedBy rdf:type owl:ObjectProperty ;
+           rdfs:domain :Scope ;
+           rdfs:range :Department ;
+           rdfs:comment "A scope may be managed by a department"@en ;
+           rdfs:label "managed by"@en .
+
+
+###  http://w3id.org/devops-infra/organization#scopeType
+:scopeType rdf:type owl:ObjectProperty ;
+           rdfs:domain :Scope ;
+           rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                               owl:hasValue <http://w3id.org/devops-infra/kos/scope-type>
+                                             ]
+                                           ) ;
+                        rdf:type owl:Class
+                      ] ;
+           rdfs:comment "The type of scope. It can be any of the following, according to the corresponding SKOS Concept Scheme: area, biz, resource, common"@en ;
+           rdfs:label "scope type"@en .
+
+
+###  http://w3id.org/devops-infra/organization#tenantType
+:tenantType rdf:type owl:ObjectProperty ;
+            rdfs:domain :Tenant ;
+            rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                owl:hasValue <http://w3id.org/devops-infra/kos/tenant-type>
+                                              ]
+                                            ) ;
+                         rdf:type owl:Class
+                       ] ;
+            rdfs:comment "The type of tenant. It can be any of the following, according to the corresponding SKOS Concept Scheme: HWS, AWS, ENABLE, DISABLE, CHINA, EUROPE, RUSSIA, A2, AP, RUSSIA_2, CHINA_NOT_CLOUDSERVICE, FRANCE"@en ;
+            rdfs:label "tenant type"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://w3id.org/devops-infra/organization#account
+:account rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Tenant ;
+         rdfs:label "account"@en .
+
+
+###  http://w3id.org/devops-infra/organization#default
+:default rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Scope ;
+         rdfs:range xsd:boolean .
+
+
+###  http://w3id.org/devops-infra/organization#password
+:password rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :Tenant ;
+          rdfs:label "password"@en .
+
+
+###  http://w3id.org/devops-infra/organization#priority
+:priority rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Scope ;
+          rdfs:label "priority"@en .
+
+
+###  http://w3id.org/devops-infra/organization#status
+:status rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Tenant ;
+        rdfs:label "status"@en .
+
+
+###  http://w3id.org/devops-infra/organization#timeZone
+:timeZone rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Site ;
+          rdfs:comment "Time Zone applicable to a Site"@en ;
+          rdfs:label "time zone"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://w3id.org/devops-infra/core#Resource
+<http://w3id.org/devops-infra/core#Resource> rdf:type owl:Class .
+
+
+###  http://w3id.org/devops-infra/organization#Department
+:Department rdf:type owl:Class ;
+            rdfs:label "Department"@en ,
+                       "部门"@cn .
+
+
+###  http://w3id.org/devops-infra/organization#Scope
+:Scope rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :managedBy ;
+                         owl:someValuesFrom :Department
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :scopeType ;
+                         owl:someValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                     owl:hasValue <http://w3id.org/devops-infra/kos/scope-type>
+                                                                   ]
+                                                                 ) ;
+                                              rdf:type owl:Class
+                                            ]
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :default ;
+                         owl:allValuesFrom xsd:boolean
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :priority ;
+                         owl:allValuesFrom xsd:string
+                       ] ;
+       rdfs:label "Scope"@en ,
+                  "领域"@cn .
+
+
+###  http://w3id.org/devops-infra/organization#Site
+:Site rdf:type owl:Class ;
+      rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :timeZone ;
+                        owl:someValuesFrom xsd:string
+                      ] ;
+      rdfs:label "Site"@en ,
+                 "站点"@cn .
+
+
+###  http://w3id.org/devops-infra/organization#Stage
+:Stage rdf:type owl:Class ;
+       rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ;
+       rdfs:label "Stage"@en ,
+                  "部署阶段"@cn .
+
+
+###  http://w3id.org/devops-infra/organization#Tenant
+:Tenant rdf:type owl:Class ;
+        rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :tenantType ;
+                          owl:someValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                      owl:hasValue <http://w3id.org/devops-infra/kos/tenant-type>
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ]
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :status ;
+                          owl:someValuesFrom xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :account ;
+                          owl:allValuesFrom xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :password ;
+                          owl:allValuesFrom xsd:string
+                        ] ;
+        rdfs:comment "A tenant is defined as XXXX"@en ;
+        rdfs:label "Tenant"@en ,
+                   "租户"@cn .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://w3id.org/devops-infra/kos/scope-type
+<http://w3id.org/devops-infra/kos/scope-type> rdf:type owl:NamedIndividual ,
+                                                       <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  http://w3id.org/devops-infra/kos/tenant-type
+<http://w3id.org/devops-infra/kos/tenant-type> rdf:type owl:NamedIndividual ,
+                                                        <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

@@ -1,0 +1,616 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://w3id.org/devops-infra/hardware#"
+     xml:base="http://w3id.org/devops-infra/hardware"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://w3id.org/devops-infra/hardware">
+        <owl:versionIRI rdf:resource="http://w3id.org/devops-infra/hardware/0.0.1"/>
+        <owl:imports rdf:resource="http://w3id.org/devops-infra/core"/>
+        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <dc:creator>David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator>Hu Peng (Huawei Research Ireland)</dc:creator>
+        <dc:creator>Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator>José Mora (Huawei Research Ireland)</dc:creator>
+        <dc:creator>Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator>Mingxue Wang (Huawei Research Ireland)</dc:creator>
+        <dc:creator>Nicholas Burrett (Huawei Research Ireland)</dc:creator>
+        <dc:creator>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator>Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:identifier>http://w3id.org/devops-infra/network</dc:identifier>
+        <dc:title xml:lang="en">Ontology for the representation of the hardware items related to a DevOps infrastructure</dc:title>
+        <terms:hasFormat>http://w3id.org/devops-infra/hardware.owl</terms:hasFormat>
+        <terms:issued>2020-12-29</terms:issued>
+        <terms:license>https://creativecommons.org/licenses/by/4.0</terms:license>
+        <vann:preferredNamespacePrefix>devopsnet</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://w3id.org/devops-infra/hardware#</vann:preferredNamespaceUri>
+        <rdfs:comment>This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland</rdfs:comment>
+        <owl:versionInfo xml:lang="en">Initial version</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasFormat -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasFormat"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/devops-infra/data-center#inDataCenter -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/data-center#inDataCenter"/>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#batch -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/hardware#batch">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:range rdf:resource="http://w3id.org/devops-infra/hardware#HardwareBatch"/>
+        <rdfs:comment xml:lang="en">Batch in which a hardware item was acquired</rdfs:comment>
+        <rdfs:label xml:lang="en">batch</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#belongsToF5Cluster -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/hardware#belongsToF5Cluster">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#F5Hardware"/>
+        <rdfs:range rdf:resource="http://w3id.org/devops-infra/network-security-load-balancing#F5Cluster"/>
+        <rdfs:comment xml:lang="en">An F5 Cluster to which an F5 hardware belongs</rdfs:comment>
+        <rdfs:label xml:lang="en">belongs to F5 cluster</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#belongsToFirewallCluster -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/hardware#belongsToFirewallCluster">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#Firewall"/>
+        <rdfs:range rdf:resource="http://w3id.org/devops-infra/network-security-load-balancing#FirewallCluster"/>
+        <rdfs:comment xml:lang="en">A Firewall Cluster to which a Firewall belongs</rdfs:comment>
+        <rdfs:label xml:lang="en">belongs to firewall cluster</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#highAvailabilityStatus -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/hardware#highAvailabilityStatus">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">It determines the status of high availability of any hardware item. Normally it will be Standby or Active</rdfs:comment>
+        <rdfs:label xml:lang="en">high availability status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#hostedInFrame -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/hardware#hostedInFrame">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:range rdf:resource="http://w3id.org/devops-infra/hardware#Frame"/>
+        <rdfs:comment xml:lang="en">Frame where a Hardware Item is physically located</rdfs:comment>
+        <rdfs:label xml:lang="en">hosted in frame</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#networkCard -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/hardware#networkCard">
+        <rdfs:range rdf:resource="http://w3id.org/devops-infra/hardware#NetCard"/>
+        <rdfs:comment xml:lang="en">The network card to which an item (e.g., Switch, Physical Server, etc.) is connected</rdfs:comment>
+        <rdfs:label xml:lang="en">network card</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#status -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/hardware#status">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">Status of a Hardware Item</rdfs:comment>
+        <rdfs:label xml:lang="en">status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#switch -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/hardware#switch">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#NetCard"/>
+        <rdfs:range rdf:resource="http://w3id.org/devops-infra/hardware#Switch"/>
+        <rdfs:comment xml:lang="en">A switch to which a network card is attached</rdfs:comment>
+        <rdfs:label xml:lang="en">switch</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/server#server -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/server#server"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#bandwidth -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#bandwidth">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#NetCard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Bandwidth associated to a Network Card</rdfs:comment>
+        <rdfs:label xml:lang="en">bandwidth</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#cabPosition -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#cabPosition">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Cabinet where the Hardware Item is</rdfs:comment>
+        <rdfs:label xml:lang="en">cab position</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#contractNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#contractNumber">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareBatch"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Contract number for a batch of hardware items</rdfs:comment>
+        <rdfs:label xml:lang="en">contract number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#dateEnabled -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#dateEnabled">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Date and time when the Hardware Item was enabled</rdfs:comment>
+        <rdfs:label xml:lang="en">date enabled</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#dateOnShelf -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#dateOnShelf">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Date and time when the Hardware Item was put in a frame</rdfs:comment>
+        <rdfs:label xml:lang="en">date on shelf</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#f5Type -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#f5Type">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#F5Hardware"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Type of F5 hardware</rdfs:comment>
+        <rdfs:label xml:lang="en">F5 type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#firewallType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#firewallType">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#Firewall"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Type of firewall</rdfs:comment>
+        <rdfs:label xml:lang="en">firewall type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#hardwareType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#hardwareType">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareBatch"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Type of hardware for a batch of hardware items</rdfs:comment>
+        <rdfs:label xml:lang="en">hardware type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#macAddress -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#macAddress">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#NetCard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">MAC address associated to a Network Card</rdfs:comment>
+        <rdfs:label xml:lang="en">mac address</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#machineType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#machineType">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Type of machine</rdfs:comment>
+        <rdfs:label xml:lang="en">machine type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#managementIP -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#managementIP">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">IP where management of the Hardware Item can be done</rdfs:comment>
+        <rdfs:label xml:lang="en">management IP</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#managementLink -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#managementLink">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Link (URL) where management of the Hardware Item can be done</rdfs:comment>
+        <rdfs:label xml:lang="en">management link</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#managementPort -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#managementPort">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Port where management of the Hardware Item can be done</rdfs:comment>
+        <rdfs:label xml:lang="en">management port</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#port -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#port">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#NetCard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">port associated to a Network Card</rdfs:comment>
+        <rdfs:label xml:lang="en">port</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#power -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#power">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#Frame"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Power connections for a frame</rdfs:comment>
+        <rdfs:label xml:lang="en">power</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#serialNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#serialNumber">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Serial number of any item (hardware items, frames, etc.)</rdfs:comment>
+        <rdfs:label xml:lang="en">serial number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#switchType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#switchType">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#Switch"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Type of switch</rdfs:comment>
+        <rdfs:label xml:lang="en">switch type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#unitPosition -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#unitPosition">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Unit where the Hardware Item is</rdfs:comment>
+        <rdfs:label xml:lang="en">unit position</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#unitPrice -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#unitPrice">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Unit price for hardware items, frames, servers, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">unit price</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#uplinkBandwidth -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#uplinkBandwidth">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#Switch"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Uplink bandwidth of a switch</rdfs:comment>
+        <rdfs:label xml:lang="en">uplink bandwidth</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#vlanID -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#vlanID">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#NetCard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">ID of the VLAN associated to a Network Card</rdfs:comment>
+        <rdfs:label xml:lang="en">VLAN ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/devops-infra/core#Resource -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/core#Resource"/>
+    
+
+
+    <!-- http://w3id.org/devops-infra/data-center#DataCenter -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/data-center#DataCenter"/>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#F5Hardware -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/hardware#F5Hardware">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:comment xml:lang="en">A specific type of hardware from the company F5.</rdfs:comment>
+        <rdfs:label xml:lang="en">F5 Hardware</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#Firewall -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/hardware#Firewall">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:comment xml:lang="en">A specific type of hardware that (network security device) that monitors incoming and outgoing network traffic and permits or blocks data packets based on a set of security rules. Its purpose is to establish a barrier between the internal network and incoming traffic from external sources (such as the internet) in order to block malicious traffic like viruses and hackers.</rdfs:comment>
+        <rdfs:label xml:lang="en">Firewall</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#Frame -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/hardware#Frame">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+        <rdfs:comment xml:lang="en">A frame, also known as rack, is a supporting framework that holds hardware modules. In this context, racks typically contain servers, hard disk drives and other computing equipment. Racks make it possible to contain a lot of equipment in a small physical footprint without requiring shelving.</rdfs:comment>
+        <rdfs:label xml:lang="en">Frame</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#HardwareBatch -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/hardware#HardwareBatch">
+        <rdfs:comment xml:lang="en">A Hardware Batch is a batch under which some hardware infrastructure was bought, kept for administrative purposes or to detect potential problems in the same batch</rdfs:comment>
+        <rdfs:label xml:lang="en">Hardware Batch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#HardwareItem -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/hardware#HardwareItem">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+        <rdfs:comment xml:lang="en">A Hardware Item (also known as Server Hardware) is any type of hardware that can be found in a frame. It also includes firewalls, switches, F5 machines, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hardware Item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#NetCard -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/hardware#NetCard">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+        <rdfs:comment xml:lang="en">A network interface controller (NIC, also known as a network interface card, network adapter, LAN adapter or physical network interface, and by similar terms) is a computer hardware component that connects a computer to a computer network.</rdfs:comment>
+        <rdfs:label xml:lang="en">Net Card</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#Switch -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/hardware#Switch">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:comment xml:lang="en">A network switch (also called switching hub, bridging hub, and, by the IEEE, MAC bridge) is networking hardware that connects devices on a computer network by using packet switching to receive and forward data to the destination device</rdfs:comment>
+        <rdfs:label xml:lang="en">Switch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/network-security-load-balancing#F5Cluster -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/network-security-load-balancing#F5Cluster"/>
+    
+
+
+    <!-- http://w3id.org/devops-infra/network-security-load-balancing#FirewallCluster -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/network-security-load-balancing#FirewallCluster"/>
+    
+
+
+    <!-- http://w3id.org/devops-infra/server#PhysicalServer -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/server#PhysicalServer"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+

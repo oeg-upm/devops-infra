@@ -1,0 +1,985 @@
+<h2 id="crossreference" class="list">Cross reference for Ontology for the representation of data centers classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Ontology for the representation of data centers.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#DataCenter"
+            title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
+      </li>
+      <li>
+         <a href="#DataCenterConnection"
+            title="http://w3id.org/devops-infra/data-center#DataCenterConnection">Data Center Connection</a>
+      </li>
+      <li>
+         <a href="#Location"
+            title="http://w3id.org/devops-infra/data-center#Location">Location</a>
+      </li>
+   </ul>
+   <div class="entity" id="DataCenter">
+      <h3>Data Center<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#DataCenter</p>
+      <div class="comment">
+         <span class="markdown">A Data Center is a facility that centralizes an organization's shared IT operations and equipment for the purposes of storing, processing, and disseminating data and applications. Because they house an organization's most critical and proprietary assets, data centers are vital to the continuity of daily operations.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#linuxPrimaryDataCenterIP"
+               title="http://w3id.org/devops-infra/data-center#linuxPrimaryDataCenterIP">Linux primary data center IP address</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#windowsPrimaryDataCenterIP"
+               title="http://w3id.org/devops-infra/data-center#windowsPrimaryDataCenterIP">Windows primary data center IP address</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#allowsConnectionVia"
+               title="http://w3id.org/devops-infra/data-center#allowsConnectionVia">allows connection via</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#cloudAvailabilityZone"
+               title="http://w3id.org/devops-infra/data-center#cloudAvailabilityZone">cloud availability zone</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#cloudRegion"
+               title="http://w3id.org/devops-infra/data-center#cloudRegion">cloud region</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#datacenterType"
+               title="http://w3id.org/devops-infra/data-center#datacenterType">data center type</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hostPrefix"
+               title="http://w3id.org/devops-infra/data-center#hostPrefix">host prefix</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hosts" title="http://w3id.org/devops-infra/data-center#hosts">hosts</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#locatedIn"
+               title="http://w3id.org/devops-infra/data-center#locatedIn">located In</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#locatedInSite"
+               title="http://w3id.org/devops-infra/data-center#locatedInSite">located in site</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#managementIP"
+               title="http://w3id.org/devops-infra/data-center#managementIP">management IP address</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#networkServiceProviderIP"
+               title="http://w3id.org/devops-infra/data-center#networkServiceProviderIP">network service provider IP address</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#networkTimeProtocolIP"
+               title="http://w3id.org/devops-infra/data-center#networkTimeProtocolIP">network time protocol IP address</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#offersIPAddress"
+               title="http://w3id.org/devops-infra/data-center#offersIPAddress">offers IP Address</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#offersIPNetwork"
+               title="http://w3id.org/devops-infra/data-center#offersIPNetwork">offers IP Network</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#offersNetworkSegment"
+               title="http://w3id.org/devops-infra/data-center#offersNetworkSegment">offers Network Segment</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#offersSSHChannel"
+               title="http://w3id.org/devops-infra/data-center#offersSSHChannel">offers SSH Channel</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#primaryDataCenterIP"
+               title="http://w3id.org/devops-infra/data-center#primaryDataCenterIP">primary data center IP address</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#primaryDataCenterHostname"
+               title="http://w3id.org/devops-infra/data-center#primaryDataCenterHostname">primary data center hostname</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#supports"
+               title="http://w3id.org/devops-infra/data-center#supports">supports</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#vendorAvailabilityZone"
+               title="http://w3id.org/devops-infra/data-center#vendorAvailabilityZone">vendor availability zone</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#vendorRegion"
+               title="http://w3id.org/devops-infra/data-center#vendorRegion">vendor region</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DataCenterConnection">
+      <h3>Data Center Connection<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#DataCenterConnection</p>
+      <div class="comment">
+         <span class="markdown">A Data Center Connection describes the details of connections that may be established to a data center, including the protocol used, bandwidth available, packet loss data and delay data.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#connectionType"
+               title="http://w3id.org/devops-infra/data-center#connectionType">connection type</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#allowsConnectionVia"
+               title="http://w3id.org/devops-infra/data-center#allowsConnectionVia">allows connection via</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Location">
+      <h3>Location<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#Location</p>
+      <div class="comment">
+         <span class="markdown">A Location where a Data Center is placed. This may be substituted in the future by an equivalent class from a general ontology, such as schema.org</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#city" title="http://w3id.org/devops-infra/data-center#city">city</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#region" title="http://w3id.org/devops-infra/data-center#region">region</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#timezone"
+               title="http://w3id.org/devops-infra/data-center#timezone">timezone</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#locatedIn"
+               title="http://w3id.org/devops-infra/data-center#locatedIn">located In</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#allowsConnectionVia"
+            title="http://w3id.org/devops-infra/data-center#allowsConnectionVia">allows connection via</a>
+      </li>
+      <li>
+         <a href="#connectionType"
+            title="http://w3id.org/devops-infra/data-center#connectionType">connection type</a>
+      </li>
+      <li>
+         <a href="#datacenterType"
+            title="http://w3id.org/devops-infra/data-center#datacenterType">data center type</a>
+      </li>
+      <li>
+         <a href="#hosts" title="http://w3id.org/devops-infra/data-center#hosts">hosts</a>
+      </li>
+      <li>
+         <a href="#locatedIn"
+            title="http://w3id.org/devops-infra/data-center#locatedIn">located In</a>
+      </li>
+      <li>
+         <a href="#locatedInSite"
+            title="http://w3id.org/devops-infra/data-center#locatedInSite">located in site</a>
+      </li>
+      <li>
+         <a href="#offersIPAddress"
+            title="http://w3id.org/devops-infra/data-center#offersIPAddress">offers IP Address</a>
+      </li>
+      <li>
+         <a href="#offersIPNetwork"
+            title="http://w3id.org/devops-infra/data-center#offersIPNetwork">offers IP Network</a>
+      </li>
+      <li>
+         <a href="#offersNetworkSegment"
+            title="http://w3id.org/devops-infra/data-center#offersNetworkSegment">offers Network Segment</a>
+      </li>
+      <li>
+         <a href="#offersSSHChannel"
+            title="http://w3id.org/devops-infra/data-center#offersSSHChannel">offers SSH Channel</a>
+      </li>
+      <li>
+         <a href="#supports"
+            title="http://w3id.org/devops-infra/data-center#supports">supports</a>
+      </li>
+   </ul>
+   <div class="entity" id="allowsConnectionVia">
+      <h3>allows connection via<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#allowsConnectionVia</p>
+      <div class="comment">
+         <span class="markdown">The Data Center can be connected through a Data Center Connection</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataCenter"
+                  title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#DataCenterConnection"
+                  title="http://w3id.org/devops-infra/data-center#DataCenterConnection">Data Center Connection</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="connectionType">
+      <h3>connection type<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#connectionType</p>
+      <div class="comment">
+         <span class="markdown">The type of connection established to a Data Center. It can be MSTP (Multiple Spanning Tree Protocol), IPSecVPN, etc.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataCenterConnection"
+                  title="http://w3id.org/devops-infra/data-center#DataCenterConnection">Data Center Connection</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span> 
+               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span> 
+               <span class="logic">value</span> 
+               <a href="#http://w3id.org/devops-infra/kos/connection-type"
+                  title="http://w3id.org/devops-infra/kos/connection-type">connection type</a>)</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="datacenterType">
+      <h3>data center type<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#datacenterType</p>
+      <div class="comment">
+         <span class="markdown">The type of a Data Center. For example, it may be and Internet Data Center (IDC) or a Virtual Data Center providing Infrastructure as a Service (IAAS).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataCenter"
+                  title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span> 
+               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span> 
+               <span class="logic">value</span> 
+               <a href="#http://w3id.org/devops-infra/kos/data-center-type"
+                  title="http://w3id.org/devops-infra/kos/data-center-type">data center type</a>)</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hosts">
+      <h3>hosts<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#hosts</p>
+      <div class="comment">
+         <span class="markdown">A Data Center may host a number of physical and logical items (frames, servers, service clusters, BGPAS, etc.)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataCenter"
+                  title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <span class="dotted" title="http://w3id.org/devops-infra/core#ResourceGroup">resource group</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="locatedIn">
+      <h3>located In<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#locatedIn</p>
+      <div class="comment">
+         <span class="markdown">The Data Center is placed in a Location, with a specific GPS position, city, region and timezone</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataCenter"
+                  title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Location"
+                  title="http://w3id.org/devops-infra/data-center#Location">Location</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="locatedInSite">
+      <h3>located in site<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#locatedInSite</p>
+      <div class="comment">
+         <span class="markdown">The Data Center is located in a Site</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataCenter"
+                  title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://w3id.org/devops-infra/organisation#Site">site</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="offersIPAddress">
+      <h3>offers IP Address<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#offersIPAddress</p>
+      <div class="comment">
+         <span class="markdown">The Data Center offers IP Addresses to its customers</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataCenter"
+                  title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://w3id.org/devops-infra/network#IPAddress">i p address</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="offersIPNetwork">
+      <h3>offers IP Network<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#offersIPNetwork</p>
+      <div class="comment">
+         <span class="markdown">The Data Center offers an IP Network to its customers</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataCenter"
+                  title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://w3id.org/devops-infra/network#IPNetwork">i p network</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="offersNetworkSegment">
+      <h3>offers Network Segment<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#offersNetworkSegment</p>
+      <div class="comment">
+         <span class="markdown">The Data Center offers a Network Segment to its customers</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataCenter"
+                  title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://w3id.org/devops-infra/network#NetworkSegment">network segment</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="offersSSHChannel">
+      <h3>offers SSH Channel<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#offersSSHChannel</p>
+      <div class="comment">
+         <span class="markdown">The Data Center offers an SSH Channel to its customers</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataCenter"
+                  title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://w3id.org/devops-infra/network#SSHChannel">s s h channel</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="supports">
+      <h3>supports<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#supports</p>
+      <div class="comment">
+         <span class="markdown">The Data Center may support specific resource requirements or capacity</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataCenter"
+                  title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://w3id.org/devops-infra/resource-requirement#ResourceCapacity">resource capacity</span>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <span class="dotted"
+                     title="http://w3id.org/devops-infra/resource-requirement#ResourceRequirement">resource requirement</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#city" title="http://w3id.org/devops-infra/data-center#city">city</a>
+      </li>
+      <li>
+         <a href="#cloudAvailabilityZone"
+            title="http://w3id.org/devops-infra/data-center#cloudAvailabilityZone">cloud availability zone</a>
+      </li>
+      <li>
+         <a href="#cloudRegion"
+            title="http://w3id.org/devops-infra/data-center#cloudRegion">cloud region</a>
+      </li>
+      <li>
+         <a href="#hostPrefix"
+            title="http://w3id.org/devops-infra/data-center#hostPrefix">host prefix</a>
+      </li>
+      <li>
+         <a href="#linuxPrimaryDataCenterIP"
+            title="http://w3id.org/devops-infra/data-center#linuxPrimaryDataCenterIP">Linux primary data center IP address</a>
+      </li>
+      <li>
+         <a href="#managementIP"
+            title="http://w3id.org/devops-infra/data-center#managementIP">management IP address</a>
+      </li>
+      <li>
+         <a href="#networkServiceProviderIP"
+            title="http://w3id.org/devops-infra/data-center#networkServiceProviderIP">network service provider IP address</a>
+      </li>
+      <li>
+         <a href="#networkTimeProtocolIP"
+            title="http://w3id.org/devops-infra/data-center#networkTimeProtocolIP">network time protocol IP address</a>
+      </li>
+      <li>
+         <a href="#primaryDataCenterHostname"
+            title="http://w3id.org/devops-infra/data-center#primaryDataCenterHostname">primary data center hostname</a>
+      </li>
+      <li>
+         <a href="#primaryDataCenterIP"
+            title="http://w3id.org/devops-infra/data-center#primaryDataCenterIP">primary data center IP address</a>
+      </li>
+      <li>
+         <a href="#region" title="http://w3id.org/devops-infra/data-center#region">region</a>
+      </li>
+      <li>
+         <a href="#timezone"
+            title="http://w3id.org/devops-infra/data-center#timezone">timezone</a>
+      </li>
+      <li>
+         <a href="#vendorAvailabilityZone"
+            title="http://w3id.org/devops-infra/data-center#vendorAvailabilityZone">vendor availability zone</a>
+      </li>
+      <li>
+         <a href="#vendorRegion"
+            title="http://w3id.org/devops-infra/data-center#vendorRegion">vendor region</a>
+      </li>
+      <li>
+         <a href="#windowsPrimaryDataCenterIP"
+            title="http://w3id.org/devops-infra/data-center#windowsPrimaryDataCenterIP">Windows primary data center IP address</a>
+      </li>
+   </ul>
+   <div class="entity" id="city">
+      <h3>city<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#city</p>
+      <div class="comment">
+         <span class="markdown">The city where a location is</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Location"
+                  title="http://w3id.org/devops-infra/data-center#Location">Location</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="cloudAvailabilityZone">
+      <h3>cloud availability zone<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#cloudAvailabilityZone</p>
+      <div class="comment">
+         <span class="markdown">The cloud availability zone for the Data Center</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataCenter"
+                  title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="cloudRegion">
+      <h3>cloud region<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#cloudRegion</p>
+      <div class="comment">
+         <span class="markdown">The cloud region where the Data Center operates</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataCenter"
+                  title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hostPrefix">
+      <h3>host prefix<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#hostPrefix</p>
+      <div class="comment">
+         <span class="markdown">The host prefix for the Data Center</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataCenter"
+                  title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="linuxPrimaryDataCenterIP">
+      <h3>Linux primary data center IP address<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#linuxPrimaryDataCenterIP</p>
+      <div class="comment">
+         <span class="markdown">The IP address of the Linux primary Data Center</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataCenter"
+                  title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="managementIP">
+      <h3>management IP address<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#managementIP</p>
+      <div class="comment">
+         <span class="markdown">The IP address to manage the Data Center</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataCenter"
+                  title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="networkServiceProviderIP">
+      <h3>network service provider IP address<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#networkServiceProviderIP</p>
+      <div class="comment">
+         <span class="markdown">The IP address of the Network Service Provider of the Data Center</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataCenter"
+                  title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="networkTimeProtocolIP">
+      <h3>network time protocol IP address<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#networkTimeProtocolIP</p>
+      <div class="comment">
+         <span class="markdown">The IP address of the Network Time Protocol used by the Data Center</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataCenter"
+                  title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="primaryDataCenterHostname">
+      <h3>primary data center hostname<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#primaryDataCenterHostname</p>
+      <div class="comment">
+         <span class="markdown">The hostname of the primary Data Center</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataCenter"
+                  title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="primaryDataCenterIP">
+      <h3>primary data center IP address<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#primaryDataCenterIP</p>
+      <div class="comment">
+         <span class="markdown">The IP address of the primary Data Center</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataCenter"
+                  title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="region">
+      <h3>region<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#region</p>
+      <div class="comment">
+         <span class="markdown">The region where a location is</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Location"
+                  title="http://w3id.org/devops-infra/data-center#Location">Location</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="timezone">
+      <h3>timezone<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#timezone</p>
+      <div class="comment">
+         <span class="markdown">The timezone where a location is</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Location"
+                  title="http://w3id.org/devops-infra/data-center#Location">Location</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="vendorAvailabilityZone">
+      <h3>vendor availability zone<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#vendorAvailabilityZone</p>
+      <div class="comment">
+         <span class="markdown">The vendor availability zone for the Data Center</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataCenter"
+                  title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="vendorRegion">
+      <h3>vendor region<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#vendorRegion</p>
+      <div class="comment">
+         <span class="markdown">The vendor region where the Data Center operates</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataCenter"
+                  title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="windowsPrimaryDataCenterIP">
+      <h3>Windows primary data center IP address<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#windowsPrimaryDataCenterIP</p>
+      <div class="comment">
+         <span class="markdown">The IP address of the Windows primary Data Center</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataCenter"
+                  title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://w3id.org/devops-infra/kos/connection-type"
+            title="http://w3id.org/devops-infra/kos/connection-type">
+            <span>connection type</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/devops-infra/kos/data-center-type"
+            title="http://w3id.org/devops-infra/kos/data-center-type">
+            <span>data center type</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://w3id.org/devops-infra/kos/connection-type">
+      <h3>connection type<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/kos/connection-type</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/devops-infra/kos/data-center-type">
+      <h3>data center type<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/kos/data-center-type</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

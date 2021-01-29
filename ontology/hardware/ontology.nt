@@ -1,0 +1,345 @@
+<http://w3id.org/devops-infra/hardware> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/devops-infra/hardware> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/devops-infra/hardware/0.0.1> .
+<http://w3id.org/devops-infra/hardware> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/devops-infra/core> .
+<http://w3id.org/devops-infra/hardware> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
+<http://w3id.org/devops-infra/hardware> <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/hardware> <http://purl.org/dc/elements/1.1/creator> "Hu Peng (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/hardware> <http://purl.org/dc/elements/1.1/creator> "Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/hardware> <http://purl.org/dc/elements/1.1/creator> "José Mora (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/hardware> <http://purl.org/dc/elements/1.1/creator> "Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/hardware> <http://purl.org/dc/elements/1.1/creator> "Mingxue Wang (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/hardware> <http://purl.org/dc/elements/1.1/creator> "Nicholas Burrett (Huawei Research Ireland)" .
+<http://w3id.org/devops-infra/hardware> <http://purl.org/dc/elements/1.1/creator> "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/hardware> <http://purl.org/dc/elements/1.1/creator> "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/hardware> <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/network" .
+<http://w3id.org/devops-infra/hardware> <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of the hardware items related to a DevOps infrastructure"@en .
+<http://w3id.org/devops-infra/hardware> <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/hardware.owl" .
+<http://w3id.org/devops-infra/hardware> <http://purl.org/dc/terms/issued> "2020-12-29" .
+<http://w3id.org/devops-infra/hardware> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" .
+<http://w3id.org/devops-infra/hardware> <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopsnet" .
+<http://w3id.org/devops-infra/hardware> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/hardware#" .
+<http://w3id.org/devops-infra/hardware> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" .
+<http://w3id.org/devops-infra/hardware> <http://www.w3.org/2002/07/owl#versionInfo> "Initial version"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/hasFormat
+<http://purl.org/dc/terms/hasFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/devops-infra/data-center#inDataCenter
+<http://w3id.org/devops-infra/data-center#inDataCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://w3id.org/devops-infra/hardware#batch
+<http://w3id.org/devops-infra/hardware#batch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/hardware#batch> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#HardwareItem> .
+<http://w3id.org/devops-infra/hardware#batch> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/hardware#HardwareBatch> .
+<http://w3id.org/devops-infra/hardware#batch> <http://www.w3.org/2000/01/rdf-schema#comment> "Batch in which a hardware item was acquired"@en .
+<http://w3id.org/devops-infra/hardware#batch> <http://www.w3.org/2000/01/rdf-schema#label> "batch"@en .
+# 
+# http://w3id.org/devops-infra/hardware#belongsToF5Cluster
+<http://w3id.org/devops-infra/hardware#belongsToF5Cluster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/hardware#belongsToF5Cluster> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#F5Hardware> .
+<http://w3id.org/devops-infra/hardware#belongsToF5Cluster> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/network-security-load-balancing#F5Cluster> .
+<http://w3id.org/devops-infra/hardware#belongsToF5Cluster> <http://www.w3.org/2000/01/rdf-schema#comment> "An F5 Cluster to which an F5 hardware belongs"@en .
+<http://w3id.org/devops-infra/hardware#belongsToF5Cluster> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to F5 cluster"@en .
+# 
+# http://w3id.org/devops-infra/hardware#belongsToFirewallCluster
+<http://w3id.org/devops-infra/hardware#belongsToFirewallCluster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/hardware#belongsToFirewallCluster> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#Firewall> .
+<http://w3id.org/devops-infra/hardware#belongsToFirewallCluster> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/network-security-load-balancing#FirewallCluster> .
+<http://w3id.org/devops-infra/hardware#belongsToFirewallCluster> <http://www.w3.org/2000/01/rdf-schema#comment> "A Firewall Cluster to which a Firewall belongs"@en .
+<http://w3id.org/devops-infra/hardware#belongsToFirewallCluster> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to firewall cluster"@en .
+# 
+# http://w3id.org/devops-infra/hardware#highAvailabilityStatus
+<http://w3id.org/devops-infra/hardware#highAvailabilityStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/hardware#highAvailabilityStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#HardwareItem> .
+<http://w3id.org/devops-infra/hardware#highAvailabilityStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/devops-infra/hardware#highAvailabilityStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "It determines the status of high availability of any hardware item. Normally it will be Standby or Active"@en .
+<http://w3id.org/devops-infra/hardware#highAvailabilityStatus> <http://www.w3.org/2000/01/rdf-schema#label> "high availability status"@en .
+# 
+# http://w3id.org/devops-infra/hardware#hostedInFrame
+<http://w3id.org/devops-infra/hardware#hostedInFrame> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/hardware#hostedInFrame> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#HardwareItem> .
+<http://w3id.org/devops-infra/hardware#hostedInFrame> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/hardware#Frame> .
+<http://w3id.org/devops-infra/hardware#hostedInFrame> <http://www.w3.org/2000/01/rdf-schema#comment> "Frame where a Hardware Item is physically located"@en .
+<http://w3id.org/devops-infra/hardware#hostedInFrame> <http://www.w3.org/2000/01/rdf-schema#label> "hosted in frame"@en .
+# 
+# http://w3id.org/devops-infra/hardware#networkCard
+<http://w3id.org/devops-infra/hardware#networkCard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/hardware#networkCard> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/hardware#NetCard> .
+<http://w3id.org/devops-infra/hardware#networkCard> <http://www.w3.org/2000/01/rdf-schema#comment> "The network card to which an item (e.g., Switch, Physical Server, etc.) is connected"@en .
+<http://w3id.org/devops-infra/hardware#networkCard> <http://www.w3.org/2000/01/rdf-schema#label> "network card"@en .
+# 
+# http://w3id.org/devops-infra/hardware#status
+<http://w3id.org/devops-infra/hardware#status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/hardware#status> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#HardwareItem> .
+<http://w3id.org/devops-infra/hardware#status> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/devops-infra/hardware#status> <http://www.w3.org/2000/01/rdf-schema#comment> "Status of a Hardware Item"@en .
+<http://w3id.org/devops-infra/hardware#status> <http://www.w3.org/2000/01/rdf-schema#label> "status"@en .
+# 
+# http://w3id.org/devops-infra/hardware#switch
+<http://w3id.org/devops-infra/hardware#switch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/hardware#switch> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#NetCard> .
+<http://w3id.org/devops-infra/hardware#switch> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/hardware#Switch> .
+<http://w3id.org/devops-infra/hardware#switch> <http://www.w3.org/2000/01/rdf-schema#comment> "A switch to which a network card is attached"@en .
+<http://w3id.org/devops-infra/hardware#switch> <http://www.w3.org/2000/01/rdf-schema#label> "switch"@en .
+# 
+# http://w3id.org/devops-infra/server#server
+<http://w3id.org/devops-infra/server#server> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/devops-infra/hardware#bandwidth
+<http://w3id.org/devops-infra/hardware#bandwidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/hardware#bandwidth> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#NetCard> .
+<http://w3id.org/devops-infra/hardware#bandwidth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/hardware#bandwidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Bandwidth associated to a Network Card"@en .
+<http://w3id.org/devops-infra/hardware#bandwidth> <http://www.w3.org/2000/01/rdf-schema#label> "bandwidth"@en .
+# 
+# http://w3id.org/devops-infra/hardware#cabPosition
+<http://w3id.org/devops-infra/hardware#cabPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/hardware#cabPosition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#HardwareItem> .
+<http://w3id.org/devops-infra/hardware#cabPosition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/hardware#cabPosition> <http://www.w3.org/2000/01/rdf-schema#comment> "Cabinet where the Hardware Item is"@en .
+<http://w3id.org/devops-infra/hardware#cabPosition> <http://www.w3.org/2000/01/rdf-schema#label> "cab position"@en .
+# 
+# http://w3id.org/devops-infra/hardware#contractNumber
+<http://w3id.org/devops-infra/hardware#contractNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/hardware#contractNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#HardwareBatch> .
+<http://w3id.org/devops-infra/hardware#contractNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/hardware#contractNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Contract number for a batch of hardware items"@en .
+<http://w3id.org/devops-infra/hardware#contractNumber> <http://www.w3.org/2000/01/rdf-schema#label> "contract number"@en .
+# 
+# http://w3id.org/devops-infra/hardware#dateEnabled
+<http://w3id.org/devops-infra/hardware#dateEnabled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/hardware#dateEnabled> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#HardwareItem> .
+<http://w3id.org/devops-infra/hardware#dateEnabled> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/devops-infra/hardware#dateEnabled> <http://www.w3.org/2000/01/rdf-schema#comment> "Date and time when the Hardware Item was enabled"@en .
+<http://w3id.org/devops-infra/hardware#dateEnabled> <http://www.w3.org/2000/01/rdf-schema#label> "date enabled"@en .
+# 
+# http://w3id.org/devops-infra/hardware#dateOnShelf
+<http://w3id.org/devops-infra/hardware#dateOnShelf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/hardware#dateOnShelf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#HardwareItem> .
+<http://w3id.org/devops-infra/hardware#dateOnShelf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/devops-infra/hardware#dateOnShelf> <http://www.w3.org/2000/01/rdf-schema#comment> "Date and time when the Hardware Item was put in a frame"@en .
+<http://w3id.org/devops-infra/hardware#dateOnShelf> <http://www.w3.org/2000/01/rdf-schema#label> "date on shelf"@en .
+# 
+# http://w3id.org/devops-infra/hardware#f5Type
+<http://w3id.org/devops-infra/hardware#f5Type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/hardware#f5Type> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#F5Hardware> .
+<http://w3id.org/devops-infra/hardware#f5Type> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/hardware#f5Type> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of F5 hardware"@en .
+<http://w3id.org/devops-infra/hardware#f5Type> <http://www.w3.org/2000/01/rdf-schema#label> "F5 type"@en .
+# 
+# http://w3id.org/devops-infra/hardware#firewallType
+<http://w3id.org/devops-infra/hardware#firewallType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/hardware#firewallType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#Firewall> .
+<http://w3id.org/devops-infra/hardware#firewallType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/hardware#firewallType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of firewall"@en .
+<http://w3id.org/devops-infra/hardware#firewallType> <http://www.w3.org/2000/01/rdf-schema#label> "firewall type"@en .
+# 
+# http://w3id.org/devops-infra/hardware#hardwareType
+<http://w3id.org/devops-infra/hardware#hardwareType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/hardware#hardwareType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#HardwareBatch> .
+<http://w3id.org/devops-infra/hardware#hardwareType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/hardware#hardwareType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of hardware for a batch of hardware items"@en .
+<http://w3id.org/devops-infra/hardware#hardwareType> <http://www.w3.org/2000/01/rdf-schema#label> "hardware type"@en .
+# 
+# http://w3id.org/devops-infra/hardware#macAddress
+<http://w3id.org/devops-infra/hardware#macAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/hardware#macAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#NetCard> .
+<http://w3id.org/devops-infra/hardware#macAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/hardware#macAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "MAC address associated to a Network Card"@en .
+<http://w3id.org/devops-infra/hardware#macAddress> <http://www.w3.org/2000/01/rdf-schema#label> "mac address"@en .
+# 
+# http://w3id.org/devops-infra/hardware#machineType
+<http://w3id.org/devops-infra/hardware#machineType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/hardware#machineType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#HardwareItem> .
+<http://w3id.org/devops-infra/hardware#machineType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/hardware#machineType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of machine"@en .
+<http://w3id.org/devops-infra/hardware#machineType> <http://www.w3.org/2000/01/rdf-schema#label> "machine type"@en .
+# 
+# http://w3id.org/devops-infra/hardware#managementIP
+<http://w3id.org/devops-infra/hardware#managementIP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/hardware#managementIP> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#HardwareItem> .
+<http://w3id.org/devops-infra/hardware#managementIP> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/hardware#managementIP> <http://www.w3.org/2000/01/rdf-schema#comment> "IP where management of the Hardware Item can be done"@en .
+<http://w3id.org/devops-infra/hardware#managementIP> <http://www.w3.org/2000/01/rdf-schema#label> "management IP"@en .
+# 
+# http://w3id.org/devops-infra/hardware#managementLink
+<http://w3id.org/devops-infra/hardware#managementLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/hardware#managementLink> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#HardwareItem> .
+<http://w3id.org/devops-infra/hardware#managementLink> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/hardware#managementLink> <http://www.w3.org/2000/01/rdf-schema#comment> "Link (URL) where management of the Hardware Item can be done"@en .
+<http://w3id.org/devops-infra/hardware#managementLink> <http://www.w3.org/2000/01/rdf-schema#label> "management link"@en .
+# 
+# http://w3id.org/devops-infra/hardware#managementPort
+<http://w3id.org/devops-infra/hardware#managementPort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/hardware#managementPort> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#HardwareItem> .
+<http://w3id.org/devops-infra/hardware#managementPort> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/hardware#managementPort> <http://www.w3.org/2000/01/rdf-schema#comment> "Port where management of the Hardware Item can be done"@en .
+<http://w3id.org/devops-infra/hardware#managementPort> <http://www.w3.org/2000/01/rdf-schema#label> "management port"@en .
+# 
+# http://w3id.org/devops-infra/hardware#port
+<http://w3id.org/devops-infra/hardware#port> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/hardware#port> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#NetCard> .
+<http://w3id.org/devops-infra/hardware#port> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/hardware#port> <http://www.w3.org/2000/01/rdf-schema#comment> "port associated to a Network Card"@en .
+<http://w3id.org/devops-infra/hardware#port> <http://www.w3.org/2000/01/rdf-schema#label> "port"@en .
+# 
+# http://w3id.org/devops-infra/hardware#power
+<http://w3id.org/devops-infra/hardware#power> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/hardware#power> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#Frame> .
+<http://w3id.org/devops-infra/hardware#power> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/hardware#power> <http://www.w3.org/2000/01/rdf-schema#comment> "Power connections for a frame"@en .
+<http://w3id.org/devops-infra/hardware#power> <http://www.w3.org/2000/01/rdf-schema#label> "power"@en .
+# 
+# http://w3id.org/devops-infra/hardware#serialNumber
+<http://w3id.org/devops-infra/hardware#serialNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/hardware#serialNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/hardware#serialNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Serial number of any item (hardware items, frames, etc.)"@en .
+<http://w3id.org/devops-infra/hardware#serialNumber> <http://www.w3.org/2000/01/rdf-schema#label> "serial number"@en .
+# 
+# http://w3id.org/devops-infra/hardware#switchType
+<http://w3id.org/devops-infra/hardware#switchType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/hardware#switchType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#Switch> .
+<http://w3id.org/devops-infra/hardware#switchType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/hardware#switchType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of switch"@en .
+<http://w3id.org/devops-infra/hardware#switchType> <http://www.w3.org/2000/01/rdf-schema#label> "switch type"@en .
+# 
+# http://w3id.org/devops-infra/hardware#unitPosition
+<http://w3id.org/devops-infra/hardware#unitPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/hardware#unitPosition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#HardwareItem> .
+<http://w3id.org/devops-infra/hardware#unitPosition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/hardware#unitPosition> <http://www.w3.org/2000/01/rdf-schema#comment> "Unit where the Hardware Item is"@en .
+<http://w3id.org/devops-infra/hardware#unitPosition> <http://www.w3.org/2000/01/rdf-schema#label> "unit position"@en .
+# 
+# http://w3id.org/devops-infra/hardware#unitPrice
+<http://w3id.org/devops-infra/hardware#unitPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/hardware#unitPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://w3id.org/devops-infra/hardware#unitPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Unit price for hardware items, frames, servers, etc."@en .
+<http://w3id.org/devops-infra/hardware#unitPrice> <http://www.w3.org/2000/01/rdf-schema#label> "unit price"@en .
+# 
+# http://w3id.org/devops-infra/hardware#uplinkBandwidth
+<http://w3id.org/devops-infra/hardware#uplinkBandwidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/hardware#uplinkBandwidth> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#Switch> .
+<http://w3id.org/devops-infra/hardware#uplinkBandwidth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/hardware#uplinkBandwidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Uplink bandwidth of a switch"@en .
+<http://w3id.org/devops-infra/hardware#uplinkBandwidth> <http://www.w3.org/2000/01/rdf-schema#label> "uplink bandwidth"@en .
+# 
+# http://w3id.org/devops-infra/hardware#vlanID
+<http://w3id.org/devops-infra/hardware#vlanID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/hardware#vlanID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/hardware#NetCard> .
+<http://w3id.org/devops-infra/hardware#vlanID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/hardware#vlanID> <http://www.w3.org/2000/01/rdf-schema#comment> "ID of the VLAN associated to a Network Card"@en .
+<http://w3id.org/devops-infra/hardware#vlanID> <http://www.w3.org/2000/01/rdf-schema#label> "VLAN ID"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/devops-infra/core#Resource
+<http://w3id.org/devops-infra/core#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/devops-infra/data-center#DataCenter
+<http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/devops-infra/hardware#F5Hardware
+<http://w3id.org/devops-infra/hardware#F5Hardware> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/hardware#F5Hardware> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/hardware#HardwareItem> .
+<http://w3id.org/devops-infra/hardware#F5Hardware> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific type of hardware from the company F5."@en .
+<http://w3id.org/devops-infra/hardware#F5Hardware> <http://www.w3.org/2000/01/rdf-schema#label> "F5 Hardware"@en .
+# 
+# http://w3id.org/devops-infra/hardware#Firewall
+<http://w3id.org/devops-infra/hardware#Firewall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/hardware#Firewall> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/hardware#HardwareItem> .
+<http://w3id.org/devops-infra/hardware#Firewall> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific type of hardware that (network security device) that monitors incoming and outgoing network traffic and permits or blocks data packets based on a set of security rules. Its purpose is to establish a barrier between the internal network and incoming traffic from external sources (such as the internet) in order to block malicious traffic like viruses and hackers."@en .
+<http://w3id.org/devops-infra/hardware#Firewall> <http://www.w3.org/2000/01/rdf-schema#label> "Firewall"@en .
+# 
+# http://w3id.org/devops-infra/hardware#Frame
+<http://w3id.org/devops-infra/hardware#Frame> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/hardware#Frame> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/hardware#Frame> <http://www.w3.org/2000/01/rdf-schema#comment> "A frame, also known as rack, is a supporting framework that holds hardware modules. In this context, racks typically contain servers, hard disk drives and other computing equipment. Racks make it possible to contain a lot of equipment in a small physical footprint without requiring shelving."@en .
+<http://w3id.org/devops-infra/hardware#Frame> <http://www.w3.org/2000/01/rdf-schema#label> "Frame"@en .
+# 
+# http://w3id.org/devops-infra/hardware#HardwareBatch
+<http://w3id.org/devops-infra/hardware#HardwareBatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/hardware#HardwareBatch> <http://www.w3.org/2000/01/rdf-schema#comment> "A Hardware Batch is a batch under which some hardware infrastructure was bought, kept for administrative purposes or to detect potential problems in the same batch"@en .
+<http://w3id.org/devops-infra/hardware#HardwareBatch> <http://www.w3.org/2000/01/rdf-schema#label> "Hardware Batch"@en .
+# 
+# http://w3id.org/devops-infra/hardware#HardwareItem
+<http://w3id.org/devops-infra/hardware#HardwareItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/hardware#HardwareItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/hardware#HardwareItem> <http://www.w3.org/2000/01/rdf-schema#comment> "A Hardware Item (also known as Server Hardware) is any type of hardware that can be found in a frame. It also includes firewalls, switches, F5 machines, etc."@en .
+<http://w3id.org/devops-infra/hardware#HardwareItem> <http://www.w3.org/2000/01/rdf-schema#label> "Hardware Item"@en .
+# 
+# http://w3id.org/devops-infra/hardware#NetCard
+<http://w3id.org/devops-infra/hardware#NetCard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/hardware#NetCard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/hardware#NetCard> <http://www.w3.org/2000/01/rdf-schema#comment> "A network interface controller (NIC, also known as a network interface card, network adapter, LAN adapter or physical network interface, and by similar terms) is a computer hardware component that connects a computer to a computer network."@en .
+<http://w3id.org/devops-infra/hardware#NetCard> <http://www.w3.org/2000/01/rdf-schema#label> "Net Card"@en .
+# 
+# http://w3id.org/devops-infra/hardware#Switch
+<http://w3id.org/devops-infra/hardware#Switch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/hardware#Switch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/hardware#HardwareItem> .
+<http://w3id.org/devops-infra/hardware#Switch> <http://www.w3.org/2000/01/rdf-schema#comment> "A network switch (also called switching hub, bridging hub, and, by the IEEE, MAC bridge) is networking hardware that connects devices on a computer network by using packet switching to receive and forward data to the destination device"@en .
+<http://w3id.org/devops-infra/hardware#Switch> <http://www.w3.org/2000/01/rdf-schema#label> "Switch"@en .
+# 
+# http://w3id.org/devops-infra/network-security-load-balancing#F5Cluster
+<http://w3id.org/devops-infra/network-security-load-balancing#F5Cluster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/devops-infra/network-security-load-balancing#FirewallCluster
+<http://w3id.org/devops-infra/network-security-load-balancing#FirewallCluster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/devops-infra/server#PhysicalServer
+<http://w3id.org/devops-infra/server#PhysicalServer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
