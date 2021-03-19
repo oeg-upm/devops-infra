@@ -12,7 +12,7 @@
   "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/organization#scopeType"
+    "@id" : "http://w3id.org/devops-infra/organisation#scopeType"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "_:genid11"
@@ -43,7 +43,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/organization#default"
+    "@id" : "http://w3id.org/devops-infra/organisation#default"
   } ]
 }, {
   "@id" : "_:genid16",
@@ -52,13 +52,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/organization#priority"
+    "@id" : "http://w3id.org/devops-infra/organisation#priority"
   } ]
 }, {
   "@id" : "_:genid17",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/organization#timeZone"
+    "@id" : "http://w3id.org/devops-infra/organisation#timeZone"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -67,7 +67,7 @@
   "@id" : "_:genid18",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/organization#tenantType"
+    "@id" : "http://w3id.org/devops-infra/organisation#tenantType"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "_:genid19"
@@ -94,20 +94,20 @@
 }, {
   "@id" : "_:genid23",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/organization#status"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/organisation#Scope"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/organisation#scope"
   } ]
 }, {
   "@id" : "_:genid24",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/organization#account"
+    "@id" : "http://w3id.org/devops-infra/organisation#tenantStatus"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "_:genid25",
@@ -116,7 +116,16 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/organization#password"
+    "@id" : "http://w3id.org/devops-infra/organisation#account"
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/organisation#password"
   } ]
 }, {
   "@id" : "_:genid3",
@@ -150,10 +159,10 @@
   "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/organization#managedBy"
+    "@id" : "http://w3id.org/devops-infra/organisation#managedBy"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://w3id.org/devops-infra/organization#Department"
+    "@id" : "http://w3id.org/devops-infra/organisation#Department"
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/creator",
@@ -189,7 +198,7 @@
   "@id" : "http://w3id.org/devops-infra/kos/tenant-type",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/organization",
+  "@id" : "http://w3id.org/devops-infra/organisation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)"
@@ -200,7 +209,7 @@
   }, {
     "@value" : "José Mora (Huawei Research Ireland)"
   }, {
-    "@value" : "Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)"
+    "@value" : "Julián Arenas-Guerrero (Ontology Engineering Group - Universidad Politécnica de Madrid)"
   }, {
     "@value" : "Mingxue Wang (Huawei Research Ireland)"
   }, {
@@ -211,16 +220,16 @@
     "@value" : "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)"
   } ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
-    "@value" : "http://w3id.org/devops-infra/organization"
+    "@value" : "http://w3id.org/devops-infra/organisation"
   } ],
   "http://purl.org/dc/elements/1.1/title" : [ {
     "@value" : "Ontology for the representation of the organisation-related part of DevOps"
   } ],
   "http://purl.org/dc/terms/hasFormat" : [ {
-    "@value" : "http://w3id.org/devops-infra/organization.owl"
+    "@value" : "http://w3id.org/devops-infra/organisation.owl"
   } ],
   "http://purl.org/dc/terms/issued" : [ {
-    "@value" : "2020-10-14"
+    "@value" : "2021-02-15"
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@value" : "https://creativecommons.org/licenses/by/4.0"
@@ -229,7 +238,7 @@
     "@value" : "devopsorg"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@value" : "http://w3id.org/devops-infra/organization#"
+    "@value" : "http://w3id.org/devops-infra/organisation#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland"
@@ -238,16 +247,18 @@
     "@id" : "http://w3id.org/devops-infra/core"
   }, {
     "@id" : "http://www.w3.org/2004/02/skos/core"
+  }, {
+    "@id" : "http://www.w3.org/ns/org#"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://w3id.org/devops-infra/organization/0.0.1"
+    "@id" : "http://w3id.org/devops-infra/organisation/0.0.2"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
-    "@value" : "Initial version"
+    "@value" : "Version after the generation of mappings"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/organization#Department",
+  "@id" : "http://w3id.org/devops-infra/organisation#Department",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -255,9 +266,12 @@
   }, {
     "@language" : "cn",
     "@value" : "部门"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Organization"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/organization#Scope",
+  "@id" : "http://w3id.org/devops-infra/organisation#Scope",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -276,7 +290,7 @@
     "@id" : "_:genid16"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/organization#Site",
+  "@id" : "http://w3id.org/devops-infra/organisation#Site",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -291,7 +305,7 @@
     "@id" : "_:genid17"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/organization#Stage",
+  "@id" : "http://w3id.org/devops-infra/organisation#Stage",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -304,11 +318,11 @@
     "@id" : "http://w3id.org/devops-infra/core#Resource"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/organization#Tenant",
+  "@id" : "http://w3id.org/devops-infra/organisation#Tenant",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A tenant is defined as XXXX"
+    "@value" : "A tenant is usually understood as a container for items of an Organisation in a cloud, such as users, domains, subscriptions, etc"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -327,48 +341,67 @@
     "@id" : "_:genid24"
   }, {
     "@id" : "_:genid25"
+  }, {
+    "@id" : "_:genid26"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/organization#account",
+  "@id" : "http://w3id.org/devops-infra/organisation#account",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/organization#Tenant"
+    "@id" : "http://w3id.org/devops-infra/organisation#Tenant"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "account"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/organization#default",
+  "@id" : "http://w3id.org/devops-infra/organisation#default",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/organization#Scope"
+    "@id" : "http://w3id.org/devops-infra/organisation#Scope"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/organization#managedBy",
+  "@id" : "http://w3id.org/devops-infra/organisation#domain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The domain of a Tenant. It can be China, Asia, Europe, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/devops-infra/organisation#Tenant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "domain"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://w3id.org/devops-infra/organisation#managedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A scope may be managed by a department"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/organization#Scope"
+    "@id" : "http://w3id.org/devops-infra/organisation#Scope"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "managed by"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/devops-infra/organization#Department"
+    "@id" : "http://w3id.org/devops-infra/organisation#Department"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/organization#password",
+  "@id" : "http://w3id.org/devops-infra/organisation#password",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/organization#Tenant"
+    "@id" : "http://w3id.org/devops-infra/organisation#Tenant"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -378,24 +411,38 @@
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/organization#priority",
+  "@id" : "http://w3id.org/devops-infra/organisation#priority",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/organization#Scope"
+    "@id" : "http://w3id.org/devops-infra/organisation#Scope"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "priority"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/organization#scopeType",
+  "@id" : "http://w3id.org/devops-infra/organisation#scope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Scope where any resource makes sense"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "scope"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/devops-infra/organisation#Scope"
+  } ]
+}, {
+  "@id" : "http://w3id.org/devops-infra/organisation#scopeType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The type of scope. It can be any of the following, according to the corresponding SKOS Concept Scheme: area, biz, resource, common"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/organization#Scope"
+    "@id" : "http://w3id.org/devops-infra/organisation#Scope"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -405,24 +452,31 @@
     "@id" : "_:genid1"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/organization#status",
+  "@id" : "http://w3id.org/devops-infra/organisation#tenantStatus",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property describe the status of a tenant. It may be enabled or disabled. In the future, this may be transformed into a SKOS thesaurus"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/organization#Tenant"
+    "@id" : "http://w3id.org/devops-infra/organisation#Tenant"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "status"
+    "@value" : "tenant status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/organization#tenantType",
+  "@id" : "http://w3id.org/devops-infra/organisation#tenantType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The type of tenant. It can be any of the following, according to the corresponding SKOS Concept Scheme: HWS, AWS, ENABLE, DISABLE, CHINA, EUROPE, RUSSIA, A2, AP, RUSSIA_2, CHINA_NOT_CLOUDSERVICE, FRANCE"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/organization#Tenant"
+    "@id" : "http://w3id.org/devops-infra/organisation#Tenant"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -432,14 +486,14 @@
     "@id" : "_:genid5"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/organization#timeZone",
+  "@id" : "http://w3id.org/devops-infra/organisation#timeZone",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Time Zone applicable to a Site"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/organization#Site"
+    "@id" : "http://w3id.org/devops-infra/organisation#Site"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",

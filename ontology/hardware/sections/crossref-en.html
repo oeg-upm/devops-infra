@@ -4,6 +4,9 @@ This section provides details for each class and property defined by Ontology fo
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
+         <a href="#Disk" title="http://w3id.org/devops-infra/hardware#Disk">Disk</a>
+      </li>
+      <li>
          <a href="#F5Hardware" title="http://w3id.org/devops-infra/hardware#F5Hardware">F5 Hardware</a>
       </li>
       <li>
@@ -24,9 +27,37 @@ This section provides details for each class and property defined by Ontology fo
          <a href="#NetCard" title="http://w3id.org/devops-infra/hardware#NetCard">Net Card</a>
       </li>
       <li>
+         <a href="#ServerHardware"
+            title="http://w3id.org/devops-infra/hardware#ServerHardware">Server Hardware</a>
+      </li>
+      <li>
          <a href="#Switch" title="http://w3id.org/devops-infra/hardware#Switch">Switch</a>
       </li>
    </ul>
+   <div class="entity" id="Disk">
+      <h3>Disk<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#Disk</p>
+      <div class="comment">
+         <span class="markdown">A disk, understood as a piece of hardware. It can be of different types, and have size.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#HardwareItem"
+               title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#diskSize" title="http://w3id.org/devops-infra/hardware#diskSize">disk size</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="F5Hardware">
       <h3>F5 Hardware<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -40,8 +71,8 @@ This section provides details for each class and property defined by Ontology fo
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#HardwareItem"
-               title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+            <a href="#ServerHardware"
+               title="http://w3id.org/devops-infra/hardware#ServerHardware">Server Hardware</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -61,13 +92,13 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#Firewall</p>
       <div class="comment">
-         <span class="markdown">A specific type of hardware that (network security device) that monitors incoming and outgoing network traffic and permits or blocks data packets based on a set of security rules. Its purpose is to establish a barrier between the internal network and incoming traffic from external sources (such as the internet) in order to block malicious traffic like viruses and hackers.</span>
+         <span class="markdown">A specific type of hardware (network security device, which may be virtualised in some cases) that monitors incoming and outgoing network traffic and permits or blocks data packets based on a set of security rules. Its purpose is to establish a barrier between the internal network and incoming traffic from external sources (such as the internet) in order to block malicious traffic like viruses and hackers.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#HardwareItem"
-               title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+            <a href="#ServerHardware"
+               title="http://w3id.org/devops-infra/hardware#ServerHardware">Server Hardware</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -93,12 +124,14 @@ This section provides details for each class and property defined by Ontology fo
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
+            <a href="#HardwareItem"
+               title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#power" title="http://w3id.org/devops-infra/hardware#power">power</a>
+            <a href="#frameType" title="http://w3id.org/devops-infra/hardware#frameType">The type of frame</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#power" title="http://w3id.org/devops-infra/hardware#power">power</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
@@ -124,8 +157,6 @@ This section provides details for each class and property defined by Ontology fo
          <dd>
             <a href="#contractNumber"
                title="http://w3id.org/devops-infra/hardware#contractNumber">contract number</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hardwareType"
-               title="http://w3id.org/devops-infra/hardware#hardwareType">hardware type</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
@@ -143,12 +174,83 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#HardwareItem</p>
       <div class="comment">
-         <span class="markdown">A Hardware Item (also known as Server Hardware) is any type of hardware that can be found in a frame. It also includes firewalls, switches, F5 machines, etc.</span>
+         <span class="markdown">A piece of hardware that can be found in the context of a DevOps infrastructure</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Disk" title="http://w3id.org/devops-infra/hardware#Disk">Disk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Frame" title="http://w3id.org/devops-infra/hardware#Frame">Frame</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#NetCard" title="http://w3id.org/devops-infra/hardware#NetCard">Net Card</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ServerHardware"
+               title="http://w3id.org/devops-infra/hardware#ServerHardware">Server Hardware</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#networkCard"
+               title="http://w3id.org/devops-infra/hardware#networkCard">network card</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#serialNumber"
+               title="http://w3id.org/devops-infra/hardware#serialNumber">serial number</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#unitPrice" title="http://w3id.org/devops-infra/hardware#unitPrice">unit price</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NetCard">
+      <h3>Net Card<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#NetCard</p>
+      <div class="comment">
+         <span class="markdown">A network interface controller (NIC, also known as a network interface card, network adapter, LAN adapter or physical network interface, and by similar terms) is a computer hardware component that connects a computer to a computer network.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#HardwareItem"
+               title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#vlanID" title="http://w3id.org/devops-infra/hardware#vlanID">VLAN ID</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#bandwidth" title="http://w3id.org/devops-infra/hardware#bandwidth">bandwidth</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#macAddress" title="http://w3id.org/devops-infra/hardware#macAddress">mac address</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#port" title="http://w3id.org/devops-infra/hardware#port">port</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#switch" title="http://w3id.org/devops-infra/hardware#switch">switch</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#networkCard"
+               title="http://w3id.org/devops-infra/hardware#networkCard">network card</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ServerHardware">
+      <h3>Server Hardware<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#ServerHardware</p>
+      <div class="comment">
+         <span class="markdown">A Server Hardware is any type of hardware that can be found inside a frame. It includes firewalls, switches, F5 machines, etc.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#HardwareItem"
+               title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -179,43 +281,9 @@ This section provides details for each class and property defined by Ontology fo
                title="http://w3id.org/devops-infra/hardware#managementLink">management link</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#managementPort"
                title="http://w3id.org/devops-infra/hardware#managementPort">management port</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#status" title="http://w3id.org/devops-infra/hardware#status">status</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#unitPosition"
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#unitPosition"
                title="http://w3id.org/devops-infra/hardware#unitPosition">unit position</a>
             <sup class="type-dp" title="data property">dp</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="NetCard">
-      <h3>Net Card<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#NetCard</p>
-      <div class="comment">
-         <span class="markdown">A network interface controller (NIC, also known as a network interface card, network adapter, LAN adapter or physical network interface, and by similar terms) is a computer hardware component that connects a computer to a computer network.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#vlanID" title="http://w3id.org/devops-infra/hardware#vlanID">VLAN ID</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#bandwidth" title="http://w3id.org/devops-infra/hardware#bandwidth">bandwidth</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#macAddress" title="http://w3id.org/devops-infra/hardware#macAddress">mac address</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#port" title="http://w3id.org/devops-infra/hardware#port">port</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#switch" title="http://w3id.org/devops-infra/hardware#switch">switch</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#networkCard"
-               title="http://w3id.org/devops-infra/hardware#networkCard">network card</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -232,8 +300,8 @@ This section provides details for each class and property defined by Ontology fo
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#HardwareItem"
-               title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+            <a href="#ServerHardware"
+               title="http://w3id.org/devops-infra/hardware#ServerHardware">Server Hardware</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -277,9 +345,6 @@ This section provides details for each class and property defined by Ontology fo
             title="http://w3id.org/devops-infra/hardware#networkCard">network card</a>
       </li>
       <li>
-         <a href="#status" title="http://w3id.org/devops-infra/hardware#status">status</a>
-      </li>
-      <li>
          <a href="#switch" title="http://w3id.org/devops-infra/hardware#switch">switch</a>
       </li>
    </ul>
@@ -297,8 +362,8 @@ This section provides details for each class and property defined by Ontology fo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#HardwareItem"
-                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <a href="#ServerHardware"
+                  title="http://w3id.org/devops-infra/hardware#ServerHardware">Server Hardware</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -370,14 +435,14 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#highAvailabilityStatus</p>
       <div class="comment">
-         <span class="markdown">It determines the status of high availability of any hardware item. Normally it will be Standby or Active</span>
+         <span class="markdown">It determines the status of high availability of any servder hardware item. Normally it will be Standby or Active</span>
       </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#HardwareItem"
-                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <a href="#ServerHardware"
+                  title="http://w3id.org/devops-infra/hardware#ServerHardware">Server Hardware</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -395,14 +460,14 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#hostedInFrame</p>
       <div class="comment">
-         <span class="markdown">Frame where a Hardware Item is physically located</span>
+         <span class="markdown">Frame where a Server Hardware Item is physically located</span>
       </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#HardwareItem"
-                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <a href="#ServerHardware"
+                  title="http://w3id.org/devops-infra/hardware#ServerHardware">Server Hardware</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -421,27 +486,7 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#networkCard</p>
       <div class="comment">
-         <span class="markdown">The network card to which an item (e.g., Switch, Physical Server, etc.) is connected</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <a href="#NetCard" title="http://w3id.org/devops-infra/hardware#NetCard">Net Card</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="status">
-      <h3>status<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#status</p>
-      <div class="comment">
-         <span class="markdown">Status of a Hardware Item</span>
+         <span class="markdown">The network card to which a Hardware Item (e.g., Switch, Physical Server, etc.) is connected</span>
       </div>
       <div class="description">
          <dl>
@@ -453,7 +498,8 @@ This section provides details for each class and property defined by Ontology fo
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+               <a href="#NetCard" title="http://w3id.org/devops-infra/hardware#NetCard">Net Card</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -506,6 +552,9 @@ This section provides details for each class and property defined by Ontology fo
             title="http://w3id.org/devops-infra/hardware#dateOnShelf">date on shelf</a>
       </li>
       <li>
+         <a href="#diskSize" title="http://w3id.org/devops-infra/hardware#diskSize">disk size</a>
+      </li>
+      <li>
          <a href="#f5Type" title="http://w3id.org/devops-infra/hardware#f5Type">F5 type</a>
       </li>
       <li>
@@ -547,6 +596,12 @@ This section provides details for each class and property defined by Ontology fo
       </li>
       <li>
          <a href="#switchType" title="http://w3id.org/devops-infra/hardware#switchType">switch type</a>
+      </li>
+      <li>
+         <a href="#diskType" title="http://w3id.org/devops-infra/hardware#diskType">The type of a disk (SAS, SATA, etc.). This may be converted in the future to a SKOS theasurus</a>
+      </li>
+      <li>
+         <a href="#frameType" title="http://w3id.org/devops-infra/hardware#frameType">The type of frame</a>
       </li>
       <li>
          <a href="#unitPosition"
@@ -595,14 +650,14 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#cabPosition</p>
       <div class="comment">
-         <span class="markdown">Cabinet where the Hardware Item is</span>
+         <span class="markdown">Cabinet where the Server Hardware Item is</span>
       </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#HardwareItem"
-                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <a href="#ServerHardware"
+                  title="http://w3id.org/devops-infra/hardware#ServerHardware">Server Hardware</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -651,8 +706,8 @@ This section provides details for each class and property defined by Ontology fo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#HardwareItem"
-                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <a href="#ServerHardware"
+                  title="http://w3id.org/devops-infra/hardware#ServerHardware">Server Hardware</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -676,13 +731,37 @@ This section provides details for each class and property defined by Ontology fo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#HardwareItem"
-                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <a href="#ServerHardware"
+                  title="http://w3id.org/devops-infra/hardware#ServerHardware">Server Hardware</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="diskSize">
+      <h3>disk size<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#diskSize</p>
+      <div class="comment">
+         <span class="markdown">The size (in GB) of a hard disk</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Disk" title="http://w3id.org/devops-infra/hardware#Disk">Disk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
             </dd>
          </dl>
       </div>
@@ -743,7 +822,7 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#hardwareType</p>
       <div class="comment">
-         <span class="markdown">Type of hardware for a batch of hardware items</span>
+         <span class="markdown">Type of hardware for a batch of hardware items, or for any hardware item</span>
       </div>
       <div class="description">
          <dl>
@@ -751,6 +830,10 @@ This section provides details for each class and property defined by Ontology fo
             <dd>
                <a href="#HardwareBatch"
                   title="http://w3id.org/devops-infra/hardware#HardwareBatch">Hardware Batch</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#HardwareItem"
+                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -798,8 +881,8 @@ This section provides details for each class and property defined by Ontology fo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#HardwareItem"
-                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <a href="#ServerHardware"
+                  title="http://w3id.org/devops-infra/hardware#ServerHardware">Server Hardware</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -817,14 +900,14 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#managementIP</p>
       <div class="comment">
-         <span class="markdown">IP where management of the Hardware Item can be done</span>
+         <span class="markdown">IP where management of the Server Hardware Item can be done</span>
       </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#HardwareItem"
-                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <a href="#ServerHardware"
+                  title="http://w3id.org/devops-infra/hardware#ServerHardware">Server Hardware</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -848,8 +931,8 @@ This section provides details for each class and property defined by Ontology fo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#HardwareItem"
-                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <a href="#ServerHardware"
+                  title="http://w3id.org/devops-infra/hardware#ServerHardware">Server Hardware</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -873,8 +956,8 @@ This section provides details for each class and property defined by Ontology fo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#HardwareItem"
-                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <a href="#ServerHardware"
+                  title="http://w3id.org/devops-infra/hardware#ServerHardware">Server Hardware</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -940,10 +1023,16 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#serialNumber</p>
       <div class="comment">
-         <span class="markdown">Serial number of any item (hardware items, frames, etc.)</span>
+         <span class="markdown">Serial number of a hardware item (server hardware, frames, network cards, etc.)</span>
       </div>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#HardwareItem"
+                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
@@ -975,6 +1064,35 @@ This section provides details for each class and property defined by Ontology fo
          </dl>
       </div>
    </div>
+   <div class="entity" id="diskType">
+      <h3>The type of a disk (SAS, SATA, etc.). This may be converted in the future to a SKOS theasurus<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#diskType</p>
+   </div>
+   <div class="entity" id="frameType">
+      <h3>The type of frame<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#frameType</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Frame" title="http://w3id.org/devops-infra/hardware#Frame">Frame</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="unitPosition">
       <h3>unit position<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -983,14 +1101,14 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#unitPosition</p>
       <div class="comment">
-         <span class="markdown">Unit where the Hardware Item is</span>
+         <span class="markdown">Unit where the Server Hardware Item is</span>
       </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#HardwareItem"
-                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <a href="#ServerHardware"
+                  title="http://w3id.org/devops-infra/hardware#ServerHardware">Server Hardware</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1012,6 +1130,12 @@ This section provides details for each class and property defined by Ontology fo
       </div>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#HardwareItem"
+                  title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>

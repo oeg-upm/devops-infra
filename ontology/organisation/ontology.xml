@@ -1,37 +1,40 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://w3id.org/devops-infra/organization#"
-     xml:base="http://w3id.org/devops-infra/organization"
+<rdf:RDF xmlns="http://w3id.org/devops-infra/organisation#"
+     xml:base="http://w3id.org/devops-infra/organisation"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:org="http://www.w3.org/ns/org#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="http://w3id.org/devops-infra/organization">
-        <owl:versionIRI rdf:resource="http://w3id.org/devops-infra/organization/0.0.1"/>
+    <owl:Ontology rdf:about="http://w3id.org/devops-infra/organisation">
+        <owl:versionIRI rdf:resource="http://w3id.org/devops-infra/organisation/0.0.2"/>
         <owl:imports rdf:resource="http://w3id.org/devops-infra/core"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
         <dc:creator>David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:creator>Hu Peng (Huawei Research Ireland)</dc:creator>
         <dc:creator>Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:creator>José Mora (Huawei Research Ireland)</dc:creator>
-        <dc:creator>Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator>Julián Arenas-Guerrero (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:creator>Mingxue Wang (Huawei Research Ireland)</dc:creator>
         <dc:creator>Nicholas Burrett (Huawei Research Ireland)</dc:creator>
         <dc:creator>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:creator>Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
-        <dc:identifier>http://w3id.org/devops-infra/organization</dc:identifier>
+        <dc:identifier>http://w3id.org/devops-infra/organisation</dc:identifier>
         <dc:title>Ontology for the representation of the organisation-related part of DevOps</dc:title>
-        <terms:hasFormat>http://w3id.org/devops-infra/organization.owl</terms:hasFormat>
-        <terms:issued>2020-10-14</terms:issued>
+        <terms:hasFormat>http://w3id.org/devops-infra/organisation.owl</terms:hasFormat>
+        <terms:issued>2021-02-15</terms:issued>
         <terms:license>https://creativecommons.org/licenses/by/4.0</terms:license>
         <vann:preferredNamespacePrefix>devopsorg</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>http://w3id.org/devops-infra/organization#</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri>http://w3id.org/devops-infra/organisation#</vann:preferredNamespaceUri>
         <rdfs:comment>This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland</rdfs:comment>
-        <owl:versionInfo xml:lang="en">Initial version</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version after the generation of mappings</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -116,23 +119,34 @@
     
 
 
-    <!-- http://w3id.org/devops-infra/organization#managedBy -->
+    <!-- http://w3id.org/devops-infra/organisation#managedBy -->
 
 
-    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/organization#managedBy">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/organization#Scope"/>
-        <rdfs:range rdf:resource="http://w3id.org/devops-infra/organization#Department"/>
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/organisation#managedBy">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/organisation#Scope"/>
+        <rdfs:range rdf:resource="http://w3id.org/devops-infra/organisation#Department"/>
         <rdfs:comment xml:lang="en">A scope may be managed by a department</rdfs:comment>
         <rdfs:label xml:lang="en">managed by</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://w3id.org/devops-infra/organization#scopeType -->
+    <!-- http://w3id.org/devops-infra/organisation#scope -->
 
 
-    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/organization#scopeType">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/organization#Scope"/>
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/organisation#scope">
+        <rdfs:range rdf:resource="http://w3id.org/devops-infra/organisation#Scope"/>
+        <rdfs:comment xml:lang="en">The Scope where any resource makes sense</rdfs:comment>
+        <rdfs:label xml:lang="en">scope</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/organisation#scopeType -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/organisation#scopeType">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/organisation#Scope"/>
         <rdfs:range>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -150,11 +164,11 @@
     
 
 
-    <!-- http://w3id.org/devops-infra/organization#tenantType -->
+    <!-- http://w3id.org/devops-infra/organisation#tenantType -->
 
 
-    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/organization#tenantType">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/organization#Tenant"/>
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/organisation#tenantType">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/organisation#Tenant"/>
         <rdfs:range>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -184,62 +198,76 @@
     
 
 
-    <!-- http://w3id.org/devops-infra/organization#account -->
+    <!-- http://w3id.org/devops-infra/organisation#account -->
 
 
-    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/organization#account">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/organization#Tenant"/>
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/organisation#account">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/organisation#Tenant"/>
         <rdfs:label xml:lang="en">account</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://w3id.org/devops-infra/organization#default -->
+    <!-- http://w3id.org/devops-infra/organisation#default -->
 
 
-    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/organization#default">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/organization#Scope"/>
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/organisation#default">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/organisation#Scope"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://w3id.org/devops-infra/organization#password -->
+    <!-- http://w3id.org/devops-infra/organisation#domain -->
 
 
-    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/organization#password">
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/organisation#domain">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/organisation#Tenant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The domain of a Tenant. It can be China, Asia, Europe, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">domain</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/organisation#password -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/organisation#password">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/organization#Tenant"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/organisation#Tenant"/>
         <rdfs:label xml:lang="en">password</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://w3id.org/devops-infra/organization#priority -->
+    <!-- http://w3id.org/devops-infra/organisation#priority -->
 
 
-    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/organization#priority">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/organization#Scope"/>
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/organisation#priority">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/organisation#Scope"/>
         <rdfs:label xml:lang="en">priority</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://w3id.org/devops-infra/organization#status -->
+    <!-- http://w3id.org/devops-infra/organisation#tenantStatus -->
 
 
-    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/organization#status">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/organization#Tenant"/>
-        <rdfs:label xml:lang="en">status</rdfs:label>
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/organisation#tenantStatus">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/organisation#Tenant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">This property describe the status of a tenant. It may be enabled or disabled. In the future, this may be transformed into a SKOS thesaurus</rdfs:comment>
+        <rdfs:label xml:lang="en">tenant status</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://w3id.org/devops-infra/organization#timeZone -->
+    <!-- http://w3id.org/devops-infra/organisation#timeZone -->
 
 
-    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/organization#timeZone">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/organization#Site"/>
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/organisation#timeZone">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/organisation#Site"/>
         <rdfs:comment xml:lang="en">Time Zone applicable to a Site</rdfs:comment>
         <rdfs:label xml:lang="en">time zone</rdfs:label>
     </owl:DatatypeProperty>
@@ -265,29 +293,30 @@
     
 
 
-    <!-- http://w3id.org/devops-infra/organization#Department -->
+    <!-- http://w3id.org/devops-infra/organisation#Department -->
 
 
-    <owl:Class rdf:about="http://w3id.org/devops-infra/organization#Department">
+    <owl:Class rdf:about="http://w3id.org/devops-infra/organisation#Department">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
         <rdfs:label xml:lang="en">Department</rdfs:label>
         <rdfs:label xml:lang="cn">部门</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://w3id.org/devops-infra/organization#Scope -->
+    <!-- http://w3id.org/devops-infra/organisation#Scope -->
 
 
-    <owl:Class rdf:about="http://w3id.org/devops-infra/organization#Scope">
+    <owl:Class rdf:about="http://w3id.org/devops-infra/organisation#Scope">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/organization#managedBy"/>
-                <owl:someValuesFrom rdf:resource="http://w3id.org/devops-infra/organization#Department"/>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/organisation#managedBy"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/devops-infra/organisation#Department"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/organization#scopeType"/>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/organisation#scopeType"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
@@ -303,13 +332,13 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/organization#default"/>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/organisation#default"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/organization#priority"/>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/organisation#priority"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -319,14 +348,14 @@
     
 
 
-    <!-- http://w3id.org/devops-infra/organization#Site -->
+    <!-- http://w3id.org/devops-infra/organisation#Site -->
 
 
-    <owl:Class rdf:about="http://w3id.org/devops-infra/organization#Site">
+    <owl:Class rdf:about="http://w3id.org/devops-infra/organisation#Site">
         <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/organization#timeZone"/>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/organisation#timeZone"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -336,10 +365,10 @@
     
 
 
-    <!-- http://w3id.org/devops-infra/organization#Stage -->
+    <!-- http://w3id.org/devops-infra/organisation#Stage -->
 
 
-    <owl:Class rdf:about="http://w3id.org/devops-infra/organization#Stage">
+    <owl:Class rdf:about="http://w3id.org/devops-infra/organisation#Stage">
         <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
         <rdfs:label xml:lang="en">Stage</rdfs:label>
         <rdfs:label xml:lang="cn">部署阶段</rdfs:label>
@@ -347,14 +376,14 @@
     
 
 
-    <!-- http://w3id.org/devops-infra/organization#Tenant -->
+    <!-- http://w3id.org/devops-infra/organisation#Tenant -->
 
 
-    <owl:Class rdf:about="http://w3id.org/devops-infra/organization#Tenant">
+    <owl:Class rdf:about="http://w3id.org/devops-infra/organisation#Tenant">
         <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/organization#tenantType"/>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/organisation#tenantType"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
@@ -370,23 +399,29 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/organization#status"/>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/organisation#scope"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/devops-infra/organisation#Scope"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/organisation#tenantStatus"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/organization#account"/>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/organisation#account"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/organization#password"/>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/organisation#password"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A tenant is defined as XXXX</rdfs:comment>
+        <rdfs:comment xml:lang="en">A tenant is usually understood as a container for items of an Organisation in a cloud, such as users, domains, subscriptions, etc</rdfs:comment>
         <rdfs:label xml:lang="en">Tenant</rdfs:label>
         <rdfs:label xml:lang="cn">租户</rdfs:label>
     </owl:Class>

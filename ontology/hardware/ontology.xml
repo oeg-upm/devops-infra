@@ -11,14 +11,14 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://w3id.org/devops-infra/hardware">
-        <owl:versionIRI rdf:resource="http://w3id.org/devops-infra/hardware/0.0.1"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/devops-infra/hardware/0.0.2"/>
         <owl:imports rdf:resource="http://w3id.org/devops-infra/core"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <dc:creator>David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:creator>Hu Peng (Huawei Research Ireland)</dc:creator>
         <dc:creator>Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:creator>José Mora (Huawei Research Ireland)</dc:creator>
-        <dc:creator>Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator>Julián Arenas-Guerrero (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:creator>Mingxue Wang (Huawei Research Ireland)</dc:creator>
         <dc:creator>Nicholas Burrett (Huawei Research Ireland)</dc:creator>
         <dc:creator>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
@@ -26,12 +26,12 @@
         <dc:identifier>http://w3id.org/devops-infra/network</dc:identifier>
         <dc:title xml:lang="en">Ontology for the representation of the hardware items related to a DevOps infrastructure</dc:title>
         <terms:hasFormat>http://w3id.org/devops-infra/hardware.owl</terms:hasFormat>
-        <terms:issued>2020-12-29</terms:issued>
+        <terms:issued>2021-02-15</terms:issued>
         <terms:license>https://creativecommons.org/licenses/by/4.0</terms:license>
         <vann:preferredNamespacePrefix>devopsnet</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>http://w3id.org/devops-infra/hardware#</vann:preferredNamespaceUri>
         <rdfs:comment>This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland</rdfs:comment>
-        <owl:versionInfo xml:lang="en">Initial version</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version after initial set of RML mappings have been generated for a sample database</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -116,6 +116,13 @@
     
 
 
+    <!-- http://w3id.org/devops-infra/core#status -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/core#status"/>
+    
+
+
     <!-- http://w3id.org/devops-infra/data-center#inDataCenter -->
 
 
@@ -127,7 +134,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/hardware#batch">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#ServerHardware"/>
         <rdfs:range rdf:resource="http://w3id.org/devops-infra/hardware#HardwareBatch"/>
         <rdfs:comment xml:lang="en">Batch in which a hardware item was acquired</rdfs:comment>
         <rdfs:label xml:lang="en">batch</rdfs:label>
@@ -163,9 +170,9 @@
 
 
     <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/hardware#highAvailabilityStatus">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#ServerHardware"/>
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdfs:comment xml:lang="en">It determines the status of high availability of any hardware item. Normally it will be Standby or Active</rdfs:comment>
+        <rdfs:comment xml:lang="en">It determines the status of high availability of any servder hardware item. Normally it will be Standby or Active</rdfs:comment>
         <rdfs:label xml:lang="en">high availability status</rdfs:label>
     </owl:ObjectProperty>
     
@@ -175,9 +182,9 @@
 
 
     <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/hardware#hostedInFrame">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#ServerHardware"/>
         <rdfs:range rdf:resource="http://w3id.org/devops-infra/hardware#Frame"/>
-        <rdfs:comment xml:lang="en">Frame where a Hardware Item is physically located</rdfs:comment>
+        <rdfs:comment xml:lang="en">Frame where a Server Hardware Item is physically located</rdfs:comment>
         <rdfs:label xml:lang="en">hosted in frame</rdfs:label>
     </owl:ObjectProperty>
     
@@ -187,21 +194,10 @@
 
 
     <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/hardware#networkCard">
-        <rdfs:range rdf:resource="http://w3id.org/devops-infra/hardware#NetCard"/>
-        <rdfs:comment xml:lang="en">The network card to which an item (e.g., Switch, Physical Server, etc.) is connected</rdfs:comment>
-        <rdfs:label xml:lang="en">network card</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://w3id.org/devops-infra/hardware#status -->
-
-
-    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/hardware#status">
         <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdfs:comment xml:lang="en">Status of a Hardware Item</rdfs:comment>
-        <rdfs:label xml:lang="en">status</rdfs:label>
+        <rdfs:range rdf:resource="http://w3id.org/devops-infra/hardware#NetCard"/>
+        <rdfs:comment xml:lang="en">The network card to which a Hardware Item (e.g., Switch, Physical Server, etc.) is connected</rdfs:comment>
+        <rdfs:label xml:lang="en">network card</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -253,9 +249,9 @@
 
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#cabPosition">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#ServerHardware"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Cabinet where the Hardware Item is</rdfs:comment>
+        <rdfs:comment xml:lang="en">Cabinet where the Server Hardware Item is</rdfs:comment>
         <rdfs:label xml:lang="en">cab position</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -277,7 +273,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#dateEnabled">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#ServerHardware"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="en">Date and time when the Hardware Item was enabled</rdfs:comment>
         <rdfs:label xml:lang="en">date enabled</rdfs:label>
@@ -289,10 +285,32 @@
 
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#dateOnShelf">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#ServerHardware"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="en">Date and time when the Hardware Item was put in a frame</rdfs:comment>
         <rdfs:label xml:lang="en">date on shelf</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#diskSize -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#diskSize">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#Disk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The size (in GB) of a hard disk</rdfs:comment>
+        <rdfs:label xml:lang="en">disk size</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#diskType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#diskType">
+        <rdfs:label xml:lang="en">The type of a disk (SAS, SATA, etc.). This may be converted in the future to a SKOS theasurus</rdfs:label>
+        <rdfs:label xml:lang="en">disk type</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -321,13 +339,32 @@
     
 
 
+    <!-- http://w3id.org/devops-infra/hardware#frameType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#frameType">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#Frame"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">The type of frame</rdfs:label>
+        <rdfs:label xml:lang="en">frame type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://w3id.org/devops-infra/hardware#hardwareType -->
 
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#hardwareType">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareBatch"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/devops-infra/hardware#HardwareBatch"/>
+                    <rdf:Description rdf:about="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Type of hardware for a batch of hardware items</rdfs:comment>
+        <rdfs:comment xml:lang="en">Type of hardware for a batch of hardware items, or for any hardware item</rdfs:comment>
         <rdfs:label xml:lang="en">hardware type</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -349,7 +386,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#machineType">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#ServerHardware"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Type of machine</rdfs:comment>
         <rdfs:label xml:lang="en">machine type</rdfs:label>
@@ -361,9 +398,9 @@
 
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#managementIP">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#ServerHardware"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">IP where management of the Hardware Item can be done</rdfs:comment>
+        <rdfs:comment xml:lang="en">IP where management of the Server Hardware Item can be done</rdfs:comment>
         <rdfs:label xml:lang="en">management IP</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -373,7 +410,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#managementLink">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#ServerHardware"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Link (URL) where management of the Hardware Item can be done</rdfs:comment>
         <rdfs:label xml:lang="en">management link</rdfs:label>
@@ -385,7 +422,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#managementPort">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#ServerHardware"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Port where management of the Hardware Item can be done</rdfs:comment>
         <rdfs:label xml:lang="en">management port</rdfs:label>
@@ -421,8 +458,9 @@
 
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#serialNumber">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Serial number of any item (hardware items, frames, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">Serial number of a hardware item (server hardware, frames, network cards, etc.)</rdfs:comment>
         <rdfs:label xml:lang="en">serial number</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -444,9 +482,9 @@
 
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#unitPosition">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#ServerHardware"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Unit where the Hardware Item is</rdfs:comment>
+        <rdfs:comment xml:lang="en">Unit where the Server Hardware Item is</rdfs:comment>
         <rdfs:label xml:lang="en">unit position</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -456,6 +494,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/hardware#unitPrice">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment xml:lang="en">Unit price for hardware items, frames, servers, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">unit price</rdfs:label>
@@ -513,11 +552,42 @@
     
 
 
+    <!-- http://w3id.org/devops-infra/hardware#Disk -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/hardware#Disk">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/hardware#diskSize"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/hardware#diskSize"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/hardware#diskType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A disk, understood as a piece of hardware. It can be of different types, and have size.</rdfs:comment>
+        <rdfs:label xml:lang="en">Disk</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/devops-infra/hardware#F5Hardware -->
 
 
     <owl:Class rdf:about="http://w3id.org/devops-infra/hardware#F5Hardware">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/hardware#ServerHardware"/>
         <rdfs:comment xml:lang="en">A specific type of hardware from the company F5.</rdfs:comment>
         <rdfs:label xml:lang="en">F5 Hardware</rdfs:label>
     </owl:Class>
@@ -528,8 +598,8 @@
 
 
     <owl:Class rdf:about="http://w3id.org/devops-infra/hardware#Firewall">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
-        <rdfs:comment xml:lang="en">A specific type of hardware that (network security device) that monitors incoming and outgoing network traffic and permits or blocks data packets based on a set of security rules. Its purpose is to establish a barrier between the internal network and incoming traffic from external sources (such as the internet) in order to block malicious traffic like viruses and hackers.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/hardware#ServerHardware"/>
+        <rdfs:comment xml:lang="en">A specific type of hardware (network security device, which may be virtualised in some cases) that monitors incoming and outgoing network traffic and permits or blocks data packets based on a set of security rules. Its purpose is to establish a barrier between the internal network and incoming traffic from external sources (such as the internet) in order to block malicious traffic like viruses and hackers.</rdfs:comment>
         <rdfs:label xml:lang="en">Firewall</rdfs:label>
     </owl:Class>
     
@@ -539,7 +609,13 @@
 
 
     <owl:Class rdf:about="http://w3id.org/devops-infra/hardware#Frame">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/hardware#frameType"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A frame, also known as rack, is a supporting framework that holds hardware modules. In this context, racks typically contain servers, hard disk drives and other computing equipment. Racks make it possible to contain a lot of equipment in a small physical footprint without requiring shelving.</rdfs:comment>
         <rdfs:label xml:lang="en">Frame</rdfs:label>
     </owl:Class>
@@ -561,7 +637,20 @@
 
     <owl:Class rdf:about="http://w3id.org/devops-infra/hardware#HardwareItem">
         <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
-        <rdfs:comment xml:lang="en">A Hardware Item (also known as Server Hardware) is any type of hardware that can be found in a frame. It also includes firewalls, switches, F5 machines, etc.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/core#status"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/hardware#serialNumber"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A piece of hardware that can be found in the context of a DevOps infrastructure</rdfs:comment>
         <rdfs:label xml:lang="en">Hardware Item</rdfs:label>
     </owl:Class>
     
@@ -571,9 +660,20 @@
 
 
     <owl:Class rdf:about="http://w3id.org/devops-infra/hardware#NetCard">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
         <rdfs:comment xml:lang="en">A network interface controller (NIC, also known as a network interface card, network adapter, LAN adapter or physical network interface, and by similar terms) is a computer hardware component that connects a computer to a computer network.</rdfs:comment>
         <rdfs:label xml:lang="en">Net Card</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/devops-infra/hardware#ServerHardware -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/hardware#ServerHardware">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:comment xml:lang="en">A Server Hardware is any type of hardware that can be found inside a frame. It includes firewalls, switches, F5 machines, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Server Hardware</rdfs:label>
     </owl:Class>
     
 
@@ -582,7 +682,7 @@
 
 
     <owl:Class rdf:about="http://w3id.org/devops-infra/hardware#Switch">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/hardware#HardwareItem"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/hardware#ServerHardware"/>
         <rdfs:comment xml:lang="en">A network switch (also called switching hub, bridging hub, and, by the IEEE, MAC bridge) is networking hardware that connects devices on a computer network by using packet switching to receive and forward data to the destination device</rdfs:comment>
         <rdfs:label xml:lang="en">Switch</rdfs:label>
     </owl:Class>

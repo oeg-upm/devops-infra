@@ -7,14 +7,14 @@
 @base <http://w3id.org/devops-infra/software> .
 
 <http://w3id.org/devops-infra/software> rdf:type owl:Ontology ;
-                                         owl:versionIRI <http://w3id.org/devops-infra/software/0.0.1> ;
+                                         owl:versionIRI <http://w3id.org/devops-infra/software/0.0.2> ;
                                          owl:imports <http://w3id.org/devops-infra/core> ,
                                                      <http://www.w3.org/2004/02/skos/core> ;
                                          <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
                                                                                    "Hu Peng (Huawei Research Ireland)" ,
                                                                                    "Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
                                                                                    "José Mora (Huawei Research Ireland)" ,
-                                                                                   "Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                   "Julián Arenas-Guerrero (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
                                                                                    "Mingxue Wang (Huawei Research Ireland)" ,
                                                                                    "Nicholas Burrett (Huawei Research Ireland)" ,
                                                                                    "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
@@ -22,12 +22,12 @@
                                          <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/software" ;
                                          <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of the software infrastructure"@en ;
                                          <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/software.owl" ;
-                                         <http://purl.org/dc/terms/issued> "2020-12-10" ;
+                                         <http://purl.org/dc/terms/issued> "2021-02-15" ;
                                          <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" ;
                                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopssw" ;
                                          <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/software#" ;
                                          rdfs:comment "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" ;
-                                         owl:versionInfo "Initial version"@en .
+                                         owl:versionInfo "Version after creating an initial set of mappings"@en .
 
 #################################################################
 #    Annotation properties
@@ -94,10 +94,26 @@
 
 ###  http://w3id.org/devops-infra/software#inSoftwareDirectory
 :inSoftwareDirectory rdf:type owl:ObjectProperty ;
-                     rdfs:domain :Software ;
+                     rdfs:domain :File ;
                      rdfs:range :SoftwareDirectory ;
                      rdfs:comment "The software directory where a software (file, service module or its versions) is located"@en ;
                      rdfs:label "in software directory"@en .
+
+
+###  http://w3id.org/devops-infra/software#installedInServer
+:installedInServer rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Software ;
+                   rdfs:range <http://w3id.org/devops-infra/server#Server> ;
+                   rdfs:comment "A piece of Software may be installed in multiple Servers"@en ;
+                   rdfs:label "installed in server"@en .
+
+
+###  http://w3id.org/devops-infra/software#installsServiceModuleVersion
+:installsServiceModuleVersion rdf:type owl:ObjectProperty ;
+                              rdfs:domain :AutoInstallPackage ;
+                              rdfs:range :ServiceModuleVersion ;
+                              rdfs:label "This property identifies the Service Module Version that an Auto Install Package installs"@en ,
+                                         "installs service module version"@en .
 
 
 ###  http://w3id.org/devops-infra/software#parentDirectory
@@ -106,6 +122,14 @@
                  rdfs:range :SoftwareDirectory ;
                  rdfs:comment "The parent directory of a software directory"@en ;
                  rdfs:label "parent directory"@en .
+
+
+###  http://w3id.org/devops-infra/software#releasedAsFile
+:releasedAsFile rdf:type owl:ObjectProperty ;
+                rdfs:domain :Software ;
+                rdfs:range :File ;
+                rdfs:comment "A piece of software is usually released as a file"@en ;
+                rdfs:label "released as file"@en .
 
 
 ###  http://w3id.org/devops-infra/software#softwareType
@@ -121,6 +145,22 @@
                          ] ;
               rdfs:comment "The type of a software. It can be, among others, database, webcontainer, application, etc."@en ;
               rdfs:label "software type"@en .
+
+
+###  http://w3id.org/devops-infra/software#usesAutoDeployPackage
+:usesAutoDeployPackage rdf:type owl:ObjectProperty ;
+                       rdfs:domain :AutoInstallPackage ;
+                       rdfs:range :AutoDeployPackage ;
+                       rdfs:comment "This property identifies the deploy package that is used for an auto install package"@en ;
+                       rdfs:label "uses auto deploy package"@en .
+
+
+###  http://w3id.org/devops-infra/software#versionOfServiceModule
+:versionOfServiceModule rdf:type owl:ObjectProperty ;
+                        rdfs:domain :ServiceModuleVersion ;
+                        rdfs:range :ServiceModule ;
+                        rdfs:label "This property relates a Service Module Version with its corresponding Service Module"@en ,
+                                   "version of service module"@en .
 
 
 #################################################################
@@ -139,12 +179,28 @@
 <http://w3id.org/devops-infra/core#version> rdf:type owl:DatatypeProperty .
 
 
+###  http://w3id.org/devops-infra/software#installPath
+:installPath rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Software ;
+             rdfs:range xsd:string ;
+             rdfs:comment "The path where the software is usually installed"@en ;
+             rdfs:label "install path"@en .
+
+
 ###  http://w3id.org/devops-infra/software#md5
 :md5 rdf:type owl:DatatypeProperty ;
      rdfs:domain :File ;
      rdfs:range xsd:string ;
      rdfs:comment "The MD5 hashing algorithm is a one-way cryptographic function that accepts a message of any length as input and returns as output a fixed-length digest value to be used for authenticating the original message. In this context, it is used to allow verifying that the content of a file has not been changed during transmission"@en ;
      rdfs:label "MD5"@en .
+
+
+###  http://w3id.org/devops-infra/software#version
+:version rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Software ;
+         rdfs:range xsd:string ;
+         rdfs:comment "The version of a piece of software (e.g., used for Service Module Versions)"@en ;
+         rdfs:label "version"@en .
 
 
 #################################################################
@@ -155,9 +211,35 @@
 <http://w3id.org/devops-infra/core#Resource> rdf:type owl:Class .
 
 
+###  http://w3id.org/devops-infra/server#Server
+<http://w3id.org/devops-infra/server#Server> rdf:type owl:Class .
+
+
+###  http://w3id.org/devops-infra/software#AutoDeployPackage
+:AutoDeployPackage rdf:type owl:Class ;
+                   rdfs:subClassOf :File ;
+                   rdfs:comment "A file that contains a package of software that can be deployed automatically"@en ;
+                   rdfs:label "Auto Deploy Package"@en .
+
+
+###  http://w3id.org/devops-infra/software#AutoInstallPackage
+:AutoInstallPackage rdf:type owl:Class ;
+                    rdfs:subClassOf :File ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :installsServiceModuleVersion ;
+                                      owl:allValuesFrom :ServiceModuleVersion
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :usesAutoDeployPackage ;
+                                      owl:allValuesFrom :AutoDeployPackage
+                                    ] ;
+                    rdfs:comment "A file that contains a package of software that can be installed automatically"@en ;
+                    rdfs:label "Auto Install Package"@en .
+
+
 ###  http://w3id.org/devops-infra/software#File
 :File rdf:type owl:Class ;
-      rdfs:subClassOf :Software ,
+      rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :fileType ;
                         owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
@@ -186,7 +268,11 @@
 
 ###  http://w3id.org/devops-infra/software#ServiceModuleVersion
 :ServiceModuleVersion rdf:type owl:Class ;
-                      rdfs:subClassOf :Software ;
+                      rdfs:subClassOf :Software ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :versionOfServiceModule ;
+                                        owl:someValuesFrom :ServiceModule
+                                      ] ;
                       rdfs:comment "Version of a Service Module, which is used by a Product Version offered in the context of the DevOps infrastructure"@en ;
                       rdfs:label "Service Module Version"@en .
 
@@ -197,6 +283,14 @@
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :inSoftwareDirectory ;
                             owl:allValuesFrom :SoftwareDirectory
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :installedInServer ;
+                            owl:allValuesFrom <http://w3id.org/devops-infra/server#Server>
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :releasedAsFile ;
+                            owl:allValuesFrom :File
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :softwareType ;
@@ -216,8 +310,13 @@
                           [ rdf:type owl:Restriction ;
                             owl:onProperty <http://w3id.org/devops-infra/core#version> ;
                             owl:allValuesFrom xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :installPath ;
+                            owl:allValuesFrom xsd:string
                           ] ;
-          rdfs:comment "This class refers to any type of Software that is handled in the context of a DevOps infrastructure"@en ;
+          rdfs:comment """This class refers to any type of Software that is handled in the context of a DevOps infrastructure
+TODO: it would be good to determine a good set of attributes that would characterise software."""@en ;
           rdfs:label "Software"@en .
 
 

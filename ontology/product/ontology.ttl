@@ -14,7 +14,7 @@
                                                                                   "Hu Peng (Huawei Research Ireland)" ,
                                                                                   "Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
                                                                                   "José Mora (Huawei Research Ireland)" ,
-                                                                                  "Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                  "Julián Arenas-Guerrero (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
                                                                                   "Mingxue Wang (Huawei Research Ireland)" ,
                                                                                   "Nicholas Burrett (Huawei Research Ireland)" ,
                                                                                   "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
@@ -69,6 +69,10 @@
 #    Object Properties
 #################################################################
 
+###  http://w3id.org/devops-infra/core#dependsOn
+<http://w3id.org/devops-infra/core#dependsOn> rdf:type owl:ObjectProperty .
+
+
 ###  http://w3id.org/devops-infra/organisation#domain
 <http://w3id.org/devops-infra/organisation#domain> rdf:type owl:ObjectProperty .
 
@@ -95,7 +99,7 @@
 
 ###  http://w3id.org/devops-infra/product#calls
 :calls rdf:type owl:ObjectProperty ;
-       rdfs:subPropertyOf :dependsOn ;
+       rdfs:subPropertyOf <http://w3id.org/devops-infra/core#dependsOn> ;
        rdfs:domain :Service ;
        rdfs:range [ rdf:type owl:Class ;
                     owl:unionOf ( :MicroService
@@ -117,18 +121,6 @@
                                              ) ;
                           rdf:type owl:Class
                         ] .
-
-
-###  http://w3id.org/devops-infra/product#dependsOn
-:dependsOn rdf:type owl:ObjectProperty ;
-           rdfs:domain :Product ;
-           rdfs:range [ rdf:type owl:Class ;
-                        owl:unionOf ( :MicroService
-                                      :Service
-                                    )
-                      ] ;
-           rdfs:comment "A product depends on services and microservices in order to run"@en ;
-           rdfs:label "depends on"@en .
 
 
 ###  http://w3id.org/devops-infra/product#deployedInstanceOf
@@ -188,7 +180,7 @@
 
 ###  http://w3id.org/devops-infra/product#uses
 :uses rdf:type owl:ObjectProperty ;
-      rdfs:subPropertyOf :dependsOn ;
+      rdfs:subPropertyOf <http://w3id.org/devops-infra/core#dependsOn> ;
       rdfs:range :Service ;
       rdfs:comment "A Product Offering or a Business Product use services"@en ;
       rdfs:label "uses"@en .
@@ -259,14 +251,6 @@
       rdfs:range xsd:string ;
       rdfs:comment "Port where a microservice instance is running"@en ;
       rdfs:label "port"@en .
-
-
-###  http://w3id.org/devops-infra/product#status
-:status rdf:type owl:DatatypeProperty ;
-        rdfs:domain :MicroServiceRunningInstanceDeployment ;
-        rdfs:range xsd:string ;
-        rdfs:comment "Status of a running instance of a microservice in the TerraForm infrastructure"@en ;
-        rdfs:label "status"@en .
 
 
 ###  http://w3id.org/devops-infra/product#value
@@ -407,7 +391,7 @@
 :Product rdf:type owl:Class ;
          rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ,
                          [ rdf:type owl:Restriction ;
-                           owl:onProperty :dependsOn ;
+                           owl:onProperty <http://w3id.org/devops-infra/core#dependsOn> ;
                            owl:allValuesFrom [ rdf:type owl:Class ;
                                                owl:unionOf ( :MicroService
                                                              :Service
@@ -558,13 +542,11 @@
 
 
 ###  http://w3id.org/devops-infra/server#Server
-<http://w3id.org/devops-infra/server#Server> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/server#Server> rdf:type owl:Class .
 
 
 ###  http://w3id.org/devops-infra/server#ServerLoadBalancer
-<http://w3id.org/devops-infra/server#ServerLoadBalancer> rdf:type owl:Class ;
-                                                         rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> .
+<http://w3id.org/devops-infra/server#ServerLoadBalancer> rdf:type owl:Class .
 
 
 #################################################################

@@ -44,8 +44,8 @@ This section provides details for each class and property defined by Ontology fo
                title="http://w3id.org/devops-infra/data-center#cloudAvailabilityZone">cloud availability zone</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#cloudRegion"
                title="http://w3id.org/devops-infra/data-center#cloudRegion">cloud region</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#datacenterType"
-               title="http://w3id.org/devops-infra/data-center#datacenterType">data center type</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#dataCenterType"
+               title="http://w3id.org/devops-infra/data-center#dataCenterType">data center type</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hostPrefix"
                title="http://w3id.org/devops-infra/data-center#hostPrefix">host prefix</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hosts" title="http://w3id.org/devops-infra/data-center#hosts">hosts</a>
@@ -65,8 +65,6 @@ This section provides details for each class and property defined by Ontology fo
                title="http://w3id.org/devops-infra/data-center#offersIPNetwork">offers IP Network</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#offersNetworkSegment"
                title="http://w3id.org/devops-infra/data-center#offersNetworkSegment">offers Network Segment</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#offersSSHChannel"
-               title="http://w3id.org/devops-infra/data-center#offersSSHChannel">offers SSH Channel</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#primaryDataCenterIP"
                title="http://w3id.org/devops-infra/data-center#primaryDataCenterIP">primary data center IP address</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#primaryDataCenterHostname"
@@ -155,8 +153,8 @@ This section provides details for each class and property defined by Ontology fo
             title="http://w3id.org/devops-infra/data-center#connectionType">connection type</a>
       </li>
       <li>
-         <a href="#datacenterType"
-            title="http://w3id.org/devops-infra/data-center#datacenterType">data center type</a>
+         <a href="#dataCenterType"
+            title="http://w3id.org/devops-infra/data-center#dataCenterType">data center type</a>
       </li>
       <li>
          <a href="#hosts" title="http://w3id.org/devops-infra/data-center#hosts">hosts</a>
@@ -180,10 +178,6 @@ This section provides details for each class and property defined by Ontology fo
       <li>
          <a href="#offersNetworkSegment"
             title="http://w3id.org/devops-infra/data-center#offersNetworkSegment">offers Network Segment</a>
-      </li>
-      <li>
-         <a href="#offersSSHChannel"
-            title="http://w3id.org/devops-infra/data-center#offersSSHChannel">offers SSH Channel</a>
       </li>
       <li>
          <a href="#supports"
@@ -245,13 +239,13 @@ This section provides details for each class and property defined by Ontology fo
          </dl>
       </div>
    </div>
-   <div class="entity" id="datacenterType">
+   <div class="entity" id="dataCenterType">
       <h3>data center type<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#datacenterType</p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#dataCenterType</p>
       <div class="comment">
          <span class="markdown">The type of a Data Center. For example, it may be and Internet Data Center (IDC) or a Virtual Data Center providing Infrastructure as a Service (IAAS).</span>
       </div>
@@ -297,7 +291,6 @@ This section provides details for each class and property defined by Ontology fo
                <sup class="type-c" title="class">c</sup> 
                <span class="logic">or</span> 
                <span class="dotted" title="http://w3id.org/devops-infra/core#ResourceGroup">resource group</span>
-               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -429,32 +422,6 @@ This section provides details for each class and property defined by Ontology fo
             <dd>
                <span class="dotted"
                      title="http://w3id.org/devops-infra/network#NetworkSegment">network segment</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="offersSSHChannel">
-      <h3>offers SSH Channel<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/data-center#offersSSHChannel</p>
-      <div class="comment">
-         <span class="markdown">The Data Center offers an SSH Channel to its customers</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#DataCenter"
-                  title="http://w3id.org/devops-infra/data-center#DataCenter">Data Center</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://w3id.org/devops-infra/network#SSHChannel">s s h channel</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>

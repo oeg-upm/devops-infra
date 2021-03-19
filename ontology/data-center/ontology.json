@@ -59,22 +59,13 @@
   "@id" : "_:genid21",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://w3id.org/devops-infra/server#Server"
+    "@id" : "_:genid22"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://w3id.org/devops-infra/data-center#hosts"
   } ]
 }, {
   "@id" : "_:genid22",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid23"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/data-center#hosts"
-  } ]
-}, {
-  "@id" : "_:genid23",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -84,7 +75,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid26",
+  "@id" : "_:genid25",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://w3id.org/devops-infra/data-center#Location"
@@ -93,7 +84,7 @@
     "@id" : "http://w3id.org/devops-infra/data-center#locatedIn"
   } ]
 }, {
-  "@id" : "_:genid27",
+  "@id" : "_:genid26",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://w3id.org/devops-infra/organisation#Site"
@@ -102,7 +93,7 @@
     "@id" : "http://w3id.org/devops-infra/data-center#locatedInSite"
   } ]
 }, {
-  "@id" : "_:genid28",
+  "@id" : "_:genid27",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://w3id.org/devops-infra/network#IPAddress"
@@ -111,13 +102,22 @@
     "@id" : "http://w3id.org/devops-infra/data-center#offersIPAddress"
   } ]
 }, {
-  "@id" : "_:genid29",
+  "@id" : "_:genid28",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://w3id.org/devops-infra/network#IPNetwork"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://w3id.org/devops-infra/data-center#offersIPNetwork"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/network#NetworkSegment"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/data-center#offersNetworkSegment"
   } ]
 }, {
   "@id" : "_:genid3",
@@ -132,40 +132,22 @@
   "@id" : "_:genid30",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://w3id.org/devops-infra/network#NetworkSegment"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/data-center#offersNetworkSegment"
-  } ]
-}, {
-  "@id" : "_:genid31",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://w3id.org/devops-infra/network#SSHChannel"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/data-center#offersSSHChannel"
-  } ]
-}, {
-  "@id" : "_:genid32",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://w3id.org/devops-infra/resource-requirement#ResourceRequirement"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://w3id.org/devops-infra/data-center#supports"
   } ]
 }, {
-  "@id" : "_:genid33",
+  "@id" : "_:genid31",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid34"
+    "@id" : "_:genid32"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://w3id.org/devops-infra/data-center#supports"
   } ]
 }, {
-  "@id" : "_:genid34",
+  "@id" : "_:genid32",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -175,7 +157,16 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid37",
+  "@id" : "_:genid35",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/network#SSHChannel"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/network#offersSSHChannel"
+  } ]
+}, {
+  "@id" : "_:genid36",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -184,7 +175,7 @@
     "@id" : "http://w3id.org/devops-infra/data-center#cloudAvailabilityZone"
   } ]
 }, {
-  "@id" : "_:genid38",
+  "@id" : "_:genid37",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -193,7 +184,7 @@
     "@id" : "http://w3id.org/devops-infra/data-center#cloudRegion"
   } ]
 }, {
-  "@id" : "_:genid39",
+  "@id" : "_:genid38",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -202,7 +193,7 @@
     "@id" : "http://w3id.org/devops-infra/data-center#hostPrefix"
   } ]
 }, {
-  "@id" : "_:genid40",
+  "@id" : "_:genid39",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -211,7 +202,7 @@
     "@id" : "http://w3id.org/devops-infra/data-center#linuxPrimaryDataCenterIP"
   } ]
 }, {
-  "@id" : "_:genid41",
+  "@id" : "_:genid40",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -220,7 +211,7 @@
     "@id" : "http://w3id.org/devops-infra/data-center#managementIP"
   } ]
 }, {
-  "@id" : "_:genid42",
+  "@id" : "_:genid41",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -229,7 +220,7 @@
     "@id" : "http://w3id.org/devops-infra/data-center#networkServiceProviderIP"
   } ]
 }, {
-  "@id" : "_:genid43",
+  "@id" : "_:genid42",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -238,7 +229,7 @@
     "@id" : "http://w3id.org/devops-infra/data-center#networkTimeProtocolIP"
   } ]
 }, {
-  "@id" : "_:genid44",
+  "@id" : "_:genid43",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -247,7 +238,7 @@
     "@id" : "http://w3id.org/devops-infra/data-center#primaryDataCenterHostname"
   } ]
 }, {
-  "@id" : "_:genid45",
+  "@id" : "_:genid44",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -256,7 +247,7 @@
     "@id" : "http://w3id.org/devops-infra/data-center#primaryDataCenterIP"
   } ]
 }, {
-  "@id" : "_:genid46",
+  "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -265,7 +256,7 @@
     "@id" : "http://w3id.org/devops-infra/data-center#vendorAvailabilityZone"
   } ]
 }, {
-  "@id" : "_:genid47",
+  "@id" : "_:genid46",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -274,7 +265,7 @@
     "@id" : "http://w3id.org/devops-infra/data-center#vendorRegion"
   } ]
 }, {
-  "@id" : "_:genid48",
+  "@id" : "_:genid47",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -283,13 +274,22 @@
     "@id" : "http://w3id.org/devops-infra/data-center#windowsPrimaryDataCenterIP"
   } ]
 }, {
-  "@id" : "_:genid49",
+  "@id" : "_:genid48",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://w3id.org/devops-infra/network#bandwidth"
+  } ]
+}, {
+  "@id" : "_:genid49",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "_:genid50"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/data-center#dataCenterConnectionType"
   } ]
 }, {
   "@id" : "_:genid5",
@@ -303,25 +303,16 @@
   } ]
 }, {
   "@id" : "_:genid50",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid51"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/data-center#dataCenterConnectionType"
-  } ]
-}, {
-  "@id" : "_:genid51",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "@id" : "_:genid53"
+      "@id" : "_:genid52"
     } ]
   } ]
 }, {
-  "@id" : "_:genid53",
+  "@id" : "_:genid52",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "http://w3id.org/devops-infra/kos/connection-type"
@@ -330,7 +321,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid55",
+  "@id" : "_:genid54",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://w3id.org/devops-infra/data-center#DataCenter"
@@ -339,7 +330,7 @@
     "@id" : "http://w3id.org/devops-infra/data-center#endInternetDataCenter"
   } ]
 }, {
-  "@id" : "_:genid56",
+  "@id" : "_:genid55",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://w3id.org/devops-infra/data-center#DataCenter"
@@ -348,7 +339,7 @@
     "@id" : "http://w3id.org/devops-infra/data-center#startInternetDataCenter"
   } ]
 }, {
-  "@id" : "_:genid57",
+  "@id" : "_:genid56",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -357,7 +348,7 @@
     "@id" : "http://w3id.org/devops-infra/network#bandwidth"
   } ]
 }, {
-  "@id" : "_:genid58",
+  "@id" : "_:genid57",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -366,7 +357,7 @@
     "@id" : "http://w3id.org/devops-infra/network#delay"
   } ]
 }, {
-  "@id" : "_:genid59",
+  "@id" : "_:genid58",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -375,7 +366,7 @@
     "@id" : "http://w3id.org/devops-infra/network#packetLoss"
   } ]
 }, {
-  "@id" : "_:genid60",
+  "@id" : "_:genid59",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -384,7 +375,7 @@
     "@id" : "http://w3id.org/devops-infra/data-center#city"
   } ]
 }, {
-  "@id" : "_:genid61",
+  "@id" : "_:genid60",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -393,7 +384,7 @@
     "@id" : "http://w3id.org/devops-infra/data-center#region"
   } ]
 }, {
-  "@id" : "_:genid62",
+  "@id" : "_:genid61",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -402,7 +393,7 @@
     "@id" : "http://w3id.org/devops-infra/data-center#timezone"
   } ]
 }, {
-  "@id" : "_:genid63",
+  "@id" : "_:genid62",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#double"
@@ -411,7 +402,7 @@
     "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
   } ]
 }, {
-  "@id" : "_:genid64",
+  "@id" : "_:genid63",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#double"
@@ -466,9 +457,6 @@
   "@id" : "http://w3id.org/devops-infra/core#Resource",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/core#ResourceGroup",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
   "@id" : "http://w3id.org/devops-infra/core#createTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
@@ -486,7 +474,7 @@
   }, {
     "@value" : "José Mora (Huawei Research Ireland)"
   }, {
-    "@value" : "Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)"
+    "@value" : "Julián Arenas-Guerrero (Ontology Engineering Group - Universidad Politécnica de Madrid)"
   }, {
     "@value" : "Mingxue Wang (Huawei Research Ireland)"
   }, {
@@ -507,7 +495,7 @@
     "@value" : "http://w3id.org/devops-infra/data-center.owl"
   } ],
   "http://purl.org/dc/terms/issued" : [ {
-    "@value" : "2020-12-30"
+    "@value" : "2021-02-15"
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@value" : "https://creativecommons.org/licenses/by/4.0"
@@ -527,11 +515,11 @@
     "@id" : "http://www.w3.org/2004/02/skos/core"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://w3id.org/devops-infra/data-center/0.0.1"
+    "@id" : "http://w3id.org/devops-infra/data-center/0.0.2"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
-    "@value" : "Initial version"
+    "@value" : "Version generated after the creation of the initial set of mappings"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/data-center#DataCenter",
@@ -553,7 +541,7 @@
   }, {
     "@id" : "_:genid21"
   }, {
-    "@id" : "_:genid22"
+    "@id" : "_:genid25"
   }, {
     "@id" : "_:genid26"
   }, {
@@ -567,9 +555,9 @@
   }, {
     "@id" : "_:genid31"
   }, {
-    "@id" : "_:genid32"
+    "@id" : "_:genid35"
   }, {
-    "@id" : "_:genid33"
+    "@id" : "_:genid36"
   }, {
     "@id" : "_:genid37"
   }, {
@@ -594,8 +582,6 @@
     "@id" : "_:genid47"
   }, {
     "@id" : "_:genid48"
-  }, {
-    "@id" : "_:genid49"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/data-center#DataCenterConnection",
@@ -611,7 +597,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/devops-infra/core#Resource"
   }, {
-    "@id" : "_:genid50"
+    "@id" : "_:genid49"
+  }, {
+    "@id" : "_:genid54"
   }, {
     "@id" : "_:genid55"
   }, {
@@ -620,8 +608,6 @@
     "@id" : "_:genid57"
   }, {
     "@id" : "_:genid58"
-  }, {
-    "@id" : "_:genid59"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/data-center#Location",
@@ -637,6 +623,8 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/devops-infra/core#Resource"
   }, {
+    "@id" : "_:genid59"
+  }, {
     "@id" : "_:genid60"
   }, {
     "@id" : "_:genid61"
@@ -644,8 +632,6 @@
     "@id" : "_:genid62"
   }, {
     "@id" : "_:genid63"
-  }, {
-    "@id" : "_:genid64"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/data-center#allowsConnectionVia",
@@ -737,9 +723,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://w3id.org/devops-infra/data-center#dataCenterType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/data-center#datacenterType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -946,23 +929,6 @@
     "@id" : "http://w3id.org/devops-infra/network#NetworkSegment"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/data-center#offersSSHChannel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "The Data Center offers an SSH Channel to its customers"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/data-center#DataCenter"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "offers SSH Channel"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/devops-infra/network#SSHChannel"
-  } ]
-}, {
   "@id" : "http://w3id.org/devops-infra/data-center#primaryDataCenterHostname",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1102,6 +1068,9 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "http://w3id.org/devops-infra/hardware#Frame",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://w3id.org/devops-infra/kos/connection-type",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ]
 }, {
@@ -1125,6 +1094,9 @@
 }, {
   "@id" : "http://w3id.org/devops-infra/network#delay",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://w3id.org/devops-infra/network#offersSSHChannel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://w3id.org/devops-infra/network#packetLoss",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]

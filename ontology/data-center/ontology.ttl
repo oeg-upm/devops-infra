@@ -7,14 +7,14 @@
 @base <http://w3id.org/devops-infra/data-center> .
 
 <http://w3id.org/devops-infra/data-center> rdf:type owl:Ontology ;
-                                            owl:versionIRI <http://w3id.org/devops-infra/data-center/0.0.1> ;
+                                            owl:versionIRI <http://w3id.org/devops-infra/data-center/0.0.2> ;
                                             owl:imports <http://w3id.org/devops-infra/core> ,
                                                         <http://www.w3.org/2004/02/skos/core> ;
                                             <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
                                                                                       "Hu Peng (Huawei Research Ireland)" ,
                                                                                       "Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
                                                                                       "José Mora (Huawei Research Ireland)" ,
-                                                                                      "Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                      "Julián Arenas-Guerrero (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
                                                                                       "Mingxue Wang (Huawei Research Ireland)" ,
                                                                                       "Nicholas Burrett (Huawei Research Ireland)" ,
                                                                                       "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
@@ -22,12 +22,12 @@
                                             <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/database" ;
                                             <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of data centers"@en ;
                                             <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/data-center.owl" ;
-                                            <http://purl.org/dc/terms/issued> "2020-12-30" ;
+                                            <http://purl.org/dc/terms/issued> "2021-02-15" ;
                                             <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" ;
                                             <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopsdc" ;
                                             <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/data-center#" ;
                                             rdfs:comment "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" ;
-                                            owl:versionInfo "Initial version"@en .
+                                            owl:versionInfo "Version generated after the creation of the initial set of mappings"@en .
 
 #################################################################
 #    Annotation properties
@@ -97,11 +97,7 @@
 
 
 ###  http://w3id.org/devops-infra/data-center#dataCenterType
-:dataCenterType rdf:type owl:ObjectProperty .
-
-
-###  http://w3id.org/devops-infra/data-center#datacenterType
-:datacenterType rdf:type owl:ObjectProperty ;
+:dataCenterType rdf:type owl:ObjectProperty ;
                 rdfs:domain :DataCenter ;
                 rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
                                                   [ rdf:type owl:Restriction ;
@@ -171,14 +167,6 @@
                       rdfs:label "offers Network Segment"@en .
 
 
-###  http://w3id.org/devops-infra/data-center#offersSSHChannel
-:offersSSHChannel rdf:type owl:ObjectProperty ;
-                  rdfs:domain :DataCenter ;
-                  rdfs:range <http://w3id.org/devops-infra/network#SSHChannel> ;
-                  rdfs:comment "The Data Center offers an SSH Channel to its customers"@en ;
-                  rdfs:label "offers SSH Channel"@en .
-
-
 ###  http://w3id.org/devops-infra/data-center#startInternetDataCenter
 :startInternetDataCenter rdf:type owl:ObjectProperty .
 
@@ -193,6 +181,10 @@
                      ] ;
           rdfs:comment "The Data Center may support specific resource requirements or capacity"@en ;
           rdfs:label "supports"@en .
+
+
+###  http://w3id.org/devops-infra/network#offersSSHChannel
+<http://w3id.org/devops-infra/network#offersSSHChannel> rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -355,10 +347,6 @@
 <http://w3id.org/devops-infra/core#Resource> rdf:type owl:Class .
 
 
-###  http://w3id.org/devops-infra/core#ResourceGroup
-<http://w3id.org/devops-infra/core#ResourceGroup> rdf:type owl:Class .
-
-
 ###  http://w3id.org/devops-infra/data-center#DataCenter
 :DataCenter rdf:type owl:Class ;
             rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ,
@@ -376,10 +364,6 @@
                                                                      ) ;
                                                   rdf:type owl:Class
                                                 ]
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty :hosts ;
-                              owl:allValuesFrom <http://w3id.org/devops-infra/server#Server>
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :hosts ;
@@ -410,10 +394,6 @@
                               owl:allValuesFrom <http://w3id.org/devops-infra/network#NetworkSegment>
                             ] ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty :offersSSHChannel ;
-                              owl:allValuesFrom <http://w3id.org/devops-infra/network#SSHChannel>
-                            ] ,
-                            [ rdf:type owl:Restriction ;
                               owl:onProperty :supports ;
                               owl:allValuesFrom <http://w3id.org/devops-infra/resource-requirement#ResourceRequirement>
                             ] ,
@@ -424,6 +404,10 @@
                                                                 <http://w3id.org/devops-infra/resource-requirement#ResourceRequirement>
                                                               )
                                                 ]
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://w3id.org/devops-infra/network#offersSSHChannel> ;
+                              owl:allValuesFrom <http://w3id.org/devops-infra/network#SSHChannel>
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :cloudAvailabilityZone ;
@@ -544,6 +528,10 @@
                           ] ;
           rdfs:comment "A Location where a Data Center is placed. This may be substituted in the future by an equivalent class from a general ontology, such as schema.org"@en ;
           rdfs:label "Location"@en .
+
+
+###  http://w3id.org/devops-infra/hardware#Frame
+<http://w3id.org/devops-infra/hardware#Frame> rdf:type owl:Class .
 
 
 ###  http://w3id.org/devops-infra/network#IPAddress

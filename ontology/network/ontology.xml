@@ -11,14 +11,14 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://w3id.org/devops-infra/network">
-        <owl:versionIRI rdf:resource="http://w3id.org/devops-infra/network/0.0.1"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/devops-infra/network/0.0.2"/>
         <owl:imports rdf:resource="http://w3id.org/devops-infra/core"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <dc:creator>David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:creator>Hu Peng (Huawei Research Ireland)</dc:creator>
         <dc:creator>Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:creator>José Mora (Huawei Research Ireland)</dc:creator>
-        <dc:creator>Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator>Julián Arenas-Guerrero (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:creator>Mingxue Wang (Huawei Research Ireland)</dc:creator>
         <dc:creator>Nicholas Burrett (Huawei Research Ireland)</dc:creator>
         <dc:creator>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
@@ -26,12 +26,12 @@
         <dc:identifier>http://w3id.org/devops-infra/network</dc:identifier>
         <dc:title xml:lang="en">Ontology for the representation of the network-related parts of a DevOps infrastructure</dc:title>
         <terms:hasFormat>http://w3id.org/devops-infra/network.owl</terms:hasFormat>
-        <terms:issued>2020-12-29</terms:issued>
+        <terms:issued>2021-02-17</terms:issued>
         <terms:license>https://creativecommons.org/licenses/by/4.0</terms:license>
         <vann:preferredNamespacePrefix>devopsnet</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>http://w3id.org/devops-infra/network#</vann:preferredNamespaceUri>
         <rdfs:comment>This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland</rdfs:comment>
-        <owl:versionInfo xml:lang="en">Initial version</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version after the initial set of mappings has been generated</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -133,7 +133,7 @@
 
     <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/network#containsFirewall">
         <rdfs:domain rdf:resource="http://w3id.org/devops-infra/network#FirewallCluster"/>
-        <rdfs:range rdf:resource="http://w3id.org/devops-infra/network#Firewall"/>
+        <rdfs:range rdf:resource="http://w3id.org/devops-infra/hardware#Firewall"/>
         <rdfs:comment xml:lang="en">A firewall cluster contains firewalls</rdfs:comment>
         <rdfs:label xml:lang="en">contains firewall</rdfs:label>
     </owl:ObjectProperty>
@@ -157,7 +157,7 @@
 
     <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/network#hasDNSIPAddress">
         <rdfs:domain rdf:resource="http://w3id.org/devops-infra/network#DNSDomain"/>
-        <rdfs:range rdf:resource="http://w3id.org/devops-infra/network#DNSIPAddress"/>
+        <rdfs:range rdf:resource="http://w3id.org/devops-infra/network#IPAddress"/>
         <rdfs:comment xml:lang="en">A DNS Domain has a DNS IP Address associated to it</rdfs:comment>
         <rdfs:label xml:lang="en">has DNS IP Address</rdfs:label>
     </owl:ObjectProperty>
@@ -168,7 +168,6 @@
 
 
     <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/network#hasDNSProfile">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/network#DNSRecordConfiguration"/>
         <rdfs:range rdf:resource="http://w3id.org/devops-infra/network#DNSConfigurationProfile"/>
         <rdfs:comment xml:lang="en">A DNS Record Configuration follows a DNS Configuration Profile</rdfs:comment>
         <rdfs:label xml:lang="en">has DNS profile</rdfs:label>
@@ -207,6 +206,17 @@
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="en">The status of an IP address, normally associated to private and virtual IP addresses</rdfs:comment>
         <rdfs:label xml:lang="en">IP status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/devops-infra/network#offersSSHChannel -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/network#offersSSHChannel">
+        <rdfs:range rdf:resource="http://w3id.org/devops-infra/network#SSHChannel"/>
+        <rdfs:comment xml:lang="en">A Server or Data Center (or any other element) may offer an SSH Channel in order to get access to them.</rdfs:comment>
+        <rdfs:label xml:lang="en">offers SSH Channel</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -263,7 +273,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/network#usedForDNSDomain">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/network#DNSRecordConfiguration"/>
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/network#DNSRecord"/>
         <rdfs:range rdf:resource="http://w3id.org/devops-infra/network#DNSDomain"/>
         <rdfs:comment xml:lang="en">A DNS Record Configuration is used for a DNS Domain</rdfs:comment>
         <rdfs:label xml:lang="en">used in DNS domain</rdfs:label>
@@ -275,7 +285,6 @@
 
 
     <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/network#usesCertificate">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/network#DNSIPAddress"/>
         <rdfs:range rdf:resource="http://w3id.org/devops-infra/certificate#DigitalCertificate"/>
         <rdfs:comment xml:lang="en">A DNS IP uses a certificate</rdfs:comment>
         <rdfs:label xml:lang="en">uses certificate</rdfs:label>
@@ -325,6 +334,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/network#destinationIP">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/devops-infra/network#ipAddress"/>
         <rdfs:domain rdf:resource="http://w3id.org/devops-infra/network#PublicNATEntry"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">For a Public NAT Entry, this property determines the destination IP address for the translation</rdfs:comment>
@@ -337,6 +347,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/network#destinationPort">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/devops-infra/network#port"/>
         <rdfs:domain rdf:resource="http://w3id.org/devops-infra/network#PublicNATEntry"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">For a Public NAT Entry, this property determines the port of the destination IP address for the translation</rdfs:comment>
@@ -417,18 +428,6 @@
     
 
 
-    <!-- http://w3id.org/devops-infra/network#managementIP -->
-
-
-    <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/network#managementIP">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/network#Firewall"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">For a Firewall, the IP address where it can be managed</rdfs:comment>
-        <rdfs:label xml:lang="en">management IP</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://w3id.org/devops-infra/network#networkIP -->
 
 
@@ -504,7 +503,6 @@
 
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/network#region">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/network#DNSIPAddress"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Region where a DNS IP operates</rdfs:comment>
         <rdfs:label xml:lang="en">region</rdfs:label>
@@ -528,6 +526,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/network#sourceIP">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/devops-infra/network#ipAddress"/>
         <rdfs:domain rdf:resource="http://w3id.org/devops-infra/network#PublicNATEntry"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">For a Public NAT Entry, this property determines the source IP address for the translation</rdfs:comment>
@@ -540,6 +539,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/devops-infra/network#sourcePort">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/devops-infra/network#port"/>
         <rdfs:domain rdf:resource="http://w3id.org/devops-infra/network#PublicNATEntry"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">For a Public NAT Entry, this property determines the port of the source IP address for the translation</rdfs:comment>
@@ -653,10 +653,19 @@
     
 
 
+    <!-- http://w3id.org/devops-infra/hardware#Firewall -->
+
+
+    <owl:Class rdf:about="http://w3id.org/devops-infra/hardware#Firewall"/>
+    
+
+
     <!-- http://w3id.org/devops-infra/network#DNSConfigurationProfile -->
 
 
-    <owl:Class rdf:about="http://w3id.org/devops-infra/network#DNSConfigurationProfile"/>
+    <owl:Class rdf:about="http://w3id.org/devops-infra/network#DNSConfigurationProfile">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
+    </owl:Class>
     
 
 
@@ -671,39 +680,6 @@
     
 
 
-    <!-- http://w3id.org/devops-infra/network#DNSIPAddress -->
-
-
-    <owl:Class rdf:about="http://w3id.org/devops-infra/network#DNSIPAddress">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/network#IPAddress"/>
-        <rdfs:comment xml:lang="en">The IP address of a DNS.</rdfs:comment>
-        <rdfs:label xml:lang="en">DNS IP Address</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/devops-infra/network#DNSPodDomain -->
-
-
-    <owl:Class rdf:about="http://w3id.org/devops-infra/network#DNSPodDomain">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/network#DNSDomain"/>
-        <rdfs:comment xml:lang="en">A DNS Pod domain</rdfs:comment>
-        <rdfs:label xml:lang="en">DNS Pod Domain</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/devops-infra/network#DNSPodRecord -->
-
-
-    <owl:Class rdf:about="http://w3id.org/devops-infra/network#DNSPodRecord">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/network#DNSRecord"/>
-        <rdfs:comment xml:lang="en">A DNS Pod domain record.</rdfs:comment>
-        <rdfs:label xml:lang="en">DNS Pod Record</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://w3id.org/devops-infra/network#DNSRecord -->
 
 
@@ -711,24 +687,6 @@
         <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
         <rdfs:comment xml:lang="en">A DNS record, which can be an A/AAAA record or a service (SRV) record, is a specification of data in the Domain Name System defining the location, i.e., the hostname and port number, of servers for specified services. It is defined in RFC 2782, and its type code is 33. Some Internet protocols such as the Session Initiation Protocol (SIP) and the Extensible Messaging and Presence Protocol (XMPP) often require SRV support by network elements.</rdfs:comment>
         <rdfs:label xml:lang="en">DNS Record</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/devops-infra/network#DNSRecordConfiguration -->
-
-
-    <owl:Class rdf:about="http://w3id.org/devops-infra/network#DNSRecordConfiguration"/>
-    
-
-
-    <!-- http://w3id.org/devops-infra/network#Firewall -->
-
-
-    <owl:Class rdf:about="http://w3id.org/devops-infra/network#Firewall">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
-        <rdfs:comment xml:lang="en">A firewall is a network security device that monitors incoming and outgoing network traffic and permits or blocks data packets based on a set of security rules.</rdfs:comment>
-        <rdfs:label xml:lang="en">Firewall</rdfs:label>
     </owl:Class>
     
 

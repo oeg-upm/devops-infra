@@ -1,12 +1,12 @@
 <http://w3id.org/devops-infra/network> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://w3id.org/devops-infra/network> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/devops-infra/network/0.0.1> .
+<http://w3id.org/devops-infra/network> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/devops-infra/network/0.0.2> .
 <http://w3id.org/devops-infra/network> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/devops-infra/core> .
 <http://w3id.org/devops-infra/network> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
 <http://w3id.org/devops-infra/network> <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
 <http://w3id.org/devops-infra/network> <http://purl.org/dc/elements/1.1/creator> "Hu Peng (Huawei Research Ireland)" .
 <http://w3id.org/devops-infra/network> <http://purl.org/dc/elements/1.1/creator> "Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
 <http://w3id.org/devops-infra/network> <http://purl.org/dc/elements/1.1/creator> "José Mora (Huawei Research Ireland)" .
-<http://w3id.org/devops-infra/network> <http://purl.org/dc/elements/1.1/creator> "Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/network> <http://purl.org/dc/elements/1.1/creator> "Julián Arenas-Guerrero (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
 <http://w3id.org/devops-infra/network> <http://purl.org/dc/elements/1.1/creator> "Mingxue Wang (Huawei Research Ireland)" .
 <http://w3id.org/devops-infra/network> <http://purl.org/dc/elements/1.1/creator> "Nicholas Burrett (Huawei Research Ireland)" .
 <http://w3id.org/devops-infra/network> <http://purl.org/dc/elements/1.1/creator> "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
@@ -14,12 +14,12 @@
 <http://w3id.org/devops-infra/network> <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/network" .
 <http://w3id.org/devops-infra/network> <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of the network-related parts of a DevOps infrastructure"@en .
 <http://w3id.org/devops-infra/network> <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/network.owl" .
-<http://w3id.org/devops-infra/network> <http://purl.org/dc/terms/issued> "2020-12-29" .
+<http://w3id.org/devops-infra/network> <http://purl.org/dc/terms/issued> "2021-02-17" .
 <http://w3id.org/devops-infra/network> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" .
 <http://w3id.org/devops-infra/network> <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopsnet" .
 <http://w3id.org/devops-infra/network> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/network#" .
 <http://w3id.org/devops-infra/network> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" .
-<http://w3id.org/devops-infra/network> <http://www.w3.org/2002/07/owl#versionInfo> "Initial version"@en .
+<http://w3id.org/devops-infra/network> <http://www.w3.org/2002/07/owl#versionInfo> "Version after the initial set of mappings has been generated"@en .
 # 
 # 
 # #################################################################
@@ -72,7 +72,7 @@
 # http://w3id.org/devops-infra/network#containsFirewall
 <http://w3id.org/devops-infra/network#containsFirewall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/devops-infra/network#containsFirewall> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/network#FirewallCluster> .
-<http://w3id.org/devops-infra/network#containsFirewall> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/network#Firewall> .
+<http://w3id.org/devops-infra/network#containsFirewall> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/hardware#Firewall> .
 <http://w3id.org/devops-infra/network#containsFirewall> <http://www.w3.org/2000/01/rdf-schema#comment> "A firewall cluster contains firewalls"@en .
 <http://w3id.org/devops-infra/network#containsFirewall> <http://www.w3.org/2000/01/rdf-schema#label> "contains firewall"@en .
 # 
@@ -86,13 +86,12 @@
 # http://w3id.org/devops-infra/network#hasDNSIPAddress
 <http://w3id.org/devops-infra/network#hasDNSIPAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/devops-infra/network#hasDNSIPAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/network#DNSDomain> .
-<http://w3id.org/devops-infra/network#hasDNSIPAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/network#DNSIPAddress> .
+<http://w3id.org/devops-infra/network#hasDNSIPAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/network#IPAddress> .
 <http://w3id.org/devops-infra/network#hasDNSIPAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "A DNS Domain has a DNS IP Address associated to it"@en .
 <http://w3id.org/devops-infra/network#hasDNSIPAddress> <http://www.w3.org/2000/01/rdf-schema#label> "has DNS IP Address"@en .
 # 
 # http://w3id.org/devops-infra/network#hasDNSProfile
 <http://w3id.org/devops-infra/network#hasDNSProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://w3id.org/devops-infra/network#hasDNSProfile> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/network#DNSRecordConfiguration> .
 <http://w3id.org/devops-infra/network#hasDNSProfile> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/network#DNSConfigurationProfile> .
 <http://w3id.org/devops-infra/network#hasDNSProfile> <http://www.w3.org/2000/01/rdf-schema#comment> "A DNS Record Configuration follows a DNS Configuration Profile"@en .
 <http://w3id.org/devops-infra/network#hasDNSProfile> <http://www.w3.org/2000/01/rdf-schema#label> "has DNS profile"@en .
@@ -116,6 +115,12 @@
 <http://w3id.org/devops-infra/network#ipStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3id.org/devops-infra/network#ipStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "The status of an IP address, normally associated to private and virtual IP addresses"@en .
 <http://w3id.org/devops-infra/network#ipStatus> <http://www.w3.org/2000/01/rdf-schema#label> "IP status"@en .
+# 
+# http://w3id.org/devops-infra/network#offersSSHChannel
+<http://w3id.org/devops-infra/network#offersSSHChannel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/network#offersSSHChannel> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/network#SSHChannel> .
+<http://w3id.org/devops-infra/network#offersSSHChannel> <http://www.w3.org/2000/01/rdf-schema#comment> "A Server or Data Center (or any other element) may offer an SSH Channel in order to get access to them."@en .
+<http://w3id.org/devops-infra/network#offersSSHChannel> <http://www.w3.org/2000/01/rdf-schema#label> "offers SSH Channel"@en .
 # 
 # http://w3id.org/devops-infra/network#partOfIPNetwork
 <http://w3id.org/devops-infra/network#partOfIPNetwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -147,14 +152,13 @@
 # 
 # http://w3id.org/devops-infra/network#usedForDNSDomain
 <http://w3id.org/devops-infra/network#usedForDNSDomain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://w3id.org/devops-infra/network#usedForDNSDomain> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/network#DNSRecordConfiguration> .
+<http://w3id.org/devops-infra/network#usedForDNSDomain> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/network#DNSRecord> .
 <http://w3id.org/devops-infra/network#usedForDNSDomain> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/network#DNSDomain> .
 <http://w3id.org/devops-infra/network#usedForDNSDomain> <http://www.w3.org/2000/01/rdf-schema#comment> "A DNS Record Configuration is used for a DNS Domain"@en .
 <http://w3id.org/devops-infra/network#usedForDNSDomain> <http://www.w3.org/2000/01/rdf-schema#label> "used in DNS domain"@en .
 # 
 # http://w3id.org/devops-infra/network#usesCertificate
 <http://w3id.org/devops-infra/network#usesCertificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://w3id.org/devops-infra/network#usesCertificate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/network#DNSIPAddress> .
 <http://w3id.org/devops-infra/network#usesCertificate> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/certificate#DigitalCertificate> .
 <http://w3id.org/devops-infra/network#usesCertificate> <http://www.w3.org/2000/01/rdf-schema#comment> "A DNS IP uses a certificate"@en .
 <http://w3id.org/devops-infra/network#usesCertificate> <http://www.w3.org/2000/01/rdf-schema#label> "uses certificate"@en .
@@ -183,6 +187,7 @@
 # 
 # http://w3id.org/devops-infra/network#destinationIP
 <http://w3id.org/devops-infra/network#destinationIP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/network#destinationIP> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/devops-infra/network#ipAddress> .
 <http://w3id.org/devops-infra/network#destinationIP> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/network#PublicNATEntry> .
 <http://w3id.org/devops-infra/network#destinationIP> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://w3id.org/devops-infra/network#destinationIP> <http://www.w3.org/2000/01/rdf-schema#comment> "For a Public NAT Entry, this property determines the destination IP address for the translation"@en .
@@ -190,6 +195,7 @@
 # 
 # http://w3id.org/devops-infra/network#destinationPort
 <http://w3id.org/devops-infra/network#destinationPort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/network#destinationPort> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/devops-infra/network#port> .
 <http://w3id.org/devops-infra/network#destinationPort> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/network#PublicNATEntry> .
 <http://w3id.org/devops-infra/network#destinationPort> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://w3id.org/devops-infra/network#destinationPort> <http://www.w3.org/2000/01/rdf-schema#comment> "For a Public NAT Entry, this property determines the port of the destination IP address for the translation"@en .
@@ -237,13 +243,6 @@
 <http://w3id.org/devops-infra/network#macAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "MAC address associated to an IP address (normally a private or virtual address)"@en .
 <http://w3id.org/devops-infra/network#macAddress> <http://www.w3.org/2000/01/rdf-schema#label> "MAC address"@en .
 # 
-# http://w3id.org/devops-infra/network#managementIP
-<http://w3id.org/devops-infra/network#managementIP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://w3id.org/devops-infra/network#managementIP> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/network#Firewall> .
-<http://w3id.org/devops-infra/network#managementIP> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://w3id.org/devops-infra/network#managementIP> <http://www.w3.org/2000/01/rdf-schema#comment> "For a Firewall, the IP address where it can be managed"@en .
-<http://w3id.org/devops-infra/network#managementIP> <http://www.w3.org/2000/01/rdf-schema#label> "management IP"@en .
-# 
 # http://w3id.org/devops-infra/network#networkIP
 <http://w3id.org/devops-infra/network#networkIP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/devops-infra/network#networkIP> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/network#IPNetwork> .
@@ -287,7 +286,6 @@
 # 
 # http://w3id.org/devops-infra/network#region
 <http://w3id.org/devops-infra/network#region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://w3id.org/devops-infra/network#region> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/network#DNSIPAddress> .
 <http://w3id.org/devops-infra/network#region> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://w3id.org/devops-infra/network#region> <http://www.w3.org/2000/01/rdf-schema#comment> "Region where a DNS IP operates"@en .
 <http://w3id.org/devops-infra/network#region> <http://www.w3.org/2000/01/rdf-schema#label> "region"@en .
@@ -301,6 +299,7 @@
 # 
 # http://w3id.org/devops-infra/network#sourceIP
 <http://w3id.org/devops-infra/network#sourceIP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/network#sourceIP> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/devops-infra/network#ipAddress> .
 <http://w3id.org/devops-infra/network#sourceIP> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/network#PublicNATEntry> .
 <http://w3id.org/devops-infra/network#sourceIP> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://w3id.org/devops-infra/network#sourceIP> <http://www.w3.org/2000/01/rdf-schema#comment> "For a Public NAT Entry, this property determines the source IP address for the translation"@en .
@@ -308,6 +307,7 @@
 # 
 # http://w3id.org/devops-infra/network#sourcePort
 <http://w3id.org/devops-infra/network#sourcePort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/devops-infra/network#sourcePort> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/devops-infra/network#port> .
 <http://w3id.org/devops-infra/network#sourcePort> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/network#PublicNATEntry> .
 <http://w3id.org/devops-infra/network#sourcePort> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://w3id.org/devops-infra/network#sourcePort> <http://www.w3.org/2000/01/rdf-schema#comment> "For a Public NAT Entry, this property determines the port of the source IP address for the translation"@en .
@@ -373,8 +373,12 @@
 # http://w3id.org/devops-infra/data-center#DataCenter
 <http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
+# http://w3id.org/devops-infra/hardware#Firewall
+<http://w3id.org/devops-infra/hardware#Firewall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # http://w3id.org/devops-infra/network#DNSConfigurationProfile
 <http://w3id.org/devops-infra/network#DNSConfigurationProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/network#DNSConfigurationProfile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
 # 
 # http://w3id.org/devops-infra/network#DNSDomain
 <http://w3id.org/devops-infra/network#DNSDomain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -382,38 +386,11 @@
 <http://w3id.org/devops-infra/network#DNSDomain> <http://www.w3.org/2000/01/rdf-schema#comment> "A DNS is a directory of domain names that align with IP addresses (so called DNS IP in this ontology)"@en .
 <http://w3id.org/devops-infra/network#DNSDomain> <http://www.w3.org/2000/01/rdf-schema#label> "DNS Domain"@en .
 # 
-# http://w3id.org/devops-infra/network#DNSIPAddress
-<http://w3id.org/devops-infra/network#DNSIPAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/devops-infra/network#DNSIPAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/network#IPAddress> .
-<http://w3id.org/devops-infra/network#DNSIPAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "The IP address of a DNS."@en .
-<http://w3id.org/devops-infra/network#DNSIPAddress> <http://www.w3.org/2000/01/rdf-schema#label> "DNS IP Address"@en .
-# 
-# http://w3id.org/devops-infra/network#DNSPodDomain
-<http://w3id.org/devops-infra/network#DNSPodDomain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/devops-infra/network#DNSPodDomain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/network#DNSDomain> .
-<http://w3id.org/devops-infra/network#DNSPodDomain> <http://www.w3.org/2000/01/rdf-schema#comment> "A DNS Pod domain"@en .
-<http://w3id.org/devops-infra/network#DNSPodDomain> <http://www.w3.org/2000/01/rdf-schema#label> "DNS Pod Domain"@en .
-# 
-# http://w3id.org/devops-infra/network#DNSPodRecord
-<http://w3id.org/devops-infra/network#DNSPodRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/devops-infra/network#DNSPodRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/network#DNSRecord> .
-<http://w3id.org/devops-infra/network#DNSPodRecord> <http://www.w3.org/2000/01/rdf-schema#comment> "A DNS Pod domain record."@en .
-<http://w3id.org/devops-infra/network#DNSPodRecord> <http://www.w3.org/2000/01/rdf-schema#label> "DNS Pod Record"@en .
-# 
 # http://w3id.org/devops-infra/network#DNSRecord
 <http://w3id.org/devops-infra/network#DNSRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/devops-infra/network#DNSRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
 <http://w3id.org/devops-infra/network#DNSRecord> <http://www.w3.org/2000/01/rdf-schema#comment> "A DNS record, which can be an A/AAAA record or a service (SRV) record, is a specification of data in the Domain Name System defining the location, i.e., the hostname and port number, of servers for specified services. It is defined in RFC 2782, and its type code is 33. Some Internet protocols such as the Session Initiation Protocol (SIP) and the Extensible Messaging and Presence Protocol (XMPP) often require SRV support by network elements."@en .
 <http://w3id.org/devops-infra/network#DNSRecord> <http://www.w3.org/2000/01/rdf-schema#label> "DNS Record"@en .
-# 
-# http://w3id.org/devops-infra/network#DNSRecordConfiguration
-<http://w3id.org/devops-infra/network#DNSRecordConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
-# http://w3id.org/devops-infra/network#Firewall
-<http://w3id.org/devops-infra/network#Firewall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/devops-infra/network#Firewall> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
-<http://w3id.org/devops-infra/network#Firewall> <http://www.w3.org/2000/01/rdf-schema#comment> "A firewall is a network security device that monitors incoming and outgoing network traffic and permits or blocks data packets based on a set of security rules."@en .
-<http://w3id.org/devops-infra/network#Firewall> <http://www.w3.org/2000/01/rdf-schema#label> "Firewall"@en .
 # 
 # http://w3id.org/devops-infra/network#FirewallCluster
 <http://w3id.org/devops-infra/network#FirewallCluster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

@@ -14,7 +14,7 @@
                                                                                       "Hu Peng (Huawei Research Ireland)" ,
                                                                                       "Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
                                                                                       "José Mora (Huawei Research Ireland)" ,
-                                                                                      "Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                      "Julián Arenas-Guerrero (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
                                                                                       "Mingxue Wang (Huawei Research Ireland)" ,
                                                                                       "Nicholas Burrett (Huawei Research Ireland)" ,
                                                                                       "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
@@ -22,12 +22,12 @@
                                             <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/certificate" ;
                                             <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of aspects related to certificates (SSL, CFCA, etc.)"@en ;
                                             <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/certificate.owl" ;
-                                            <http://purl.org/dc/terms/issued> "2020-12-10" ;
+                                            <http://purl.org/dc/terms/issued> "2021-02-15" ;
                                             <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" ;
                                             <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopscert" ;
                                             <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/certificate#" ;
                                             rdfs:comment "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" ;
-                                            owl:versionInfo "Initial version"@en .
+                                            owl:versionInfo "Version after the mappings have been generated"@en .
 
 #################################################################
 #    Annotation properties

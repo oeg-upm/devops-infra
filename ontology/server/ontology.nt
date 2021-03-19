@@ -1,21 +1,21 @@
 <http://w3id.org/devops-infra/server> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://w3id.org/devops-infra/server> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/devops-infra/server/0.0.1> .
+<http://w3id.org/devops-infra/server> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/devops-infra/server/0.0.2> .
 <http://w3id.org/devops-infra/server> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/devops-infra/core> .
 <http://w3id.org/devops-infra/server> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
 <http://w3id.org/devops-infra/server> <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
 <http://w3id.org/devops-infra/server> <http://purl.org/dc/elements/1.1/creator> "Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
-<http://w3id.org/devops-infra/server> <http://purl.org/dc/elements/1.1/creator> "Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/server> <http://purl.org/dc/elements/1.1/creator> "Julián Arenas-Guerrero (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
 <http://w3id.org/devops-infra/server> <http://purl.org/dc/elements/1.1/creator> "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
 <http://w3id.org/devops-infra/server> <http://purl.org/dc/elements/1.1/creator> "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
 <http://w3id.org/devops-infra/server> <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/server" .
 <http://w3id.org/devops-infra/server> <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of the infrastructure of servers"@en .
 <http://w3id.org/devops-infra/server> <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/server.owl" .
-<http://w3id.org/devops-infra/server> <http://purl.org/dc/terms/issued> "2020-12-09" .
+<http://w3id.org/devops-infra/server> <http://purl.org/dc/terms/issued> "2021-02-15" .
 <http://w3id.org/devops-infra/server> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" .
 <http://w3id.org/devops-infra/server> <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopsserv" .
 <http://w3id.org/devops-infra/server> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/product#" .
 <http://w3id.org/devops-infra/server> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" .
-<http://w3id.org/devops-infra/server> <http://www.w3.org/2002/07/owl#versionInfo> "Initial version" .
+<http://w3id.org/devops-infra/server> <http://www.w3.org/2002/07/owl#versionInfo> "Version after initial set of RML mappings have been generated for a sample database"@en .
 # 
 # 
 # #################################################################
@@ -58,11 +58,17 @@
 # #################################################################
 # 
 # 
+# http://w3id.org/devops-infra/core#status
+<http://w3id.org/devops-infra/core#status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
 # http://w3id.org/devops-infra/data-center#inDataCenter
 <http://w3id.org/devops-infra/data-center#inDataCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/devops-infra/data-center#inDataCenter> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/data-center#DataCenter> .
 <http://w3id.org/devops-infra/data-center#inDataCenter> <http://www.w3.org/2000/01/rdf-schema#comment> "Property used to indicate that a resource (e.g., a Server) is running or located in a data center"@en .
 <http://w3id.org/devops-infra/data-center#inDataCenter> <http://www.w3.org/2000/01/rdf-schema#label> "in data center"@en .
+# 
+# http://w3id.org/devops-infra/network#offersSSHChannel
+<http://w3id.org/devops-infra/network#offersSSHChannel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
 # http://w3id.org/devops-infra/organisation#site
 <http://w3id.org/devops-infra/organisation#site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -108,6 +114,13 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/devops-infra/server#chargeMode> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of charge mode for a virtual server (prepaid or postpaid)"@en .
 <http://w3id.org/devops-infra/server#chargeMode> <http://www.w3.org/2000/01/rdf-schema#label> "charge mode"@en .
+# 
+# http://w3id.org/devops-infra/server#containsDisk
+<http://w3id.org/devops-infra/server#containsDisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/server#containsDisk> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/server#Server> .
+<http://w3id.org/devops-infra/server#containsDisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/hardware#Disk> .
+<http://w3id.org/devops-infra/server#containsDisk> <http://www.w3.org/2000/01/rdf-schema#comment> "This property identifies the disks that are (physically or virtually) mounted in a server"@en .
+<http://w3id.org/devops-infra/server#containsDisk> <http://www.w3.org/2000/01/rdf-schema#label> "contains disk"@en .
 # 
 # http://w3id.org/devops-infra/server#creationType
 <http://w3id.org/devops-infra/server#creationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -173,6 +186,8 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://w3id.org/devops-infra/server#offeredByVendor
 <http://w3id.org/devops-infra/server#offeredByVendor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/devops-infra/server#offeredByVendor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/server#Server> .
+<http://w3id.org/devops-infra/server#offeredByVendor> <http://www.w3.org/2000/01/rdf-schema#comment> "This property describes the vendor that offers a specific resource (e.g., AWS, HWS, etc.). In the future it should be decided whether this should be a SKOS thesaurus or an instance of a class Organisation"@en .
+<http://w3id.org/devops-infra/server#offeredByVendor> <http://www.w3.org/2000/01/rdf-schema#label> "offered by vendor"@en .
 # 
 # http://w3id.org/devops-infra/server#physicalServerStatus
 <http://w3id.org/devops-infra/server#physicalServerStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -199,11 +214,10 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://w3id.org/devops-infra/server#runsOnHardware> <http://www.w3.org/2000/01/rdf-schema#comment> "A Physical Server runs on a specific set of Server Hardware"@en .
 <http://w3id.org/devops-infra/server#runsOnHardware> <http://www.w3.org/2000/01/rdf-schema#label> "runs on hardware"@en .
 # 
-# http://w3id.org/devops-infra/server#status
-<http://w3id.org/devops-infra/server#status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://w3id.org/devops-infra/server#status> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
-<http://w3id.org/devops-infra/server#status> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/server#Server> .
-<http://w3id.org/devops-infra/server#status> <http://www.w3.org/2000/01/rdf-schema#range> _:genid17 .
+# http://w3id.org/devops-infra/server#virtualServerStatus
+<http://w3id.org/devops-infra/server#virtualServerStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/server#virtualServerStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/server#VirtualServer> .
+<http://w3id.org/devops-infra/server#virtualServerStatus> <http://www.w3.org/2000/01/rdf-schema#range> _:genid17 .
 _:genid17 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid20 .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -212,27 +226,9 @@ _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid19 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/status> .
+_:genid19 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/virtual-server-status> .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/devops-infra/server#status> <http://www.w3.org/2000/01/rdf-schema#comment> "Status of a server of any type, which may be normal or abnormal"@en .
-<http://w3id.org/devops-infra/server#status> <http://www.w3.org/2000/01/rdf-schema#label> "status"@en .
-# 
-# http://w3id.org/devops-infra/server#virtualServerStatus
-<http://w3id.org/devops-infra/server#virtualServerStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://w3id.org/devops-infra/server#virtualServerStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/server#VirtualServer> .
-<http://w3id.org/devops-infra/server#virtualServerStatus> <http://www.w3.org/2000/01/rdf-schema#range> _:genid21 .
-_:genid21 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid24 .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid23 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/virtual-server-status> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/devops-infra/server#virtualServerStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows specifying the status of a virtual server"@en .
 <http://w3id.org/devops-infra/server#virtualServerStatus> <http://www.w3.org/2000/01/rdf-schema#label> "virtual Server Status"@en .
 # 
@@ -255,6 +251,10 @@ _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://w3id.org/devops-infra/server#availabilityZone
 <http://w3id.org/devops-infra/server#availabilityZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/devops-infra/server#availabilityZone> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://w3id.org/devops-infra/server#availabilityZone> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/server#VirtualServer> .
+<http://w3id.org/devops-infra/server#availabilityZone> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/server#availabilityZone> <http://www.w3.org/2000/01/rdf-schema#comment> "The availability zone for which a Virtual Server. Typical values correspond to large regions where services are offered, such as China, North America, Europe, etc.\nThis may be converted in the future into a SKOS thesaurus or the property may be converted into an object property whose range is a Zone."@en .
+<http://w3id.org/devops-infra/server#availabilityZone> <http://www.w3.org/2000/01/rdf-schema#label> "availability zone"@en .
 # 
 # http://w3id.org/devops-infra/server#bandwidth
 <http://w3id.org/devops-infra/server#bandwidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -279,10 +279,6 @@ _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://w3id.org/devops-infra/server#createTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://w3id.org/devops-infra/server#createTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Time when the resource was created\nTODO: move to core ontology module"@en .
 <http://w3id.org/devops-infra/server#createTime> <http://www.w3.org/2000/01/rdf-schema#label> "create time"@en .
-# 
-# http://w3id.org/devops-infra/server#diskType
-<http://w3id.org/devops-infra/server#diskType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://w3id.org/devops-infra/server#diskType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/server#HostDisk> .
 # 
 # http://w3id.org/devops-infra/server#ecsId
 <http://w3id.org/devops-infra/server#ecsId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -372,10 +368,6 @@ _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://w3id.org/devops-infra/server#mainMac> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://w3id.org/devops-infra/server#mainMac> <http://www.w3.org/2000/01/rdf-schema#comment> "Main MAC address of a server"@en .
 <http://w3id.org/devops-infra/server#mainMac> <http://www.w3.org/2000/01/rdf-schema#label> "main MAC"@en .
-# 
-# http://w3id.org/devops-infra/server#maxSize
-<http://w3id.org/devops-infra/server#maxSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://w3id.org/devops-infra/server#maxSize> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/server#HostDisk> .
 # 
 # http://w3id.org/devops-infra/server#memory
 <http://w3id.org/devops-infra/server#memory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -500,10 +492,16 @@ _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://w3id.org/devops-infra/data-center#DataCenter
 <http://w3id.org/devops-infra/data-center#DataCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
+# http://w3id.org/devops-infra/hardware#Disk
+<http://w3id.org/devops-infra/hardware#Disk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # http://w3id.org/devops-infra/hardware#ServerHardware
 <http://w3id.org/devops-infra/hardware#ServerHardware> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/devops-infra/hardware#ServerHardware> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
 <http://w3id.org/devops-infra/hardware#ServerHardware> <http://www.w3.org/2000/01/rdf-schema#label> "Server Hardware"@en .
+# 
+# http://w3id.org/devops-infra/network#SSHChannel
+<http://w3id.org/devops-infra/network#SSHChannel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://w3id.org/devops-infra/server#Account
 <http://w3id.org/devops-infra/server#Account> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -515,10 +513,10 @@ _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://w3id.org/devops-infra/server#AutoExpandHostConfig> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/server#HostConfiguration> .
 <http://w3id.org/devops-infra/server#AutoExpandHostConfig> <http://www.w3.org/2000/01/rdf-schema#label> "Auto Expand Host Configuration"@en .
 # 
-# http://w3id.org/devops-infra/server#AutoScallingHostConfig
-<http://w3id.org/devops-infra/server#AutoScallingHostConfig> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/devops-infra/server#AutoScallingHostConfig> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/server#HostConfiguration> .
-<http://w3id.org/devops-infra/server#AutoScallingHostConfig> <http://www.w3.org/2000/01/rdf-schema#label> "Auto Scalling Host Configuration"@en .
+# http://w3id.org/devops-infra/server#AutoScalingHostConfig
+<http://w3id.org/devops-infra/server#AutoScalingHostConfig> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/server#AutoScalingHostConfig> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/server#HostConfiguration> .
+<http://w3id.org/devops-infra/server#AutoScalingHostConfig> <http://www.w3.org/2000/01/rdf-schema#label> "Auto Scaling Host Configuration"@en .
 # 
 # http://w3id.org/devops-infra/server#BareMetalServer
 <http://w3id.org/devops-infra/server#BareMetalServer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -533,15 +531,11 @@ _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://w3id.org/devops-infra/server#HostConfiguration
 <http://w3id.org/devops-infra/server#HostConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/devops-infra/server#HostConfiguration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
-<http://w3id.org/devops-infra/server#HostConfiguration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#flavor> .
-_:genid25 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/server#HostFlavor> .
+<http://w3id.org/devops-infra/server#HostConfiguration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#flavor> .
+_:genid21 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/server#HostFlavor> .
 <http://w3id.org/devops-infra/server#HostConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "Host Configuration"@en .
-# 
-# http://w3id.org/devops-infra/server#HostDisk
-<http://w3id.org/devops-infra/server#HostDisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/devops-infra/server#HostDisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
 # 
 # http://w3id.org/devops-infra/server#HostFlavor
 <http://w3id.org/devops-infra/server#HostFlavor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -579,65 +573,73 @@ _:genid25 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-
 # http://w3id.org/devops-infra/server#PhysicalServer
 <http://w3id.org/devops-infra/server#PhysicalServer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/devops-infra/server#PhysicalServer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/server#Server> .
-<http://w3id.org/devops-infra/server#PhysicalServer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#physicalServerStatus> .
-_:genid26 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid27 .
-_:genid27 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid30 .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid29 .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid29 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/physical-server-status> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/server#PhysicalServer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#physicalServerStatus> .
+_:genid22 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid25 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/physical-server-status> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/devops-infra/server#PhysicalServer> <http://www.w3.org/2002/07/owl#disjointWith> <http://w3id.org/devops-infra/server#VirtualServer> .
 <http://w3id.org/devops-infra/server#PhysicalServer> <http://www.w3.org/2000/01/rdf-schema#label> "Physical Server"@en .
 # 
 # http://w3id.org/devops-infra/server#Server
 <http://w3id.org/devops-infra/server#Server> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/devops-infra/server#Server> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
-<http://w3id.org/devops-infra/server#Server> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#assignmentStatus> .
-_:genid31 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid32 .
-_:genid32 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid35 .
+<http://w3id.org/devops-infra/server#Server> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/core#status> .
+_:genid27 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid28 .
+_:genid28 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid30 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/status> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/server#Server> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/network#offersSSHChannel> .
+_:genid32 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/network#SSHChannel> .
+<http://w3id.org/devops-infra/server#Server> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#assignmentStatus> .
+_:genid33 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid34 .
+_:genid34 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
 _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid34 .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid34 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/assignment-status> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/devops-infra/server#Server> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid36 .
 _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#flavor> .
-_:genid36 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/server#HostFlavor> .
-<http://w3id.org/devops-infra/server#Server> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#hasAccount> .
-_:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/server#Account> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid36 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/assignment-status> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/devops-infra/server#Server> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#status> .
-_:genid38 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid39 .
-_:genid39 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid42 .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid40 .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid41 .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid41 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/status> .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#containsDisk> .
+_:genid38 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/hardware#Disk> .
+<http://w3id.org/devops-infra/server#Server> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#flavor> .
+_:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/server#HostFlavor> .
+<http://w3id.org/devops-infra/server#Server> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#hasAccount> .
+_:genid40 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/server#Account> .
 <http://w3id.org/devops-infra/server#Server> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents all types of servers (physical and virtual)"@en .
 <http://w3id.org/devops-infra/server#Server> <http://www.w3.org/2000/01/rdf-schema#label> "Server"@en .
 # 
@@ -653,63 +655,63 @@ _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://w3id.org/devops-infra/server#VirtualServer
 <http://w3id.org/devops-infra/server#VirtualServer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/devops-infra/server#VirtualServer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/server#Server> .
-<http://w3id.org/devops-infra/server#VirtualServer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
-_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#chargeMode> .
-_:genid43 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid44 .
-_:genid44 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid47 .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid45 .
+<http://w3id.org/devops-infra/server#VirtualServer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#chargeMode> .
+_:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid42 .
+_:genid42 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid45 .
 _:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid46 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid44 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/charge-mode> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/server#VirtualServer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
 _:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid46 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/charge-mode> .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/devops-infra/server#VirtualServer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#creationType> .
-_:genid48 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid49 .
-_:genid49 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid52 .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid50 .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#creationType> .
+_:genid46 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid47 .
+_:genid47 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid50 .
 _:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid51 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid49 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/creation-type> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/server#VirtualServer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
 _:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid51 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/creation-type> .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/devops-infra/server#VirtualServer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#virtualServerStatus> .
-_:genid53 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid54 .
-_:genid54 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid57 .
-_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid55 .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#virtualServerStatus> .
+_:genid51 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid52 .
+_:genid52 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid55 .
 _:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid56 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid54 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/virtual-server-status> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/server#VirtualServer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid56 .
 _:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid56 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/virtual-server-status> .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#vmConfPath> .
+_:genid56 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/server#VirtualServer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#vmFile> .
+_:genid57 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 <http://w3id.org/devops-infra/server#VirtualServer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid58 .
 _:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#vmConfPath> .
+_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#vmImgPath> .
 _:genid58 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-<http://w3id.org/devops-infra/server#VirtualServer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid59 .
-_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#vmFile> .
-_:genid59 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-<http://w3id.org/devops-infra/server#VirtualServer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid60 .
-_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid60 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/server#vmImgPath> .
-_:genid60 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 <http://w3id.org/devops-infra/server#VirtualServer> <http://www.w3.org/2000/01/rdf-schema#label> "VirtualServer"@en .
 # 
 # 

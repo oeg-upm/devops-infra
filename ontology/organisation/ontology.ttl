@@ -1,33 +1,34 @@
-@prefix : <http://w3id.org/devops-infra/organization#> .
+@prefix : <http://w3id.org/devops-infra/organisation#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://w3id.org/devops-infra/organization> .
+@base <http://w3id.org/devops-infra/organisation> .
 
-<http://w3id.org/devops-infra/organization> rdf:type owl:Ontology ;
-                                             owl:versionIRI <http://w3id.org/devops-infra/organization/0.0.1> ;
+<http://w3id.org/devops-infra/organisation> rdf:type owl:Ontology ;
+                                             owl:versionIRI <http://w3id.org/devops-infra/organisation/0.0.2> ;
                                              owl:imports <http://w3id.org/devops-infra/core> ,
-                                                         <http://www.w3.org/2004/02/skos/core> ;
+                                                         <http://www.w3.org/2004/02/skos/core> ,
+                                                         <http://www.w3.org/ns/org#> ;
                                              <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
                                                                                        "Hu Peng (Huawei Research Ireland)" ,
                                                                                        "Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
                                                                                        "José Mora (Huawei Research Ireland)" ,
-                                                                                       "Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                       "Julián Arenas-Guerrero (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
                                                                                        "Mingxue Wang (Huawei Research Ireland)" ,
                                                                                        "Nicholas Burrett (Huawei Research Ireland)" ,
                                                                                        "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
                                                                                        "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)" ;
-                                             <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/organization" ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/organisation" ;
                                              <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of the organisation-related part of DevOps" ;
-                                             <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/organization.owl" ;
-                                             <http://purl.org/dc/terms/issued> "2020-10-14" ;
+                                             <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/organisation.owl" ;
+                                             <http://purl.org/dc/terms/issued> "2021-02-15" ;
                                              <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" ;
                                              <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopsorg" ;
-                                             <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/organization#" ;
+                                             <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/organisation#" ;
                                              rdfs:comment "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" ;
-                                             owl:versionInfo "Initial version"@en .
+                                             owl:versionInfo "Version after the generation of mappings"@en .
 
 #################################################################
 #    Annotation properties
@@ -69,7 +70,7 @@
 #    Object Properties
 #################################################################
 
-###  http://w3id.org/devops-infra/organization#managedBy
+###  http://w3id.org/devops-infra/organisation#managedBy
 :managedBy rdf:type owl:ObjectProperty ;
            rdfs:domain :Scope ;
            rdfs:range :Department ;
@@ -77,7 +78,14 @@
            rdfs:label "managed by"@en .
 
 
-###  http://w3id.org/devops-infra/organization#scopeType
+###  http://w3id.org/devops-infra/organisation#scope
+:scope rdf:type owl:ObjectProperty ;
+       rdfs:range :Scope ;
+       rdfs:comment "The Scope where any resource makes sense"@en ;
+       rdfs:label "scope"@en .
+
+
+###  http://w3id.org/devops-infra/organisation#scopeType
 :scopeType rdf:type owl:ObjectProperty ;
            rdfs:domain :Scope ;
            rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
@@ -92,7 +100,7 @@
            rdfs:label "scope type"@en .
 
 
-###  http://w3id.org/devops-infra/organization#tenantType
+###  http://w3id.org/devops-infra/organisation#tenantType
 :tenantType rdf:type owl:ObjectProperty ;
             rdfs:domain :Tenant ;
             rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
@@ -111,38 +119,48 @@
 #    Data properties
 #################################################################
 
-###  http://w3id.org/devops-infra/organization#account
+###  http://w3id.org/devops-infra/organisation#account
 :account rdf:type owl:DatatypeProperty ;
          rdfs:domain :Tenant ;
          rdfs:label "account"@en .
 
 
-###  http://w3id.org/devops-infra/organization#default
+###  http://w3id.org/devops-infra/organisation#default
 :default rdf:type owl:DatatypeProperty ;
          rdfs:domain :Scope ;
          rdfs:range xsd:boolean .
 
 
-###  http://w3id.org/devops-infra/organization#password
+###  http://w3id.org/devops-infra/organisation#domain
+:domain rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Tenant ;
+        rdfs:range xsd:string ;
+        rdfs:comment "The domain of a Tenant. It can be China, Asia, Europe, etc."@en ;
+        rdfs:label "domain"@en .
+
+
+###  http://w3id.org/devops-infra/organisation#password
 :password rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf owl:topDataProperty ;
           rdfs:domain :Tenant ;
           rdfs:label "password"@en .
 
 
-###  http://w3id.org/devops-infra/organization#priority
+###  http://w3id.org/devops-infra/organisation#priority
 :priority rdf:type owl:DatatypeProperty ;
           rdfs:domain :Scope ;
           rdfs:label "priority"@en .
 
 
-###  http://w3id.org/devops-infra/organization#status
-:status rdf:type owl:DatatypeProperty ;
-        rdfs:domain :Tenant ;
-        rdfs:label "status"@en .
+###  http://w3id.org/devops-infra/organisation#tenantStatus
+:tenantStatus rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Tenant ;
+              rdfs:range xsd:string ;
+              rdfs:comment "This property describe the status of a tenant. It may be enabled or disabled. In the future, this may be transformed into a SKOS thesaurus"@en ;
+              rdfs:label "tenant status"@en .
 
 
-###  http://w3id.org/devops-infra/organization#timeZone
+###  http://w3id.org/devops-infra/organisation#timeZone
 :timeZone rdf:type owl:DatatypeProperty ;
           rdfs:domain :Site ;
           rdfs:comment "Time Zone applicable to a Site"@en ;
@@ -157,13 +175,14 @@
 <http://w3id.org/devops-infra/core#Resource> rdf:type owl:Class .
 
 
-###  http://w3id.org/devops-infra/organization#Department
+###  http://w3id.org/devops-infra/organisation#Department
 :Department rdf:type owl:Class ;
+            rdfs:subClassOf <http://xmlns.com/foaf/0.1/Organization> ;
             rdfs:label "Department"@en ,
                        "部门"@cn .
 
 
-###  http://w3id.org/devops-infra/organization#Scope
+###  http://w3id.org/devops-infra/organisation#Scope
 :Scope rdf:type owl:Class ;
        rdfs:subClassOf [ rdf:type owl:Restriction ;
                          owl:onProperty :managedBy ;
@@ -192,7 +211,7 @@
                   "领域"@cn .
 
 
-###  http://w3id.org/devops-infra/organization#Site
+###  http://w3id.org/devops-infra/organisation#Site
 :Site rdf:type owl:Class ;
       rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ,
                       [ rdf:type owl:Restriction ;
@@ -203,14 +222,14 @@
                  "站点"@cn .
 
 
-###  http://w3id.org/devops-infra/organization#Stage
+###  http://w3id.org/devops-infra/organisation#Stage
 :Stage rdf:type owl:Class ;
        rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ;
        rdfs:label "Stage"@en ,
                   "部署阶段"@cn .
 
 
-###  http://w3id.org/devops-infra/organization#Tenant
+###  http://w3id.org/devops-infra/organisation#Tenant
 :Tenant rdf:type owl:Class ;
         rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ,
                         [ rdf:type owl:Restriction ;
@@ -225,7 +244,11 @@
                                              ]
                         ] ,
                         [ rdf:type owl:Restriction ;
-                          owl:onProperty :status ;
+                          owl:onProperty :scope ;
+                          owl:allValuesFrom :Scope
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :tenantStatus ;
                           owl:someValuesFrom xsd:string
                         ] ,
                         [ rdf:type owl:Restriction ;
@@ -236,7 +259,7 @@
                           owl:onProperty :password ;
                           owl:allValuesFrom xsd:string
                         ] ;
-        rdfs:comment "A tenant is defined as XXXX"@en ;
+        rdfs:comment "A tenant is usually understood as a container for items of an Organisation in a cloud, such as users, domains, subscriptions, etc"@en ;
         rdfs:label "Tenant"@en ,
                    "租户"@cn .
 

@@ -68,8 +68,14 @@ This section provides details for each class and property defined by Ontology fo
             title="http://w3id.org/devops-infra/core#belongsToResourceGroup">belongs to resource group</a>
       </li>
       <li>
+         <a href="#dependsOn" title="http://w3id.org/devops-infra/core#dependsOn">depends on</a>
+      </li>
+      <li>
          <a href="#parentResourceGroup"
             title="http://w3id.org/devops-infra/core#parentResourceGroup">parent Resource Group</a>
+      </li>
+      <li>
+         <a href="#status" title="http://w3id.org/devops-infra/core#status">status</a>
       </li>
    </ul>
    <div class="entity" id="belongsToResourceGroup">
@@ -79,6 +85,9 @@ This section provides details for each class and property defined by Ontology fo
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/core#belongsToResourceGroup</p>
+      <div class="comment">
+         <span class="markdown">This property relates a Resource with a Resource Group</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -94,6 +103,37 @@ This section provides details for each class and property defined by Ontology fo
          </dl>
       </div>
    </div>
+   <div class="entity" id="dependsOn">
+      <h3>depends on<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/core#dependsOn</p>
+      <div class="comment">
+         <span class="markdown">A Resource or Resource Group may depend on zero to many Resources or Resource Groups</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Resource" title="http://w3id.org/devops-infra/core#Resource">Resource</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#ResourceGroup" title="http://w3id.org/devops-infra/core#ResourceGroup">Resource Group</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Resource" title="http://w3id.org/devops-infra/core#Resource">Resource</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#ResourceGroup" title="http://w3id.org/devops-infra/core#ResourceGroup">Resource Group</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="parentResourceGroup">
       <h3>parent Resource Group<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -101,6 +141,9 @@ This section provides details for each class and property defined by Ontology fo
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/core#parentResourceGroup</p>
+      <div class="comment">
+         <span class="markdown">This property relates a Resource Group with its parent Resource Group, if any</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -113,6 +156,37 @@ This section provides details for each class and property defined by Ontology fo
                <a href="#ResourceGroup" title="http://w3id.org/devops-infra/core#ResourceGroup">Resource Group</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="status">
+      <h3>status<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/core#status</p>
+      <div class="comment">
+         <span class="markdown">This property refers to the status of any resource or resource group, and its value is determined by a SKOS of different types of status that may be considered</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Resource" title="http://w3id.org/devops-infra/core#Resource">Resource</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#ResourceGroup" title="http://w3id.org/devops-infra/core#ResourceGroup">Resource Group</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">value</span> 
+               <a href="#http://w3id.org/devops-infra/kos/status" title="http://w3id.org/devops-infra/kos/status">status</a>)</dd>
          </dl>
       </div>
    </div>
@@ -209,6 +283,31 @@ This section provides details for each class and property defined by Ontology fo
             </dd>
          </dl>
       </div>
+   </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://w3id.org/devops-infra/kos/status" title="http://w3id.org/devops-infra/kos/status">
+            <span>status</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://w3id.org/devops-infra/kos/status">
+      <h3>status<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/kos/status</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
    </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>

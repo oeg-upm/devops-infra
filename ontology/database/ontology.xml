@@ -11,14 +11,14 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://w3id.org/devops-infra/database">
-        <owl:versionIRI rdf:resource="http://w3id.org/devops-infra/database/0.0.1"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/devops-infra/database/0.0.2"/>
         <owl:imports rdf:resource="http://w3id.org/devops-infra/core"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <dc:creator>David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:creator>Hu Peng (Huawei Research Ireland)</dc:creator>
         <dc:creator>Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:creator>José Mora (Huawei Research Ireland)</dc:creator>
-        <dc:creator>Julián Arenas (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator>Julián Arenas-Guerrero (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:creator>Mingxue Wang (Huawei Research Ireland)</dc:creator>
         <dc:creator>Nicholas Burrett (Huawei Research Ireland)</dc:creator>
         <dc:creator>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
@@ -26,12 +26,12 @@
         <dc:identifier>http://w3id.org/devops-infra/database</dc:identifier>
         <dc:title xml:lang="en">Ontology for the representation of the database-related infrastructure</dc:title>
         <terms:hasFormat>http://w3id.org/devops-infra/database.owl</terms:hasFormat>
-        <terms:issued>2020-12-10</terms:issued>
+        <terms:issued>2021-02-15</terms:issued>
         <terms:license>https://creativecommons.org/licenses/by/4.0</terms:license>
         <vann:preferredNamespacePrefix>devopsdb</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>http://w3id.org/devops-infra/database#</vann:preferredNamespaceUri>
         <rdfs:comment>This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland</rdfs:comment>
-        <owl:versionInfo xml:lang="en">Initial version</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version generated after the initial set of mappings</owl:versionInfo>
     </owl:Ontology>
     
 

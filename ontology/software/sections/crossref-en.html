@@ -4,6 +4,14 @@ This section provides details for each class and property defined by Ontology fo
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
+         <a href="#AutoDeployPackage"
+            title="http://w3id.org/devops-infra/software#AutoDeployPackage">Auto Deploy Package</a>
+      </li>
+      <li>
+         <a href="#AutoInstallPackage"
+            title="http://w3id.org/devops-infra/software#AutoInstallPackage">Auto Install Package</a>
+      </li>
+      <li>
          <a href="#File" title="http://w3id.org/devops-infra/software#File">File</a>
       </li>
       <li>
@@ -22,6 +30,56 @@ This section provides details for each class and property defined by Ontology fo
             title="http://w3id.org/devops-infra/software#SoftwareDirectory">Software Directory</a>
       </li>
    </ul>
+   <div class="entity" id="AutoDeployPackage">
+      <h3>Auto Deploy Package<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/software#AutoDeployPackage</p>
+      <div class="comment">
+         <span class="markdown">A file that contains a package of software that can be deployed automatically</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#File" title="http://w3id.org/devops-infra/software#File">File</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#usesAutoDeployPackage"
+               title="http://w3id.org/devops-infra/software#usesAutoDeployPackage">uses auto deploy package</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AutoInstallPackage">
+      <h3>Auto Install Package<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/software#AutoInstallPackage</p>
+      <div class="comment">
+         <span class="markdown">A file that contains a package of software that can be installed automatically</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#File" title="http://w3id.org/devops-infra/software#File">File</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#installsServiceModuleVersion"
+               title="http://w3id.org/devops-infra/software#installsServiceModuleVersion">This property identifies the Service Module Version that an Auto Install Package installs</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#usesAutoDeployPackage"
+               title="http://w3id.org/devops-infra/software#usesAutoDeployPackage">uses auto deploy package</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="File">
       <h3>File<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -35,13 +93,29 @@ This section provides details for each class and property defined by Ontology fo
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Software" title="http://w3id.org/devops-infra/software#Software">Software</a>
+            <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#AutoDeployPackage"
+               title="http://w3id.org/devops-infra/software#AutoDeployPackage">Auto Deploy Package</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#AutoInstallPackage"
+               title="http://w3id.org/devops-infra/software#AutoInstallPackage">Auto Install Package</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#md5" title="http://w3id.org/devops-infra/software#md5">MD5</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#fileType" title="http://w3id.org/devops-infra/software#fileType">file type</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#inSoftwareDirectory"
+               title="http://w3id.org/devops-infra/software#inSoftwareDirectory">in software directory</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#releasedAsFile"
+               title="http://w3id.org/devops-infra/software#releasedAsFile">released as file</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -67,6 +141,12 @@ This section provides details for each class and property defined by Ontology fo
             <a href="#hasVersion" title="http://w3id.org/devops-infra/software#hasVersion">has version</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#versionOfServiceModule"
+               title="http://w3id.org/devops-infra/software#versionOfServiceModule">This property relates a Service Module Version with its corresponding Service Module</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="ServiceModuleVersion">
@@ -85,9 +165,17 @@ This section provides details for each class and property defined by Ontology fo
             <a href="#Software" title="http://w3id.org/devops-infra/software#Software">Software</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#versionOfServiceModule"
+               title="http://w3id.org/devops-infra/software#versionOfServiceModule">This property relates a Service Module Version with its corresponding Service Module</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasVersion" title="http://w3id.org/devops-infra/software#hasVersion">has version</a>
+            <a href="#installsServiceModuleVersion"
+               title="http://w3id.org/devops-infra/software#installsServiceModuleVersion">This property identifies the Service Module Version that an Auto Install Package installs</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasVersion" title="http://w3id.org/devops-infra/software#hasVersion">has version</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -100,7 +188,8 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/software#Software</p>
       <div class="comment">
-         <span class="markdown">This class refers to any type of Software that is handled in the context of a DevOps infrastructure</span>
+         <span class="markdown">This class refers to any type of Software that is handled in the context of a DevOps infrastructure
+TODO: it would be good to determine a good set of attributes that would characterise software.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -110,8 +199,7 @@ This section provides details for each class and property defined by Ontology fo
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#File" title="http://w3id.org/devops-infra/software#File">File</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ServiceModule"
+            <a href="#ServiceModule"
                title="http://w3id.org/devops-infra/software#ServiceModule">Service Module</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ServiceModuleVersion"
                title="http://w3id.org/devops-infra/software#ServiceModuleVersion">Service Module Version</a>
@@ -119,11 +207,16 @@ This section provides details for each class and property defined by Ontology fo
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#inSoftwareDirectory"
-               title="http://w3id.org/devops-infra/software#inSoftwareDirectory">in software directory</a>
+            <a href="#installPath"
+               title="http://w3id.org/devops-infra/software#installPath">install path</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#installedInServer"
+               title="http://w3id.org/devops-infra/software#installedInServer">installed in server</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#releasedAsFile"
+               title="http://w3id.org/devops-infra/software#releasedAsFile">released as file</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#softwareType"
                title="http://w3id.org/devops-infra/software#softwareType">software type</a>
-            <sup class="type-op" title="object property">op</sup>
+            <sup class="type-op" title="object property">op</sup>, <a href="#version" title="http://w3id.org/devops-infra/software#version">version</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
    </div>
@@ -173,12 +266,32 @@ This section provides details for each class and property defined by Ontology fo
             title="http://w3id.org/devops-infra/software#inSoftwareDirectory">in software directory</a>
       </li>
       <li>
+         <a href="#installedInServer"
+            title="http://w3id.org/devops-infra/software#installedInServer">installed in server</a>
+      </li>
+      <li>
          <a href="#parentDirectory"
             title="http://w3id.org/devops-infra/software#parentDirectory">parent directory</a>
       </li>
       <li>
+         <a href="#releasedAsFile"
+            title="http://w3id.org/devops-infra/software#releasedAsFile">released as file</a>
+      </li>
+      <li>
          <a href="#softwareType"
             title="http://w3id.org/devops-infra/software#softwareType">software type</a>
+      </li>
+      <li>
+         <a href="#installsServiceModuleVersion"
+            title="http://w3id.org/devops-infra/software#installsServiceModuleVersion">This property identifies the Service Module Version that an Auto Install Package installs</a>
+      </li>
+      <li>
+         <a href="#versionOfServiceModule"
+            title="http://w3id.org/devops-infra/software#versionOfServiceModule">This property relates a Service Module Version with its corresponding Service Module</a>
+      </li>
+      <li>
+         <a href="#usesAutoDeployPackage"
+            title="http://w3id.org/devops-infra/software#usesAutoDeployPackage">uses auto deploy package</a>
       </li>
    </ul>
    <div class="entity" id="fileType">
@@ -248,13 +361,38 @@ This section provides details for each class and property defined by Ontology fo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Software" title="http://w3id.org/devops-infra/software#Software">Software</a>
+               <a href="#File" title="http://w3id.org/devops-infra/software#File">File</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <a href="#SoftwareDirectory"
                   title="http://w3id.org/devops-infra/software#SoftwareDirectory">Software Directory</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="installedInServer">
+      <h3>installed in server<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/software#installedInServer</p>
+      <div class="comment">
+         <span class="markdown">A piece of Software may be installed in multiple Servers</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Software" title="http://w3id.org/devops-infra/software#Software">Software</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://w3id.org/devops-infra/server#Server">server</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -287,6 +425,31 @@ This section provides details for each class and property defined by Ontology fo
          </dl>
       </div>
    </div>
+   <div class="entity" id="releasedAsFile">
+      <h3>released as file<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/software#releasedAsFile</p>
+      <div class="comment">
+         <span class="markdown">A piece of software is usually released as a file</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Software" title="http://w3id.org/devops-infra/software#Software">Software</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#File" title="http://w3id.org/devops-infra/software#File">File</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="softwareType">
       <h3>software type<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -313,13 +476,119 @@ This section provides details for each class and property defined by Ontology fo
          </dl>
       </div>
    </div>
+   <div class="entity" id="installsServiceModuleVersion">
+      <h3>This property identifies the Service Module Version that an Auto Install Package installs<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/software#installsServiceModuleVersion</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#AutoInstallPackage"
+                  title="http://w3id.org/devops-infra/software#AutoInstallPackage">Auto Install Package</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ServiceModuleVersion"
+                  title="http://w3id.org/devops-infra/software#ServiceModuleVersion">Service Module Version</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="versionOfServiceModule">
+      <h3>This property relates a Service Module Version with its corresponding Service Module<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/software#versionOfServiceModule</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ServiceModuleVersion"
+                  title="http://w3id.org/devops-infra/software#ServiceModuleVersion">Service Module Version</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ServiceModule"
+                  title="http://w3id.org/devops-infra/software#ServiceModule">Service Module</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="usesAutoDeployPackage">
+      <h3>uses auto deploy package<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/software#usesAutoDeployPackage</p>
+      <div class="comment">
+         <span class="markdown">This property identifies the deploy package that is used for an auto install package</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#AutoInstallPackage"
+                  title="http://w3id.org/devops-infra/software#AutoInstallPackage">Auto Install Package</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#AutoDeployPackage"
+                  title="http://w3id.org/devops-infra/software#AutoDeployPackage">Auto Deploy Package</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
 </div><div id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
+         <a href="#installPath"
+            title="http://w3id.org/devops-infra/software#installPath">install path</a>
+      </li>
+      <li>
          <a href="#md5" title="http://w3id.org/devops-infra/software#md5">MD5</a>
       </li>
+      <li>
+         <a href="#version" title="http://w3id.org/devops-infra/software#version">version</a>
+      </li>
    </ul>
+   <div class="entity" id="installPath">
+      <h3>install path<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/software#installPath</p>
+      <div class="comment">
+         <span class="markdown">The path where the software is usually installed</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Software" title="http://w3id.org/devops-infra/software#Software">Software</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="md5">
       <h3>MD5<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -335,6 +604,30 @@ This section provides details for each class and property defined by Ontology fo
             <dt>has domain</dt>
             <dd>
                <a href="#File" title="http://w3id.org/devops-infra/software#File">File</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="version">
+      <h3>version<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/software#version</p>
+      <div class="comment">
+         <span class="markdown">The version of a piece of software (e.g., used for Service Module Versions)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Software" title="http://w3id.org/devops-infra/software#Software">Software</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
