@@ -11,8 +11,8 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://w3id.org/devops-infra/software">
-        <owl:versionIRI rdf:resource="http://w3id.org/devops-infra/software/0.0.2"/>
-        <owl:imports rdf:resource="http://w3id.org/devops-infra/core"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/devops-infra/software/1.0.0"/>
+        <owl:imports rdf:resource="http://w3id.org/devops-infra/core/1.0.0"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <dc:creator>David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:creator>Hu Peng (Huawei Research Ireland)</dc:creator>
@@ -22,16 +22,17 @@
         <dc:creator>Mingxue Wang (Huawei Research Ireland)</dc:creator>
         <dc:creator>Nicholas Burrett (Huawei Research Ireland)</dc:creator>
         <dc:creator>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator>Puchao Zhang (Huawei Research Ireland)</dc:creator>
         <dc:creator>Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:identifier>http://w3id.org/devops-infra/software</dc:identifier>
         <dc:title xml:lang="en">Ontology for the representation of the software infrastructure</dc:title>
         <terms:hasFormat>http://w3id.org/devops-infra/software.owl</terms:hasFormat>
-        <terms:issued>2021-02-15</terms:issued>
+        <terms:issued>2021-04-15</terms:issued>
         <terms:license>https://creativecommons.org/licenses/by/4.0</terms:license>
         <vann:preferredNamespacePrefix>devopssw</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>http://w3id.org/devops-infra/software#</vann:preferredNamespaceUri>
         <rdfs:comment>This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland</rdfs:comment>
-        <owl:versionInfo xml:lang="en">Version after creating an initial set of mappings</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">First official release</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -423,6 +424,12 @@
 
     <owl:Class rdf:about="http://w3id.org/devops-infra/software#ServiceModule">
         <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/software#Software"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/software#hasVersion"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/devops-infra/software#ServiceModuleVersion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A Service Module, which is used by a Product (including Services, MicroServices, etc.) offered in the context of the  DevOps infrastructure</rdfs:comment>
         <rdfs:label xml:lang="en">Service Module</rdfs:label>
     </owl:Class>
@@ -483,18 +490,6 @@
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/core#createTime"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://w3id.org/devops-infra/core#version"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>

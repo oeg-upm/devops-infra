@@ -11,8 +11,8 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://w3id.org/devops-infra/network">
-        <owl:versionIRI rdf:resource="http://w3id.org/devops-infra/network/0.0.2"/>
-        <owl:imports rdf:resource="http://w3id.org/devops-infra/core"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/devops-infra/network/1.0.0"/>
+        <owl:imports rdf:resource="http://w3id.org/devops-infra/core/1.0.0"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <dc:creator>David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:creator>Hu Peng (Huawei Research Ireland)</dc:creator>
@@ -22,16 +22,17 @@
         <dc:creator>Mingxue Wang (Huawei Research Ireland)</dc:creator>
         <dc:creator>Nicholas Burrett (Huawei Research Ireland)</dc:creator>
         <dc:creator>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator>Puchao Zhang (Huawei Research Ireland)</dc:creator>
         <dc:creator>Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:identifier>http://w3id.org/devops-infra/network</dc:identifier>
         <dc:title xml:lang="en">Ontology for the representation of the network-related parts of a DevOps infrastructure</dc:title>
         <terms:hasFormat>http://w3id.org/devops-infra/network.owl</terms:hasFormat>
-        <terms:issued>2021-02-17</terms:issued>
+        <terms:issued>2021-04-17</terms:issued>
         <terms:license>https://creativecommons.org/licenses/by/4.0</terms:license>
         <vann:preferredNamespacePrefix>devopsnet</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>http://w3id.org/devops-infra/network#</vann:preferredNamespaceUri>
         <rdfs:comment>This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland</rdfs:comment>
-        <owl:versionInfo xml:lang="en">Version after the initial set of mappings has been generated</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">First official release</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -116,6 +117,13 @@
     
 
 
+    <!-- http://w3id.org/devops-infra/data-center#inDataCenter -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/data-center#inDataCenter"/>
+    
+
+
     <!-- http://w3id.org/devops-infra/network#belongsToIPNetwork -->
 
 
@@ -124,18 +132,6 @@
         <rdfs:range rdf:resource="http://w3id.org/devops-infra/network#IPNetwork"/>
         <rdfs:comment xml:lang="en">An IP address belongs to an IP network</rdfs:comment>
         <rdfs:label xml:lang="en">belongs to IP network</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://w3id.org/devops-infra/network#containsFirewall -->
-
-
-    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/network#containsFirewall">
-        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/network#FirewallCluster"/>
-        <rdfs:range rdf:resource="http://w3id.org/devops-infra/hardware#Firewall"/>
-        <rdfs:comment xml:lang="en">A firewall cluster contains firewalls</rdfs:comment>
-        <rdfs:label xml:lang="en">contains firewall</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -164,17 +160,6 @@
     
 
 
-    <!-- http://w3id.org/devops-infra/network#hasDNSProfile -->
-
-
-    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/network#hasDNSProfile">
-        <rdfs:range rdf:resource="http://w3id.org/devops-infra/network#DNSConfigurationProfile"/>
-        <rdfs:comment xml:lang="en">A DNS Record Configuration follows a DNS Configuration Profile</rdfs:comment>
-        <rdfs:label xml:lang="en">has DNS profile</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://w3id.org/devops-infra/network#hasPrivateIP -->
 
 
@@ -183,17 +168,6 @@
         <rdfs:range rdf:resource="http://w3id.org/devops-infra/network#PrivateIPAddress"/>
         <rdfs:comment xml:lang="en">A virtual floating IP address has a private IP</rdfs:comment>
         <rdfs:label xml:lang="en">has private IP</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://w3id.org/devops-infra/network#inDataCenter -->
-
-
-    <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/network#inDataCenter">
-        <rdfs:range rdf:resource="http://w3id.org/devops-infra/data-center#DataCenter"/>
-        <rdfs:comment xml:lang="en">SSH Channels, Network Segments, public IP addresses, etc., can be provided by a data center</rdfs:comment>
-        <rdfs:label xml:lang="en">in data center</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -657,15 +631,6 @@
 
 
     <owl:Class rdf:about="http://w3id.org/devops-infra/hardware#Firewall"/>
-    
-
-
-    <!-- http://w3id.org/devops-infra/network#DNSConfigurationProfile -->
-
-
-    <owl:Class rdf:about="http://w3id.org/devops-infra/network#DNSConfigurationProfile">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/devops-infra/core#Resource"/>
-    </owl:Class>
     
 
 

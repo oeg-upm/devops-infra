@@ -7,23 +7,24 @@
 @base <http://w3id.org/devops-infra/server> .
 
 <http://w3id.org/devops-infra/server> rdf:type owl:Ontology ;
-                                       owl:versionIRI <http://w3id.org/devops-infra/server/0.0.2> ;
-                                       owl:imports <http://w3id.org/devops-infra/core> ,
+                                       owl:versionIRI <http://w3id.org/devops-infra/server/1.0.0> ;
+                                       owl:imports <http://w3id.org/devops-infra/core/1.0.0> ,
                                                    <http://www.w3.org/2004/02/skos/core> ;
                                        <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
                                                                                  "Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
                                                                                  "Julián Arenas-Guerrero (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
                                                                                  "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                 "Puchao Zhang (Huawei Research Ireland)" ,
                                                                                  "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)" ;
                                        <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/server" ;
                                        <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of the infrastructure of servers"@en ;
                                        <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/server.owl" ;
-                                       <http://purl.org/dc/terms/issued> "2021-02-15" ;
+                                       <http://purl.org/dc/terms/issued> "2021-04-15" ;
                                        <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" ;
                                        <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopsserv" ;
-                                       <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/product#" ;
+                                       <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/server#" ;
                                        rdfs:comment "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" ;
-                                       owl:versionInfo "Version after initial set of RML mappings have been generated for a sample database"@en .
+                                       owl:versionInfo "First official release"@en .
 
 #################################################################
 #    Annotation properties
@@ -76,16 +77,18 @@
                                                         rdfs:label "in data center"@en .
 
 
+###  http://w3id.org/devops-infra/hardware#networkCard
+<http://w3id.org/devops-infra/hardware#networkCard> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf <http://w3id.org/devops-infra/core#dependsOn> ;
+                                                    rdfs:range <http://w3id.org/devops-infra/hardware#NetworkCard> .
+
+
 ###  http://w3id.org/devops-infra/network#offersSSHChannel
 <http://w3id.org/devops-infra/network#offersSSHChannel> rdf:type owl:ObjectProperty .
 
 
 ###  http://w3id.org/devops-infra/organisation#site
 <http://w3id.org/devops-infra/organisation#site> rdf:type owl:ObjectProperty .
-
-
-###  http://w3id.org/devops-infra/organisation#stage
-<http://w3id.org/devops-infra/organisation#stage> rdf:type owl:ObjectProperty .
 
 
 ###  http://w3id.org/devops-infra/organisation#tenant
@@ -124,9 +127,10 @@
 
 ###  http://w3id.org/devops-infra/server#containsDisk
 :containsDisk rdf:type owl:ObjectProperty ;
-              rdfs:domain :Server ;
+              rdfs:subPropertyOf <http://w3id.org/devops-infra/core#dependsOn> ;
+              rdfs:domain :PhysicalServer ;
               rdfs:range <http://w3id.org/devops-infra/hardware#Disk> ;
-              rdfs:comment "This property identifies the disks that are (physically or virtually) mounted in a server"@en ;
+              rdfs:comment "This property identifies the disks that are physically mounted in a Physical Server"@en ;
               rdfs:label "contains disk"@en .
 
 
@@ -149,7 +153,8 @@
 :flavor rdf:type owl:ObjectProperty ;
         rdfs:domain :VirtualServer ;
         rdfs:range :HostFlavor ;
-        rdfs:comment "A Virtual Server may have a flavor, which specifies the size of a virtual server that can be launched on a host"@en .
+        rdfs:comment "A Virtual Server may have a flavor, which specifies the size of a virtual server that can be launched on a host"@en ;
+        rdfs:label "flavor"@en .
 
 
 ###  http://w3id.org/devops-infra/server#hasAccount
@@ -161,8 +166,23 @@
             rdfs:label "has account"@en .
 
 
+###  http://w3id.org/devops-infra/server#hostConfiguration
+:hostConfiguration rdf:type owl:ObjectProperty ;
+                   rdfs:domain :VirtualServer ;
+                   rdfs:range :HostConfiguration ;
+                   rdfs:comment "This property links a Virtual Server with its Host Configuration"@en ;
+                   rdfs:label "host configuration"@en .
+
+
+###  http://w3id.org/devops-infra/server#hostImage
+:hostImage rdf:type owl:ObjectProperty ;
+           rdfs:domain :VirtualServer ;
+           rdfs:range :HostImage .
+
+
 ###  http://w3id.org/devops-infra/server#hostedIn
 :hostedIn rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf <http://w3id.org/devops-infra/core#dependsOn> ;
           owl:inverseOf :hosts ;
           rdfs:domain :VirtualServer ;
           rdfs:range :PhysicalServer ;
@@ -184,21 +204,6 @@
              rdfs:range :Server ;
              rdfs:comment "An account is associated to a Server"@en ;
              rdfs:label "is Account Of"@en .
-
-
-###  http://w3id.org/devops-infra/server#networkCard
-:networkCard rdf:type owl:ObjectProperty ;
-             rdfs:domain :PhysicalServer ;
-             rdfs:range :NetworkCard ;
-             rdfs:comment "A Physical Server has at least a network card associated to it"@en ;
-             rdfs:label "network card"@en .
-
-
-###  http://w3id.org/devops-infra/server#offeredByVendor
-:offeredByVendor rdf:type owl:ObjectProperty ;
-                 rdfs:domain :Server ;
-                 rdfs:comment "This property describes the vendor that offers a specific resource (e.g., AWS, HWS, etc.). In the future it should be decided whether this should be a SKOS thesaurus or an instance of a class Organisation"@en ;
-                 rdfs:label "offered by vendor"@en .
 
 
 ###  http://w3id.org/devops-infra/server#physicalServerStatus
@@ -243,12 +248,12 @@
 #    Data properties
 #################################################################
 
-###  http://w3id.org/devops-infra/server#assignTime
-:assignTime rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
-            rdfs:range xsd:dateTime ;
-            rdfs:label "Time when the server was assigned"@en ,
-                       "assign time"@en .
+###  http://w3id.org/devops-infra/server#assignmentTime
+:assignmentTime rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:range xsd:dateTime ;
+                rdfs:label "Time when the server was assigned"@en ,
+                           "assignment time"@en .
 
 
 ###  http://w3id.org/devops-infra/server#availabilityZone
@@ -261,38 +266,12 @@ This may be converted in the future into a SKOS thesaurus or the property may be
                   rdfs:label "availability zone"@en .
 
 
-###  http://w3id.org/devops-infra/server#bandwidth
-:bandwidth rdf:type owl:DatatypeProperty ;
-           rdfs:domain :NetworkCard ;
-           rdfs:label "Bandwidth of a network card"@en ,
-                      "bandwidth"@en .
-
-
 ###  http://w3id.org/devops-infra/server#cpu
 :cpu rdf:type owl:DatatypeProperty ;
      rdfs:domain :Server ;
      rdfs:range xsd:string ;
      rdfs:label "CPU"@en ,
-                "cpu"@en .
-
-
-###  http://w3id.org/devops-infra/server#createSrc
-:createSrc rdf:type owl:DatatypeProperty ;
-           rdfs:subPropertyOf owl:topDataProperty .
-
-
-###  http://w3id.org/devops-infra/server#createTime
-:createTime rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
-            rdfs:range xsd:dateTime ;
-            rdfs:comment """Time when the resource was created
-TODO: move to core ontology module"""@en ;
-            rdfs:label "create time"@en .
-
-
-###  http://w3id.org/devops-infra/server#ecsId
-:ecsId rdf:type owl:DatatypeProperty ;
-       rdfs:subPropertyOf owl:topDataProperty .
+                "The type of CPU of a Server"@en .
 
 
 ###  http://w3id.org/devops-infra/server#expireTime
@@ -301,11 +280,6 @@ TODO: move to core ontology module"""@en ;
             rdfs:range xsd:dateTime ;
             rdfs:comment "This property identifies the time when an account or its password expires"@en ;
             rdfs:label "expire time"@en .
-
-
-###  http://w3id.org/devops-infra/server#hardDisk
-:hardDisk rdf:type owl:DatatypeProperty ;
-          rdfs:subPropertyOf owl:topDataProperty .
 
 
 ###  http://w3id.org/devops-infra/server#host
@@ -341,41 +315,11 @@ TODO: move to core ontology module"""@en ;
       rdfs:label "ipv6"@en .
 
 
-###  http://w3id.org/devops-infra/server#isDeleted
-:isDeleted rdf:type owl:DatatypeProperty ;
-           rdfs:range xsd:boolean ;
-           rdfs:comment "Property used to determine whether a (business) product offering, a service or a microservice are currently running or available, or they have been deleted from the corresponding catalogues and/or infrastructure"@en ;
-           rdfs:label "is deleted"@en .
-
-
 ###  http://w3id.org/devops-infra/server#kernel
 :kernel rdf:type owl:DatatypeProperty ;
         rdfs:subPropertyOf owl:topDataProperty ;
         rdfs:range xsd:string ;
         rdfs:label "kernel"@en .
-
-
-###  http://w3id.org/devops-infra/server#key
-:key rdf:type owl:DatatypeProperty ;
-     rdfs:range xsd:string ;
-     rdfs:comment "Key of a TerraFormInfraEncryptedItem" ;
-     rdfs:label "key" .
-
-
-###  http://w3id.org/devops-infra/server#lastModified
-:lastModified rdf:type owl:DatatypeProperty ;
-              rdfs:range xsd:dateTime ;
-              rdfs:comment """Time of the last modification of any resource
-TODO: Move to devopscore"""@en ;
-              rdfs:label "last modified"@en .
-
-
-###  http://w3id.org/devops-infra/server#mac
-:mac rdf:type owl:DatatypeProperty ;
-     rdfs:domain :NetworkCard ;
-     rdfs:range xsd:string ;
-     rdfs:comment "MAC address of a network card or other network interface components"@en ;
-     rdfs:label "mac"@en .
 
 
 ###  http://w3id.org/devops-infra/server#macName
@@ -397,8 +341,8 @@ TODO: Move to devopscore"""@en ;
 ###  http://w3id.org/devops-infra/server#memory
 :memory rdf:type owl:DatatypeProperty ;
         rdfs:subPropertyOf owl:topDataProperty ;
-        rdfs:range xsd:string ;
-        rdfs:comment "memory"@en ;
+        rdfs:range xsd:float ;
+        rdfs:comment "Amount of memory of a Resource (e.g., Host Flavor, Server, etc.), in GB"@en ;
         rdfs:label "memory"@en .
 
 
@@ -419,6 +363,20 @@ TODO: Move to devopscore"""@en ;
               rdfs:label "net interface"@en .
 
 
+###  http://w3id.org/devops-infra/server#networkPerformance
+:networkPerformance rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "The type of performance of thye network associated to a Resource (e.g., Host Flavor, Server, etc.). This may be an enumerated value (defined in a SKOS Concept Scheme) or any string, as there is no consensus on the values to be used. Commonly used values are: low, moderate, high, etc."@en ;
+                    rdfs:label "network performance"@en .
+
+
+###  http://w3id.org/devops-infra/server#numberCPUs
+:numberCPUs rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:int ;
+            rdfs:comment "The number of CPUs of a Resource (Host Flavor, Server, etc.)"@en ;
+            rdfs:label "number of CPUs"@en .
+
+
 ###  http://w3id.org/devops-infra/server#operatingSystem
 :operatingSystem rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf owl:topDataProperty ;
@@ -428,25 +386,18 @@ TODO: Move to devopscore"""@en ;
                  rdfs:label "operating system"@en .
 
 
-###  http://w3id.org/devops-infra/server#podInfo
-:podInfo rdf:type owl:DatatypeProperty ;
-         rdfs:subPropertyOf owl:topDataProperty .
-
-
-###  http://w3id.org/devops-infra/server#port
-:port rdf:type owl:DatatypeProperty ;
-      rdfs:range xsd:string ;
-      rdfs:comment "Port where a microservice instance (or a network card) is running"@en ;
-      rdfs:label "port"@en .
-
-
 ###  http://w3id.org/devops-infra/server#price
-:price rdf:type owl:DatatypeProperty .
+:price rdf:type owl:DatatypeProperty ;
+       rdfs:domain :HostFlavor ;
+       rdfs:comment "Price of a Host Flavor"@en ;
+       rdfs:label "price"@en .
 
 
-###  http://w3id.org/devops-infra/server#region
-:region rdf:type owl:DatatypeProperty ;
-        rdfs:subPropertyOf owl:topDataProperty .
+###  http://w3id.org/devops-infra/server#processorArchitecture
+:processorArchitecture rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "The type of processor architecture that is used by a Resource (e.g., a Host Flavor, a Server, etc.). It will be usually 32-bit or 64-bit."@en ;
+                       rdfs:label "processor architecture"@en .
 
 
 ###  http://w3id.org/devops-infra/server#resourceType
@@ -459,28 +410,17 @@ TODO: Move to devopscore"""@en ;
 
 ###  http://w3id.org/devops-infra/server#serialNumber
 :serialNumber rdf:type owl:DatatypeProperty ;
-              rdfs:domain :Server ;
+              rdfs:domain :PhysicalServer ;
               rdfs:range xsd:string ;
-              rdfs:label "The serial number of the corresponding machine, as assigned by the corresponding vendor"@en ,
+              rdfs:label "The serial number of the machine corresponding to a Physical Server, as assigned by the corresponding vendor"@en ,
                          "serial number" .
 
 
-###  http://w3id.org/devops-infra/server#startTime
-:startTime rdf:type owl:DatatypeProperty ;
-           rdfs:subPropertyOf owl:topDataProperty ;
-           rdfs:range xsd:dateTime ;
-           rdfs:comment """Start time of the resource
-TODO: move to core ontology module"""@en ;
-           rdfs:label "start time"@en .
-
-
-###  http://w3id.org/devops-infra/server#updateTime
-:updateTime rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
-            rdfs:range xsd:dateTime ;
-            rdfs:label """Update time of the element
-TODO: move to core ontology module"""@en ,
-                       "update time"@en .
+###  http://w3id.org/devops-infra/server#storageCapacity
+:storageCapacity rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "The amount of storage, in GB, of a Resource (e.g., Host Flavor, Server, etc.). As there may be several virtual or physical disks associated to it, it is represented as a string (e.g., 1x160, 2x40, etc.)"@en ;
+                 rdfs:label "storage capacity"@en .
 
 
 ###  http://w3id.org/devops-infra/server#username
@@ -491,21 +431,6 @@ TODO: move to core ontology module"""@en ,
           rdfs:label "username"@en .
 
 
-###  http://w3id.org/devops-infra/server#value
-:value rdf:type owl:DatatypeProperty ;
-       rdfs:range xsd:string ;
-       rdfs:comment "value for the corresponding key of the TerraForm Encrypted Value"@en ;
-       rdfs:label "value"@en .
-
-
-###  http://w3id.org/devops-infra/server#vlan
-:vlan rdf:type owl:DatatypeProperty ;
-      rdfs:subPropertyOf owl:topDataProperty ;
-      rdfs:domain :NetworkCard ;
-      rdfs:comment "VLAN associated to a network card"@en ;
-      rdfs:label "vlan"@en .
-
-
 ###  http://w3id.org/devops-infra/server#vmConfPath
 :vmConfPath rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
@@ -514,12 +439,14 @@ TODO: move to core ontology module"""@en ,
 
 ###  http://w3id.org/devops-infra/server#vmFile
 :vmFile rdf:type owl:DatatypeProperty ;
-        rdfs:subPropertyOf owl:topDataProperty .
+        rdfs:subPropertyOf owl:topDataProperty ;
+        rdfs:domain :VirtualServer .
 
 
 ###  http://w3id.org/devops-infra/server#vmImgPath
 :vmImgPath rdf:type owl:DatatypeProperty ;
-           rdfs:subPropertyOf owl:topDataProperty .
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :VirtualServer .
 
 
 #################################################################
@@ -538,10 +465,12 @@ TODO: move to core ontology module"""@en ,
 <http://w3id.org/devops-infra/hardware#Disk> rdf:type owl:Class .
 
 
+###  http://w3id.org/devops-infra/hardware#NetworkCard
+<http://w3id.org/devops-infra/hardware#NetworkCard> rdf:type owl:Class .
+
+
 ###  http://w3id.org/devops-infra/hardware#ServerHardware
-<http://w3id.org/devops-infra/hardware#ServerHardware> rdf:type owl:Class ;
-                                                       rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ;
-                                                       rdfs:label "Server Hardware"@en .
+<http://w3id.org/devops-infra/hardware#ServerHardware> rdf:type owl:Class .
 
 
 ###  http://w3id.org/devops-infra/network#SSHChannel
@@ -557,12 +486,14 @@ TODO: move to core ontology module"""@en ,
 ###  http://w3id.org/devops-infra/server#AutoExpandHostConfig
 :AutoExpandHostConfig rdf:type owl:Class ;
                       rdfs:subClassOf :HostConfiguration ;
+                      rdfs:comment "A configuration for a Service Module to automatically expand when required"@en ;
                       rdfs:label "Auto Expand Host Configuration"@en .
 
 
 ###  http://w3id.org/devops-infra/server#AutoScalingHostConfig
 :AutoScalingHostConfig rdf:type owl:Class ;
                        rdfs:subClassOf :HostConfiguration ;
+                       rdfs:comment "A configuration for a Microservice to automatically expand and scale up when required"@en ;
                        rdfs:label "Auto Scaling Host Configuration"@en .
 
 
@@ -573,11 +504,6 @@ TODO: move to core ontology module"""@en ,
                  rdfs:label "Bare-metal Server"@en .
 
 
-###  http://w3id.org/devops-infra/server#ECServer
-:ECServer rdf:type owl:Class ;
-          rdfs:subClassOf :VirtualServer .
-
-
 ###  http://w3id.org/devops-infra/server#HostConfiguration
 :HostConfiguration rdf:type owl:Class ;
                    rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ,
@@ -585,12 +511,38 @@ TODO: move to core ontology module"""@en ,
                                      owl:onProperty :flavor ;
                                      owl:allValuesFrom :HostFlavor
                                    ] ;
+                   rdfs:comment "General-purpose class to described the potential configuration of a host"@en ;
                    rdfs:label "Host Configuration"@en .
 
 
 ###  http://w3id.org/devops-infra/server#HostFlavor
 :HostFlavor rdf:type owl:Class ;
-            rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ;
+            rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :memory ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:float
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :networkPerformance ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :numberCPUs ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:int
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :processorArchitecture ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :storageCapacity ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:string
+                            ] ;
             rdfs:comment "A flavor defines the size of a virtual server that can be launched on a host. That is, it defines the available hardware configuration (compute, memory, storage capacity). An example is the m3.large.8 flavor"@en ;
             rdfs:label "Host Flavor"@en .
 
@@ -600,37 +552,21 @@ TODO: move to core ontology module"""@en ,
            rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> .
 
 
-###  http://w3id.org/devops-infra/server#IDCXenVMServer
-:IDCXenVMServer rdf:type owl:Class ;
-                rdfs:subClassOf :VirtualServer ;
-                rdfs:label "IDC Xen Virtual Server" .
-
-
-###  http://w3id.org/devops-infra/server#IECEdgeCloud
-:IECEdgeCloud rdf:type owl:Class ;
-              rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> .
-
-
-###  http://w3id.org/devops-infra/server#IECEdgeCloudServer
-:IECEdgeCloudServer rdf:type owl:Class ;
-                    rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> .
-
-
-###  http://w3id.org/devops-infra/server#IECServer
-:IECServer rdf:type owl:Class ;
-           rdfs:subClassOf :PhysicalServer .
-
-
-###  http://w3id.org/devops-infra/server#NetworkCard
-:NetworkCard rdf:type owl:Class ;
-             rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ;
-             rdfs:comment "A Network interface card (also known as a NIC, network card, or network interface controller) is an electronic device that connects a computer to a computer network, usually a LAN. It is considered a piece of computer hardware. Most modern computers support an internal network interface controller embedded in the motherboard directly rather than provided as an external component."@en ;
-             rdfs:label "Network Card"@en .
-
-
 ###  http://w3id.org/devops-infra/server#PhysicalServer
 :PhysicalServer rdf:type owl:Class ;
                 rdfs:subClassOf :Server ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :runsOnHardware ;
+                                  owl:someValuesFrom <http://w3id.org/devops-infra/hardware#ServerHardware>
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://w3id.org/devops-infra/hardware#networkCard> ;
+                                  owl:allValuesFrom <http://w3id.org/devops-infra/hardware#NetworkCard>
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :containsDisk ;
+                                  owl:allValuesFrom <http://w3id.org/devops-infra/hardware#Disk>
+                                ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty :physicalServerStatus ;
                                   owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
@@ -641,6 +577,10 @@ TODO: move to core ontology module"""@en ,
                                                                          ) ;
                                                       rdf:type owl:Class
                                                     ]
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :runsOnHardware ;
+                                  owl:allValuesFrom <http://w3id.org/devops-infra/hardware#ServerHardware>
                                 ] ;
                 owl:disjointWith :VirtualServer ;
                 rdfs:label "Physical Server"@en .
@@ -676,14 +616,6 @@ TODO: move to core ontology module"""@en ,
                                             ]
                         ] ,
                         [ rdf:type owl:Restriction ;
-                          owl:onProperty :containsDisk ;
-                          owl:allValuesFrom <http://w3id.org/devops-infra/hardware#Disk>
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :flavor ;
-                          owl:allValuesFrom :HostFlavor
-                        ] ,
-                        [ rdf:type owl:Restriction ;
                           owl:onProperty :hasAccount ;
                           owl:allValuesFrom :Account
                         ] ;
@@ -694,17 +626,17 @@ TODO: move to core ontology module"""@en ,
 ###  http://w3id.org/devops-infra/server#ServerLoadBalancer
 :ServerLoadBalancer rdf:type owl:Class ;
                     rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ;
+                    rdfs:comment "A Server Load Balancer (SLB) distributes high traffic sites among several servers using a network-based hardware or software-defined appliance. Server load balancers intercept traffic for a website and reroute that traffic to servers"@en ;
                     rdfs:label "Server Load Balancer"@en .
-
-
-###  http://w3id.org/devops-infra/server#ServerLoadBalancerHost
-:ServerLoadBalancerHost rdf:type owl:Class ;
-                        rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> .
 
 
 ###  http://w3id.org/devops-infra/server#VirtualServer
 :VirtualServer rdf:type owl:Class ;
                rdfs:subClassOf :Server ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hostConfiguration ;
+                                 owl:someValuesFrom :HostConfiguration
+                               ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :chargeMode ;
                                  owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
@@ -726,6 +658,14 @@ TODO: move to core ontology module"""@en ,
                                                                         ) ;
                                                      rdf:type owl:Class
                                                    ]
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :flavor ;
+                                 owl:allValuesFrom :HostFlavor
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hostImage ;
+                                 owl:allValuesFrom :HostImage
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :virtualServerStatus ;

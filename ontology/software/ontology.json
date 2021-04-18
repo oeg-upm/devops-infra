@@ -57,6 +57,15 @@
 }, {
   "@id" : "_:genid17",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/software#ServiceModuleVersion"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/software#hasVersion"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://w3id.org/devops-infra/software#versionOfServiceModule"
   } ],
@@ -64,7 +73,7 @@
     "@id" : "http://w3id.org/devops-infra/software#ServiceModule"
   } ]
 }, {
-  "@id" : "_:genid18",
+  "@id" : "_:genid19",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://w3id.org/devops-infra/software#SoftwareDirectory"
@@ -73,7 +82,7 @@
     "@id" : "http://w3id.org/devops-infra/software#inSoftwareDirectory"
   } ]
 }, {
-  "@id" : "_:genid19",
+  "@id" : "_:genid20",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://w3id.org/devops-infra/server#Server"
@@ -82,7 +91,7 @@
     "@id" : "http://w3id.org/devops-infra/software#installedInServer"
   } ]
 }, {
-  "@id" : "_:genid20",
+  "@id" : "_:genid21",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://w3id.org/devops-infra/software#File"
@@ -91,26 +100,26 @@
     "@id" : "http://w3id.org/devops-infra/software#releasedAsFile"
   } ]
 }, {
-  "@id" : "_:genid21",
+  "@id" : "_:genid22",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid22"
+    "@id" : "_:genid23"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://w3id.org/devops-infra/software#softwareType"
   } ]
 }, {
-  "@id" : "_:genid22",
+  "@id" : "_:genid23",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "@id" : "_:genid24"
+      "@id" : "_:genid25"
     } ]
   } ]
 }, {
-  "@id" : "_:genid24",
+  "@id" : "_:genid25",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "http://w3id.org/devops-infra/kos/software-type"
@@ -119,25 +128,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid26",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#createTime"
-  } ]
-}, {
   "@id" : "_:genid27",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#version"
-  } ]
-}, {
-  "@id" : "_:genid28",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -146,7 +137,7 @@
     "@id" : "http://w3id.org/devops-infra/software#installPath"
   } ]
 }, {
-  "@id" : "_:genid29",
+  "@id" : "_:genid28",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://w3id.org/devops-infra/software#SoftwareDirectory"
@@ -256,6 +247,8 @@
   }, {
     "@value" : "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)"
   }, {
+    "@value" : "Puchao Zhang (Huawei Research Ireland)"
+  }, {
     "@value" : "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)"
   } ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
@@ -269,7 +262,7 @@
     "@value" : "http://w3id.org/devops-infra/software.owl"
   } ],
   "http://purl.org/dc/terms/issued" : [ {
-    "@value" : "2021-02-15"
+    "@value" : "2021-04-15"
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@value" : "https://creativecommons.org/licenses/by/4.0"
@@ -284,16 +277,16 @@
     "@value" : "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland"
   } ],
   "http://www.w3.org/2002/07/owl#imports" : [ {
-    "@id" : "http://w3id.org/devops-infra/core"
+    "@id" : "http://w3id.org/devops-infra/core/1.0.0"
   }, {
     "@id" : "http://www.w3.org/2004/02/skos/core"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://w3id.org/devops-infra/software/0.0.2"
+    "@id" : "http://w3id.org/devops-infra/software/1.0.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
-    "@value" : "Version after creating an initial set of mappings"
+    "@value" : "First official release"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/software#AutoDeployPackage",
@@ -358,6 +351,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/devops-infra/software#Software"
+  }, {
+    "@id" : "_:genid17"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/software#ServiceModuleVersion",
@@ -373,7 +368,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/devops-infra/software#Software"
   }, {
-    "@id" : "_:genid17"
+    "@id" : "_:genid18"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/software#Software",
@@ -389,19 +384,15 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/devops-infra/core#Resource"
   }, {
-    "@id" : "_:genid18"
-  }, {
     "@id" : "_:genid19"
   }, {
     "@id" : "_:genid20"
   }, {
     "@id" : "_:genid21"
   }, {
-    "@id" : "_:genid26"
+    "@id" : "_:genid22"
   }, {
     "@id" : "_:genid27"
-  }, {
-    "@id" : "_:genid28"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/software#SoftwareDirectory",
@@ -417,7 +408,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/devops-infra/core#Resource"
   }, {
-    "@id" : "_:genid29"
+    "@id" : "_:genid28"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/software#fileType",

@@ -49,6 +49,7 @@ This section provides details for each class and property defined by Ontology fo
          <dd>
             <a href="#belongsToDatabase"
                title="http://w3id.org/devops-infra/database#belongsToDatabase">belongs to database</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#database" title="http://w3id.org/devops-infra/database#database">database</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -93,9 +94,7 @@ This section provides details for each class and property defined by Ontology fo
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#dbInstanceVersion"
-               title="http://w3id.org/devops-infra/database#dbInstanceVersion">database instance version</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#dbMonitorRole"
+            <a href="#dbMonitorRole"
                title="http://w3id.org/devops-infra/database#dbMonitorRole">database monitor role</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#dbType" title="http://w3id.org/devops-infra/database#dbType">database type</a>
             <sup class="type-op" title="object property">op</sup>
@@ -145,8 +144,6 @@ This section provides details for each class and property defined by Ontology fo
          <dd>
             <a href="#backupStatus"
                title="http://w3id.org/devops-infra/database#backupStatus">backup status</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#mysqlversionStatus"
-               title="http://w3id.org/devops-infra/database#mysqlversionStatus">mysqlversion status</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#scanDate" title="http://w3id.org/devops-infra/database#scanDate">scan date</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#tableStatus"
                title="http://w3id.org/devops-infra/database#tableStatus">table status</a>
@@ -170,6 +167,11 @@ This section provides details for each class and property defined by Ontology fo
             title="http://w3id.org/devops-infra/database#dbBinaryLogChangeStatus">binary log change status</a>
       </li>
       <li>
+         <a href="#database" title="http://w3id.org/devops-infra/database#database">
+            <span>database</span>
+         </a>
+      </li>
+      <li>
          <a href="#dbMonitorRole"
             title="http://w3id.org/devops-infra/database#dbMonitorRole">database monitor role</a>
       </li>
@@ -186,15 +188,6 @@ This section provides details for each class and property defined by Ontology fo
       <li>
          <a href="#hasDatabaseInstance"
             title="http://w3id.org/devops-infra/database#hasDatabaseInstance">has database instance</a>
-      </li>
-      <li>
-         <a href="#http://w3id.org/devops-infra/server#hostedBy" title="http://w3id.org/devops-infra/server#hostedBy">
-            <span>hosted by</span>
-         </a>
-      </li>
-      <li>
-         <a href="#mysqlversionStatus"
-            title="http://w3id.org/devops-infra/database#mysqlversionStatus">mysqlversion status</a>
       </li>
       <li>
          <a href="#tableStatus"
@@ -236,10 +229,15 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/database#belongsToDatabase</p>
       <div class="comment">
-         <span class="markdown">The database to which the Big Table belongs</span>
+         <span class="markdown">The database to which a Big Table belongs</span>
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#database" title="http://w3id.org/devops-infra/database#database">database</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#DatabaseBigTable"
@@ -275,6 +273,32 @@ This section provides details for each class and property defined by Ontology fo
          </dl>
       </div>
    </div>
+   <div class="entity" id="database">
+      <h3>database<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/database#database</p>
+      <div class="comment">
+         <span class="markdown">The database to which a replica, scan report, big table or instance relates to.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#belongsToDatabase"
+                  title="http://w3id.org/devops-infra/database#belongsToDatabase">belongs to database</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Database" title="http://w3id.org/devops-infra/database#Database">Database</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="dbMonitorRole">
       <h3>database monitor role<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -298,8 +322,7 @@ This section provides details for each class and property defined by Ontology fo
                <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span> 
                <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span> 
                <span class="logic">value</span> 
-               <a href="#http://w3id.org/devops-infra/kos/db-monitor-role"
-                  title="http://w3id.org/devops-infra/kos/db-monitor-role">db monitor role</a>)</dd>
+               <a href="#http://w3id.org/devops-infra/kos/db-monitor-role" title="http://w3id.org/devops-infra/kos/db-monitor-role">db monitor role</a>)</dd>
          </dl>
       </div>
    </div>
@@ -403,50 +426,6 @@ This section provides details for each class and property defined by Ontology fo
          </dl>
       </div>
    </div>
-   <div class="entity" id="http://w3id.org/devops-infra/server#hostedBy">
-      <h3>hosted by<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#hostedBy</p>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://w3id.org/devops-infra/server#Server">server</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="mysqlversionStatus">
-      <h3>mysqlversion status<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/database#mysqlversionStatus</p>
-      <div class="comment">
-         <span class="markdown">The status of a mySQL version. It can be normal or abnormal.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#DatabaseScanReport"
-                  title="http://w3id.org/devops-infra/database#DatabaseScanReport">Database Scan Report</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span> 
-               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span> 
-               <span class="logic">value</span> 
-               <a href="#http://w3id.org/devops-infra/kos/status" title="http://w3id.org/devops-infra/kos/status">status</a>)</dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="tableStatus">
       <h3>table status<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -478,10 +457,6 @@ This section provides details for each class and property defined by Ontology fo
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#dbInstanceVersion"
-            title="http://w3id.org/devops-infra/database#dbInstanceVersion">database instance version</a>
-      </li>
-      <li>
          <a href="#dbSize" title="http://w3id.org/devops-infra/database#dbSize">database size</a>
       </li>
       <li>
@@ -506,35 +481,6 @@ This section provides details for each class and property defined by Ontology fo
          <a href="#tableSize" title="http://w3id.org/devops-infra/database#tableSize">table size</a>
       </li>
    </ul>
-   <div class="entity" id="dbInstanceVersion">
-      <h3>database instance version<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/database#dbInstanceVersion</p>
-      <div class="comment">
-         <span class="markdown">The version of the database instance</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#DatabaseInstance"
-                  title="http://w3id.org/devops-infra/database#DatabaseInstance">Database Instance</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="dbSize">
       <h3>database size<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -765,8 +711,7 @@ This section provides details for each class and property defined by Ontology fo
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
    <ul class="hlist">
       <li>
-         <a href="#http://w3id.org/devops-infra/kos/db-monitor-role"
-            title="http://w3id.org/devops-infra/kos/db-monitor-role">
+         <a href="#http://w3id.org/devops-infra/kos/db-monitor-role" title="http://w3id.org/devops-infra/kos/db-monitor-role">
             <span>db monitor role</span>
          </a>
       </li>

@@ -7,8 +7,8 @@
 @base <http://w3id.org/devops-infra/network> .
 
 <http://w3id.org/devops-infra/network> rdf:type owl:Ontology ;
-                                        owl:versionIRI <http://w3id.org/devops-infra/network/0.0.2> ;
-                                        owl:imports <http://w3id.org/devops-infra/core> ,
+                                        owl:versionIRI <http://w3id.org/devops-infra/network/1.0.0> ;
+                                        owl:imports <http://w3id.org/devops-infra/core/1.0.0> ,
                                                     <http://www.w3.org/2004/02/skos/core> ;
                                         <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
                                                                                   "Hu Peng (Huawei Research Ireland)" ,
@@ -18,16 +18,17 @@
                                                                                   "Mingxue Wang (Huawei Research Ireland)" ,
                                                                                   "Nicholas Burrett (Huawei Research Ireland)" ,
                                                                                   "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                  "Puchao Zhang (Huawei Research Ireland)" ,
                                                                                   "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)" ;
                                         <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/network" ;
                                         <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of the network-related parts of a DevOps infrastructure"@en ;
                                         <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/network.owl" ;
-                                        <http://purl.org/dc/terms/issued> "2021-02-17" ;
+                                        <http://purl.org/dc/terms/issued> "2021-04-17" ;
                                         <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" ;
                                         <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopsnet" ;
                                         <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/network#" ;
                                         rdfs:comment "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" ;
-                                        owl:versionInfo "Version after the initial set of mappings has been generated"@en .
+                                        owl:versionInfo "First official release"@en .
 
 #################################################################
 #    Annotation properties
@@ -69,20 +70,16 @@
 #    Object Properties
 #################################################################
 
+###  http://w3id.org/devops-infra/data-center#inDataCenter
+<http://w3id.org/devops-infra/data-center#inDataCenter> rdf:type owl:ObjectProperty .
+
+
 ###  http://w3id.org/devops-infra/network#belongsToIPNetwork
 :belongsToIPNetwork rdf:type owl:ObjectProperty ;
                     rdfs:domain :IPAddress ;
                     rdfs:range :IPNetwork ;
                     rdfs:comment "An IP address belongs to an IP network"@en ;
                     rdfs:label "belongs to IP network"@en .
-
-
-###  http://w3id.org/devops-infra/network#containsFirewall
-:containsFirewall rdf:type owl:ObjectProperty ;
-                  rdfs:domain :FirewallCluster ;
-                  rdfs:range <http://w3id.org/devops-infra/hardware#Firewall> ;
-                  rdfs:comment "A firewall cluster contains firewalls"@en ;
-                  rdfs:label "contains firewall"@en .
 
 
 ###  http://w3id.org/devops-infra/network#exposesIPAddress
@@ -101,26 +98,12 @@
                  rdfs:label "has DNS IP Address"@en .
 
 
-###  http://w3id.org/devops-infra/network#hasDNSProfile
-:hasDNSProfile rdf:type owl:ObjectProperty ;
-               rdfs:range :DNSConfigurationProfile ;
-               rdfs:comment "A DNS Record Configuration follows a DNS Configuration Profile"@en ;
-               rdfs:label "has DNS profile"@en .
-
-
 ###  http://w3id.org/devops-infra/network#hasPrivateIP
 :hasPrivateIP rdf:type owl:ObjectProperty ;
               rdfs:domain :VirtualFloatingIPAddress ;
               rdfs:range :PrivateIPAddress ;
               rdfs:comment "A virtual floating IP address has a private IP"@en ;
               rdfs:label "has private IP"@en .
-
-
-###  http://w3id.org/devops-infra/network#inDataCenter
-:inDataCenter rdf:type owl:ObjectProperty ;
-              rdfs:range <http://w3id.org/devops-infra/data-center#DataCenter> ;
-              rdfs:comment "SSH Channels, Network Segments, public IP addresses, etc., can be provided by a data center"@en ;
-              rdfs:label "in data center"@en .
 
 
 ###  http://w3id.org/devops-infra/network#ipStatus
@@ -417,11 +400,6 @@
 
 ###  http://w3id.org/devops-infra/hardware#Firewall
 <http://w3id.org/devops-infra/hardware#Firewall> rdf:type owl:Class .
-
-
-###  http://w3id.org/devops-infra/network#DNSConfigurationProfile
-:DNSConfigurationProfile rdf:type owl:Class ;
-                         rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> .
 
 
 ###  http://w3id.org/devops-infra/network#DNSDomain

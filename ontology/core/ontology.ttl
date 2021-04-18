@@ -7,7 +7,7 @@
 @base <http://w3id.org/devops-infra/core> .
 
 <http://w3id.org/devops-infra/core> rdf:type owl:Ontology ;
-                                     owl:versionIRI <http://w3id.org/devops-infra/core/0.0.2> ;
+                                     owl:versionIRI <http://w3id.org/devops-infra/core/1.0.0> ;
                                      <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
                                                                                "Hu Peng (Huawei Research Ireland)" ,
                                                                                "Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
@@ -16,16 +16,17 @@
                                                                                "Mingxue Wang (Huawei Research Ireland)" ,
                                                                                "Nicholas Burrett (Huawei Research Ireland)" ,
                                                                                "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                               "Puchao Zhang (Huawei Research Ireland)" ,
                                                                                "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)" ;
                                      <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/core" ;
-                                     <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of core elements like resources in the DevOps ontology network" ;
+                                     <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of core elements, such as Resources and Resource Groups, in the ICT infrastructure for DevOps ontology network" ;
                                      <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/core.owl" ;
                                      <http://purl.org/dc/terms/issued> "2021-02-17" ;
                                      <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" ;
                                      <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopscore" ;
                                      <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/core#" ;
                                      rdfs:comment "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" ;
-                                     owl:versionInfo "Version after the initial generation of mapppings"@en .
+                                     owl:versionInfo "First official release"@en .
 
 #################################################################
 #    Annotation properties
@@ -69,30 +70,23 @@
 
 ###  http://w3id.org/devops-infra/core#belongsToResourceGroup
 :belongsToResourceGroup rdf:type owl:ObjectProperty ;
-                        rdfs:domain :Resource ;
+                        rdfs:domain :ConfigurationItem ;
                         rdfs:range :ResourceGroup ;
-                        rdfs:comment "This property relates a Resource with a Resource Group"@en ;
+                        rdfs:comment "This property relates a Resource or a Resource Group (that is, a Configuration Item) with another Resource Group that it belongs to"@en ;
                         rdfs:label "belongs to resource group"@en .
 
 
 ###  http://w3id.org/devops-infra/core#dependsOn
 :dependsOn rdf:type owl:ObjectProperty ;
-           rdfs:domain [ rdf:type owl:Class ;
-                         owl:unionOf ( :Resource
-                                       :ResourceGroup
-                                     )
-                       ] ;
-           rdfs:range [ rdf:type owl:Class ;
-                        owl:unionOf ( :Resource
-                                      :ResourceGroup
-                                    )
-                      ] ;
-           rdfs:comment "A Resource or Resource Group may depend on zero to many Resources or Resource Groups"@en ;
+           rdfs:domain :ConfigurationItem ;
+           rdfs:range :ConfigurationItem ;
+           rdfs:comment "A Resource or Resource Group (a Configuration Item) may depend on zero to many other Resources or Resource Groups (Configuration Items). For example, a Service may depend on a number of microservices to run, as well as on some specific hardware or software infrastructure"@en ;
            rdfs:label "depends on"@en .
 
 
 ###  http://w3id.org/devops-infra/core#parentResourceGroup
 :parentResourceGroup rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :belongsToResourceGroup ;
                      rdfs:domain :ResourceGroup ;
                      rdfs:range :ResourceGroup ;
                      rdfs:comment "This property relates a Resource Group with its parent Resource Group, if any"@en ;
@@ -114,7 +108,7 @@
                                         ) ;
                      rdf:type owl:Class
                    ] ;
-        rdfs:comment "This property refers to the status of any resource or resource group, and its value is determined by a SKOS of different types of status that may be considered"@en ;
+        rdfs:comment "This property refers to the status of any Resource or Resource Group (Configuration Item), and its value is determined by a SKOS of different types of status that may be considered"@en ;
         rdfs:label "status"@en .
 
 
@@ -130,28 +124,48 @@
 #    Data properties
 #################################################################
 
-###  http://w3id.org/devops-infra/core#createTime
-:createTime rdf:type owl:DatatypeProperty ;
-            rdfs:domain [ rdf:type owl:Class ;
-                          owl:unionOf ( :Resource
-                                        :ResourceGroup
-                                      )
-                        ] ;
-            rdfs:range xsd:dateTime ;
-            rdfs:comment "Date and time when a Resource or Resource Group is created"@en ;
-            rdfs:label "create time"@en .
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:DatatypeProperty ;
+                                   rdfs:comment "Date of creation of the resource"@en ;
+                                   rdfs:label "date created"@en .
 
 
-###  http://w3id.org/devops-infra/core#updateTime
-:updateTime rdf:type owl:DatatypeProperty ;
-            rdfs:domain [ rdf:type owl:Class ;
-                          owl:unionOf ( :Resource
-                                        :ResourceGroup
-                                      )
-                        ] ;
-            rdfs:range xsd:dateTime ;
-            rdfs:comment "The date and time when a Resource or Resource Group is updated"@en ;
-            rdfs:label "update time"@en .
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty ;
+                                      rdfs:comment "An unambiguous reference to the resource within a given context"@en ;
+                                      rdfs:label "identifier"@en .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:DatatypeProperty ;
+                                    rdfs:comment "Date on which the resource was changed"@en ;
+                                    rdfs:label "date modified"@en .
+
+
+###  http://w3id.org/devops-infra/core#created
+:created rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf <http://purl.org/dc/terms/created> ;
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( :Resource
+                                     :ResourceGroup
+                                   )
+                     ] ;
+         rdfs:range xsd:dateTime ;
+         rdfs:comment "Date and time when a Resource or Resource Group was created"@en ;
+         rdfs:label "created"@en .
+
+
+###  http://w3id.org/devops-infra/core#modified
+:modified rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf <http://purl.org/dc/terms/modified> ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :Resource
+                                      :ResourceGroup
+                                    )
+                      ] ;
+          rdfs:range xsd:dateTime ;
+          rdfs:comment "Date and time when a Resource or ResourceGroup experience a modification"@en ;
+          rdfs:label "last modified"@en .
 
 
 ###  http://w3id.org/devops-infra/core#version
@@ -170,93 +184,66 @@
 #    Classes
 #################################################################
 
+###  http://w3id.org/devops-infra/core#ConfigurationItem
+:ConfigurationItem rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty :dependsOn ;
+                                     owl:allValuesFrom :ConfigurationItem
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :status ;
+                                     owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                owl:hasValue <http://w3id.org/devops-infra/kos/status>
+                                                                              ]
+                                                                            ) ;
+                                                         rdf:type owl:Class
+                                                       ]
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://w3id.org/devops-infra/organisation#scope> ;
+                                     owl:allValuesFrom <http://w3id.org/devops-infra/organisation#Scope>
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://purl.org/dc/terms/identifier> ;
+                                     owl:allValuesFrom rdfs:Literal
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :created ;
+                                     owl:allValuesFrom xsd:dateTime
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :modified ;
+                                     owl:allValuesFrom xsd:dateTime
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :version ;
+                                     owl:allValuesFrom xsd:string
+                                   ] ;
+                   rdfs:comment "A Configuration Item identifies an entity (Resource) or a group of entities (Resource Group) that are managed in the context of a DevOps infrastructure in this ontology network."@en ;
+                   rdfs:label "Configuration Item"@en .
+
+
 ###  http://w3id.org/devops-infra/core#Resource
 :Resource rdf:type owl:Class ;
-          rdfs:subClassOf [ rdf:type owl:Restriction ;
+          rdfs:subClassOf :ConfigurationItem ,
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty :belongsToResourceGroup ;
                             owl:allValuesFrom :ResourceGroup
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :dependsOn ;
-                            owl:allValuesFrom [ rdf:type owl:Class ;
-                                                owl:unionOf ( :Resource
-                                                              :ResourceGroup
-                                                            )
-                                              ]
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :status ;
-                            owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
-                                                                     [ rdf:type owl:Restriction ;
-                                                                       owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                                                       owl:hasValue <http://w3id.org/devops-infra/kos/status>
-                                                                     ]
-                                                                   ) ;
-                                                rdf:type owl:Class
-                                              ]
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty <http://w3id.org/devops-infra/organisation#scope> ;
-                            owl:allValuesFrom <http://w3id.org/devops-infra/organisation#Scope>
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :createTime ;
-                            owl:allValuesFrom xsd:dateTime
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :updateTime ;
-                            owl:allValuesFrom xsd:dateTime
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :version ;
-                            owl:allValuesFrom xsd:string
                           ] ;
-          rdfs:comment "A Resource is any relevant entity that is managed in the context of a DevOps infrastructure in this ontology network"@en ;
+          rdfs:comment "A Resource is any relevant entity that is managed in the context of a DevOps infrastructure in this ontology network. This term is also known as a Configuration Item in many Configuration Management Databases."@en ;
           rdfs:label "Resource"@en .
 
 
 ###  http://w3id.org/devops-infra/core#ResourceGroup
 :ResourceGroup rdf:type owl:Class ;
-               rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                 owl:onProperty :dependsOn ;
-                                 owl:allValuesFrom [ rdf:type owl:Class ;
-                                                     owl:unionOf ( :Resource
-                                                                   :ResourceGroup
-                                                                 )
-                                                   ]
-                               ] ,
+               rdfs:subClassOf :ConfigurationItem ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :parentResourceGroup ;
                                  owl:allValuesFrom :ResourceGroup
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :status ;
-                                 owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
-                                                                          [ rdf:type owl:Restriction ;
-                                                                            owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                                                            owl:hasValue <http://w3id.org/devops-infra/kos/status>
-                                                                          ]
-                                                                        ) ;
-                                                     rdf:type owl:Class
-                                                   ]
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty <http://w3id.org/devops-infra/organisation#scope> ;
-                                 owl:allValuesFrom <http://w3id.org/devops-infra/organisation#Scope>
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :createTime ;
-                                 owl:allValuesFrom xsd:dateTime
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :updateTime ;
-                                 owl:allValuesFrom xsd:dateTime
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :version ;
-                                 owl:allValuesFrom xsd:string
                                ] ;
-               rdfs:comment "A Resource Group identifies a grouping of entities (resources) that are managed in the context of a DevOps infrastructure in this ontology network"@en ;
+               rdfs:comment "A Resource Group identifies a grouping of entities (resources) that are managed in the context of a DevOps infrastructure in this ontology network. This term is also known as a Configuration Item in many Configuration Management Databases."@en ;
                rdfs:label "Resource Group"@en .
 
 

@@ -1,6 +1,6 @@
 <http://w3id.org/devops-infra/certificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://w3id.org/devops-infra/certificate> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/devops-infra/certificate/0.0.1> .
-<http://w3id.org/devops-infra/certificate> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/devops-infra/core> .
+<http://w3id.org/devops-infra/certificate> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/devops-infra/certificate/1.0.0> .
+<http://w3id.org/devops-infra/certificate> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/devops-infra/core/1.0.0> .
 <http://w3id.org/devops-infra/certificate> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
 <http://w3id.org/devops-infra/certificate> <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
 <http://w3id.org/devops-infra/certificate> <http://purl.org/dc/elements/1.1/creator> "Hu Peng (Huawei Research Ireland)" .
@@ -10,6 +10,7 @@
 <http://w3id.org/devops-infra/certificate> <http://purl.org/dc/elements/1.1/creator> "Mingxue Wang (Huawei Research Ireland)" .
 <http://w3id.org/devops-infra/certificate> <http://purl.org/dc/elements/1.1/creator> "Nicholas Burrett (Huawei Research Ireland)" .
 <http://w3id.org/devops-infra/certificate> <http://purl.org/dc/elements/1.1/creator> "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/certificate> <http://purl.org/dc/elements/1.1/creator> "Puchao Zhang (Huawei Research Ireland)" .
 <http://w3id.org/devops-infra/certificate> <http://purl.org/dc/elements/1.1/creator> "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
 <http://w3id.org/devops-infra/certificate> <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/certificate" .
 <http://w3id.org/devops-infra/certificate> <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of aspects related to certificates (SSL, CFCA, etc.)"@en .
@@ -19,7 +20,7 @@
 <http://w3id.org/devops-infra/certificate> <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopscert" .
 <http://w3id.org/devops-infra/certificate> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/certificate#" .
 <http://w3id.org/devops-infra/certificate> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" .
-<http://w3id.org/devops-infra/certificate> <http://www.w3.org/2002/07/owl#versionInfo> "Version after the mappings have been generated"@en .
+<http://w3id.org/devops-infra/certificate> <http://www.w3.org/2002/07/owl#versionInfo> "First official release"@en .
 # 
 # 
 # #################################################################

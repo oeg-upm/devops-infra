@@ -4,12 +4,49 @@ This section provides details for each class and property defined by Ontology fo
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
+         <a href="#ConfigurationItem"
+            title="http://w3id.org/devops-infra/core#ConfigurationItem">Configuration Item</a>
+      </li>
+      <li>
          <a href="#Resource" title="http://w3id.org/devops-infra/core#Resource">Resource</a>
       </li>
       <li>
          <a href="#ResourceGroup" title="http://w3id.org/devops-infra/core#ResourceGroup">Resource Group</a>
       </li>
    </ul>
+   <div class="entity" id="ConfigurationItem">
+      <h3>Configuration Item<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/core#ConfigurationItem</p>
+      <div class="comment">
+         <span class="markdown">A Configuration Item identifies an entity (Resource) or a group of entities (Resource Group) that are managed in the context of a DevOps infrastructure in this ontology network.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Resource" title="http://w3id.org/devops-infra/core#Resource">Resource</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ResourceGroup" title="http://w3id.org/devops-infra/core#ResourceGroup">Resource Group</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#belongsToResourceGroup"
+               title="http://w3id.org/devops-infra/core#belongsToResourceGroup">belongs to resource group</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#dependsOn" title="http://w3id.org/devops-infra/core#dependsOn">depends on</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#dependsOn" title="http://w3id.org/devops-infra/core#dependsOn">depends on</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="Resource">
       <h3>Resource<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -18,16 +55,14 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/core#Resource</p>
       <div class="comment">
-         <span class="markdown">A Resource is any relevant entity that is managed in the context of a DevOps infrastructure in this ontology network</span>
+         <span class="markdown">A Resource is any relevant entity that is managed in the context of a DevOps infrastructure in this ontology network. This term is also known as a Configuration Item in many Configuration Management Databases.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
-         <dd/>
-         <dt>is in domain of</dt>
          <dd>
-            <a href="#belongsToResourceGroup"
-               title="http://w3id.org/devops-infra/core#belongsToResourceGroup">belongs to resource group</a>
-            <sup class="type-op" title="object property">op</sup>
+            <a href="#ConfigurationItem"
+               title="http://w3id.org/devops-infra/core#ConfigurationItem">Configuration Item</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -39,11 +74,15 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/core#ResourceGroup</p>
       <div class="comment">
-         <span class="markdown">A Resource Group identifies a grouping of entities (resources) that are managed in the context of a DevOps infrastructure in this ontology network</span>
+         <span class="markdown">A Resource Group identifies a grouping of entities (resources) that are managed in the context of a DevOps infrastructure in this ontology network. This term is also known as a Configuration Item in many Configuration Management Databases.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
-         <dd/>
+         <dd>
+            <a href="#ConfigurationItem"
+               title="http://w3id.org/devops-infra/core#ConfigurationItem">Configuration Item</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#parentResourceGroup"
@@ -86,13 +125,20 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/core#belongsToResourceGroup</p>
       <div class="comment">
-         <span class="markdown">This property relates a Resource with a Resource Group</span>
+         <span class="markdown">This property relates a Resource or a Resource Group (that is, a Configuration Item) with another Resource Group that it belongs to</span>
       </div>
       <div class="description">
          <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#parentResourceGroup"
+                  title="http://w3id.org/devops-infra/core#parentResourceGroup">parent Resource Group</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#Resource" title="http://w3id.org/devops-infra/core#Resource">Resource</a>
+               <a href="#ConfigurationItem"
+                  title="http://w3id.org/devops-infra/core#ConfigurationItem">Configuration Item</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -111,24 +157,20 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/core#dependsOn</p>
       <div class="comment">
-         <span class="markdown">A Resource or Resource Group may depend on zero to many Resources or Resource Groups</span>
+         <span class="markdown">A Resource or Resource Group (a Configuration Item) may depend on zero to many other Resources or Resource Groups (Configuration Items). For example, a Service may depend on a number of microservices to run, as well as on some specific hardware or software infrastructure</span>
       </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Resource" title="http://w3id.org/devops-infra/core#Resource">Resource</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#ResourceGroup" title="http://w3id.org/devops-infra/core#ResourceGroup">Resource Group</a>
+               <a href="#ConfigurationItem"
+                  title="http://w3id.org/devops-infra/core#ConfigurationItem">Configuration Item</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Resource" title="http://w3id.org/devops-infra/core#Resource">Resource</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#ResourceGroup" title="http://w3id.org/devops-infra/core#ResourceGroup">Resource Group</a>
+               <a href="#ConfigurationItem"
+                  title="http://w3id.org/devops-infra/core#ConfigurationItem">Configuration Item</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -146,6 +188,12 @@ This section provides details for each class and property defined by Ontology fo
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#belongsToResourceGroup"
+                  title="http://w3id.org/devops-infra/core#belongsToResourceGroup">belongs to resource group</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#ResourceGroup" title="http://w3id.org/devops-infra/core#ResourceGroup">Resource Group</a>
@@ -167,7 +215,7 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/core#status</p>
       <div class="comment">
-         <span class="markdown">This property refers to the status of any resource or resource group, and its value is determined by a SKOS of different types of status that may be considered</span>
+         <span class="markdown">This property refers to the status of any Resource or Resource Group (Configuration Item), and its value is determined by a SKOS of different types of status that may be considered</span>
       </div>
       <div class="description">
          <dl>
@@ -194,27 +242,41 @@ This section provides details for each class and property defined by Ontology fo
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#createTime" title="http://w3id.org/devops-infra/core#createTime">create time</a>
+         <a href="#created" title="http://w3id.org/devops-infra/core#created">created</a>
       </li>
       <li>
-         <a href="#updateTime" title="http://w3id.org/devops-infra/core#updateTime">update time</a>
+         <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">date created</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">date modified</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a>
+      </li>
+      <li>
+         <a href="#modified" title="http://w3id.org/devops-infra/core#modified">last modified</a>
       </li>
       <li>
          <a href="#version" title="http://w3id.org/devops-infra/core#version">version</a>
       </li>
    </ul>
-   <div class="entity" id="createTime">
-      <h3>create time<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="created">
+      <h3>created<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/core#createTime</p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/core#created</p>
       <div class="comment">
-         <span class="markdown">Date and time when a Resource or Resource Group is created</span>
+         <span class="markdown">Date and time when a Resource or Resource Group was created</span>
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">date created</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Resource" title="http://w3id.org/devops-infra/core#Resource">Resource</a>
@@ -230,18 +292,74 @@ This section provides details for each class and property defined by Ontology fo
          </dl>
       </div>
    </div>
-   <div class="entity" id="updateTime">
-      <h3>update time<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="http://purl.org/dc/terms/created">
+      <h3>date created<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/core#updateTime</p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/created</p>
       <div class="comment">
-         <span class="markdown">The date and time when a Resource or Resource Group is updated</span>
+         <span class="markdown">Date of creation of the resource</span>
       </div>
       <div class="description">
          <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#created" title="http://w3id.org/devops-infra/core#created">created</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/modified">
+      <h3>date modified<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/modified</p>
+      <div class="comment">
+         <span class="markdown">Date on which the resource was changed</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#modified" title="http://w3id.org/devops-infra/core#modified">last modified</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/identifier">
+      <h3>identifier<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/identifier</p>
+      <div class="comment">
+         <span class="markdown">An unambiguous reference to the resource within a given context</span>
+      </div>
+   </div>
+   <div class="entity" id="modified">
+      <h3>last modified<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/core#modified</p>
+      <div class="comment">
+         <span class="markdown">Date and time when a Resource or ResourceGroup experience a modification</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">date modified</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Resource" title="http://w3id.org/devops-infra/core#Resource">Resource</a>

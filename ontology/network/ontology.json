@@ -32,6 +32,9 @@
   "@id" : "http://w3id.org/devops-infra/data-center#DataCenter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
+  "@id" : "http://w3id.org/devops-infra/data-center#inDataCenter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
   "@id" : "http://w3id.org/devops-infra/hardware#Firewall",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
@@ -54,6 +57,8 @@
   }, {
     "@value" : "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)"
   }, {
+    "@value" : "Puchao Zhang (Huawei Research Ireland)"
+  }, {
     "@value" : "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)"
   } ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
@@ -67,7 +72,7 @@
     "@value" : "http://w3id.org/devops-infra/network.owl"
   } ],
   "http://purl.org/dc/terms/issued" : [ {
-    "@value" : "2021-02-17"
+    "@value" : "2021-04-17"
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@value" : "https://creativecommons.org/licenses/by/4.0"
@@ -82,22 +87,16 @@
     "@value" : "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland"
   } ],
   "http://www.w3.org/2002/07/owl#imports" : [ {
-    "@id" : "http://w3id.org/devops-infra/core"
+    "@id" : "http://w3id.org/devops-infra/core/1.0.0"
   }, {
     "@id" : "http://www.w3.org/2004/02/skos/core"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://w3id.org/devops-infra/network/0.0.2"
+    "@id" : "http://w3id.org/devops-infra/network/1.0.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
-    "@value" : "Version after the initial set of mappings has been generated"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/network#DNSConfigurationProfile",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#Resource"
+    "@value" : "First official release"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/network#DNSDomain",
@@ -288,23 +287,6 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/network#containsFirewall",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A firewall cluster contains firewalls"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/network#FirewallCluster"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "contains firewall"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/devops-infra/hardware#Firewall"
-  } ]
-}, {
   "@id" : "http://w3id.org/devops-infra/network#destinationIP",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -413,20 +395,6 @@
     "@id" : "http://w3id.org/devops-infra/network#IPAddress"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/network#hasDNSProfile",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A DNS Record Configuration follows a DNS Configuration Profile"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has DNS profile"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/devops-infra/network#DNSConfigurationProfile"
-  } ]
-}, {
   "@id" : "http://w3id.org/devops-infra/network#hasPrivateIP",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -442,20 +410,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://w3id.org/devops-infra/network#PrivateIPAddress"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/network#inDataCenter",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "SSH Channels, Network Segments, public IP addresses, etc., can be provided by a data center"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "in data center"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/devops-infra/data-center#DataCenter"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/network#ipAddress",

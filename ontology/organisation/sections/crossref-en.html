@@ -4,8 +4,8 @@ This section provides details for each class and property defined by Ontology fo
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
-         <a href="#http://w3id.org/devops-infra/organisation#Department"
-            title="http://w3id.org/devops-infra/organisation#Department">Department</a>
+         <a href="#http://w3id.org/devops-infra/organisation#Organisation"
+            title="http://w3id.org/devops-infra/organisation#Organisation">Organisation</a>
       </li>
       <li>
          <a href="#http://w3id.org/devops-infra/organisation#Scope" title="http://w3id.org/devops-infra/organisation#Scope">Scope</a>
@@ -14,19 +14,19 @@ This section provides details for each class and property defined by Ontology fo
          <a href="#http://w3id.org/devops-infra/organisation#Site" title="http://w3id.org/devops-infra/organisation#Site">Site</a>
       </li>
       <li>
-         <a href="#http://w3id.org/devops-infra/organisation#Stage" title="http://w3id.org/devops-infra/organisation#Stage">Stage</a>
-      </li>
-      <li>
          <a href="#http://w3id.org/devops-infra/organisation#Tenant" title="http://w3id.org/devops-infra/organisation#Tenant">Tenant</a>
       </li>
    </ul>
-   <div class="entity" id="http://w3id.org/devops-infra/organisation#Department">
-      <h3>Department<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="http://w3id.org/devops-infra/organisation#Organisation">
+      <h3>Organisation<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/organisation#Department</p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/organisation#Organisation</p>
+      <div class="comment">
+         <span class="markdown">This concept is generated as a specialisation of the concept Organization from the W3C Organization ontology, so as to refer to any type of organisation or deparment inside an organisation that may be responsible for specific resource, scopes, tenants, etc.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -47,6 +47,9 @@ This section provides details for each class and property defined by Ontology fo
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/organisation#Scope</p>
+      <div class="comment">
+         <span class="markdown">This is a term commonly used to describe the reasons why a Resource or Resource Group (a Configuration Item) are handled or grouped together. It may be related to a geographical area, to some business context, may be part of some common infrastructure form the cloud provider, etc. Generally, a Scope is managed by a specific Department, which is responsible for it.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
@@ -76,32 +79,21 @@ This section provides details for each class and property defined by Ontology fo
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/organisation#Site</p>
+      <div class="comment">
+         <span class="markdown">Tem term Site is commonly used to refer to a group of Configuration Itens (e.g., virtual and physical servers, services, applications, etc.) which are grouped together and connected in order to host specific applications, products or services in a cloud environment.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
-            <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#http://w3id.org/devops-infra/organisation#timeZone"
+            <a href="#http://w3id.org/devops-infra/organisation#accessibleToTenant"
+               title="http://w3id.org/devops-infra/organisation#accessibleToTenant">accessible to tenant</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://w3id.org/devops-infra/organisation#timeZone"
                title="http://w3id.org/devops-infra/organisation#timeZone">time zone</a>
             <sup class="type-dp" title="data property">dp</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="http://w3id.org/devops-infra/organisation#Stage">
-      <h3>Stage<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/organisation#Stage</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
-            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -113,13 +105,12 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/organisation#Tenant</p>
       <div class="comment">
-         <span class="markdown">A tenant is usually understood as a container for items of an Organisation in a cloud, such as users, domains, subscriptions, etc</span>
+         <span class="markdown">A tenant is usually understood as a container for items of an Organisation in a cloud, such as users, domains, subscriptions, etc. In other words, it identifies a group of users (e.g., from an organisation) who share a common access with specific privileges to some resources (configuration items) in the cloud. These resources may be provided by a single or by multiple providers (e.g., AWS, HWS, etc.) and belong to a specifc domain (e.g., normally named after a geographical region, as this is commonly used to provision physical resources from specific data centers).</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
-            <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
@@ -134,11 +125,21 @@ This section provides details for each class and property defined by Ontology fo
                title="http://w3id.org/devops-infra/organisation#tenantType">tenant type</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://w3id.org/devops-infra/organisation#accessibleToTenant"
+               title="http://w3id.org/devops-infra/organisation#accessibleToTenant">accessible to tenant</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
 </div><div id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
+      <li>
+         <a href="#http://w3id.org/devops-infra/organisation#accessibleToTenant"
+            title="http://w3id.org/devops-infra/organisation#accessibleToTenant">accessible to tenant</a>
+      </li>
       <li>
          <a href="#http://w3id.org/devops-infra/organisation#managedBy"
             title="http://w3id.org/devops-infra/organisation#managedBy">managed by</a>
@@ -155,6 +156,31 @@ This section provides details for each class and property defined by Ontology fo
             title="http://w3id.org/devops-infra/organisation#tenantType">tenant type</a>
       </li>
    </ul>
+   <div class="entity" id="http://w3id.org/devops-infra/organisation#accessibleToTenant">
+      <h3>accessible to tenant<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/organisation#accessibleToTenant</p>
+      <div class="comment">
+         <span class="markdown">This propety is use to refer to the Tenants for which a Resource or Resource Group (e.g., a Site according to this ontology) is accessible.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://w3id.org/devops-infra/organisation#Site" title="http://w3id.org/devops-infra/organisation#Site">Site</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://w3id.org/devops-infra/organisation#Tenant" title="http://w3id.org/devops-infra/organisation#Tenant">Tenant</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="http://w3id.org/devops-infra/organisation#managedBy">
       <h3>managed by<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -163,7 +189,7 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/organisation#managedBy</p>
       <div class="comment">
-         <span class="markdown">A scope may be managed by a department</span>
+         <span class="markdown">A scope may be managed by an Organisation (or part of it, e.g., a department)</span>
       </div>
       <div class="description">
          <dl>
@@ -174,8 +200,8 @@ This section provides details for each class and property defined by Ontology fo
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#http://w3id.org/devops-infra/organisation#Department"
-                  title="http://w3id.org/devops-infra/organisation#Department">Department</a>
+               <a href="#http://w3id.org/devops-infra/organisation#Organisation"
+                  title="http://w3id.org/devops-infra/organisation#Organisation">Organisation</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -209,7 +235,7 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/organisation#scopeType</p>
       <div class="comment">
-         <span class="markdown">The type of scope. It can be any of the following, according to the corresponding SKOS Concept Scheme: area, biz, resource, common</span>
+         <span class="markdown">The type of scope. It can be any of the following, according to the corresponding SKOS Concept Scheme: area, biz, resource, common, etc.</span>
       </div>
       <div class="description">
          <dl>
@@ -235,7 +261,7 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/organisation#tenantType</p>
       <div class="comment">
-         <span class="markdown">The type of tenant. It can be any of the following, according to the corresponding SKOS Concept Scheme: HWS, AWS, ENABLE, DISABLE, CHINA, EUROPE, RUSSIA, A2, AP, RUSSIA_2, CHINA_NOT_CLOUDSERVICE, FRANCE</span>
+         <span class="markdown">The type of tenant. Examples of tenants, taken from several cloud providers, are: HWS, AWS, CHINA, EUROPE, RUSSIA, A2, AP, RUSSIA_2, CHINA_NOT_CLOUDSERVICE, FRANCE, etc.</span>
       </div>
       <div class="description">
          <dl>
@@ -293,6 +319,9 @@ This section provides details for each class and property defined by Ontology fo
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/organisation#account</p>
+      <div class="comment">
+         <span class="markdown">The account associated to a tenant</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -355,6 +384,9 @@ This section provides details for each class and property defined by Ontology fo
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/organisation#password</p>
+      <div class="comment">
+         <span class="markdown">The password associated to an account for a tenant. This will not be represented in most knoweldge graphs</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -376,6 +408,9 @@ This section provides details for each class and property defined by Ontology fo
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/organisation#priority</p>
+      <div class="comment">
+         <span class="markdown">A priority associated to a specific Scope, which can be useful to determine the level of priority that the managing department or organisation will assign to it in case of problems.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>

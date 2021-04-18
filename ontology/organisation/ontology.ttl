@@ -7,8 +7,8 @@
 @base <http://w3id.org/devops-infra/organisation> .
 
 <http://w3id.org/devops-infra/organisation> rdf:type owl:Ontology ;
-                                             owl:versionIRI <http://w3id.org/devops-infra/organisation/0.0.2> ;
-                                             owl:imports <http://w3id.org/devops-infra/core> ,
+                                             owl:versionIRI <http://w3id.org/devops-infra/organisation/1.0.0> ;
+                                             owl:imports <http://w3id.org/devops-infra/core/1.0.0> ,
                                                          <http://www.w3.org/2004/02/skos/core> ,
                                                          <http://www.w3.org/ns/org#> ;
                                              <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
@@ -19,16 +19,17 @@
                                                                                        "Mingxue Wang (Huawei Research Ireland)" ,
                                                                                        "Nicholas Burrett (Huawei Research Ireland)" ,
                                                                                        "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                       "Puchao Zhang (Huawei Research Ireland)" ,
                                                                                        "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)" ;
                                              <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/organisation" ;
-                                             <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of the organisation-related part of DevOps" ;
+                                             <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of the organisation-related part of the ICT infrastructure for DevOps ontology network" ;
                                              <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/organisation.owl" ;
                                              <http://purl.org/dc/terms/issued> "2021-02-15" ;
                                              <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" ;
                                              <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopsorg" ;
                                              <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/organisation#" ;
                                              rdfs:comment "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" ;
-                                             owl:versionInfo "Version after the generation of mappings"@en .
+                                             owl:versionInfo "First official release"@en .
 
 #################################################################
 #    Annotation properties
@@ -70,11 +71,19 @@
 #    Object Properties
 #################################################################
 
+###  http://w3id.org/devops-infra/organisation#accessibleToTenant
+:accessibleToTenant rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Site ;
+                    rdfs:range :Tenant ;
+                    rdfs:comment "This propety is use to refer to the Tenants for which a Resource or Resource Group (e.g., a Site according to this ontology) is accessible."@en ;
+                    rdfs:label "accessible to tenant"@en .
+
+
 ###  http://w3id.org/devops-infra/organisation#managedBy
 :managedBy rdf:type owl:ObjectProperty ;
            rdfs:domain :Scope ;
-           rdfs:range :Department ;
-           rdfs:comment "A scope may be managed by a department"@en ;
+           rdfs:range :Organisation ;
+           rdfs:comment "A scope may be managed by an Organisation (or part of it, e.g., a department)"@en ;
            rdfs:label "managed by"@en .
 
 
@@ -96,7 +105,7 @@
                                            ) ;
                         rdf:type owl:Class
                       ] ;
-           rdfs:comment "The type of scope. It can be any of the following, according to the corresponding SKOS Concept Scheme: area, biz, resource, common"@en ;
+           rdfs:comment "The type of scope. It can be any of the following, according to the corresponding SKOS Concept Scheme: area, biz, resource, common, etc."@en ;
            rdfs:label "scope type"@en .
 
 
@@ -111,7 +120,7 @@
                                             ) ;
                          rdf:type owl:Class
                        ] ;
-            rdfs:comment "The type of tenant. It can be any of the following, according to the corresponding SKOS Concept Scheme: HWS, AWS, ENABLE, DISABLE, CHINA, EUROPE, RUSSIA, A2, AP, RUSSIA_2, CHINA_NOT_CLOUDSERVICE, FRANCE"@en ;
+            rdfs:comment "The type of tenant. Examples of tenants, taken from several cloud providers, are: HWS, AWS, CHINA, EUROPE, RUSSIA, A2, AP, RUSSIA_2, CHINA_NOT_CLOUDSERVICE, FRANCE, etc."@en ;
             rdfs:label "tenant type"@en .
 
 
@@ -122,6 +131,7 @@
 ###  http://w3id.org/devops-infra/organisation#account
 :account rdf:type owl:DatatypeProperty ;
          rdfs:domain :Tenant ;
+         rdfs:comment "The account associated to a tenant"@en ;
          rdfs:label "account"@en .
 
 
@@ -143,12 +153,14 @@
 :password rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf owl:topDataProperty ;
           rdfs:domain :Tenant ;
+          rdfs:comment "The password associated to an account for a tenant. This will not be represented in most knoweldge graphs"@en ;
           rdfs:label "password"@en .
 
 
 ###  http://w3id.org/devops-infra/organisation#priority
 :priority rdf:type owl:DatatypeProperty ;
           rdfs:domain :Scope ;
+          rdfs:comment "A priority associated to a specific Scope, which can be useful to determine the level of priority that the managing department or organisation will assign to it in case of problems."@en ;
           rdfs:label "priority"@en .
 
 
@@ -171,22 +183,18 @@
 #    Classes
 #################################################################
 
-###  http://w3id.org/devops-infra/core#Resource
-<http://w3id.org/devops-infra/core#Resource> rdf:type owl:Class .
-
-
-###  http://w3id.org/devops-infra/organisation#Department
-:Department rdf:type owl:Class ;
-            rdfs:subClassOf <http://xmlns.com/foaf/0.1/Organization> ;
-            rdfs:label "Department"@en ,
-                       "部门"@cn .
+###  http://w3id.org/devops-infra/organisation#Organisation
+:Organisation rdf:type owl:Class ;
+              rdfs:subClassOf <http://xmlns.com/foaf/0.1/Organization> ;
+              rdfs:comment "This concept is generated as a specialisation of the concept Organization from the W3C Organization ontology, so as to refer to any type of organisation or deparment inside an organisation that may be responsible for specific resource, scopes, tenants, etc."@en ;
+              rdfs:label "Organisation"@en .
 
 
 ###  http://w3id.org/devops-infra/organisation#Scope
 :Scope rdf:type owl:Class ;
        rdfs:subClassOf [ rdf:type owl:Restriction ;
                          owl:onProperty :managedBy ;
-                         owl:someValuesFrom :Department
+                         owl:someValuesFrom :Organisation
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :scopeType ;
@@ -207,8 +215,8 @@
                          owl:onProperty :priority ;
                          owl:allValuesFrom xsd:string
                        ] ;
-       rdfs:label "Scope"@en ,
-                  "领域"@cn .
+       rdfs:comment "This is a term commonly used to describe the reasons why a Resource or Resource Group (a Configuration Item) are handled or grouped together. It may be related to a geographical area, to some business context, may be part of some common infrastructure form the cloud provider, etc. Generally, a Scope is managed by a specific Department, which is responsible for it."@en ;
+       rdfs:label "Scope"@en .
 
 
 ###  http://w3id.org/devops-infra/organisation#Site
@@ -218,15 +226,8 @@
                         owl:onProperty :timeZone ;
                         owl:someValuesFrom xsd:string
                       ] ;
-      rdfs:label "Site"@en ,
-                 "站点"@cn .
-
-
-###  http://w3id.org/devops-infra/organisation#Stage
-:Stage rdf:type owl:Class ;
-       rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ;
-       rdfs:label "Stage"@en ,
-                  "部署阶段"@cn .
+      rdfs:comment "Tem term Site is commonly used to refer to a group of Configuration Itens (e.g., virtual and physical servers, services, applications, etc.) which are grouped together and connected in order to host specific applications, products or services in a cloud environment."@en ;
+      rdfs:label "Site"@en .
 
 
 ###  http://w3id.org/devops-infra/organisation#Tenant
@@ -259,9 +260,8 @@
                           owl:onProperty :password ;
                           owl:allValuesFrom xsd:string
                         ] ;
-        rdfs:comment "A tenant is usually understood as a container for items of an Organisation in a cloud, such as users, domains, subscriptions, etc"@en ;
-        rdfs:label "Tenant"@en ,
-                   "租户"@cn .
+        rdfs:comment "A tenant is usually understood as a container for items of an Organisation in a cloud, such as users, domains, subscriptions, etc. In other words, it identifies a group of users (e.g., from an organisation) who share a common access with specific privileges to some resources (configuration items) in the cloud. These resources may be provided by a single or by multiple providers (e.g., AWS, HWS, etc.) and belong to a specifc domain (e.g., normally named after a geographical region, as this is commonly used to provision physical resources from specific data centers)."@en ;
+        rdfs:label "Tenant"@en .
 
 
 #################################################################

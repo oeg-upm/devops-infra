@@ -24,7 +24,8 @@ This section provides details for each class and property defined by Ontology fo
             title="http://w3id.org/devops-infra/hardware#HardwareItem">Hardware Item</a>
       </li>
       <li>
-         <a href="#NetCard" title="http://w3id.org/devops-infra/hardware#NetCard">Net Card</a>
+         <a href="#NetworkCard"
+            title="http://w3id.org/devops-infra/hardware#NetworkCard">Network Card</a>
       </li>
       <li>
          <a href="#ServerHardware"
@@ -78,9 +79,7 @@ This section provides details for each class and property defined by Ontology fo
          <dt>is in domain of</dt>
          <dd>
             <a href="#f5Type" title="http://w3id.org/devops-infra/hardware#f5Type">F5 type</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#belongsToF5Cluster"
-               title="http://w3id.org/devops-infra/hardware#belongsToF5Cluster">belongs to F5 cluster</a>
-            <sup class="type-op" title="object property">op</sup>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
    </div>
@@ -103,9 +102,7 @@ This section provides details for each class and property defined by Ontology fo
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#belongsToFirewallCluster"
-               title="http://w3id.org/devops-infra/hardware#belongsToFirewallCluster">belongs to firewall cluster</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#firewallType"
+            <a href="#firewallType"
                title="http://w3id.org/devops-infra/hardware#firewallType">firewall type</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
@@ -153,6 +150,8 @@ This section provides details for each class and property defined by Ontology fo
          <span class="markdown">A Hardware Batch is a batch under which some hardware infrastructure was bought, kept for administrative purposes or to detect potential problems in the same batch</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
          <dt>is in domain of</dt>
          <dd>
             <a href="#contractNumber"
@@ -186,7 +185,8 @@ This section provides details for each class and property defined by Ontology fo
          <dd>
             <a href="#Disk" title="http://w3id.org/devops-infra/hardware#Disk">Disk</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Frame" title="http://w3id.org/devops-infra/hardware#Frame">Frame</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#NetCard" title="http://w3id.org/devops-infra/hardware#NetCard">Net Card</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#NetworkCard"
+               title="http://w3id.org/devops-infra/hardware#NetworkCard">Network Card</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ServerHardware"
                title="http://w3id.org/devops-infra/hardware#ServerHardware">Server Hardware</a>
             <sup class="type-c" title="class">c</sup>
@@ -202,15 +202,15 @@ This section provides details for each class and property defined by Ontology fo
          </dd>
       </dl>
    </div>
-   <div class="entity" id="NetCard">
-      <h3>Net Card<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="NetworkCard">
+      <h3>Network Card<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#NetCard</p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#NetworkCard</p>
       <div class="comment">
-         <span class="markdown">A network interface controller (NIC, also known as a network interface card, network adapter, LAN adapter or physical network interface, and by similar terms) is a computer hardware component that connects a computer to a computer network.</span>
+         <span class="markdown">A network interface controller (NIC, also known as a network interface card, network adapter, LAN adapter or physical network interface, and by similar terms) is a computer hardware component that connects a computer to a computer network, usually a LAN. It is considered a piece of computer hardware. Most modern computers support an internal network interface controller embedded in the motherboard directly rather than provided as an external component.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -325,14 +325,6 @@ This section provides details for each class and property defined by Ontology fo
          <a href="#batch" title="http://w3id.org/devops-infra/hardware#batch">batch</a>
       </li>
       <li>
-         <a href="#belongsToF5Cluster"
-            title="http://w3id.org/devops-infra/hardware#belongsToF5Cluster">belongs to F5 cluster</a>
-      </li>
-      <li>
-         <a href="#belongsToFirewallCluster"
-            title="http://w3id.org/devops-infra/hardware#belongsToFirewallCluster">belongs to firewall cluster</a>
-      </li>
-      <li>
          <a href="#highAvailabilityStatus"
             title="http://w3id.org/devops-infra/hardware#highAvailabilityStatus">high availability status</a>
       </li>
@@ -370,58 +362,6 @@ This section provides details for each class and property defined by Ontology fo
             <dd>
                <a href="#HardwareBatch"
                   title="http://w3id.org/devops-infra/hardware#HardwareBatch">Hardware Batch</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="belongsToF5Cluster">
-      <h3>belongs to F5 cluster<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#belongsToF5Cluster</p>
-      <div class="comment">
-         <span class="markdown">An F5 Cluster to which an F5 hardware belongs</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#F5Hardware" title="http://w3id.org/devops-infra/hardware#F5Hardware">F5 Hardware</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted"
-                     title="http://w3id.org/devops-infra/network-security-load-balancing#F5Cluster">f5 cluster</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="belongsToFirewallCluster">
-      <h3>belongs to firewall cluster<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#belongsToFirewallCluster</p>
-      <div class="comment">
-         <span class="markdown">A Firewall Cluster to which a Firewall belongs</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Firewall" title="http://w3id.org/devops-infra/hardware#Firewall">Firewall</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted"
-                     title="http://w3id.org/devops-infra/network-security-load-balancing#FirewallCluster">firewall cluster</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -498,7 +438,8 @@ This section provides details for each class and property defined by Ontology fo
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#NetCard" title="http://w3id.org/devops-infra/hardware#NetCard">Net Card</a>
+               <a href="#NetworkCard"
+                  title="http://w3id.org/devops-infra/hardware#NetworkCard">Network Card</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -518,7 +459,8 @@ This section provides details for each class and property defined by Ontology fo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#NetCard" title="http://w3id.org/devops-infra/hardware#NetCard">Net Card</a>
+               <a href="#NetworkCard"
+                  title="http://w3id.org/devops-infra/hardware#NetworkCard">Network Card</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -632,7 +574,8 @@ This section provides details for each class and property defined by Ontology fo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#NetCard" title="http://w3id.org/devops-infra/hardware#NetCard">Net Card</a>
+               <a href="#NetworkCard"
+                  title="http://w3id.org/devops-infra/hardware#NetworkCard">Network Card</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -857,7 +800,8 @@ This section provides details for each class and property defined by Ontology fo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#NetCard" title="http://w3id.org/devops-infra/hardware#NetCard">Net Card</a>
+               <a href="#NetworkCard"
+                  title="http://w3id.org/devops-infra/hardware#NetworkCard">Network Card</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -981,7 +925,8 @@ This section provides details for each class and property defined by Ontology fo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#NetCard" title="http://w3id.org/devops-infra/hardware#NetCard">Net Card</a>
+               <a href="#NetworkCard"
+                  title="http://w3id.org/devops-infra/hardware#NetworkCard">Network Card</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1181,7 +1126,8 @@ This section provides details for each class and property defined by Ontology fo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#NetCard" title="http://w3id.org/devops-infra/hardware#NetCard">Net Card</a>
+               <a href="#NetworkCard"
+                  title="http://w3id.org/devops-infra/hardware#NetworkCard">Network Card</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>

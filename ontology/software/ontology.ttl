@@ -7,8 +7,8 @@
 @base <http://w3id.org/devops-infra/software> .
 
 <http://w3id.org/devops-infra/software> rdf:type owl:Ontology ;
-                                         owl:versionIRI <http://w3id.org/devops-infra/software/0.0.2> ;
-                                         owl:imports <http://w3id.org/devops-infra/core> ,
+                                         owl:versionIRI <http://w3id.org/devops-infra/software/1.0.0> ;
+                                         owl:imports <http://w3id.org/devops-infra/core/1.0.0> ,
                                                      <http://www.w3.org/2004/02/skos/core> ;
                                          <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
                                                                                    "Hu Peng (Huawei Research Ireland)" ,
@@ -18,16 +18,17 @@
                                                                                    "Mingxue Wang (Huawei Research Ireland)" ,
                                                                                    "Nicholas Burrett (Huawei Research Ireland)" ,
                                                                                    "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                   "Puchao Zhang (Huawei Research Ireland)" ,
                                                                                    "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)" ;
                                          <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/software" ;
                                          <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of the software infrastructure"@en ;
                                          <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/software.owl" ;
-                                         <http://purl.org/dc/terms/issued> "2021-02-15" ;
+                                         <http://purl.org/dc/terms/issued> "2021-04-15" ;
                                          <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" ;
                                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopssw" ;
                                          <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/software#" ;
                                          rdfs:comment "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" ;
-                                         owl:versionInfo "Version after creating an initial set of mappings"@en .
+                                         owl:versionInfo "First official release"@en .
 
 #################################################################
 #    Annotation properties
@@ -261,7 +262,11 @@
 
 ###  http://w3id.org/devops-infra/software#ServiceModule
 :ServiceModule rdf:type owl:Class ;
-               rdfs:subClassOf :Software ;
+               rdfs:subClassOf :Software ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasVersion ;
+                                 owl:allValuesFrom :ServiceModuleVersion
+                               ] ;
                rdfs:comment "A Service Module, which is used by a Product (including Services, MicroServices, etc.) offered in the context of the  DevOps infrastructure"@en ;
                rdfs:label "Service Module"@en .
 
@@ -302,14 +307,6 @@
                                                                    ) ;
                                                 rdf:type owl:Class
                                               ]
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty <http://w3id.org/devops-infra/core#createTime> ;
-                            owl:allValuesFrom xsd:dateTime
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty <http://w3id.org/devops-infra/core#version> ;
-                            owl:allValuesFrom xsd:string
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :installPath ;

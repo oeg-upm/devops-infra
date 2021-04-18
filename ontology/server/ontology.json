@@ -67,49 +67,94 @@
 }, {
   "@id" : "_:genid22",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid23"
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/server#physicalServerStatus"
+    "@id" : "http://w3id.org/devops-infra/server#memory"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ]
 }, {
   "@id" : "_:genid23",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "@id" : "_:genid25"
-    } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/server#networkPerformance"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/server#numberCPUs"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ]
 }, {
   "@id" : "_:genid25",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://w3id.org/devops-infra/kos/physical-server-status"
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+    "@id" : "http://w3id.org/devops-infra/server#processorArchitecture"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/server#storageCapacity"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ]
 }, {
   "@id" : "_:genid27",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid28"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#status"
+    "@id" : "http://w3id.org/devops-infra/server#runsOnHardware"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/hardware#ServerHardware"
   } ]
 }, {
   "@id" : "_:genid28",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "@id" : "_:genid30"
-    } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/hardware#NetworkCard"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/hardware#networkCard"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/hardware#Disk"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/server#containsDisk"
   } ]
 }, {
   "@id" : "_:genid3",
@@ -123,6 +168,62 @@
 }, {
   "@id" : "_:genid30",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "_:genid31"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/server#physicalServerStatus"
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "@id" : "_:genid33"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid33",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/devops-infra/kos/physical-server-status"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid35",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/hardware#ServerHardware"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/server#runsOnHardware"
+  } ]
+}, {
+  "@id" : "_:genid36",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "_:genid37"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/core#status"
+  } ]
+}, {
+  "@id" : "_:genid37",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "@id" : "_:genid39"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid39",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "http://w3id.org/devops-infra/kos/status"
   } ],
@@ -130,7 +231,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid32",
+  "@id" : "_:genid41",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://w3id.org/devops-infra/network#SSHChannel"
@@ -139,26 +240,26 @@
     "@id" : "http://w3id.org/devops-infra/network#offersSSHChannel"
   } ]
 }, {
-  "@id" : "_:genid33",
+  "@id" : "_:genid42",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid34"
+    "@id" : "_:genid43"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://w3id.org/devops-infra/server#assignmentStatus"
   } ]
 }, {
-  "@id" : "_:genid34",
+  "@id" : "_:genid43",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "@id" : "_:genid36"
+      "@id" : "_:genid45"
     } ]
   } ]
 }, {
-  "@id" : "_:genid36",
+  "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "http://w3id.org/devops-infra/kos/assignment-status"
@@ -167,25 +268,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid38",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://w3id.org/devops-infra/hardware#Disk"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/server#containsDisk"
-  } ]
-}, {
-  "@id" : "_:genid39",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://w3id.org/devops-infra/server#HostFlavor"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/server#flavor"
-  } ]
-}, {
-  "@id" : "_:genid40",
+  "@id" : "_:genid47",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://w3id.org/devops-infra/server#Account"
@@ -194,60 +277,22 @@
     "@id" : "http://w3id.org/devops-infra/server#hasAccount"
   } ]
 }, {
-  "@id" : "_:genid41",
+  "@id" : "_:genid48",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid42"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/server#chargeMode"
-  } ]
-}, {
-  "@id" : "_:genid42",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "@id" : "_:genid44"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid44",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://w3id.org/devops-infra/kos/charge-mode"
+    "@id" : "http://w3id.org/devops-infra/server#hostConfiguration"
   } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
-  "@id" : "_:genid46",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid47"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/server#creationType"
-  } ]
-}, {
-  "@id" : "_:genid47",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "@id" : "_:genid49"
-    } ]
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/server#HostConfiguration"
   } ]
 }, {
   "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://w3id.org/devops-infra/kos/creation-type"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "_:genid50"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+    "@id" : "http://w3id.org/devops-infra/server#chargeMode"
   } ]
 }, {
   "@id" : "_:genid5",
@@ -260,26 +305,91 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid51",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid52"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/server#virtualServerStatus"
-  } ]
-}, {
-  "@id" : "_:genid52",
+  "@id" : "_:genid50",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "@id" : "_:genid54"
+      "@id" : "_:genid52"
     } ]
   } ]
 }, {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/devops-infra/kos/charge-mode"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
   "@id" : "_:genid54",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "_:genid55"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/server#creationType"
+  } ]
+}, {
+  "@id" : "_:genid55",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "@id" : "_:genid57"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid57",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/devops-infra/kos/creation-type"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid59",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/server#HostFlavor"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/server#flavor"
+  } ]
+}, {
+  "@id" : "_:genid60",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/server#HostImage"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/server#hostImage"
+  } ]
+}, {
+  "@id" : "_:genid61",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "_:genid62"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/server#virtualServerStatus"
+  } ]
+}, {
+  "@id" : "_:genid62",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "@id" : "_:genid64"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid64",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "http://w3id.org/devops-infra/kos/virtual-server-status"
@@ -288,7 +398,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid56",
+  "@id" : "_:genid66",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -297,7 +407,7 @@
     "@id" : "http://w3id.org/devops-infra/server#vmConfPath"
   } ]
 }, {
-  "@id" : "_:genid57",
+  "@id" : "_:genid67",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -306,7 +416,7 @@
     "@id" : "http://w3id.org/devops-infra/server#vmFile"
   } ]
 }, {
-  "@id" : "_:genid58",
+  "@id" : "_:genid68",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -384,14 +494,19 @@
   "@id" : "http://w3id.org/devops-infra/hardware#Disk",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
+  "@id" : "http://w3id.org/devops-infra/hardware#NetworkCard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://w3id.org/devops-infra/hardware#ServerHardware",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Server Hardware"
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/devops-infra/hardware#networkCard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/devops-infra/hardware#NetworkCard"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#Resource"
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://w3id.org/devops-infra/core#dependsOn"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/kos/assignment-status",
@@ -421,9 +536,6 @@
   "@id" : "http://w3id.org/devops-infra/organisation#site",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/organisation#stage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
-}, {
   "@id" : "http://w3id.org/devops-infra/organisation#tenant",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
@@ -438,6 +550,8 @@
   }, {
     "@value" : "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)"
   }, {
+    "@value" : "Puchao Zhang (Huawei Research Ireland)"
+  }, {
     "@value" : "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)"
   } ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
@@ -451,7 +565,7 @@
     "@value" : "http://w3id.org/devops-infra/server.owl"
   } ],
   "http://purl.org/dc/terms/issued" : [ {
-    "@value" : "2021-02-15"
+    "@value" : "2021-04-15"
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@value" : "https://creativecommons.org/licenses/by/4.0"
@@ -460,22 +574,22 @@
     "@value" : "devopsserv"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@value" : "http://w3id.org/devops-infra/product#"
+    "@value" : "http://w3id.org/devops-infra/server#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland"
   } ],
   "http://www.w3.org/2002/07/owl#imports" : [ {
-    "@id" : "http://w3id.org/devops-infra/core"
+    "@id" : "http://w3id.org/devops-infra/core/1.0.0"
   }, {
     "@id" : "http://www.w3.org/2004/02/skos/core"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://w3id.org/devops-infra/server/0.0.2"
+    "@id" : "http://w3id.org/devops-infra/server/1.0.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
-    "@value" : "Version after initial set of RML mappings have been generated for a sample database"
+    "@value" : "First official release"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/server#Account",
@@ -491,6 +605,10 @@
 }, {
   "@id" : "http://w3id.org/devops-infra/server#AutoExpandHostConfig",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A configuration for a Service Module to automatically expand when required"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Auto Expand Host Configuration"
@@ -501,6 +619,10 @@
 }, {
   "@id" : "http://w3id.org/devops-infra/server#AutoScalingHostConfig",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A configuration for a Microservice to automatically expand and scale up when required"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Auto Scaling Host Configuration"
@@ -523,14 +645,12 @@
     "@id" : "http://w3id.org/devops-infra/server#PhysicalServer"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/server#ECServer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/devops-infra/server#VirtualServer"
-  } ]
-}, {
   "@id" : "http://w3id.org/devops-infra/server#HostConfiguration",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "General-purpose class to described the potential configuration of a host"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Host Configuration"
@@ -553,51 +673,20 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/devops-infra/core#Resource"
+  }, {
+    "@id" : "_:genid22"
+  }, {
+    "@id" : "_:genid23"
+  }, {
+    "@id" : "_:genid24"
+  }, {
+    "@id" : "_:genid25"
+  }, {
+    "@id" : "_:genid26"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/server#HostImage",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#Resource"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/server#IDCXenVMServer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "IDC Xen Virtual Server"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/devops-infra/server#VirtualServer"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/server#IECEdgeCloud",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#Resource"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/server#IECEdgeCloudServer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#Resource"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/server#IECServer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/devops-infra/server#PhysicalServer"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/server#NetworkCard",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A Network interface card (also known as a NIC, network card, or network interface controller) is an electronic device that connects a computer to a computer network, usually a LAN. It is considered a piece of computer hardware. Most modern computers support an internal network interface controller embedded in the motherboard directly rather than provided as an external component."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Network Card"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/devops-infra/core#Resource"
   } ]
@@ -611,7 +700,15 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/devops-infra/server#Server"
   }, {
-    "@id" : "_:genid22"
+    "@id" : "_:genid27"
+  }, {
+    "@id" : "_:genid28"
+  }, {
+    "@id" : "_:genid29"
+  }, {
+    "@id" : "_:genid30"
+  }, {
+    "@id" : "_:genid35"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "http://w3id.org/devops-infra/server#VirtualServer"
@@ -630,31 +727,25 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/devops-infra/core#Resource"
   }, {
-    "@id" : "_:genid27"
+    "@id" : "_:genid36"
   }, {
-    "@id" : "_:genid32"
+    "@id" : "_:genid41"
   }, {
-    "@id" : "_:genid33"
+    "@id" : "_:genid42"
   }, {
-    "@id" : "_:genid38"
-  }, {
-    "@id" : "_:genid39"
-  }, {
-    "@id" : "_:genid40"
+    "@id" : "_:genid47"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/server#ServerLoadBalancer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A Server Load Balancer (SLB) distributes high traffic sites among several servers using a network-based hardware or software-defined appliance. Server load balancers intercept traffic for a website and reroute that traffic to servers"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Server Load Balancer"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#Resource"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/server#ServerLoadBalancerHost",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/devops-infra/core#Resource"
   } ]
@@ -668,33 +759,23 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/devops-infra/server#Server"
   }, {
-    "@id" : "_:genid41"
+    "@id" : "_:genid48"
   }, {
-    "@id" : "_:genid46"
+    "@id" : "_:genid49"
   }, {
-    "@id" : "_:genid51"
+    "@id" : "_:genid54"
   }, {
-    "@id" : "_:genid56"
+    "@id" : "_:genid59"
   }, {
-    "@id" : "_:genid57"
+    "@id" : "_:genid60"
   }, {
-    "@id" : "_:genid58"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/server#assignTime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Time when the server was assigned"
+    "@id" : "_:genid61"
   }, {
-    "@language" : "en",
-    "@value" : "assign time"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    "@id" : "_:genid66"
+  }, {
+    "@id" : "_:genid67"
+  }, {
+    "@id" : "_:genid68"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/server#assignmentStatus",
@@ -712,6 +793,22 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "http://w3id.org/devops-infra/server#assignmentTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Time when the server was assigned"
+  }, {
+    "@language" : "en",
+    "@value" : "assignment time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/server#availabilityZone",
@@ -732,19 +829,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/server#bandwidth",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/server#NetworkCard"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Bandwidth of a network card"
-  }, {
-    "@language" : "en",
-    "@value" : "bandwidth"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/server#chargeMode",
@@ -768,10 +852,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "This property identifies the disks that are (physically or virtually) mounted in a server"
+    "@value" : "This property identifies the disks that are physically mounted in a Physical Server"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/server#Server"
+    "@id" : "http://w3id.org/devops-infra/server#PhysicalServer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -779,6 +863,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://w3id.org/devops-infra/hardware#Disk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://w3id.org/devops-infra/core#dependsOn"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/server#cpu",
@@ -791,33 +878,10 @@
     "@value" : "CPU"
   }, {
     "@language" : "en",
-    "@value" : "cpu"
+    "@value" : "The type of CPU of a Server"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/server#createSrc",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/server#createTime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Time when the resource was created\nTODO: move to core ontology module"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "create time"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/server#creationType",
@@ -835,12 +899,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid9"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/server#ecsId",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/server#expireTime",
@@ -869,14 +927,12 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://w3id.org/devops-infra/server#VirtualServer"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "flavor"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://w3id.org/devops-infra/server#HostFlavor"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/server#hardDisk",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/server#hasAccount",
@@ -919,6 +975,32 @@
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
+  "@id" : "http://w3id.org/devops-infra/server#hostConfiguration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property links a Virtual Server with its Host Configuration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/devops-infra/server#VirtualServer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "host configuration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/devops-infra/server#HostConfiguration"
+  } ]
+}, {
+  "@id" : "http://w3id.org/devops-infra/server#hostImage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/devops-infra/server#VirtualServer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/devops-infra/server#HostImage"
+  } ]
+}, {
   "@id" : "http://w3id.org/devops-infra/server#hostName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -951,6 +1033,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://w3id.org/devops-infra/server#PhysicalServer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://w3id.org/devops-infra/core#dependsOn"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "http://w3id.org/devops-infra/server#hosts"
@@ -1023,20 +1108,6 @@
     "@id" : "http://w3id.org/devops-infra/server#Server"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/server#isDeleted",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property used to determine whether a (business) product offering, a service or a microservice are currently running or available, or they have been deleted from the corresponding catalogues and/or infrastructure"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "is deleted"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ]
-}, {
   "@id" : "http://w3id.org/devops-infra/server#kernel",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1048,49 +1119,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/server#key",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Key of a TerraFormInfraEncryptedItem"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "key"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/server#lastModified",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Time of the last modification of any resource\nTODO: Move to devopscore"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "last modified"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/server#mac",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "MAC address of a network card or other network interface components"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/server#NetworkCard"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "mac"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/server#macName",
@@ -1129,14 +1157,14 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "memory"
+    "@value" : "Amount of memory of a Resource (e.g., Host Flavor, Server, etc.), in GB"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "memory"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
@@ -1179,35 +1207,32 @@
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/server#networkCard",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "http://w3id.org/devops-infra/server#networkPerformance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A Physical Server has at least a network card associated to it"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/server#PhysicalServer"
+    "@value" : "The type of performance of thye network associated to a Resource (e.g., Host Flavor, Server, etc.). This may be an enumerated value (defined in a SKOS Concept Scheme) or any string, as there is no consensus on the values to be used. Commonly used values are: low, moderate, high, etc."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "network card"
+    "@value" : "network performance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/devops-infra/server#NetworkCard"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/server#offeredByVendor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "http://w3id.org/devops-infra/server#numberCPUs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "This property describes the vendor that offers a specific resource (e.g., AWS, HWS, etc.). In the future it should be decided whether this should be a SKOS thesaurus or an instance of a class Organisation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/server#Server"
+    "@value" : "The number of CPUs of a Resource (Host Flavor, Server, etc.)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "offered by vendor"
+    "@value" : "number of CPUs"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/server#operatingSystem",
@@ -1247,33 +1272,32 @@
     "@id" : "_:genid13"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/server#podInfo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/server#port",
+  "@id" : "http://w3id.org/devops-infra/server#price",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Port where a microservice instance (or a network card) is running"
+    "@value" : "Price of a Host Flavor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/devops-infra/server#HostFlavor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "port"
+    "@value" : "price"
+  } ]
+}, {
+  "@id" : "http://w3id.org/devops-infra/server#processorArchitecture",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The type of processor architecture that is used by a Resource (e.g., a Host Flavor, a Server, etc.). It will be usually 32-bit or 64-bit."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "processor architecture"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/server#price",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/server#region",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/server#resourceType",
@@ -1313,11 +1337,11 @@
   "@id" : "http://w3id.org/devops-infra/server#serialNumber",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/server#Server"
+    "@id" : "http://w3id.org/devops-infra/server#PhysicalServer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "The serial number of the corresponding machine, as assigned by the corresponding vendor"
+    "@value" : "The serial number of the machine corresponding to a Physical Server, as assigned by the corresponding vendor"
   }, {
     "@value" : "serial number"
   } ],
@@ -1325,37 +1349,18 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/server#startTime",
+  "@id" : "http://w3id.org/devops-infra/server#storageCapacity",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Start time of the resource\nTODO: move to core ontology module"
+    "@value" : "The amount of storage, in GB, of a Resource (e.g., Host Flavor, Server, etc.). As there may be several virtual or physical disks associated to it, it is represented as a string (e.g., 1x160, 2x40, etc.)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "start time"
+    "@value" : "storage capacity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/server#updateTime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Update time of the element\nTODO: move to core ontology module"
-  }, {
-    "@language" : "en",
-    "@value" : "update time"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/server#username",
@@ -1370,20 +1375,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "username"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/server#value",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "value for the corresponding key of the TerraForm Encrypted Value"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "value"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -1406,23 +1397,6 @@
     "@id" : "_:genid17"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/server#vlan",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "VLAN associated to a network card"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/server#NetworkCard"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "vlan"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
-  } ]
-}, {
   "@id" : "http://w3id.org/devops-infra/server#vmConfPath",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1434,12 +1408,18 @@
 }, {
   "@id" : "http://w3id.org/devops-infra/server#vmFile",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/devops-infra/server#VirtualServer"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/server#vmImgPath",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/devops-infra/server#VirtualServer"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]

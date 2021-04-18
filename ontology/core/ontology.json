@@ -9,23 +9,14 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid10",
+  "@id" : "_:genid11",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+      "@id" : "http://w3id.org/devops-infra/core#Resource"
     }, {
-      "@id" : "_:genid12"
+      "@id" : "http://w3id.org/devops-infra/core#ResourceGroup"
     } ]
-  } ]
-}, {
-  "@id" : "_:genid12",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://w3id.org/devops-infra/kos/status"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
   "@id" : "_:genid14",
@@ -39,26 +30,88 @@
   } ]
 }, {
   "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/core#ConfigurationItem"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/core#dependsOn"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "_:genid19"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/core#status"
+  } ]
+}, {
+  "@id" : "_:genid19",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://w3id.org/devops-infra/core#Resource"
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "@id" : "http://w3id.org/devops-infra/core#ResourceGroup"
+      "@id" : "_:genid21"
     } ]
   } ]
 }, {
-  "@id" : "_:genid20",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://w3id.org/devops-infra/core#Resource"
-    }, {
-      "@id" : "http://w3id.org/devops-infra/core#ResourceGroup"
-    } ]
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/devops-infra/kos/status"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
   "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/organisation#Scope"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/organisation#scope"
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.org/dc/terms/identifier"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/core#created"
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/core#modified"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/core#version"
+  } ]
+}, {
+  "@id" : "_:genid28",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://w3id.org/devops-infra/core#ResourceGroup"
@@ -67,119 +120,7 @@
     "@id" : "http://w3id.org/devops-infra/core#belongsToResourceGroup"
   } ]
 }, {
-  "@id" : "_:genid24",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid25"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#dependsOn"
-  } ]
-}, {
-  "@id" : "_:genid25",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://w3id.org/devops-infra/core#Resource"
-    }, {
-      "@id" : "http://w3id.org/devops-infra/core#ResourceGroup"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid28",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid29"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#status"
-  } ]
-}, {
   "@id" : "_:genid29",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "@id" : "_:genid31"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid31",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://w3id.org/devops-infra/kos/status"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
-  "@id" : "_:genid33",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://w3id.org/devops-infra/organisation#Scope"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/organisation#scope"
-  } ]
-}, {
-  "@id" : "_:genid34",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#createTime"
-  } ]
-}, {
-  "@id" : "_:genid35",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#updateTime"
-  } ]
-}, {
-  "@id" : "_:genid36",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#version"
-  } ]
-}, {
-  "@id" : "_:genid37",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid38"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#dependsOn"
-  } ]
-}, {
-  "@id" : "_:genid38",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://w3id.org/devops-infra/core#Resource"
-    }, {
-      "@id" : "http://w3id.org/devops-infra/core#ResourceGroup"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid4",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://w3id.org/devops-infra/core#Resource"
-    }, {
-      "@id" : "http://w3id.org/devops-infra/core#ResourceGroup"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid41",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://w3id.org/devops-infra/core#ResourceGroup"
@@ -188,26 +129,17 @@
     "@id" : "http://w3id.org/devops-infra/core#parentResourceGroup"
   } ]
 }, {
-  "@id" : "_:genid42",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid43"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#status"
-  } ]
-}, {
-  "@id" : "_:genid43",
+  "@id" : "_:genid4",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "@id" : "_:genid45"
+      "@id" : "_:genid6"
     } ]
   } ]
 }, {
-  "@id" : "_:genid45",
+  "@id" : "_:genid6",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "http://w3id.org/devops-infra/kos/status"
@@ -216,43 +148,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid47",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://w3id.org/devops-infra/organisation#Scope"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/organisation#scope"
-  } ]
-}, {
-  "@id" : "_:genid48",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#createTime"
-  } ]
-}, {
-  "@id" : "_:genid49",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#updateTime"
-  } ]
-}, {
-  "@id" : "_:genid50",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#version"
-  } ]
-}, {
-  "@id" : "_:genid7",
+  "@id" : "_:genid8",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -271,14 +167,47 @@
   "@id" : "http://purl.org/dc/elements/1.1/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Date of creation of the resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "date created"
+  } ]
+}, {
   "@id" : "http://purl.org/dc/terms/hasFormat",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An unambiguous reference to the resource within a given context"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "identifier"
+  } ]
 }, {
   "@id" : "http://purl.org/dc/terms/issued",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/license",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Date on which the resource was changed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "date modified"
+  } ]
 }, {
   "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -305,13 +234,15 @@
   }, {
     "@value" : "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)"
   }, {
+    "@value" : "Puchao Zhang (Huawei Research Ireland)"
+  }, {
     "@value" : "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)"
   } ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "http://w3id.org/devops-infra/core"
   } ],
   "http://purl.org/dc/elements/1.1/title" : [ {
-    "@value" : "Ontology for the representation of core elements like resources in the DevOps ontology network"
+    "@value" : "Ontology for the representation of core elements, such as Resources and Resource Groups, in the ICT infrastructure for DevOps ontology network"
   } ],
   "http://purl.org/dc/terms/hasFormat" : [ {
     "@value" : "http://w3id.org/devops-infra/core.owl"
@@ -332,73 +263,79 @@
     "@value" : "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://w3id.org/devops-infra/core/0.0.2"
+    "@id" : "http://w3id.org/devops-infra/core/1.0.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
-    "@value" : "Version after the initial generation of mapppings"
+    "@value" : "First official release"
+  } ]
+}, {
+  "@id" : "http://w3id.org/devops-infra/core#ConfigurationItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A Configuration Item identifies an entity (Resource) or a group of entities (Resource Group) that are managed in the context of a DevOps infrastructure in this ontology network."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Configuration Item"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid17"
+  }, {
+    "@id" : "_:genid18"
+  }, {
+    "@id" : "_:genid23"
+  }, {
+    "@id" : "_:genid24"
+  }, {
+    "@id" : "_:genid25"
+  }, {
+    "@id" : "_:genid26"
+  }, {
+    "@id" : "_:genid27"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/core#Resource",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A Resource is any relevant entity that is managed in the context of a DevOps infrastructure in this ontology network"
+    "@value" : "A Resource is any relevant entity that is managed in the context of a DevOps infrastructure in this ontology network. This term is also known as a Configuration Item in many Configuration Management Databases."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Resource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid23"
-  }, {
-    "@id" : "_:genid24"
+    "@id" : "http://w3id.org/devops-infra/core#ConfigurationItem"
   }, {
     "@id" : "_:genid28"
-  }, {
-    "@id" : "_:genid33"
-  }, {
-    "@id" : "_:genid34"
-  }, {
-    "@id" : "_:genid35"
-  }, {
-    "@id" : "_:genid36"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/core#ResourceGroup",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A Resource Group identifies a grouping of entities (resources) that are managed in the context of a DevOps infrastructure in this ontology network"
+    "@value" : "A Resource Group identifies a grouping of entities (resources) that are managed in the context of a DevOps infrastructure in this ontology network. This term is also known as a Configuration Item in many Configuration Management Databases."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Resource Group"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid37"
+    "@id" : "http://w3id.org/devops-infra/core#ConfigurationItem"
   }, {
-    "@id" : "_:genid41"
-  }, {
-    "@id" : "_:genid42"
-  }, {
-    "@id" : "_:genid47"
-  }, {
-    "@id" : "_:genid48"
-  }, {
-    "@id" : "_:genid49"
-  }, {
-    "@id" : "_:genid50"
+    "@id" : "_:genid29"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/core#belongsToResourceGroup",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "This property relates a Resource with a Resource Group"
+    "@value" : "This property relates a Resource or a Resource Group (that is, a Configuration Item) with another Resource Group that it belongs to"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#Resource"
+    "@id" : "http://w3id.org/devops-infra/core#ConfigurationItem"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -408,38 +345,61 @@
     "@id" : "http://w3id.org/devops-infra/core#ResourceGroup"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/core#createTime",
+  "@id" : "http://w3id.org/devops-infra/core#created",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Date and time when a Resource or Resource Group is created"
+    "@value" : "Date and time when a Resource or Resource Group was created"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid14"
+    "@id" : "_:genid8"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "create time"
+    "@value" : "created"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/dc/terms/created"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/core#dependsOn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A Resource or Resource Group may depend on zero to many Resources or Resource Groups"
+    "@value" : "A Resource or Resource Group (a Configuration Item) may depend on zero to many other Resources or Resource Groups (Configuration Items). For example, a Service may depend on a number of microservices to run, as well as on some specific hardware or software infrastructure"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid1"
+    "@id" : "http://w3id.org/devops-infra/core#ConfigurationItem"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "depends on"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid4"
+    "@id" : "http://w3id.org/devops-infra/core#ConfigurationItem"
+  } ]
+}, {
+  "@id" : "http://w3id.org/devops-infra/core#modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Date and time when a Resource or ResourceGroup experience a modification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid11"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "last modified"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/dc/terms/modified"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/core#parentResourceGroup",
@@ -457,40 +417,26 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://w3id.org/devops-infra/core#ResourceGroup"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://w3id.org/devops-infra/core#belongsToResourceGroup"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/core#status",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "This property refers to the status of any resource or resource group, and its value is determined by a SKOS of different types of status that may be considered"
+    "@value" : "This property refers to the status of any Resource or Resource Group (Configuration Item), and its value is determined by a SKOS of different types of status that may be considered"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid7"
+    "@id" : "_:genid1"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "status"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid10"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/core#updateTime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "The date and time when a Resource or Resource Group is updated"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid17"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "update time"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    "@id" : "_:genid4"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/core#version",
@@ -500,7 +446,7 @@
     "@value" : "This property allows representing the version of any entity (Resource or ResourceGroup)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid20"
+    "@id" : "_:genid14"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",

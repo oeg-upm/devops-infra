@@ -3,13 +3,56 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
+      "@id" : "http://w3id.org/devops-infra/product#Service"
+    }, {
+      "@id" : "http://w3id.org/devops-infra/product#ServiceInstance"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/devops-infra/kos/cluster-type"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/devops-infra/product#BusinessProductInstance"
+    }, {
+      "@id" : "http://w3id.org/devops-infra/product#MicroServiceInstance"
+    }, {
+      "@id" : "http://w3id.org/devops-infra/product#ServiceInstance"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/devops-infra/product#BusinessProduct"
+    }, {
       "@id" : "http://w3id.org/devops-infra/product#MicroService"
     }, {
       "@id" : "http://w3id.org/devops-infra/product#Service"
     } ]
   } ]
 }, {
-  "@id" : "_:genid10",
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "@id" : "_:genid23"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid23",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "http://w3id.org/devops-infra/kos/service-type"
@@ -18,166 +61,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid12",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#offeredBy"
-  } ]
-}, {
-  "@id" : "_:genid13",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#isDeleted"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid14",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#BusinessProduct"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#deployedInstanceOf"
-  } ]
-}, {
-  "@id" : "_:genid15",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#BusinessProduct"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#deployedInstanceOf"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid16",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#isDeleted"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid17",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/organisation#site"
-  } ]
-}, {
-  "@id" : "_:genid18",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/organisation#stage"
-  } ]
-}, {
-  "@id" : "_:genid19",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/organisation#tenant"
-  } ]
-}, {
-  "@id" : "_:genid20",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#runsInServiceCluster"
-  } ]
-}, {
-  "@id" : "_:genid21",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#isDeleted"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid22",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#MicroService"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#deployedInstanceOf"
-  } ]
-}, {
-  "@id" : "_:genid23",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#ServiceCluster"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#runsInServiceCluster"
-  } ]
-}, {
-  "@id" : "_:genid24",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#MicroService"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#deployedInstanceOf"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
   "@id" : "_:genid25",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#isDeleted"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid26",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid27"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#dependsOn"
-  } ]
-}, {
-  "@id" : "_:genid27",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -187,43 +71,45 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid30",
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/devops-infra/product#MicroServiceInstance"
+    }, {
+      "@id" : "http://w3id.org/devops-infra/product#ServiceInstance"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/devops-infra/product#MicroServiceInstance"
+    }, {
+      "@id" : "http://w3id.org/devops-infra/product#ServiceInstance"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid34",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://w3id.org/devops-infra/product#ProductOffering"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#hasOffering"
+    "@id" : "http://w3id.org/devops-infra/product#hasProductOffering"
   } ]
 }, {
-  "@id" : "_:genid31",
+  "@id" : "_:genid35",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#usesServiceModule"
-  } ]
-}, {
-  "@id" : "_:genid32",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#ProductVersion"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#hasProductVersion"
-  } ]
-}, {
-  "@id" : "_:genid33",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    "@id" : "http://w3id.org/devops-infra/organisation#Scope"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://w3id.org/devops-infra/product#offeredBy"
   } ]
 }, {
-  "@id" : "_:genid34",
+  "@id" : "_:genid36",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://w3id.org/devops-infra/product#Service"
@@ -232,16 +118,7 @@
     "@id" : "http://w3id.org/devops-infra/product#uses"
   } ]
 }, {
-  "@id" : "_:genid35",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#usesServiceModule"
-  } ]
-}, {
-  "@id" : "_:genid36",
+  "@id" : "_:genid37",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
@@ -254,7 +131,233 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid37",
+  "@id" : "_:genid38",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/organisation#Site"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/organisation#site"
+  } ]
+}, {
+  "@id" : "_:genid39",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/organisation#Tenant"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/organisation#tenant"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/devops-infra/product#MicroService"
+    }, {
+      "@id" : "http://w3id.org/devops-infra/product#MicroServiceInstance"
+    }, {
+      "@id" : "http://w3id.org/devops-infra/product#Service"
+    }, {
+      "@id" : "http://w3id.org/devops-infra/product#ServiceInstance"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid40",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#BusinessProduct"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#deployedInstanceOf"
+  } ]
+}, {
+  "@id" : "_:genid41",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#ServiceInstance"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#uses"
+  } ]
+}, {
+  "@id" : "_:genid42",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#BusinessProduct"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#deployedInstanceOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid43",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#isDeleted"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid44",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#ServiceCluster"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#runsInServiceCluster"
+  } ]
+}, {
+  "@id" : "_:genid45",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/software#ServiceModule"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#usesServiceModule"
+  } ]
+}, {
+  "@id" : "_:genid46",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/server#AutoScalingHostConfig"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/server#autoScalingHostConfig"
+  } ]
+}, {
+  "@id" : "_:genid47",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#isDeleted"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid48",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#MicroService"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#deployedInstanceOf"
+  } ]
+}, {
+  "@id" : "_:genid49",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#ServiceCluster"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#runsInServiceCluster"
+  } ]
+}, {
+  "@id" : "_:genid50",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#MicroService"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#deployedInstanceOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid51",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#ip"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#isDeleted"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#port"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid54",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#ProductVersion"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#hasProductVersion"
+  } ]
+}, {
+  "@id" : "_:genid55",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/organisation#Scope"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#offeredBy"
+  } ]
+}, {
+  "@id" : "_:genid56",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#Service"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#uses"
+  } ]
+}, {
+  "@id" : "_:genid57",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#isDeleted"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid58",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -263,16 +366,16 @@
     "@id" : "http://w3id.org/devops-infra/product#usesServiceModuleVersion"
   } ]
 }, {
-  "@id" : "_:genid38",
+  "@id" : "_:genid59",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid39"
+    "@id" : "_:genid60"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://w3id.org/devops-infra/product#calls"
   } ]
 }, {
-  "@id" : "_:genid39",
+  "@id" : "_:genid60",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -282,45 +385,35 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid4",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "@id" : "_:genid6"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid42",
+  "@id" : "_:genid63",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    "@id" : "http://w3id.org/devops-infra/organisation#Scope"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://w3id.org/devops-infra/product#offeredBy"
   } ]
 }, {
-  "@id" : "_:genid43",
+  "@id" : "_:genid64",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid44"
+    "@id" : "_:genid65"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://w3id.org/devops-infra/product#serviceType"
   } ]
 }, {
-  "@id" : "_:genid44",
+  "@id" : "_:genid65",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "@id" : "_:genid46"
+      "@id" : "_:genid67"
     } ]
   } ]
 }, {
-  "@id" : "_:genid46",
+  "@id" : "_:genid67",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "http://w3id.org/devops-infra/kos/service-type"
@@ -329,16 +422,16 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid48",
+  "@id" : "_:genid69",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    "@id" : "http://w3id.org/devops-infra/software#ServiceModule"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://w3id.org/devops-infra/product#usesServiceModule"
   } ]
 }, {
-  "@id" : "_:genid49",
+  "@id" : "_:genid70",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
@@ -351,35 +444,58 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid50",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://w3id.org/devops-infra/organisation#Domain"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/devops-infra/organisation#domain"
+  "@id" : "_:genid71",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "_:genid75"
+    }, {
+      "@id" : "_:genid73"
+    } ]
   } ]
 }, {
-  "@id" : "_:genid51",
+  "@id" : "_:genid73",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://w3id.org/devops-infra/data-center#DataCenter"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/data-center#hostedInDataCenter"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid75",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid52"
+    "@id" : "http://w3id.org/devops-infra/data-center#DataCenter"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/data-center#hostedInDataCenter"
+  } ]
+}, {
+  "@id" : "_:genid76",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "_:genid77"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://w3id.org/devops-infra/product#clusterType"
   } ]
 }, {
-  "@id" : "_:genid52",
+  "@id" : "_:genid77",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "@id" : "_:genid54"
+      "@id" : "_:genid79"
     } ]
   } ]
 }, {
-  "@id" : "_:genid54",
+  "@id" : "_:genid79",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "http://w3id.org/devops-infra/kos/cluster-type"
@@ -388,7 +504,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid56",
+  "@id" : "_:genid81",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://w3id.org/devops-infra/server#ServerLoadBalancer"
@@ -397,7 +513,7 @@
     "@id" : "http://w3id.org/devops-infra/server#balancedBy"
   } ]
 }, {
-  "@id" : "_:genid57",
+  "@id" : "_:genid82",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://w3id.org/devops-infra/server#Server"
@@ -406,7 +522,26 @@
     "@id" : "http://w3id.org/devops-infra/server#deployedInServer"
   } ]
 }, {
-  "@id" : "_:genid58",
+  "@id" : "_:genid83",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "_:genid84"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#calls"
+  } ]
+}, {
+  "@id" : "_:genid84",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/devops-infra/product#MicroServiceInstance"
+    }, {
+      "@id" : "http://w3id.org/devops-infra/product#ServiceInstance"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid87",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://w3id.org/devops-infra/product#Service"
@@ -415,7 +550,7 @@
     "@id" : "http://w3id.org/devops-infra/product#deployedInstanceOf"
   } ]
 }, {
-  "@id" : "_:genid59",
+  "@id" : "_:genid88",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "http://w3id.org/devops-infra/product#Service"
@@ -428,16 +563,30 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid6",
+  "@id" : "_:genid89",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://w3id.org/devops-infra/kos/cluster-type"
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+    "@id" : "http://w3id.org/devops-infra/product#ip"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid60",
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "@id" : "_:genid11"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid90",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
@@ -450,14 +599,17 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid8",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "@id" : "_:genid10"
-    } ]
+  "@id" : "_:genid91",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#port"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/creator",
@@ -490,22 +642,31 @@
   "@id" : "http://w3id.org/devops-infra/core#dependsOn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
+  "@id" : "http://w3id.org/devops-infra/data-center#DataCenter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/devops-infra/data-center#hostedInDataCenter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
   "@id" : "http://w3id.org/devops-infra/kos/cluster-type",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ]
 }, {
   "@id" : "http://w3id.org/devops-infra/kos/service-type",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/organisation#Domain",
+  "@id" : "http://w3id.org/devops-infra/organisation#Scope",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/organisation#domain",
+  "@id" : "http://w3id.org/devops-infra/organisation#Site",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/devops-infra/organisation#Tenant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/devops-infra/organisation#scope",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://w3id.org/devops-infra/organisation#site",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/organisation#stage",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://w3id.org/devops-infra/organisation#tenant",
@@ -530,6 +691,8 @@
   }, {
     "@value" : "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)"
   }, {
+    "@value" : "Puchao Zhang (Huawei Research Ireland)"
+  }, {
     "@value" : "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)"
   } ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
@@ -537,13 +700,13 @@
   } ],
   "http://purl.org/dc/elements/1.1/title" : [ {
     "@language" : "en",
-    "@value" : "Ontology for the representation of the business offering of a company, including the offered services and microservices"
+    "@value" : "Ontology for the representation of the business offering of a company, including the services and microservices that are being used to provide such business offering"
   } ],
   "http://purl.org/dc/terms/hasFormat" : [ {
     "@value" : "http://w3id.org/devops-infra/product.owl"
   } ],
   "http://purl.org/dc/terms/issued" : [ {
-    "@value" : "2020-11-19"
+    "@value" : "2021-04-16"
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@value" : "https://creativecommons.org/licenses/by/4.0"
@@ -558,20 +721,24 @@
     "@value" : "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland"
   } ],
   "http://www.w3.org/2002/07/owl#imports" : [ {
-    "@id" : "http://w3id.org/devops-infra/core"
+    "@id" : "http://w3id.org/devops-infra/core/1.0.0"
   }, {
     "@id" : "http://www.w3.org/2004/02/skos/core"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://w3id.org/devops-infra/product/0.0.1"
+    "@id" : "http://w3id.org/devops-infra/product/1.0.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
-    "@value" : "Initial version"
+    "@value" : "First official release"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/product#BusinessProduct",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A Business Product that is offered in the catalogue of an organisation (e.g., a content delivery network, an application, etc.)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Business Product"
@@ -579,28 +746,16 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/devops-infra/core#Resource"
   }, {
-    "@id" : "_:genid12"
+    "@id" : "_:genid34"
   }, {
-    "@id" : "_:genid13"
+    "@id" : "_:genid35"
+  }, {
+    "@id" : "_:genid36"
+  }, {
+    "@id" : "_:genid37"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/product#BusinessProductInstance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Business Product Instance"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#Resource"
-  }, {
-    "@id" : "_:genid14"
-  }, {
-    "@id" : "_:genid15"
-  }, {
-    "@id" : "_:genid16"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/product#BusinessProductInstanceDeployment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -608,34 +763,30 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Business Product Instance Deployment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#BusinessProductInstance"
-  }, {
-    "@id" : "_:genid17"
-  }, {
-    "@id" : "_:genid18"
-  }, {
-    "@id" : "_:genid19"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/product#InfrastructureEncryptedItemDeployment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Deployment of an Infrastructure Encrypted Item (e.g., in TerraForm)"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Infrastructure Encrypted Item Deployment"
+    "@value" : "Business Product Instance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/devops-infra/core#Resource"
+  }, {
+    "@id" : "_:genid38"
+  }, {
+    "@id" : "_:genid39"
+  }, {
+    "@id" : "_:genid40"
+  }, {
+    "@id" : "_:genid41"
+  }, {
+    "@id" : "_:genid42"
+  }, {
+    "@id" : "_:genid43"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/product#MicroService",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A Microservice is a type of Service that runs a unique process and communicates through a well-defined, lightweight mechanism, such as a container, to serve a business goal."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Microservice"
@@ -643,13 +794,21 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/devops-infra/core#Resource"
   }, {
-    "@id" : "_:genid20"
+    "@id" : "_:genid44"
   }, {
-    "@id" : "_:genid21"
+    "@id" : "_:genid45"
+  }, {
+    "@id" : "_:genid46"
+  }, {
+    "@id" : "_:genid47"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/product#MicroServiceInstance",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Instance of a MicroService running/deployed on a specific infrastructure (e.g., TerraForm)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Microservice Instance"
@@ -657,61 +816,25 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/devops-infra/core#Resource"
   }, {
-    "@id" : "_:genid22"
+    "@id" : "_:genid48"
   }, {
-    "@id" : "_:genid23"
+    "@id" : "_:genid49"
   }, {
-    "@id" : "_:genid24"
+    "@id" : "_:genid50"
   }, {
-    "@id" : "_:genid25"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/product#MicroServiceInstanceDeployment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Instance of a microservice running/deployed on a specifid infrastructure (e.g., Terraform)"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Microservice Instance Deployment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#MicroServiceInstance"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/product#MicroServiceRunningInstanceDeployment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Instance of a microservice running/deployed on a specific infrastructure (e.g., TerraForm)"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Microservice Running Instance Deployment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#Resource"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/product#Product",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Product"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/devops-infra/core#Resource"
+    "@id" : "_:genid51"
   }, {
-    "@id" : "_:genid26"
+    "@id" : "_:genid52"
   }, {
-    "@id" : "_:genid30"
-  }, {
-    "@id" : "_:genid31"
+    "@id" : "_:genid53"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/product#ProductOffering",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "For a Business Product, this is the specific offer that is done in a catalogue. A Business Product may have several Product Offering associated to them, and an offering may be described in commercial terms. In this ontology, we do not restrict/propose any specific set of attributes to be used for such description, since each organisation may have different attributes to define their offering."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Product Offering"
@@ -719,19 +842,21 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/devops-infra/core#Resource"
   }, {
-    "@id" : "_:genid32"
+    "@id" : "_:genid54"
   }, {
-    "@id" : "_:genid33"
+    "@id" : "_:genid55"
   }, {
-    "@id" : "_:genid34"
+    "@id" : "_:genid56"
   }, {
-    "@id" : "_:genid35"
-  }, {
-    "@id" : "_:genid36"
+    "@id" : "_:genid57"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/product#ProductVersion",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A specific version of a Business Product that is being offered through a Product Offering"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Product Version"
@@ -739,11 +864,15 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/devops-infra/core#Resource"
   }, {
-    "@id" : "_:genid37"
+    "@id" : "_:genid58"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/product#Service",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A Service that provides support to one or more business products. It may make use (call) other services or microservices."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Service"
@@ -751,22 +880,22 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/devops-infra/core#Resource"
   }, {
-    "@id" : "_:genid38"
+    "@id" : "_:genid59"
   }, {
-    "@id" : "_:genid42"
+    "@id" : "_:genid63"
   }, {
-    "@id" : "_:genid43"
+    "@id" : "_:genid64"
   }, {
-    "@id" : "_:genid48"
+    "@id" : "_:genid69"
   }, {
-    "@id" : "_:genid49"
+    "@id" : "_:genid70"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/product#ServiceCluster",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A Service Cluster is a logical cluster that provides high availability to services"
+    "@value" : "A Service Cluster is a logical cluster that provides high availability to services and microservices"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -775,17 +904,21 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/devops-infra/core#Resource"
   }, {
-    "@id" : "_:genid50"
+    "@id" : "_:genid71"
   }, {
-    "@id" : "_:genid51"
+    "@id" : "_:genid76"
   }, {
-    "@id" : "_:genid56"
+    "@id" : "_:genid81"
   }, {
-    "@id" : "_:genid57"
+    "@id" : "_:genid82"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/product#ServiceInstance",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Instance of a Service running/deployed on a specific infrastructure (e.g., TerraForm)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Service Instance"
@@ -793,59 +926,34 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/devops-infra/core#Resource"
   }, {
-    "@id" : "_:genid58"
+    "@id" : "_:genid83"
   }, {
-    "@id" : "_:genid59"
+    "@id" : "_:genid87"
   }, {
-    "@id" : "_:genid60"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/product#ServiceInstanceDeployment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Instance of a service running/deployed on a specific infrastructure (e.g., TerraForm)"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Service Instance Deployment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#ServiceInstance"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/product#autoScalingHostConfig",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Auto scaling host configuration for a microservice"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#MicroService"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "autoscaling host config"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    "@id" : "_:genid88"
+  }, {
+    "@id" : "_:genid89"
+  }, {
+    "@id" : "_:genid90"
+  }, {
+    "@id" : "_:genid91"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/product#calls",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A service may call other services or microservices"
+    "@value" : "A service or a service instance may call other services or microservices, or their corresponding instances"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#Service"
+    "@id" : "_:genid1"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "calls"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid1"
+    "@id" : "_:genid4"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://w3id.org/devops-infra/core#dependsOn"
@@ -853,11 +961,19 @@
 }, {
   "@id" : "http://w3id.org/devops-infra/product#clusterType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The type of a Service Cluster. The allowed values will be represented in a SKOS codelist. They can be, for example, production, redundancy, grey, etc."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://w3id.org/devops-infra/product#ServiceCluster"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "cluster type"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid4"
+    "@id" : "_:genid9"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/product#deployedInstanceOf",
@@ -866,15 +982,28 @@
     "@language" : "en",
     "@value" : "A microservice instance, a service instance or a business product instance are instances of microservices, services or business products deployed in some infrastructure"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid13"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "deployed instance of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid17"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/product#hasOffering",
+  "@id" : "http://w3id.org/devops-infra/product#hasProductOffering",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#Product"
+    "@id" : "http://w3id.org/devops-infra/product#BusinessProduct"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "A Business Product may have a number of commercial product offerings, which are usually made available in a product catalogue"
+  }, {
+    "@language" : "en",
+    "@value" : "has product offering"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://w3id.org/devops-infra/product#ProductOffering"
@@ -882,38 +1011,29 @@
 }, {
   "@id" : "http://w3id.org/devops-infra/product#hasProductVersion",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A Product Offering may have different Product Versions offered in the corresponding catalogue"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://w3id.org/devops-infra/product#ProductOffering"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#ProductVersion"
-  } ]
-}, {
-  "@id" : "http://w3id.org/devops-infra/product#hasResourceRequirements",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "The resource requirements neede by a business product"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#BusinessProduct"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "has resource requirements"
+    "@value" : "has product version"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    "@id" : "http://w3id.org/devops-infra/product#ProductVersion"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/product#ip",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "IP address where a microservice instance is running"
+    "@value" : "IP address where a service or microservice instance is running"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#MicroServiceRunningInstanceDeployment"
+    "@id" : "_:genid28"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -937,21 +1057,6 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/product#key",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Key of a TerraFormInfraEncryptedItem"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#InfrastructureEncryptedItemDeployment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "key"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
   "@id" : "http://w3id.org/devops-infra/product#offeredBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -963,17 +1068,20 @@
     "@value" : "offered by"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    "@id" : "http://w3id.org/devops-infra/organisation#Scope"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://w3id.org/devops-infra/organisation#scope"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/product#port",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Port where a microservice instance is running"
+    "@value" : "Port where a service instance or microservice instance is running"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#MicroServiceRunningInstanceDeployment"
+    "@id" : "_:genid31"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1011,7 +1119,7 @@
     "@value" : "service type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid8"
+    "@id" : "_:genid21"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/product#uses",
@@ -1031,22 +1139,6 @@
     "@id" : "http://w3id.org/devops-infra/core#dependsOn"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/product#usesResourceCapacity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#BusinessProduct"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "The resource capacity required by a business product"
-  }, {
-    "@language" : "en",
-    "@value" : "uses resource capacity"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
-  } ]
-}, {
   "@id" : "http://w3id.org/devops-infra/product#usesServiceModule",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1054,14 +1146,14 @@
     "@value" : "The service modules that are being used by a product, a product offering, a service or a microservice"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#MicroService"
+    "@id" : "_:genid25"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "uses service module"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    "@id" : "http://w3id.org/devops-infra/software#ServiceModule"
   } ]
 }, {
   "@id" : "http://w3id.org/devops-infra/product#usesServiceModuleVersion",
@@ -1078,25 +1170,11 @@
     "@value" : "uses service module version"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    "@id" : "http://w3id.org/devops-infra/software#ServiceModuleVersion"
   } ]
 }, {
-  "@id" : "http://w3id.org/devops-infra/product#value",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "value for the corresponding key of the TerraForm Encrypted Value"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/devops-infra/product#InfrastructureEncryptedItemDeployment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "value"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
+  "@id" : "http://w3id.org/devops-infra/server#AutoScalingHostConfig",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://w3id.org/devops-infra/server#Server",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
@@ -1104,9 +1182,32 @@
   "@id" : "http://w3id.org/devops-infra/server#ServerLoadBalancer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
+  "@id" : "http://w3id.org/devops-infra/server#autoScalingHostConfig",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Auto scaling host configuration for a microservice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/devops-infra/product#MicroService"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "autoscaling host config"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/devops-infra/server#AutoScalingHostConfig"
+  } ]
+}, {
   "@id" : "http://w3id.org/devops-infra/server#balancedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://w3id.org/devops-infra/server#deployedInServer",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://w3id.org/devops-infra/software#ServiceModule",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/devops-infra/software#ServiceModuleVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 } ]

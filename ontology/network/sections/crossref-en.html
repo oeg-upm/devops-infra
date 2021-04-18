@@ -4,12 +4,6 @@ This section provides details for each class and property defined by Ontology fo
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
-         <a href="#DNSConfigurationProfile"
-            title="http://w3id.org/devops-infra/network#DNSConfigurationProfile">
-            <span>d n s configuration profile</span>
-         </a>
-      </li>
-      <li>
          <a href="#DNSDomain" title="http://w3id.org/devops-infra/network#DNSDomain">DNS Domain</a>
       </li>
       <li>
@@ -49,27 +43,6 @@ This section provides details for each class and property defined by Ontology fo
             title="http://w3id.org/devops-infra/network#VirtualFloatingIPAddress">Virtual Floating IP Address</a>
       </li>
    </ul>
-   <div class="entity" id="DNSConfigurationProfile">
-      <h3>d n s configuration profile<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/network#DNSConfigurationProfile</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasDNSProfile"
-               title="http://w3id.org/devops-infra/network#hasDNSProfile">has DNS profile</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="DNSDomain">
       <h3>DNS Domain<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -152,9 +125,7 @@ This section provides details for each class and property defined by Ontology fo
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#containsFirewall"
-               title="http://w3id.org/devops-infra/network#containsFirewall">contains firewall</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#translatesIntoPublicNATEntry"
+            <a href="#translatesIntoPublicNATEntry"
                title="http://w3id.org/devops-infra/network#translatesIntoPublicNATEntry">translated into a public NAT entry</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -418,10 +389,6 @@ This section provides details for each class and property defined by Ontology fo
             title="http://w3id.org/devops-infra/network#belongsToIPNetwork">belongs to IP network</a>
       </li>
       <li>
-         <a href="#containsFirewall"
-            title="http://w3id.org/devops-infra/network#containsFirewall">contains firewall</a>
-      </li>
-      <li>
          <a href="#exposesIPAddress"
             title="http://w3id.org/devops-infra/network#exposesIPAddress">exposes IP Address</a>
       </li>
@@ -430,16 +397,8 @@ This section provides details for each class and property defined by Ontology fo
             title="http://w3id.org/devops-infra/network#hasDNSIPAddress">has DNS IP Address</a>
       </li>
       <li>
-         <a href="#hasDNSProfile"
-            title="http://w3id.org/devops-infra/network#hasDNSProfile">has DNS profile</a>
-      </li>
-      <li>
          <a href="#hasPrivateIP"
             title="http://w3id.org/devops-infra/network#hasPrivateIP">has private IP</a>
-      </li>
-      <li>
-         <a href="#inDataCenter"
-            title="http://w3id.org/devops-infra/network#inDataCenter">in data center</a>
       </li>
       <li>
          <a href="#ipStatus" title="http://w3id.org/devops-infra/network#ipStatus">IP status</a>
@@ -497,32 +456,6 @@ This section provides details for each class and property defined by Ontology fo
          </dl>
       </div>
    </div>
-   <div class="entity" id="containsFirewall">
-      <h3>contains firewall<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/network#containsFirewall</p>
-      <div class="comment">
-         <span class="markdown">A firewall cluster contains firewalls</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#FirewallCluster"
-                  title="http://w3id.org/devops-infra/network#FirewallCluster">Firewall Cluster</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://w3id.org/devops-infra/hardware#Firewall">firewall</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="exposesIPAddress">
       <h3>exposes IP Address<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -575,27 +508,6 @@ This section provides details for each class and property defined by Ontology fo
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasDNSProfile">
-      <h3>has DNS profile<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/network#hasDNSProfile</p>
-      <div class="comment">
-         <span class="markdown">A DNS Record Configuration follows a DNS Configuration Profile</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <a href="#DNSConfigurationProfile"
-                  title="http://w3id.org/devops-infra/network#DNSConfigurationProfile">d n s configuration profile</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="hasPrivateIP">
       <h3>has private IP<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -618,27 +530,6 @@ This section provides details for each class and property defined by Ontology fo
             <dd>
                <a href="#PrivateIPAddress"
                   title="http://w3id.org/devops-infra/network#PrivateIPAddress">Private IP Address</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="inDataCenter">
-      <h3>in data center<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/network#inDataCenter</p>
-      <div class="comment">
-         <span class="markdown">SSH Channels, Network Segments, public IP addresses, etc., can be provided by a data center</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted"
-                     title="http://w3id.org/devops-infra/data-center#DataCenter">data center</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>

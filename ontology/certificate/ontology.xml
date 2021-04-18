@@ -11,8 +11,8 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://w3id.org/devops-infra/certificate">
-        <owl:versionIRI rdf:resource="http://w3id.org/devops-infra/certificate/0.0.1"/>
-        <owl:imports rdf:resource="http://w3id.org/devops-infra/core"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/devops-infra/certificate/1.0.0"/>
+        <owl:imports rdf:resource="http://w3id.org/devops-infra/core/1.0.0"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <dc:creator>David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:creator>Hu Peng (Huawei Research Ireland)</dc:creator>
@@ -22,6 +22,7 @@
         <dc:creator>Mingxue Wang (Huawei Research Ireland)</dc:creator>
         <dc:creator>Nicholas Burrett (Huawei Research Ireland)</dc:creator>
         <dc:creator>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator>Puchao Zhang (Huawei Research Ireland)</dc:creator>
         <dc:creator>Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:identifier>http://w3id.org/devops-infra/certificate</dc:identifier>
         <dc:title xml:lang="en">Ontology for the representation of aspects related to certificates (SSL, CFCA, etc.)</dc:title>
@@ -31,7 +32,7 @@
         <vann:preferredNamespacePrefix>devopscert</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>http://w3id.org/devops-infra/certificate#</vann:preferredNamespaceUri>
         <rdfs:comment>This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland</rdfs:comment>
-        <owl:versionInfo xml:lang="en">Version after the mappings have been generated</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">First official release</owl:versionInfo>
     </owl:Ontology>
     
 

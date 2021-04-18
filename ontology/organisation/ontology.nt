@@ -1,6 +1,6 @@
 <http://w3id.org/devops-infra/organisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://w3id.org/devops-infra/organisation> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/devops-infra/organisation/0.0.2> .
-<http://w3id.org/devops-infra/organisation> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/devops-infra/core> .
+<http://w3id.org/devops-infra/organisation> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/devops-infra/organisation/1.0.0> .
+<http://w3id.org/devops-infra/organisation> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/devops-infra/core/1.0.0> .
 <http://w3id.org/devops-infra/organisation> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
 <http://w3id.org/devops-infra/organisation> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/org#> .
 <http://w3id.org/devops-infra/organisation> <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
@@ -11,16 +11,17 @@
 <http://w3id.org/devops-infra/organisation> <http://purl.org/dc/elements/1.1/creator> "Mingxue Wang (Huawei Research Ireland)" .
 <http://w3id.org/devops-infra/organisation> <http://purl.org/dc/elements/1.1/creator> "Nicholas Burrett (Huawei Research Ireland)" .
 <http://w3id.org/devops-infra/organisation> <http://purl.org/dc/elements/1.1/creator> "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/organisation> <http://purl.org/dc/elements/1.1/creator> "Puchao Zhang (Huawei Research Ireland)" .
 <http://w3id.org/devops-infra/organisation> <http://purl.org/dc/elements/1.1/creator> "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
 <http://w3id.org/devops-infra/organisation> <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/organisation" .
-<http://w3id.org/devops-infra/organisation> <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of the organisation-related part of DevOps" .
+<http://w3id.org/devops-infra/organisation> <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of the organisation-related part of the ICT infrastructure for DevOps ontology network" .
 <http://w3id.org/devops-infra/organisation> <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/organisation.owl" .
 <http://w3id.org/devops-infra/organisation> <http://purl.org/dc/terms/issued> "2021-02-15" .
 <http://w3id.org/devops-infra/organisation> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" .
 <http://w3id.org/devops-infra/organisation> <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopsorg" .
 <http://w3id.org/devops-infra/organisation> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/organisation#" .
 <http://w3id.org/devops-infra/organisation> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" .
-<http://w3id.org/devops-infra/organisation> <http://www.w3.org/2002/07/owl#versionInfo> "Version after the generation of mappings"@en .
+<http://w3id.org/devops-infra/organisation> <http://www.w3.org/2002/07/owl#versionInfo> "First official release"@en .
 # 
 # 
 # #################################################################
@@ -63,11 +64,18 @@
 # #################################################################
 # 
 # 
+# http://w3id.org/devops-infra/organisation#accessibleToTenant
+<http://w3id.org/devops-infra/organisation#accessibleToTenant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/organisation#accessibleToTenant> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/organisation#Site> .
+<http://w3id.org/devops-infra/organisation#accessibleToTenant> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/organisation#Tenant> .
+<http://w3id.org/devops-infra/organisation#accessibleToTenant> <http://www.w3.org/2000/01/rdf-schema#comment> "This propety is use to refer to the Tenants for which a Resource or Resource Group (e.g., a Site according to this ontology) is accessible."@en .
+<http://w3id.org/devops-infra/organisation#accessibleToTenant> <http://www.w3.org/2000/01/rdf-schema#label> "accessible to tenant"@en .
+# 
 # http://w3id.org/devops-infra/organisation#managedBy
 <http://w3id.org/devops-infra/organisation#managedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/devops-infra/organisation#managedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/organisation#Scope> .
-<http://w3id.org/devops-infra/organisation#managedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/organisation#Department> .
-<http://w3id.org/devops-infra/organisation#managedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A scope may be managed by a department"@en .
+<http://w3id.org/devops-infra/organisation#managedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/devops-infra/organisation#Organisation> .
+<http://w3id.org/devops-infra/organisation#managedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A scope may be managed by an Organisation (or part of it, e.g., a department)"@en .
 <http://w3id.org/devops-infra/organisation#managedBy> <http://www.w3.org/2000/01/rdf-schema#label> "managed by"@en .
 # 
 # http://w3id.org/devops-infra/organisation#scope
@@ -91,7 +99,7 @@ _:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/s
 _:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/scope-type> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/devops-infra/organisation#scopeType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of scope. It can be any of the following, according to the corresponding SKOS Concept Scheme: area, biz, resource, common"@en .
+<http://w3id.org/devops-infra/organisation#scopeType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of scope. It can be any of the following, according to the corresponding SKOS Concept Scheme: area, biz, resource, common, etc."@en .
 <http://w3id.org/devops-infra/organisation#scopeType> <http://www.w3.org/2000/01/rdf-schema#label> "scope type"@en .
 # 
 # http://w3id.org/devops-infra/organisation#tenantType
@@ -109,7 +117,7 @@ _:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/s
 _:genid7 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/tenant-type> .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/devops-infra/organisation#tenantType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of tenant. It can be any of the following, according to the corresponding SKOS Concept Scheme: HWS, AWS, ENABLE, DISABLE, CHINA, EUROPE, RUSSIA, A2, AP, RUSSIA_2, CHINA_NOT_CLOUDSERVICE, FRANCE"@en .
+<http://w3id.org/devops-infra/organisation#tenantType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of tenant. Examples of tenants, taken from several cloud providers, are: HWS, AWS, CHINA, EUROPE, RUSSIA, A2, AP, RUSSIA_2, CHINA_NOT_CLOUDSERVICE, FRANCE, etc."@en .
 <http://w3id.org/devops-infra/organisation#tenantType> <http://www.w3.org/2000/01/rdf-schema#label> "tenant type"@en .
 # 
 # 
@@ -124,6 +132,7 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://w3id.org/devops-infra/organisation#account
 <http://w3id.org/devops-infra/organisation#account> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/devops-infra/organisation#account> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/organisation#Tenant> .
+<http://w3id.org/devops-infra/organisation#account> <http://www.w3.org/2000/01/rdf-schema#comment> "The account associated to a tenant"@en .
 <http://w3id.org/devops-infra/organisation#account> <http://www.w3.org/2000/01/rdf-schema#label> "account"@en .
 # 
 # http://w3id.org/devops-infra/organisation#default
@@ -142,11 +151,13 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://w3id.org/devops-infra/organisation#password> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/devops-infra/organisation#password> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
 <http://w3id.org/devops-infra/organisation#password> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/organisation#Tenant> .
+<http://w3id.org/devops-infra/organisation#password> <http://www.w3.org/2000/01/rdf-schema#comment> "The password associated to an account for a tenant. This will not be represented in most knoweldge graphs"@en .
 <http://w3id.org/devops-infra/organisation#password> <http://www.w3.org/2000/01/rdf-schema#label> "password"@en .
 # 
 # http://w3id.org/devops-infra/organisation#priority
 <http://w3id.org/devops-infra/organisation#priority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/devops-infra/organisation#priority> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/organisation#Scope> .
+<http://w3id.org/devops-infra/organisation#priority> <http://www.w3.org/2000/01/rdf-schema#comment> "A priority associated to a specific Scope, which can be useful to determine the level of priority that the managing department or organisation will assign to it in case of problems."@en .
 <http://w3id.org/devops-infra/organisation#priority> <http://www.w3.org/2000/01/rdf-schema#label> "priority"@en .
 # 
 # http://w3id.org/devops-infra/organisation#tenantStatus
@@ -171,21 +182,18 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # #################################################################
 # 
 # 
-# http://w3id.org/devops-infra/core#Resource
-<http://w3id.org/devops-infra/core#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
-# http://w3id.org/devops-infra/organisation#Department
-<http://w3id.org/devops-infra/organisation#Department> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/devops-infra/organisation#Department> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Organization> .
-<http://w3id.org/devops-infra/organisation#Department> <http://www.w3.org/2000/01/rdf-schema#label> "Department"@en .
-<http://w3id.org/devops-infra/organisation#Department> <http://www.w3.org/2000/01/rdf-schema#label> "部门"@cn .
+# http://w3id.org/devops-infra/organisation#Organisation
+<http://w3id.org/devops-infra/organisation#Organisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/devops-infra/organisation#Organisation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Organization> .
+<http://w3id.org/devops-infra/organisation#Organisation> <http://www.w3.org/2000/01/rdf-schema#comment> "This concept is generated as a specialisation of the concept Organization from the W3C Organization ontology, so as to refer to any type of organisation or deparment inside an organisation that may be responsible for specific resource, scopes, tenants, etc."@en .
+<http://w3id.org/devops-infra/organisation#Organisation> <http://www.w3.org/2000/01/rdf-schema#label> "Organisation"@en .
 # 
 # http://w3id.org/devops-infra/organisation#Scope
 <http://w3id.org/devops-infra/organisation#Scope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/devops-infra/organisation#Scope> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/organisation#managedBy> .
-_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/devops-infra/organisation#Department> .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/devops-infra/organisation#Organisation> .
 <http://w3id.org/devops-infra/organisation#Scope> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/organisation#scopeType> .
@@ -209,8 +217,8 @@ _:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/organisation#priority> .
 _:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/organisation#Scope> <http://www.w3.org/2000/01/rdf-schema#comment> "This is a term commonly used to describe the reasons why a Resource or Resource Group (a Configuration Item) are handled or grouped together. It may be related to a geographical area, to some business context, may be part of some common infrastructure form the cloud provider, etc. Generally, a Scope is managed by a specific Department, which is responsible for it."@en .
 <http://w3id.org/devops-infra/organisation#Scope> <http://www.w3.org/2000/01/rdf-schema#label> "Scope"@en .
-<http://w3id.org/devops-infra/organisation#Scope> <http://www.w3.org/2000/01/rdf-schema#label> "领域"@cn .
 # 
 # http://w3id.org/devops-infra/organisation#Site
 <http://w3id.org/devops-infra/organisation#Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -219,14 +227,8 @@ _:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/organisation#timeZone> .
 _:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/devops-infra/organisation#Site> <http://www.w3.org/2000/01/rdf-schema#comment> "Tem term Site is commonly used to refer to a group of Configuration Itens (e.g., virtual and physical servers, services, applications, etc.) which are grouped together and connected in order to host specific applications, products or services in a cloud environment."@en .
 <http://w3id.org/devops-infra/organisation#Site> <http://www.w3.org/2000/01/rdf-schema#label> "Site"@en .
-<http://w3id.org/devops-infra/organisation#Site> <http://www.w3.org/2000/01/rdf-schema#label> "站点"@cn .
-# 
-# http://w3id.org/devops-infra/organisation#Stage
-<http://w3id.org/devops-infra/organisation#Stage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/devops-infra/organisation#Stage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
-<http://w3id.org/devops-infra/organisation#Stage> <http://www.w3.org/2000/01/rdf-schema#label> "Stage"@en .
-<http://w3id.org/devops-infra/organisation#Stage> <http://www.w3.org/2000/01/rdf-schema#label> "部署阶段"@cn .
 # 
 # http://w3id.org/devops-infra/organisation#Tenant
 <http://w3id.org/devops-infra/organisation#Tenant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -262,9 +264,8 @@ _:genid25 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/organisation#password> .
 _:genid26 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-<http://w3id.org/devops-infra/organisation#Tenant> <http://www.w3.org/2000/01/rdf-schema#comment> "A tenant is usually understood as a container for items of an Organisation in a cloud, such as users, domains, subscriptions, etc"@en .
+<http://w3id.org/devops-infra/organisation#Tenant> <http://www.w3.org/2000/01/rdf-schema#comment> "A tenant is usually understood as a container for items of an Organisation in a cloud, such as users, domains, subscriptions, etc. In other words, it identifies a group of users (e.g., from an organisation) who share a common access with specific privileges to some resources (configuration items) in the cloud. These resources may be provided by a single or by multiple providers (e.g., AWS, HWS, etc.) and belong to a specifc domain (e.g., normally named after a geographical region, as this is commonly used to provision physical resources from specific data centers)."@en .
 <http://w3id.org/devops-infra/organisation#Tenant> <http://www.w3.org/2000/01/rdf-schema#label> "Tenant"@en .
-<http://w3id.org/devops-infra/organisation#Tenant> <http://www.w3.org/2000/01/rdf-schema#label> "租户"@cn .
 # 
 # 
 # 

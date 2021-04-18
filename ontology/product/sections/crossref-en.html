@@ -12,31 +12,12 @@ This section provides details for each class and property defined by Ontology fo
             title="http://w3id.org/devops-infra/product#BusinessProductInstance">Business Product Instance</a>
       </li>
       <li>
-         <a href="#BusinessProductInstanceDeployment"
-            title="http://w3id.org/devops-infra/product#BusinessProductInstanceDeployment">Business Product Instance Deployment</a>
-      </li>
-      <li>
-         <a href="#InfrastructureEncryptedItemDeployment"
-            title="http://w3id.org/devops-infra/product#InfrastructureEncryptedItemDeployment">Infrastructure Encrypted Item Deployment</a>
-      </li>
-      <li>
          <a href="#MicroService"
             title="http://w3id.org/devops-infra/product#MicroService">Microservice</a>
       </li>
       <li>
          <a href="#MicroServiceInstance"
             title="http://w3id.org/devops-infra/product#MicroServiceInstance">Microservice Instance</a>
-      </li>
-      <li>
-         <a href="#MicroServiceInstanceDeployment"
-            title="http://w3id.org/devops-infra/product#MicroServiceInstanceDeployment">Microservice Instance Deployment</a>
-      </li>
-      <li>
-         <a href="#MicroServiceRunningInstanceDeployment"
-            title="http://w3id.org/devops-infra/product#MicroServiceRunningInstanceDeployment">Microservice Running Instance Deployment</a>
-      </li>
-      <li>
-         <a href="#Product" title="http://w3id.org/devops-infra/product#Product">Product</a>
       </li>
       <li>
          <a href="#ProductOffering"
@@ -57,10 +38,6 @@ This section provides details for each class and property defined by Ontology fo
          <a href="#ServiceInstance"
             title="http://w3id.org/devops-infra/product#ServiceInstance">Service Instance</a>
       </li>
-      <li>
-         <a href="#ServiceInstanceDeployment"
-            title="http://w3id.org/devops-infra/product#ServiceInstanceDeployment">Service Instance Deployment</a>
-      </li>
    </ul>
    <div class="entity" id="BusinessProduct">
       <h3>Business Product<sup class="type-c" title="class">c</sup>
@@ -69,6 +46,9 @@ This section provides details for each class and property defined by Ontology fo
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/product#BusinessProduct</p>
+      <div class="comment">
+         <span class="markdown">A Business Product that is offered in the catalogue of an organisation (e.g., a content delivery network, an application, etc.)</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -77,10 +57,8 @@ This section provides details for each class and property defined by Ontology fo
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#usesResourceCapacity"
-               title="http://w3id.org/devops-infra/product#usesResourceCapacity">The resource capacity required by a business product</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasResourceRequirements"
-               title="http://w3id.org/devops-infra/product#hasResourceRequirements">has resource requirements</a>
+            <a href="#hasProductOffering"
+               title="http://w3id.org/devops-infra/product#hasProductOffering">A Business Product may have a number of commercial product offerings, which are usually made available in a product catalogue</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -92,60 +70,14 @@ This section provides details for each class and property defined by Ontology fo
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/product#BusinessProductInstance</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#BusinessProductInstanceDeployment"
-               title="http://w3id.org/devops-infra/product#BusinessProductInstanceDeployment">Business Product Instance Deployment</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="BusinessProductInstanceDeployment">
-      <h3>Business Product Instance Deployment<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/product#BusinessProductInstanceDeployment</p>
       <div class="comment">
          <span class="markdown">Instance of a business product running/deployed on a specific infrastructure (e.g., TerraForm)</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#BusinessProductInstance"
-               title="http://w3id.org/devops-infra/product#BusinessProductInstance">Business Product Instance</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="InfrastructureEncryptedItemDeployment">
-      <h3>Infrastructure Encrypted Item Deployment<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/product#InfrastructureEncryptedItemDeployment</p>
-      <div class="comment">
-         <span class="markdown">Deployment of an Infrastructure Encrypted Item (e.g., in TerraForm)</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
             <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#key" title="http://w3id.org/devops-infra/product#key">key</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#value" title="http://w3id.org/devops-infra/product#value">value</a>
-            <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
    </div>
@@ -156,6 +88,9 @@ This section provides details for each class and property defined by Ontology fo
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/product#MicroService</p>
+      <div class="comment">
+         <span class="markdown">A Microservice is a type of Service that runs a unique process and communicates through a well-defined, lightweight mechanism, such as a container, to serve a business goal.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -164,12 +99,10 @@ This section provides details for each class and property defined by Ontology fo
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#autoScalingHostConfig"
-               title="http://w3id.org/devops-infra/product#autoScalingHostConfig">autoscaling host config</a>
+            <a href="#http://w3id.org/devops-infra/server#autoScalingHostConfig"
+               title="http://w3id.org/devops-infra/server#autoScalingHostConfig">autoscaling host config</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#runsInServiceCluster"
                title="http://w3id.org/devops-infra/product#runsInServiceCluster">runs in service cluster</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#usesServiceModule"
-               title="http://w3id.org/devops-infra/product#usesServiceModule">uses service module</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -181,80 +114,14 @@ This section provides details for each class and property defined by Ontology fo
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/product#MicroServiceInstance</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#MicroServiceInstanceDeployment"
-               title="http://w3id.org/devops-infra/product#MicroServiceInstanceDeployment">Microservice Instance Deployment</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="MicroServiceInstanceDeployment">
-      <h3>Microservice Instance Deployment<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/product#MicroServiceInstanceDeployment</p>
       <div class="comment">
-         <span class="markdown">Instance of a microservice running/deployed on a specifid infrastructure (e.g., Terraform)</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#MicroServiceInstance"
-               title="http://w3id.org/devops-infra/product#MicroServiceInstance">Microservice Instance</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="MicroServiceRunningInstanceDeployment">
-      <h3>Microservice Running Instance Deployment<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/product#MicroServiceRunningInstanceDeployment</p>
-      <div class="comment">
-         <span class="markdown">Instance of a microservice running/deployed on a specific infrastructure (e.g., TerraForm)</span>
+         <span class="markdown">Instance of a MicroService running/deployed on a specific infrastructure (e.g., TerraForm)</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#ip" title="http://w3id.org/devops-infra/product#ip">IP</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#port" title="http://w3id.org/devops-infra/product#port">port</a>
-            <sup class="type-dp" title="data property">dp</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="Product">
-      <h3>Product<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/product#Product</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#hasOffering" title="http://w3id.org/devops-infra/product#hasOffering">has offering</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -265,6 +132,9 @@ This section provides details for each class and property defined by Ontology fo
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/product#ProductOffering</p>
+      <div class="comment">
+         <span class="markdown">For a Business Product, this is the specific offer that is done in a catalogue. A Business Product may have several Product Offering associated to them, and an offering may be described in commercial terms. In this ontology, we do not restrict/propose any specific set of attributes to be used for such description, since each organisation may have different attributes to define their offering.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -279,7 +149,8 @@ This section provides details for each class and property defined by Ontology fo
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasOffering" title="http://w3id.org/devops-infra/product#hasOffering">has offering</a>
+            <a href="#hasProductOffering"
+               title="http://w3id.org/devops-infra/product#hasProductOffering">A Business Product may have a number of commercial product offerings, which are usually made available in a product catalogue</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -291,6 +162,9 @@ This section provides details for each class and property defined by Ontology fo
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/product#ProductVersion</p>
+      <div class="comment">
+         <span class="markdown">A specific version of a Business Product that is being offered through a Product Offering</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -318,16 +192,14 @@ This section provides details for each class and property defined by Ontology fo
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/product#Service</p>
+      <div class="comment">
+         <span class="markdown">A Service that provides support to one or more business products. It may make use (call) other services or microservices.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#calls" title="http://w3id.org/devops-infra/product#calls">calls</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
@@ -344,7 +216,7 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/product#ServiceCluster</p>
       <div class="comment">
-         <span class="markdown">A Service Cluster is a logical cluster that provides high availability to services</span>
+         <span class="markdown">A Service Cluster is a logical cluster that provides high availability to services and microservices</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -372,35 +244,13 @@ This section provides details for each class and property defined by Ontology fo
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/product#ServiceInstance</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#ServiceInstanceDeployment"
-               title="http://w3id.org/devops-infra/product#ServiceInstanceDeployment">Service Instance Deployment</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="ServiceInstanceDeployment">
-      <h3>Service Instance Deployment<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/product#ServiceInstanceDeployment</p>
       <div class="comment">
-         <span class="markdown">Instance of a service running/deployed on a specific infrastructure (e.g., TerraForm)</span>
+         <span class="markdown">Instance of a Service running/deployed on a specific infrastructure (e.g., TerraForm)</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#ServiceInstance"
-               title="http://w3id.org/devops-infra/product#ServiceInstance">Service Instance</a>
+            <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -409,35 +259,26 @@ This section provides details for each class and property defined by Ontology fo
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#autoScalingHostConfig"
-            title="http://w3id.org/devops-infra/product#autoScalingHostConfig">autoscaling host config</a>
+         <a href="#hasProductOffering"
+            title="http://w3id.org/devops-infra/product#hasProductOffering">A Business Product may have a number of commercial product offerings, which are usually made available in a product catalogue</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/devops-infra/server#autoScalingHostConfig"
+            title="http://w3id.org/devops-infra/server#autoScalingHostConfig">autoscaling host config</a>
       </li>
       <li>
          <a href="#calls" title="http://w3id.org/devops-infra/product#calls">calls</a>
       </li>
       <li>
-         <a href="#clusterType" title="http://w3id.org/devops-infra/product#clusterType">
-            <span>cluster type</span>
-         </a>
+         <a href="#clusterType" title="http://w3id.org/devops-infra/product#clusterType">cluster type</a>
       </li>
       <li>
          <a href="#deployedInstanceOf"
             title="http://w3id.org/devops-infra/product#deployedInstanceOf">deployed instance of</a>
       </li>
       <li>
-         <a href="#hasOffering" title="http://w3id.org/devops-infra/product#hasOffering">
-            <span>has offering</span>
-         </a>
-      </li>
-      <li>
          <a href="#hasProductVersion"
-            title="http://w3id.org/devops-infra/product#hasProductVersion">
-            <span>has product version</span>
-         </a>
-      </li>
-      <li>
-         <a href="#hasResourceRequirements"
-            title="http://w3id.org/devops-infra/product#hasResourceRequirements">has resource requirements</a>
+            title="http://w3id.org/devops-infra/product#hasProductVersion">has product version</a>
       </li>
       <li>
          <a href="#offeredBy" title="http://w3id.org/devops-infra/product#offeredBy">offered by</a>
@@ -448,10 +289,6 @@ This section provides details for each class and property defined by Ontology fo
       </li>
       <li>
          <a href="#serviceType" title="http://w3id.org/devops-infra/product#serviceType">service type</a>
-      </li>
-      <li>
-         <a href="#usesResourceCapacity"
-            title="http://w3id.org/devops-infra/product#usesResourceCapacity">The resource capacity required by a business product</a>
       </li>
       <li>
          <a href="#uses" title="http://w3id.org/devops-infra/product#uses">uses</a>
@@ -465,13 +302,37 @@ This section provides details for each class and property defined by Ontology fo
             title="http://w3id.org/devops-infra/product#usesServiceModuleVersion">uses service module version</a>
       </li>
    </ul>
-   <div class="entity" id="autoScalingHostConfig">
+   <div class="entity" id="hasProductOffering">
+      <h3>A Business Product may have a number of commercial product offerings, which are usually made available in a product catalogue<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/product#hasProductOffering</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#BusinessProduct"
+                  title="http://w3id.org/devops-infra/product#BusinessProduct">Business Product</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ProductOffering"
+                  title="http://w3id.org/devops-infra/product#ProductOffering">Product Offering</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://w3id.org/devops-infra/server#autoScalingHostConfig">
       <h3>autoscaling host config<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/product#autoScalingHostConfig</p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/server#autoScalingHostConfig</p>
       <div class="comment">
          <span class="markdown">Auto scaling host configuration for a microservice</span>
       </div>
@@ -485,7 +346,8 @@ This section provides details for each class and property defined by Ontology fo
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+               <span class="dotted"
+                     title="http://w3id.org/devops-infra/server#AutoScalingHostConfig">auto scaling host config</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -499,7 +361,7 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/product#calls</p>
       <div class="comment">
-         <span class="markdown">A service may call other services or microservices</span>
+         <span class="markdown">A service or a service instance may call other services or microservices, or their corresponding instances</span>
       </div>
       <div class="description">
          <dl>
@@ -511,6 +373,10 @@ This section provides details for each class and property defined by Ontology fo
             <dt>has domain</dt>
             <dd>
                <a href="#Service" title="http://w3id.org/devops-infra/product#Service">Service</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#ServiceInstance"
+                  title="http://w3id.org/devops-infra/product#ServiceInstance">Service Instance</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -519,7 +385,15 @@ This section provides details for each class and property defined by Ontology fo
                   title="http://w3id.org/devops-infra/product#MicroService">Microservice</a>
                <sup class="type-c" title="class">c</sup> 
                <span class="logic">or</span> 
+               <a href="#MicroServiceInstance"
+                  title="http://w3id.org/devops-infra/product#MicroServiceInstance">Microservice Instance</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
                <a href="#Service" title="http://w3id.org/devops-infra/product#Service">Service</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#ServiceInstance"
+                  title="http://w3id.org/devops-infra/product#ServiceInstance">Service Instance</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -532,6 +406,9 @@ This section provides details for each class and property defined by Ontology fo
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/product#clusterType</p>
+      <div class="comment">
+         <span class="markdown">The type of a Service Cluster. The allowed values will be represented in a SKOS codelist. They can be, for example, production, redundancy, grey, etc.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -559,25 +436,33 @@ This section provides details for each class and property defined by Ontology fo
       <div class="comment">
          <span class="markdown">A microservice instance, a service instance or a business product instance are instances of microservices, services or business products deployed in some infrastructure</span>
       </div>
-   </div>
-   <div class="entity" id="hasOffering">
-      <h3>has offering<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/product#hasOffering</p>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Product" title="http://w3id.org/devops-infra/product#Product">Product</a>
+               <a href="#BusinessProductInstance"
+                  title="http://w3id.org/devops-infra/product#BusinessProductInstance">Business Product Instance</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#MicroServiceInstance"
+                  title="http://w3id.org/devops-infra/product#MicroServiceInstance">Microservice Instance</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#ServiceInstance"
+                  title="http://w3id.org/devops-infra/product#ServiceInstance">Service Instance</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#ProductOffering"
-                  title="http://w3id.org/devops-infra/product#ProductOffering">Product Offering</a>
+               <a href="#BusinessProduct"
+                  title="http://w3id.org/devops-infra/product#BusinessProduct">Business Product</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#MicroService"
+                  title="http://w3id.org/devops-infra/product#MicroService">Microservice</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Service" title="http://w3id.org/devops-infra/product#Service">Service</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -590,6 +475,9 @@ This section provides details for each class and property defined by Ontology fo
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/product#hasProductVersion</p>
+      <div class="comment">
+         <span class="markdown">A Product Offering may have different Product Versions offered in the corresponding catalogue</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -607,32 +495,6 @@ This section provides details for each class and property defined by Ontology fo
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasResourceRequirements">
-      <h3>has resource requirements<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/product#hasResourceRequirements</p>
-      <div class="comment">
-         <span class="markdown">The resource requirements neede by a business product</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#BusinessProduct"
-                  title="http://w3id.org/devops-infra/product#BusinessProduct">Business Product</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="offeredBy">
       <h3>offered by<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -645,9 +507,14 @@ This section provides details for each class and property defined by Ontology fo
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://w3id.org/devops-infra/organisation#scope">scope</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+               <span class="dotted" title="http://w3id.org/devops-infra/organisation#Scope">scope</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -701,29 +568,6 @@ This section provides details for each class and property defined by Ontology fo
          </dl>
       </div>
    </div>
-   <div class="entity" id="usesResourceCapacity">
-      <h3>The resource capacity required by a business product<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/product#usesResourceCapacity</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#BusinessProduct"
-                  title="http://w3id.org/devops-infra/product#BusinessProduct">Business Product</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="uses">
       <h3>uses<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -765,11 +609,15 @@ This section provides details for each class and property defined by Ontology fo
             <dd>
                <a href="#MicroService"
                   title="http://w3id.org/devops-infra/product#MicroService">Microservice</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Service" title="http://w3id.org/devops-infra/product#Service">Service</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+               <span class="dotted"
+                     title="http://w3id.org/devops-infra/software#ServiceModule">service module</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -795,7 +643,8 @@ This section provides details for each class and property defined by Ontology fo
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+               <span class="dotted"
+                     title="http://w3id.org/devops-infra/software#ServiceModuleVersion">service module version</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -811,13 +660,7 @@ This section provides details for each class and property defined by Ontology fo
          <a href="#isDeleted" title="http://w3id.org/devops-infra/product#isDeleted">is deleted</a>
       </li>
       <li>
-         <a href="#key" title="http://w3id.org/devops-infra/product#key">key</a>
-      </li>
-      <li>
          <a href="#port" title="http://w3id.org/devops-infra/product#port">port</a>
-      </li>
-      <li>
-         <a href="#value" title="http://w3id.org/devops-infra/product#value">value</a>
       </li>
    </ul>
    <div class="entity" id="ip">
@@ -828,14 +671,18 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/product#ip</p>
       <div class="comment">
-         <span class="markdown">IP address where a microservice instance is running</span>
+         <span class="markdown">IP address where a service or microservice instance is running</span>
       </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#MicroServiceRunningInstanceDeployment"
-                  title="http://w3id.org/devops-infra/product#MicroServiceRunningInstanceDeployment">Microservice Running Instance Deployment</a>
+               <a href="#MicroServiceInstance"
+                  title="http://w3id.org/devops-infra/product#MicroServiceInstance">Microservice Instance</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#ServiceInstance"
+                  title="http://w3id.org/devops-infra/product#ServiceInstance">Service Instance</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -864,31 +711,6 @@ This section provides details for each class and property defined by Ontology fo
          </dl>
       </div>
    </div>
-   <div class="entity" id="key">
-      <h3>key<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/product#key</p>
-      <div class="comment">
-         <span class="markdown">Key of a TerraFormInfraEncryptedItem</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#InfrastructureEncryptedItemDeployment"
-                  title="http://w3id.org/devops-infra/product#InfrastructureEncryptedItemDeployment">Infrastructure Encrypted Item Deployment</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="port">
       <h3>port<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -897,39 +719,18 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/product#port</p>
       <div class="comment">
-         <span class="markdown">Port where a microservice instance is running</span>
+         <span class="markdown">Port where a service instance or microservice instance is running</span>
       </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#MicroServiceRunningInstanceDeployment"
-                  title="http://w3id.org/devops-infra/product#MicroServiceRunningInstanceDeployment">Microservice Running Instance Deployment</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="value">
-      <h3>value<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/product#value</p>
-      <div class="comment">
-         <span class="markdown">value for the corresponding key of the TerraForm Encrypted Value</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#InfrastructureEncryptedItemDeployment"
-                  title="http://w3id.org/devops-infra/product#InfrastructureEncryptedItemDeployment">Infrastructure Encrypted Item Deployment</a>
+               <a href="#MicroServiceInstance"
+                  title="http://w3id.org/devops-infra/product#MicroServiceInstance">Microservice Instance</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#ServiceInstance"
+                  title="http://w3id.org/devops-infra/product#ServiceInstance">Service Instance</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>

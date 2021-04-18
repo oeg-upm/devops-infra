@@ -2,7 +2,7 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
-<http://w3id.org/devops-infra/organization/0.0.1> a prov:Entity;
+<http://w3id.org/devops-infra/organization/1.0.0> a prov:Entity;
 	 dc:title "Ontology for the representation of the organisation-related part of DevOps";
 	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo :agent1;
@@ -13,9 +13,10 @@
 	 prov:wasAttributedTo :agent6;
 	 prov:wasAttributedTo :agent7;
 	 prov:wasAttributedTo :agent8;
+	 prov:wasAttributedTo :agent9;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 	 prov:specializationOf <http://w3id.org/devops-infra/organization>;
-	 prov:wasGeneratedAt "2020-11-06";
+	 prov:wasGeneratedAt "2021-04-19";
 .
 :agent0 a prov:Agent; foaf:name "Oscar Corcho".
 :agent1 a prov:Agent; foaf:name "Raúl Alcázar".
@@ -26,3 +27,4 @@
 :agent6 a prov:Agent; foaf:name "Hu Peng".
 :agent7 a prov:Agent; foaf:name "Nicholas Burrett".
 :agent8 a prov:Agent; foaf:name "José Mora".
+:agent9 a prov:Agent; foaf:name "Puchao Zhang".

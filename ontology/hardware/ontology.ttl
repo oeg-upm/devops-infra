@@ -7,8 +7,8 @@
 @base <http://w3id.org/devops-infra/hardware> .
 
 <http://w3id.org/devops-infra/hardware> rdf:type owl:Ontology ;
-                                         owl:versionIRI <http://w3id.org/devops-infra/hardware/0.0.2> ;
-                                         owl:imports <http://w3id.org/devops-infra/core> ,
+                                         owl:versionIRI <http://w3id.org/devops-infra/hardware/1.0.0> ;
+                                         owl:imports <http://w3id.org/devops-infra/core/1.0.0> ,
                                                      <http://www.w3.org/2004/02/skos/core> ;
                                          <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
                                                                                    "Hu Peng (Huawei Research Ireland)" ,
@@ -18,16 +18,17 @@
                                                                                    "Mingxue Wang (Huawei Research Ireland)" ,
                                                                                    "Nicholas Burrett (Huawei Research Ireland)" ,
                                                                                    "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                   "Puchao Zhang (Huawei Research Ireland)" ,
                                                                                    "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)" ;
-                                         <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/network" ;
+                                         <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/hardware" ;
                                          <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of the hardware items related to a DevOps infrastructure"@en ;
                                          <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/hardware.owl" ;
-                                         <http://purl.org/dc/terms/issued> "2021-02-15" ;
+                                         <http://purl.org/dc/terms/issued> "2021-04-15" ;
                                          <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" ;
                                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopsnet" ;
                                          <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/hardware#" ;
                                          rdfs:comment "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" ;
-                                         owl:versionInfo "Version after initial set of RML mappings have been generated for a sample database"@en .
+                                         owl:versionInfo "First official release"@en .
 
 #################################################################
 #    Annotation properties
@@ -85,22 +86,6 @@
        rdfs:label "batch"@en .
 
 
-###  http://w3id.org/devops-infra/hardware#belongsToF5Cluster
-:belongsToF5Cluster rdf:type owl:ObjectProperty ;
-                    rdfs:domain :F5Hardware ;
-                    rdfs:range <http://w3id.org/devops-infra/network-security-load-balancing#F5Cluster> ;
-                    rdfs:comment "An F5 Cluster to which an F5 hardware belongs"@en ;
-                    rdfs:label "belongs to F5 cluster"@en .
-
-
-###  http://w3id.org/devops-infra/hardware#belongsToFirewallCluster
-:belongsToFirewallCluster rdf:type owl:ObjectProperty ;
-                          rdfs:domain :Firewall ;
-                          rdfs:range <http://w3id.org/devops-infra/network-security-load-balancing#FirewallCluster> ;
-                          rdfs:comment "A Firewall Cluster to which a Firewall belongs"@en ;
-                          rdfs:label "belongs to firewall cluster"@en .
-
-
 ###  http://w3id.org/devops-infra/hardware#highAvailabilityStatus
 :highAvailabilityStatus rdf:type owl:ObjectProperty ;
                         rdfs:domain :ServerHardware ;
@@ -120,14 +105,14 @@
 ###  http://w3id.org/devops-infra/hardware#networkCard
 :networkCard rdf:type owl:ObjectProperty ;
              rdfs:domain :HardwareItem ;
-             rdfs:range :NetCard ;
+             rdfs:range :NetworkCard ;
              rdfs:comment "The network card to which a Hardware Item (e.g., Switch, Physical Server, etc.) is connected"@en ;
              rdfs:label "network card"@en .
 
 
 ###  http://w3id.org/devops-infra/hardware#switch
 :switch rdf:type owl:ObjectProperty ;
-        rdfs:domain :NetCard ;
+        rdfs:domain :NetworkCard ;
         rdfs:range :Switch ;
         rdfs:comment "A switch to which a network card is attached"@en ;
         rdfs:label "switch"@en .
@@ -143,7 +128,7 @@
 
 ###  http://w3id.org/devops-infra/hardware#bandwidth
 :bandwidth rdf:type owl:DatatypeProperty ;
-           rdfs:domain :NetCard ;
+           rdfs:domain :NetworkCard ;
            rdfs:range xsd:string ;
            rdfs:comment "Bandwidth associated to a Network Card"@en ;
            rdfs:label "bandwidth"@en .
@@ -233,7 +218,7 @@
 
 ###  http://w3id.org/devops-infra/hardware#macAddress
 :macAddress rdf:type owl:DatatypeProperty ;
-            rdfs:domain :NetCard ;
+            rdfs:domain :NetworkCard ;
             rdfs:range xsd:string ;
             rdfs:comment "MAC address associated to a Network Card"@en ;
             rdfs:label "mac address"@en .
@@ -273,7 +258,7 @@
 
 ###  http://w3id.org/devops-infra/hardware#port
 :port rdf:type owl:DatatypeProperty ;
-      rdfs:domain :NetCard ;
+      rdfs:domain :NetworkCard ;
       rdfs:range xsd:string ;
       rdfs:comment "port associated to a Network Card"@en ;
       rdfs:label "port"@en .
@@ -329,7 +314,7 @@
 
 ###  http://w3id.org/devops-infra/hardware#vlanID
 :vlanID rdf:type owl:DatatypeProperty ;
-        rdfs:domain :NetCard ;
+        rdfs:domain :NetworkCard ;
         rdfs:range xsd:string ;
         rdfs:comment "ID of the VLAN associated to a Network Card"@en ;
         rdfs:label "VLAN ID"@en .
@@ -395,6 +380,21 @@
 
 ###  http://w3id.org/devops-infra/hardware#HardwareBatch
 :HardwareBatch rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty :contractNumber ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hardwareType ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :unitPrice ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:float
+                               ] ;
                rdfs:comment "A Hardware Batch is a batch under which some hardware infrastructure was bought, kept for administrative purposes or to detect potential problems in the same batch"@en ;
                rdfs:label "Hardware Batch"@en .
 
@@ -403,8 +403,44 @@
 :HardwareItem rdf:type owl:Class ;
               rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ,
                               [ rdf:type owl:Restriction ;
-                                owl:onProperty <http://w3id.org/devops-infra/core#status> ;
-                                owl:allValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
+                                owl:onProperty :cabPosition ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :dateEnabled ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:dateTime
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :dateOnShelf ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:dateTime
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :machineType ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :managementIP ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :managementLink ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :managementPort ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :unitPosition ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :serialNumber ;
@@ -415,11 +451,11 @@
               rdfs:label "Hardware Item"@en .
 
 
-###  http://w3id.org/devops-infra/hardware#NetCard
-:NetCard rdf:type owl:Class ;
-         rdfs:subClassOf :HardwareItem ;
-         rdfs:comment "A network interface controller (NIC, also known as a network interface card, network adapter, LAN adapter or physical network interface, and by similar terms) is a computer hardware component that connects a computer to a computer network."@en ;
-         rdfs:label "Net Card"@en .
+###  http://w3id.org/devops-infra/hardware#NetworkCard
+:NetworkCard rdf:type owl:Class ;
+             rdfs:subClassOf :HardwareItem ;
+             rdfs:comment "A network interface controller (NIC, also known as a network interface card, network adapter, LAN adapter or physical network interface, and by similar terms) is a computer hardware component that connects a computer to a computer network, usually a LAN. It is considered a piece of computer hardware. Most modern computers support an internal network interface controller embedded in the motherboard directly rather than provided as an external component."@en ;
+             rdfs:label "Network Card"@en .
 
 
 ###  http://w3id.org/devops-infra/hardware#ServerHardware
@@ -434,14 +470,6 @@
         rdfs:subClassOf :ServerHardware ;
         rdfs:comment "A network switch (also called switching hub, bridging hub, and, by the IEEE, MAC bridge) is networking hardware that connects devices on a computer network by using packet switching to receive and forward data to the destination device"@en ;
         rdfs:label "Switch"@en .
-
-
-###  http://w3id.org/devops-infra/network-security-load-balancing#F5Cluster
-<http://w3id.org/devops-infra/network-security-load-balancing#F5Cluster> rdf:type owl:Class .
-
-
-###  http://w3id.org/devops-infra/network-security-load-balancing#FirewallCluster
-<http://w3id.org/devops-infra/network-security-load-balancing#FirewallCluster> rdf:type owl:Class .
 
 
 ###  http://w3id.org/devops-infra/server#PhysicalServer

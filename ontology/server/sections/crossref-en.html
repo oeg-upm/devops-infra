@@ -19,11 +19,6 @@ This section provides details for each class and property defined by Ontology fo
             title="http://w3id.org/devops-infra/server#BareMetalServer">Bare-metal Server</a>
       </li>
       <li>
-         <a href="#ECServer" title="http://w3id.org/devops-infra/server#ECServer">
-            <span>e c server</span>
-         </a>
-      </li>
-      <li>
          <a href="#HostConfiguration"
             title="http://w3id.org/devops-infra/server#HostConfiguration">Host Configuration</a>
       </li>
@@ -36,30 +31,6 @@ This section provides details for each class and property defined by Ontology fo
          </a>
       </li>
       <li>
-         <a href="#IECEdgeCloud"
-            title="http://w3id.org/devops-infra/server#IECEdgeCloud">
-            <span>i e c edge cloud</span>
-         </a>
-      </li>
-      <li>
-         <a href="#IECEdgeCloudServer"
-            title="http://w3id.org/devops-infra/server#IECEdgeCloudServer">
-            <span>i e c edge cloud server</span>
-         </a>
-      </li>
-      <li>
-         <a href="#IECServer" title="http://w3id.org/devops-infra/server#IECServer">
-            <span>i e c server</span>
-         </a>
-      </li>
-      <li>
-         <a href="#IDCXenVMServer"
-            title="http://w3id.org/devops-infra/server#IDCXenVMServer">IDC Xen Virtual Server</a>
-      </li>
-      <li>
-         <a href="#NetworkCard" title="http://w3id.org/devops-infra/server#NetworkCard">Network Card</a>
-      </li>
-      <li>
          <a href="#PhysicalServer"
             title="http://w3id.org/devops-infra/server#PhysicalServer">Physical Server</a>
       </li>
@@ -67,18 +38,8 @@ This section provides details for each class and property defined by Ontology fo
          <a href="#Server" title="http://w3id.org/devops-infra/server#Server">Server</a>
       </li>
       <li>
-         <a href="#http://w3id.org/devops-infra/hardware#ServerHardware"
-            title="http://w3id.org/devops-infra/hardware#ServerHardware">Server Hardware</a>
-      </li>
-      <li>
          <a href="#ServerLoadBalancer"
             title="http://w3id.org/devops-infra/server#ServerLoadBalancer">Server Load Balancer</a>
-      </li>
-      <li>
-         <a href="#ServerLoadBalancerHost"
-            title="http://w3id.org/devops-infra/server#ServerLoadBalancerHost">
-            <span>server load balancer host</span>
-         </a>
       </li>
       <li>
          <a href="#VirtualServer"
@@ -117,6 +78,9 @@ This section provides details for each class and property defined by Ontology fo
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/server#AutoExpandHostConfig</p>
+      <div class="comment">
+         <span class="markdown">A configuration for a Service Module to automatically expand when required</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -133,6 +97,9 @@ This section provides details for each class and property defined by Ontology fo
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/server#AutoScalingHostConfig</p>
+      <div class="comment">
+         <span class="markdown">A configuration for a Microservice to automatically expand and scale up when required</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -161,22 +128,6 @@ This section provides details for each class and property defined by Ontology fo
          </dd>
       </dl>
    </div>
-   <div class="entity" id="ECServer">
-      <h3>e c server<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#ECServer</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#VirtualServer"
-               title="http://w3id.org/devops-infra/server#VirtualServer">VirtualServer</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="HostConfiguration">
       <h3>Host Configuration<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -184,6 +135,9 @@ This section provides details for each class and property defined by Ontology fo
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/server#HostConfiguration</p>
+      <div class="comment">
+         <span class="markdown">General-purpose class to described the potential configuration of a host</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -197,6 +151,12 @@ This section provides details for each class and property defined by Ontology fo
             <sup class="type-c" title="class">c</sup>, <a href="#AutoScalingHostConfig"
                title="http://w3id.org/devops-infra/server#AutoScalingHostConfig">Auto Scaling Host Configuration</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hostConfiguration"
+               title="http://w3id.org/devops-infra/server#hostConfiguration">host configuration</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -215,6 +175,11 @@ This section provides details for each class and property defined by Ontology fo
          <dd>
             <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#price" title="http://w3id.org/devops-infra/server#price">price</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
@@ -236,96 +201,9 @@ This section provides details for each class and property defined by Ontology fo
             <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
-      </dl>
-   </div>
-   <div class="entity" id="IECEdgeCloud">
-      <h3>i e c edge cloud<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#IECEdgeCloud</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="IECEdgeCloudServer">
-      <h3>i e c edge cloud server<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#IECEdgeCloudServer</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="IECServer">
-      <h3>i e c server<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#IECServer</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#PhysicalServer"
-               title="http://w3id.org/devops-infra/server#PhysicalServer">Physical Server</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="IDCXenVMServer">
-      <h3>IDC Xen Virtual Server<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#IDCXenVMServer</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#VirtualServer"
-               title="http://w3id.org/devops-infra/server#VirtualServer">VirtualServer</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="NetworkCard">
-      <h3>Network Card<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#NetworkCard</p>
-      <div class="comment">
-         <span class="markdown">A Network interface card (also known as a NIC, network card, or network interface controller) is an electronic device that connects a computer to a computer network, usually a LAN. It is considered a piece of computer hardware. Most modern computers support an internal network interface controller embedded in the motherboard directly rather than provided as an external component.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#bandwidth" title="http://w3id.org/devops-infra/server#bandwidth">Bandwidth of a network card</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#mac" title="http://w3id.org/devops-infra/server#mac">mac</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#vlan" title="http://w3id.org/devops-infra/server#vlan">vlan</a>
-            <sup class="type-dp" title="data property">dp</sup>
-         </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#networkCard" title="http://w3id.org/devops-infra/server#networkCard">network card</a>
+            <a href="#hostImage" title="http://w3id.org/devops-infra/server#hostImage">host image</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -347,14 +225,14 @@ This section provides details for each class and property defined by Ontology fo
          <dd>
             <a href="#BareMetalServer"
                title="http://w3id.org/devops-infra/server#BareMetalServer">Bare-metal Server</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#IECServer" title="http://w3id.org/devops-infra/server#IECServer">i e c server</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#host" title="http://w3id.org/devops-infra/server#host">host</a>
+            <a href="#serialNumber" title="http://w3id.org/devops-infra/server#serialNumber">The serial number of the machine corresponding to a Physical Server, as assigned by the corresponding vendor</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#containsDisk" title="http://w3id.org/devops-infra/server#containsDisk">contains disk</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#host" title="http://w3id.org/devops-infra/server#host">host</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hosts" title="http://w3id.org/devops-infra/server#hosts">hosts</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#networkCard" title="http://w3id.org/devops-infra/server#networkCard">network card</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#physicalServerStatus"
                title="http://w3id.org/devops-infra/server#physicalServerStatus">physical Server Status</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#runsOnHardware"
@@ -401,18 +279,14 @@ This section provides details for each class and property defined by Ontology fo
          <dt>is in domain of</dt>
          <dd>
             <a href="#cpu" title="http://w3id.org/devops-infra/server#cpu">CPU</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#serialNumber" title="http://w3id.org/devops-infra/server#serialNumber">The serial number of the corresponding machine, as assigned by the corresponding vendor</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#assignmentStatus"
                title="http://w3id.org/devops-infra/server#assignmentStatus">assignment Status</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#containsDisk" title="http://w3id.org/devops-infra/server#containsDisk">contains disk</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasAccount" title="http://w3id.org/devops-infra/server#hasAccount">has account</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#macName" title="http://w3id.org/devops-infra/server#macName">mac name</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#mainMac" title="http://w3id.org/devops-infra/server#mainMac">main MAC</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#monitorStatus"
                title="http://w3id.org/devops-infra/server#monitorStatus">monitor status</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#offeredByVendor"
-               title="http://w3id.org/devops-infra/server#offeredByVendor">offered by vendor</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#operatingSystem"
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#operatingSystem"
                title="http://w3id.org/devops-infra/server#operatingSystem">operating system</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#resourceType" title="http://w3id.org/devops-infra/server#resourceType">resource type</a>
             <sup class="type-dp" title="data property">dp</sup>
@@ -424,27 +298,6 @@ This section provides details for each class and property defined by Ontology fo
          </dd>
       </dl>
    </div>
-   <div class="entity" id="http://w3id.org/devops-infra/hardware#ServerHardware">
-      <h3>Server Hardware<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#ServerHardware</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#runsOnHardware"
-               title="http://w3id.org/devops-infra/server#runsOnHardware">runs on hardware</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="ServerLoadBalancer">
       <h3>Server Load Balancer<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -452,21 +305,9 @@ This section provides details for each class and property defined by Ontology fo
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/server#ServerLoadBalancer</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="ServerLoadBalancerHost">
-      <h3>server load balancer host<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#ServerLoadBalancerHost</p>
+      <div class="comment">
+         <span class="markdown">A Server Load Balancer (SLB) distributes high traffic sites among several servers using a network-based hardware or software-defined appliance. Server load balancers intercept traffic for a website and reroute that traffic to servers</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -488,13 +329,6 @@ This section provides details for each class and property defined by Ontology fo
             <a href="#Server" title="http://w3id.org/devops-infra/server#Server">Server</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#IDCXenVMServer"
-               title="http://w3id.org/devops-infra/server#IDCXenVMServer">IDC Xen Virtual Server</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ECServer" title="http://w3id.org/devops-infra/server#ECServer">e c server</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#availabilityZone"
@@ -502,10 +336,15 @@ This section provides details for each class and property defined by Ontology fo
             <sup class="type-dp" title="data property">dp</sup>, <a href="#chargeMode" title="http://w3id.org/devops-infra/server#chargeMode">charge mode</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#creationType" title="http://w3id.org/devops-infra/server#creationType">creation type</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#flavor" title="http://w3id.org/devops-infra/server#flavor">flavor</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hostConfiguration"
+               title="http://w3id.org/devops-infra/server#hostConfiguration">host configuration</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hostImage" title="http://w3id.org/devops-infra/server#hostImage">host image</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hostedIn" title="http://w3id.org/devops-infra/server#hostedIn">hosted In</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#virtualServerStatus"
                title="http://w3id.org/devops-infra/server#virtualServerStatus">virtual Server Status</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#vmConfPath" title="http://w3id.org/devops-infra/server#vmConfPath">vm conf path</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#vmFile" title="http://w3id.org/devops-infra/server#vmFile">vm file</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#vmImgPath" title="http://w3id.org/devops-infra/server#vmImgPath">vm img path</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
@@ -538,12 +377,19 @@ This section provides details for each class and property defined by Ontology fo
          <a href="#creationType" title="http://w3id.org/devops-infra/server#creationType">creation type</a>
       </li>
       <li>
-         <a href="#flavor" title="http://w3id.org/devops-infra/server#flavor">
-            <span>flavor</span>
-         </a>
+         <a href="#flavor" title="http://w3id.org/devops-infra/server#flavor">flavor</a>
       </li>
       <li>
          <a href="#hasAccount" title="http://w3id.org/devops-infra/server#hasAccount">has account</a>
+      </li>
+      <li>
+         <a href="#hostConfiguration"
+            title="http://w3id.org/devops-infra/server#hostConfiguration">host configuration</a>
+      </li>
+      <li>
+         <a href="#hostImage" title="http://w3id.org/devops-infra/server#hostImage">
+            <span>host image</span>
+         </a>
       </li>
       <li>
          <a href="#hostedIn" title="http://w3id.org/devops-infra/server#hostedIn">hosted In</a>
@@ -559,11 +405,10 @@ This section provides details for each class and property defined by Ontology fo
          <a href="#isAccountOf" title="http://w3id.org/devops-infra/server#isAccountOf">is Account Of</a>
       </li>
       <li>
-         <a href="#networkCard" title="http://w3id.org/devops-infra/server#networkCard">network card</a>
-      </li>
-      <li>
-         <a href="#offeredByVendor"
-            title="http://w3id.org/devops-infra/server#offeredByVendor">offered by vendor</a>
+         <a href="#http://w3id.org/devops-infra/hardware#networkCard"
+            title="http://w3id.org/devops-infra/hardware#networkCard">
+            <span>network card</span>
+         </a>
       </li>
       <li>
          <a href="#physicalServerStatus"
@@ -640,13 +485,18 @@ This section provides details for each class and property defined by Ontology fo
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/server#containsDisk</p>
       <div class="comment">
-         <span class="markdown">This property identifies the disks that are (physically or virtually) mounted in a server</span>
+         <span class="markdown">This property identifies the disks that are physically mounted in a Physical Server</span>
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://w3id.org/devops-infra/core#dependsOn">depends on</span>
+            </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#Server" title="http://w3id.org/devops-infra/server#Server">Server</a>
+               <a href="#PhysicalServer"
+                  title="http://w3id.org/devops-infra/server#PhysicalServer">Physical Server</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -740,6 +590,56 @@ This section provides details for each class and property defined by Ontology fo
          </dl>
       </div>
    </div>
+   <div class="entity" id="hostConfiguration">
+      <h3>host configuration<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/server#hostConfiguration</p>
+      <div class="comment">
+         <span class="markdown">This property links a Virtual Server with its Host Configuration</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#VirtualServer"
+                  title="http://w3id.org/devops-infra/server#VirtualServer">VirtualServer</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#HostConfiguration"
+                  title="http://w3id.org/devops-infra/server#HostConfiguration">Host Configuration</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hostImage">
+      <h3>host image<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/server#hostImage</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#VirtualServer"
+                  title="http://w3id.org/devops-infra/server#VirtualServer">VirtualServer</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#HostImage" title="http://w3id.org/devops-infra/server#HostImage">host image</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hostedIn">
       <h3>hosted In<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -752,6 +652,10 @@ This section provides details for each class and property defined by Ontology fo
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://w3id.org/devops-infra/core#dependsOn">depends on</span>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#VirtualServer"
@@ -855,47 +759,23 @@ This section provides details for each class and property defined by Ontology fo
          </dl>
       </div>
    </div>
-   <div class="entity" id="networkCard">
+   <div class="entity" id="http://w3id.org/devops-infra/hardware#networkCard">
       <h3>network card<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#networkCard</p>
-      <div class="comment">
-         <span class="markdown">A Physical Server has at least a network card associated to it</span>
-      </div>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/hardware#networkCard</p>
       <div class="description">
          <dl>
-            <dt>has domain</dt>
+            <dt>has super-properties</dt>
             <dd>
-               <a href="#PhysicalServer"
-                  title="http://w3id.org/devops-infra/server#PhysicalServer">Physical Server</a>
-               <sup class="type-c" title="class">c</sup>
+               <span class="dotted" title="http://w3id.org/devops-infra/core#dependsOn">depends on</span>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#NetworkCard" title="http://w3id.org/devops-infra/server#NetworkCard">Network Card</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="offeredByVendor">
-      <h3>offered by vendor<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#offeredByVendor</p>
-      <div class="comment">
-         <span class="markdown">This property describes the vendor that offers a specific resource (e.g., AWS, HWS, etc.). In the future it should be decided whether this should be a SKOS thesaurus or an instance of a class Organisation</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Server" title="http://w3id.org/devops-infra/server#Server">Server</a>
+               <span class="dotted"
+                     title="http://w3id.org/devops-infra/hardware#NetworkCard">network card</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -949,8 +829,8 @@ This section provides details for each class and property defined by Ontology fo
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#http://w3id.org/devops-infra/hardware#ServerHardware"
-                  title="http://w3id.org/devops-infra/hardware#ServerHardware">Server Hardware</a>
+               <span class="dotted"
+                     title="http://w3id.org/devops-infra/hardware#ServerHardware">server hardware</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -992,31 +872,10 @@ This section provides details for each class and property defined by Ontology fo
             title="http://w3id.org/devops-infra/server#availabilityZone">availability zone</a>
       </li>
       <li>
-         <a href="#bandwidth" title="http://w3id.org/devops-infra/server#bandwidth">Bandwidth of a network card</a>
-      </li>
-      <li>
          <a href="#cpu" title="http://w3id.org/devops-infra/server#cpu">CPU</a>
       </li>
       <li>
-         <a href="#createSrc" title="http://w3id.org/devops-infra/server#createSrc">
-            <span>create src</span>
-         </a>
-      </li>
-      <li>
-         <a href="#createTime" title="http://w3id.org/devops-infra/server#createTime">create time</a>
-      </li>
-      <li>
-         <a href="#ecsId" title="http://w3id.org/devops-infra/server#ecsId">
-            <span>ecs id</span>
-         </a>
-      </li>
-      <li>
          <a href="#expireTime" title="http://w3id.org/devops-infra/server#expireTime">expire time</a>
-      </li>
-      <li>
-         <a href="#hardDisk" title="http://w3id.org/devops-infra/server#hardDisk">
-            <span>hard disk</span>
-         </a>
       </li>
       <li>
          <a href="#host" title="http://w3id.org/devops-infra/server#host">host</a>
@@ -1031,19 +890,7 @@ This section provides details for each class and property defined by Ontology fo
          <a href="#ipv6" title="http://w3id.org/devops-infra/server#ipv6">ipv6</a>
       </li>
       <li>
-         <a href="#isDeleted" title="http://w3id.org/devops-infra/server#isDeleted">is deleted</a>
-      </li>
-      <li>
          <a href="#kernel" title="http://w3id.org/devops-infra/server#kernel">kernel</a>
-      </li>
-      <li>
-         <a href="#key" title="http://w3id.org/devops-infra/server#key">key</a>
-      </li>
-      <li>
-         <a href="#lastModified" title="http://w3id.org/devops-infra/server#lastModified">last modified</a>
-      </li>
-      <li>
-         <a href="#mac" title="http://w3id.org/devops-infra/server#mac">mac</a>
       </li>
       <li>
          <a href="#macName" title="http://w3id.org/devops-infra/server#macName">
@@ -1064,46 +911,39 @@ This section provides details for each class and property defined by Ontology fo
          <a href="#netInterface" title="http://w3id.org/devops-infra/server#netInterface">net interface</a>
       </li>
       <li>
+         <a href="#networkPerformance"
+            title="http://w3id.org/devops-infra/server#networkPerformance">network performance</a>
+      </li>
+      <li>
+         <a href="#numberCPUs" title="http://w3id.org/devops-infra/server#numberCPUs">number of CPUs</a>
+      </li>
+      <li>
          <a href="#operatingSystem"
             title="http://w3id.org/devops-infra/server#operatingSystem">operating system</a>
       </li>
       <li>
-         <a href="#podInfo" title="http://w3id.org/devops-infra/server#podInfo">
-            <span>pod info</span>
-         </a>
+         <a href="#price" title="http://w3id.org/devops-infra/server#price">price</a>
       </li>
       <li>
-         <a href="#port" title="http://w3id.org/devops-infra/server#port">port</a>
-      </li>
-      <li>
-         <a href="#region" title="http://w3id.org/devops-infra/server#region">
-            <span>region</span>
-         </a>
+         <a href="#processorArchitecture"
+            title="http://w3id.org/devops-infra/server#processorArchitecture">processor architecture</a>
       </li>
       <li>
          <a href="#resourceType" title="http://w3id.org/devops-infra/server#resourceType">resource type</a>
       </li>
       <li>
-         <a href="#startTime" title="http://w3id.org/devops-infra/server#startTime">start time</a>
+         <a href="#storageCapacity"
+            title="http://w3id.org/devops-infra/server#storageCapacity">storage capacity</a>
       </li>
       <li>
-         <a href="#serialNumber" title="http://w3id.org/devops-infra/server#serialNumber">The serial number of the corresponding machine, as assigned by the corresponding vendor</a>
+         <a href="#serialNumber" title="http://w3id.org/devops-infra/server#serialNumber">The serial number of the machine corresponding to a Physical Server, as assigned by the corresponding vendor</a>
       </li>
       <li>
-         <a href="#assignTime" title="http://w3id.org/devops-infra/server#assignTime">Time when the server was assigned</a>
-      </li>
-      <li>
-         <a href="#updateTime" title="http://w3id.org/devops-infra/server#updateTime">Update time of the element
-TODO: move to core ontology module</a>
+         <a href="#assignmentTime"
+            title="http://w3id.org/devops-infra/server#assignmentTime">Time when the server was assigned</a>
       </li>
       <li>
          <a href="#username" title="http://w3id.org/devops-infra/server#username">username</a>
-      </li>
-      <li>
-         <a href="#value" title="http://w3id.org/devops-infra/server#value">value</a>
-      </li>
-      <li>
-         <a href="#vlan" title="http://w3id.org/devops-infra/server#vlan">vlan</a>
       </li>
       <li>
          <a href="#vmConfPath" title="http://w3id.org/devops-infra/server#vmConfPath">
@@ -1151,23 +991,6 @@ This may be converted in the future into a SKOS thesaurus or the property may be
          </dl>
       </div>
    </div>
-   <div class="entity" id="bandwidth">
-      <h3>Bandwidth of a network card<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#bandwidth</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#NetworkCard" title="http://w3id.org/devops-infra/server#NetworkCard">Network Card</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="cpu">
       <h3>CPU<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1185,62 +1008,6 @@ This may be converted in the future into a SKOS thesaurus or the property may be
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="createSrc">
-      <h3>create src<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#createSrc</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="createTime">
-      <h3>create time<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#createTime</p>
-      <div class="comment">
-         <span class="markdown">Time when the resource was created
-TODO: move to core ontology module</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="ecsId">
-      <h3>ecs id<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#ecsId</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
             </dd>
          </dl>
       </div>
@@ -1265,22 +1032,6 @@ TODO: move to core ontology module</span>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hardDisk">
-      <h3>hard disk<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#hardDisk</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
             </dd>
          </dl>
       </div>
@@ -1383,25 +1134,6 @@ TODO: move to core ontology module</span>
          </dl>
       </div>
    </div>
-   <div class="entity" id="isDeleted">
-      <h3>is deleted<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#isDeleted</p>
-      <div class="comment">
-         <span class="markdown">Property used to determine whether a (business) product offering, a service or a microservice are currently running or available, or they have been deleted from the corresponding catalogues and/or infrastructure</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="kernel">
       <h3>kernel<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1414,69 +1146,6 @@ TODO: move to core ontology module</span>
             <dt>has super-properties</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="key">
-      <h3>key<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#key</p>
-      <div class="comment">
-         <span class="markdown">Key of a TerraFormInfraEncryptedItem</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="lastModified">
-      <h3>last modified<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#lastModified</p>
-      <div class="comment">
-         <span class="markdown">Time of the last modification of any resource
-TODO: Move to devopscore</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="mac">
-      <h3>mac<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#mac</p>
-      <div class="comment">
-         <span class="markdown">MAC address of a network card or other network interface components</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#NetworkCard" title="http://w3id.org/devops-infra/server#NetworkCard">Network Card</a>
-               <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
@@ -1546,7 +1215,7 @@ TODO: Move to devopscore</span>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/server#memory</p>
       <div class="comment">
-         <span class="markdown">memory</span>
+         <span class="markdown">Amount of memory of a Resource (e.g., Host Flavor, Server, etc.), in GB</span>
       </div>
       <div class="description">
          <dl>
@@ -1556,7 +1225,7 @@ TODO: Move to devopscore</span>
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
             </dd>
          </dl>
       </div>
@@ -1612,6 +1281,44 @@ TODO: Move to devopscore</span>
          </dl>
       </div>
    </div>
+   <div class="entity" id="networkPerformance">
+      <h3>network performance<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/server#networkPerformance</p>
+      <div class="comment">
+         <span class="markdown">The type of performance of thye network associated to a Resource (e.g., Host Flavor, Server, etc.). This may be an enumerated value (defined in a SKOS Concept Scheme) or any string, as there is no consensus on the values to be used. Commonly used values are: low, moderate, high, etc.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="numberCPUs">
+      <h3>number of CPUs<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/server#numberCPUs</p>
+      <div class="comment">
+         <span class="markdown">The number of CPUs of a Resource (Host Flavor, Server, etc.)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#int">int</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="operatingSystem">
       <h3>operating system<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1640,53 +1347,41 @@ TODO: Move to devopscore</span>
          </dl>
       </div>
    </div>
-   <div class="entity" id="podInfo">
-      <h3>pod info<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="price">
+      <h3>price<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#podInfo</p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/server#price</p>
+      <div class="comment">
+         <span class="markdown">Price of a Host Flavor</span>
+      </div>
       <div class="description">
          <dl>
-            <dt>has super-properties</dt>
+            <dt>has domain</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="#HostFlavor" title="http://w3id.org/devops-infra/server#HostFlavor">Host Flavor</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="port">
-      <h3>port<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="processorArchitecture">
+      <h3>processor architecture<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#port</p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/server#processorArchitecture</p>
       <div class="comment">
-         <span class="markdown">Port where a microservice instance (or a network card) is running</span>
+         <span class="markdown">The type of processor architecture that is used by a Resource (e.g., a Host Flavor, a Server, etc.). It will be usually 32-bit or 64-bit.</span>
       </div>
       <div class="description">
          <dl>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="region">
-      <h3>region<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#region</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
             </dd>
          </dl>
       </div>
@@ -1715,32 +1410,27 @@ TODO: Move to devopscore</span>
          </dl>
       </div>
    </div>
-   <div class="entity" id="startTime">
-      <h3>start time<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="storageCapacity">
+      <h3>storage capacity<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#startTime</p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/server#storageCapacity</p>
       <div class="comment">
-         <span class="markdown">Start time of the resource
-TODO: move to core ontology module</span>
+         <span class="markdown">The amount of storage, in GB, of a Resource (e.g., Host Flavor, Server, etc.). As there may be several virtual or physical disks associated to it, it is represented as a string (e.g., 1x160, 2x40, etc.)</span>
       </div>
       <div class="description">
          <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
-            </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="serialNumber">
-      <h3>The serial number of the corresponding machine, as assigned by the corresponding vendor<sup class="type-dp" title="data property">dp</sup>
+      <h3>The serial number of the machine corresponding to a Physical Server, as assigned by the corresponding vendor<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
@@ -1750,7 +1440,8 @@ TODO: move to core ontology module</span>
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Server" title="http://w3id.org/devops-infra/server#Server">Server</a>
+               <a href="#PhysicalServer"
+                  title="http://w3id.org/devops-infra/server#PhysicalServer">Physical Server</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1760,34 +1451,13 @@ TODO: move to core ontology module</span>
          </dl>
       </div>
    </div>
-   <div class="entity" id="assignTime">
+   <div class="entity" id="assignmentTime">
       <h3>Time when the server was assigned<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#assignTime</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="updateTime">
-      <h3>Update time of the element
-TODO: move to core ontology module<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#updateTime</p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/server#assignmentTime</p>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -1821,49 +1491,6 @@ TODO: move to core ontology module<sup class="type-dp" title="data property">dp<
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="value">
-      <h3>value<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#value</p>
-      <div class="comment">
-         <span class="markdown">value for the corresponding key of the TerraForm Encrypted Value</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="vlan">
-      <h3>vlan<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/server#vlan</p>
-      <div class="comment">
-         <span class="markdown">VLAN associated to a network card</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#NetworkCard" title="http://w3id.org/devops-infra/server#NetworkCard">Network Card</a>
-               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -1903,6 +1530,12 @@ TODO: move to core ontology module<sup class="type-dp" title="data property">dp<
             <dd>
                <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#VirtualServer"
+                  title="http://w3id.org/devops-infra/server#VirtualServer">VirtualServer</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -1918,6 +1551,12 @@ TODO: move to core ontology module<sup class="type-dp" title="data property">dp<
             <dt>has super-properties</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#VirtualServer"
+                  title="http://w3id.org/devops-infra/server#VirtualServer">VirtualServer</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>

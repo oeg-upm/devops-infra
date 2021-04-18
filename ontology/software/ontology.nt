@@ -1,6 +1,6 @@
 <http://w3id.org/devops-infra/software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://w3id.org/devops-infra/software> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/devops-infra/software/0.0.2> .
-<http://w3id.org/devops-infra/software> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/devops-infra/core> .
+<http://w3id.org/devops-infra/software> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/devops-infra/software/1.0.0> .
+<http://w3id.org/devops-infra/software> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/devops-infra/core/1.0.0> .
 <http://w3id.org/devops-infra/software> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
 <http://w3id.org/devops-infra/software> <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
 <http://w3id.org/devops-infra/software> <http://purl.org/dc/elements/1.1/creator> "Hu Peng (Huawei Research Ireland)" .
@@ -10,16 +10,17 @@
 <http://w3id.org/devops-infra/software> <http://purl.org/dc/elements/1.1/creator> "Mingxue Wang (Huawei Research Ireland)" .
 <http://w3id.org/devops-infra/software> <http://purl.org/dc/elements/1.1/creator> "Nicholas Burrett (Huawei Research Ireland)" .
 <http://w3id.org/devops-infra/software> <http://purl.org/dc/elements/1.1/creator> "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<http://w3id.org/devops-infra/software> <http://purl.org/dc/elements/1.1/creator> "Puchao Zhang (Huawei Research Ireland)" .
 <http://w3id.org/devops-infra/software> <http://purl.org/dc/elements/1.1/creator> "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
 <http://w3id.org/devops-infra/software> <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/software" .
 <http://w3id.org/devops-infra/software> <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of the software infrastructure"@en .
 <http://w3id.org/devops-infra/software> <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/software.owl" .
-<http://w3id.org/devops-infra/software> <http://purl.org/dc/terms/issued> "2021-02-15" .
+<http://w3id.org/devops-infra/software> <http://purl.org/dc/terms/issued> "2021-04-15" .
 <http://w3id.org/devops-infra/software> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" .
 <http://w3id.org/devops-infra/software> <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopssw" .
 <http://w3id.org/devops-infra/software> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/software#" .
 <http://w3id.org/devops-infra/software> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" .
-<http://w3id.org/devops-infra/software> <http://www.w3.org/2002/07/owl#versionInfo> "Version after creating an initial set of mappings"@en .
+<http://w3id.org/devops-infra/software> <http://www.w3.org/2002/07/owl#versionInfo> "First official release"@en .
 # 
 # 
 # #################################################################
@@ -256,71 +257,67 @@ _:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 # http://w3id.org/devops-infra/software#ServiceModule
 <http://w3id.org/devops-infra/software#ServiceModule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/devops-infra/software#ServiceModule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/software#Software> .
+<http://w3id.org/devops-infra/software#ServiceModule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/software#hasVersion> .
+_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/software#ServiceModuleVersion> .
 <http://w3id.org/devops-infra/software#ServiceModule> <http://www.w3.org/2000/01/rdf-schema#comment> "A Service Module, which is used by a Product (including Services, MicroServices, etc.) offered in the context of the  DevOps infrastructure"@en .
 <http://w3id.org/devops-infra/software#ServiceModule> <http://www.w3.org/2000/01/rdf-schema#label> "Service Module"@en .
 # 
 # http://w3id.org/devops-infra/software#ServiceModuleVersion
 <http://w3id.org/devops-infra/software#ServiceModuleVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/devops-infra/software#ServiceModuleVersion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/software#Software> .
-<http://w3id.org/devops-infra/software#ServiceModuleVersion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/software#versionOfServiceModule> .
-_:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/devops-infra/software#ServiceModule> .
+<http://w3id.org/devops-infra/software#ServiceModuleVersion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/software#versionOfServiceModule> .
+_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/devops-infra/software#ServiceModule> .
 <http://w3id.org/devops-infra/software#ServiceModuleVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "Version of a Service Module, which is used by a Product Version offered in the context of the DevOps infrastructure"@en .
 <http://w3id.org/devops-infra/software#ServiceModuleVersion> <http://www.w3.org/2000/01/rdf-schema#label> "Service Module Version"@en .
 # 
 # http://w3id.org/devops-infra/software#Software
 <http://w3id.org/devops-infra/software#Software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/devops-infra/software#Software> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
-<http://w3id.org/devops-infra/software#Software> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/software#inSoftwareDirectory> .
-_:genid18 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/software#SoftwareDirectory> .
 <http://w3id.org/devops-infra/software#Software> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/software#installedInServer> .
-_:genid19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/server#Server> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/software#inSoftwareDirectory> .
+_:genid19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/software#SoftwareDirectory> .
 <http://w3id.org/devops-infra/software#Software> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/software#releasedAsFile> .
-_:genid20 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/software#File> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/software#installedInServer> .
+_:genid20 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/server#Server> .
 <http://w3id.org/devops-infra/software#Software> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/software#softwareType> .
-_:genid21 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid22 .
-_:genid22 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid25 .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid24 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/software-type> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/devops-infra/software#Software> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/core#createTime> .
-_:genid26 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/software#releasedAsFile> .
+_:genid21 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/software#File> .
+<http://w3id.org/devops-infra/software#Software> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/software#softwareType> .
+_:genid22 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid25 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/software-type> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/devops-infra/software#Software> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
 _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/core#version> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/software#installPath> .
 _:genid27 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-<http://w3id.org/devops-infra/software#Software> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/software#installPath> .
-_:genid28 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 <http://w3id.org/devops-infra/software#Software> <http://www.w3.org/2000/01/rdf-schema#comment> "This class refers to any type of Software that is handled in the context of a DevOps infrastructure\nTODO: it would be good to determine a good set of attributes that would characterise software."@en .
 <http://w3id.org/devops-infra/software#Software> <http://www.w3.org/2000/01/rdf-schema#label> "Software"@en .
 # 
 # http://w3id.org/devops-infra/software#SoftwareDirectory
 <http://w3id.org/devops-infra/software#SoftwareDirectory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/devops-infra/software#SoftwareDirectory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/devops-infra/core#Resource> .
-<http://w3id.org/devops-infra/software#SoftwareDirectory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/software#parentDirectory> .
-_:genid29 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/software#SoftwareDirectory> .
+<http://w3id.org/devops-infra/software#SoftwareDirectory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/software#parentDirectory> .
+_:genid28 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/software#SoftwareDirectory> .
 <http://w3id.org/devops-infra/software#SoftwareDirectory> <http://www.w3.org/2000/01/rdf-schema#comment> "This class refers to a Software Directory where files, service modules, etc., are located in the context of a DevOps infrastructure"@en .
 <http://w3id.org/devops-infra/software#SoftwareDirectory> <http://www.w3.org/2000/01/rdf-schema#label> "Software Directory"@en .
 # 
