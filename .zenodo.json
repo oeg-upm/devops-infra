@@ -1,0 +1,66 @@
+{
+    "description": "<p>First official release of this Ontology Network for the representation of a DevOps infrastructure. It consists of 10 interrelated ontologies, which represent different aspects of such an infrastructure.</p>\n<p>This release also includes a set of 16 SKOS concept schemes, with their corresponding SKOS concepts, and several HTML files for the publication of the catalogue of ontologies and thesauri.</p>", 
+    "license": "CC-BY-4.0", 
+    "title": "oeg-upm/devops-infra: First official version", 
+    "version": "1.0.0", 
+    "upload_type": "software", 
+    "publication_date": "2021-04-19", 
+    "creators": [
+        {
+            "affiliation": "@oeg-upm", 
+            "name": "Oscar Corcho"
+        },
+        {
+            "affiliation": "@oeg-upm", 
+            "name": "Oscar Corcho"
+        },
+        {
+            "affiliation": "@oeg-upm", 
+            "name": "Oscar Corcho"
+        },
+        {
+            "affiliation": "@oeg-upm", 
+            "name": "David Chaves-Fraga"
+        },
+        {
+            "affiliation": "@oeg-upm", 
+            "name": "Jhon Toledo"
+        },
+        {
+            "affiliation": "@oeg-upm", 
+            "name": "Julián Arenas-Guerrero"
+        },
+        {
+            "affiliation": "@oeg-upm", 
+            "name": "Carlos Badenes-Olmedo"
+        },
+        {
+            "name": "Mingxue Wang"
+        },
+        {
+            "name": "Hu Peng"
+        },
+        {
+            "name": "Nicholas Burrett"
+        },
+        {
+            "name": "José Mora"
+        },
+        {
+            "name": "Puchao Zhang"
+        }
+    ], 
+    "access_right": "open", 
+    "related_identifiers": [
+        {
+            "scheme": "url", 
+            "identifier": "https://github.com/oeg-upm/devops-infra/tree/1.0.0", 
+            "relation": "isSupplementTo"
+        }, 
+        {
+            "scheme": "doi", 
+            "identifier": "10.5281/zenodo.4701263", 
+            "relation": "isVersionOf"
+        }
+    ]
+}
