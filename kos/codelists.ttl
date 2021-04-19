@@ -5,409 +5,409 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
 
-<https://w3id.org/devops-infra/kos/status> a skos:ConceptScheme;
+<http://w3id.org/devops-infra/kos/status> a skos:ConceptScheme;
   skos:definition "It identifies the status of any Configuration Item";
-  skos:hasTopConcept <https://w3id.org/devops-infra/kos/status/active>, <https://w3id.org/devops-infra/kos/status/inactive>;
+  skos:hasTopConcept <http://w3id.org/devops-infra/kos/status/active>, <http://w3id.org/devops-infra/kos/status/inactive>;
   skos:notation "status" .
 
-<https://w3id.org/devops-infra/kos/status/active> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/status>;
+<http://w3id.org/devops-infra/kos/status/active> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/status>;
   skos:notation "active";
   skos:prefLabel "active" .
 
-<https://w3id.org/devops-infra/kos/status/inactive> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/status>;
+<http://w3id.org/devops-infra/kos/status/inactive> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/status>;
   skos:notation "inactive";
   skos:prefLabel "inactive" .
 
-<https://w3id.org/devops-infra/kos/scope-type> a skos:ConceptScheme;
+<http://w3id.org/devops-infra/kos/scope-type> a skos:ConceptScheme;
   skos:definition "It identifies the types of Scopes";
-  skos:hasTopConcept <https://w3id.org/devops-infra/kos/scope-type/area>, <https://w3id.org/devops-infra/kos/scope-type/biz>,
-    <https://w3id.org/devops-infra/kos/scope-type/common>, <https://w3id.org/devops-infra/kos/scope-type/resource>;
+  skos:hasTopConcept <http://w3id.org/devops-infra/kos/scope-type/area>, <http://w3id.org/devops-infra/kos/scope-type/biz>,
+    <http://w3id.org/devops-infra/kos/scope-type/common>, <http://w3id.org/devops-infra/kos/scope-type/resource>;
   skos:notation "scope-type" .
 
-<https://w3id.org/devops-infra/kos/scope-type/area> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/scope-type>;
+<http://w3id.org/devops-infra/kos/scope-type/area> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/scope-type>;
   skos:notation "area";
   skos:prefLabel "area" .
 
-<https://w3id.org/devops-infra/kos/scope-type/biz> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/scope-type>;
+<http://w3id.org/devops-infra/kos/scope-type/biz> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/scope-type>;
   skos:notation "biz";
   skos:prefLabel "biz" .
 
-<https://w3id.org/devops-infra/kos/scope-type/resource> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/scope-type>;
+<http://w3id.org/devops-infra/kos/scope-type/resource> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/scope-type>;
   skos:notation "resource";
   skos:prefLabel "resource" .
 
-<https://w3id.org/devops-infra/kos/scope-type/common> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/scope-type>;
+<http://w3id.org/devops-infra/kos/scope-type/common> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/scope-type>;
   skos:notation "common";
   skos:prefLabel "common" .
 
-<https://w3id.org/devops-infra/kos/tenant-type/hws> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/tenant-type>;
+<http://w3id.org/devops-infra/kos/tenant-type/hws> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/tenant-type>;
   skos:notation "hws";
   skos:prefLabel "HWS" .
 
-<https://w3id.org/devops-infra/kos/tenant-type> a skos:ConceptScheme;
+<http://w3id.org/devops-infra/kos/tenant-type> a skos:ConceptScheme;
   skos:definition "It identifies the types of Tenants";
-  skos:hasTopConcept <https://w3id.org/devops-infra/kos/tenant-type/aws>, <https://w3id.org/devops-infra/kos/tenant-type/hws>;
+  skos:hasTopConcept <http://w3id.org/devops-infra/kos/tenant-type/aws>, <http://w3id.org/devops-infra/kos/tenant-type/hws>;
   skos:notation "tenant-type" .
 
-<https://w3id.org/devops-infra/kos/tenant-type/aws> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/tenant-type>;
+<http://w3id.org/devops-infra/kos/tenant-type/aws> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/tenant-type>;
   skos:notation "aws";
   skos:prefLabel "AWS" .
 
-<https://w3id.org/devops-infra/kos/cluster-type> a skos:ConceptScheme;
+<http://w3id.org/devops-infra/kos/cluster-type> a skos:ConceptScheme;
   skos:definition "It identifies types of service clusters";
-  skos:hasTopConcept <https://w3id.org/devops-infra/kos/cluster-type/gray>, <https://w3id.org/devops-infra/kos/cluster-type/production>,
-    <https://w3id.org/devops-infra/kos/cluster-type/redundancy>;
+  skos:hasTopConcept <http://w3id.org/devops-infra/kos/cluster-type/gray>, <http://w3id.org/devops-infra/kos/cluster-type/production>,
+    <http://w3id.org/devops-infra/kos/cluster-type/redundancy>;
   skos:notation "cluster-type" .
 
-<https://w3id.org/devops-infra/kos/cluster-type/gray> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/cluster-type>;
+<http://w3id.org/devops-infra/kos/cluster-type/gray> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/cluster-type>;
   skos:notation "gray";
   skos:prefLabel "gray" .
 
-<https://w3id.org/devops-infra/kos/cluster-type/redundancy> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/cluster-type>;
+<http://w3id.org/devops-infra/kos/cluster-type/redundancy> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/cluster-type>;
   skos:notation "redundancy";
   skos:prefLabel "redundancy" .
 
-<https://w3id.org/devops-infra/kos/cluster-type/production> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/cluster-type>;
+<http://w3id.org/devops-infra/kos/cluster-type/production> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/cluster-type>;
   skos:notation "production";
   skos:prefLabel "production" .
 
-<https://w3id.org/devops-infra/kos/service-type> a skos:ConceptScheme;
+<http://w3id.org/devops-infra/kos/service-type> a skos:ConceptScheme;
   skos:definition "It identifies the types of services (or microservices) that can be offered";
-  skos:hasTopConcept <https://w3id.org/devops-infra/kos/service-type/common>, <https://w3id.org/devops-infra/kos/service-type/hws>,
-    <https://w3id.org/devops-infra/kos/service-type/middleware>;
+  skos:hasTopConcept <http://w3id.org/devops-infra/kos/service-type/common>, <http://w3id.org/devops-infra/kos/service-type/hws>,
+    <http://w3id.org/devops-infra/kos/service-type/middleware>;
   skos:notation "service-type" .
 
-<https://w3id.org/devops-infra/kos/service-type/common> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/service-type>;
+<http://w3id.org/devops-infra/kos/service-type/common> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/service-type>;
   skos:notation "common";
   skos:prefLabel "common" .
 
-<https://w3id.org/devops-infra/kos/service-type/middleware> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/service-type>;
+<http://w3id.org/devops-infra/kos/service-type/middleware> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/service-type>;
   skos:notation "middleware";
   skos:prefLabel "middleware" .
 
-<https://w3id.org/devops-infra/kos/service-type/hws> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/service-type>;
+<http://w3id.org/devops-infra/kos/service-type/hws> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/service-type>;
   skos:notation "hws";
   skos:prefLabel "HWS" .
 
-<https://w3id.org/devops-infra/kos/data-center-type> a skos:ConceptScheme;
+<http://w3id.org/devops-infra/kos/data-center-type> a skos:ConceptScheme;
   skos:definition "Types of Data Centers";
-  skos:hasTopConcept <https://w3id.org/devops-infra/kos/data-center-type/iaas>, <https://w3id.org/devops-infra/kos/data-center-type/idc>;
+  skos:hasTopConcept <http://w3id.org/devops-infra/kos/data-center-type/iaas>, <http://w3id.org/devops-infra/kos/data-center-type/idc>;
   skos:notation "data-center-type" .
 
-<https://w3id.org/devops-infra/kos/data-center-type/idc> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/data-center-type>;
+<http://w3id.org/devops-infra/kos/data-center-type/idc> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/data-center-type>;
   skos:notation "idc";
   skos:prefLabel "IDC" .
 
-<https://w3id.org/devops-infra/kos/data-center-type/iaas> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/data-center-type>;
+<http://w3id.org/devops-infra/kos/data-center-type/iaas> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/data-center-type>;
   skos:notation "iaas";
   skos:prefLabel "IAAS" .
 
-<https://w3id.org/devops-infra/kos/connection-type/transmission> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/connection-type>;
+<http://w3id.org/devops-infra/kos/connection-type/transmission> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/connection-type>;
   skos:notation "transmission";
   skos:prefLabel "Transmission" .
 
-<https://w3id.org/devops-infra/kos/connection-type> a skos:ConceptScheme;
+<http://w3id.org/devops-infra/kos/connection-type> a skos:ConceptScheme;
   skos:definition "Types of Data Center Connections";
-  skos:hasTopConcept <https://w3id.org/devops-infra/kos/connection-type/ipsecvpn>, <https://w3id.org/devops-infra/kos/connection-type/mstp>,
-    <https://w3id.org/devops-infra/kos/connection-type/transmission>;
+  skos:hasTopConcept <http://w3id.org/devops-infra/kos/connection-type/ipsecvpn>, <http://w3id.org/devops-infra/kos/connection-type/mstp>,
+    <http://w3id.org/devops-infra/kos/connection-type/transmission>;
   skos:notation "connection-type" .
 
-<https://w3id.org/devops-infra/kos/connection-type/mstp> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/connection-type>;
+<http://w3id.org/devops-infra/kos/connection-type/mstp> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/connection-type>;
   skos:notation "mstp";
   skos:prefLabel "MSTP" .
 
-<https://w3id.org/devops-infra/kos/connection-type/ipsecvpn> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/connection-type>;
+<http://w3id.org/devops-infra/kos/connection-type/ipsecvpn> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/connection-type>;
   skos:notation "ipsecvpn";
   skos:prefLabel "IPSecVPN" .
 
-<https://w3id.org/devops-infra/kos/creation-type> a skos:ConceptScheme;
+<http://w3id.org/devops-infra/kos/creation-type> a skos:ConceptScheme;
   skos:definition "How a Virtual Server has been created";
-  skos:hasTopConcept <https://w3id.org/devops-infra/kos/creation-type/batch>, <https://w3id.org/devops-infra/kos/creation-type/single>;
+  skos:hasTopConcept <http://w3id.org/devops-infra/kos/creation-type/batch>, <http://w3id.org/devops-infra/kos/creation-type/single>;
   skos:notation "creation-type" .
 
-<https://w3id.org/devops-infra/kos/creation-type/batch> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/creation-type>;
+<http://w3id.org/devops-infra/kos/creation-type/batch> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/creation-type>;
   skos:notation "batch";
   skos:prefLabel "batch" .
 
-<https://w3id.org/devops-infra/kos/creation-type/single> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/creation-type>;
+<http://w3id.org/devops-infra/kos/creation-type/single> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/creation-type>;
   skos:notation "single";
   skos:prefLabel "single" .
 
-<https://w3id.org/devops-infra/kos/assignment-status> a skos:ConceptScheme;
+<http://w3id.org/devops-infra/kos/assignment-status> a skos:ConceptScheme;
   skos:definition "It identifies the status of assignment of any Server";
-  skos:hasTopConcept <https://w3id.org/devops-infra/kos/assignment-status/apply-recovery>,
-    <https://w3id.org/devops-infra/kos/assignment-status/broken>, <https://w3id.org/devops-infra/kos/assignment-status/inuse>,
-    <https://w3id.org/devops-infra/kos/assignment-status/not-ready-assign>, <https://w3id.org/devops-infra/kos/assignment-status/ready-for-recovery>,
-    <https://w3id.org/devops-infra/kos/assignment-status/recovery>, <https://w3id.org/devops-infra/kos/assignment-status/to-offline>,
-    <https://w3id.org/devops-infra/kos/assignment-status/unuse>;
+  skos:hasTopConcept <http://w3id.org/devops-infra/kos/assignment-status/apply-recovery>,
+    <http://w3id.org/devops-infra/kos/assignment-status/broken>, <http://w3id.org/devops-infra/kos/assignment-status/inuse>,
+    <http://w3id.org/devops-infra/kos/assignment-status/not-ready-assign>, <http://w3id.org/devops-infra/kos/assignment-status/ready-for-recovery>,
+    <http://w3id.org/devops-infra/kos/assignment-status/recovery>, <http://w3id.org/devops-infra/kos/assignment-status/to-offline>,
+    <http://w3id.org/devops-infra/kos/assignment-status/unuse>;
   skos:notation "assignment-status" .
 
-<https://w3id.org/devops-infra/kos/assignment-status/unuse> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/assignment-status>;
+<http://w3id.org/devops-infra/kos/assignment-status/unuse> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/assignment-status>;
   skos:notation "unuse";
   skos:prefLabel "unuse" .
 
-<https://w3id.org/devops-infra/kos/assignment-status/inuse> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/assignment-status>;
+<http://w3id.org/devops-infra/kos/assignment-status/inuse> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/assignment-status>;
   skos:notation "inuse";
   skos:prefLabel "inuse" .
 
-<https://w3id.org/devops-infra/kos/assignment-status/apply-recovery> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/assignment-status>;
+<http://w3id.org/devops-infra/kos/assignment-status/apply-recovery> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/assignment-status>;
   skos:notation "apply-recovery";
   skos:prefLabel "apply recovery" .
 
-<https://w3id.org/devops-infra/kos/assignment-status/ready-for-recovery> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/assignment-status>;
+<http://w3id.org/devops-infra/kos/assignment-status/ready-for-recovery> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/assignment-status>;
   skos:notation "ready-for-recovery";
   skos:prefLabel "ready for recovery" .
 
-<https://w3id.org/devops-infra/kos/assignment-status/recovery> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/assignment-status>;
+<http://w3id.org/devops-infra/kos/assignment-status/recovery> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/assignment-status>;
   skos:notation "recovery";
   skos:prefLabel "recovery" .
 
-<https://w3id.org/devops-infra/kos/assignment-status/not-ready-assign> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/assignment-status>;
+<http://w3id.org/devops-infra/kos/assignment-status/not-ready-assign> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/assignment-status>;
   skos:notation "not-ready-assign";
   skos:prefLabel "not ready assign" .
 
-<https://w3id.org/devops-infra/kos/assignment-status/broken> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/assignment-status>;
+<http://w3id.org/devops-infra/kos/assignment-status/broken> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/assignment-status>;
   skos:notation "broken";
   skos:prefLabel "broken" .
 
-<https://w3id.org/devops-infra/kos/assignment-status/to-offline> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/assignment-status>;
+<http://w3id.org/devops-infra/kos/assignment-status/to-offline> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/assignment-status>;
   skos:notation "to-offline";
   skos:prefLabel "to offline" .
 
-<https://w3id.org/devops-infra/kos/charge-mode> a skos:ConceptScheme;
+<http://w3id.org/devops-infra/kos/charge-mode> a skos:ConceptScheme;
   skos:definition "It identifies how a Server is being charged to customers";
-  skos:hasTopConcept <https://w3id.org/devops-infra/kos/charge-mode/postpaid>, <https://w3id.org/devops-infra/kos/charge-mode/prepaid>;
+  skos:hasTopConcept <http://w3id.org/devops-infra/kos/charge-mode/postpaid>, <http://w3id.org/devops-infra/kos/charge-mode/prepaid>;
   skos:notation "charge-mode" .
 
-<https://w3id.org/devops-infra/kos/charge-mode/prepaid> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/charge-mode>;
+<http://w3id.org/devops-infra/kos/charge-mode/prepaid> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/charge-mode>;
   skos:notation "prepaid";
   skos:prefLabel "prePaid" .
 
-<https://w3id.org/devops-infra/kos/charge-mode/postpaid> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/charge-mode>;
+<http://w3id.org/devops-infra/kos/charge-mode/postpaid> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/charge-mode>;
   skos:notation "postpaid";
   skos:prefLabel "postPaid" .
 
-<https://w3id.org/devops-infra/kos/physical-server-status> a skos:ConceptScheme;
+<http://w3id.org/devops-infra/kos/physical-server-status> a skos:ConceptScheme;
   skos:definition "It identifies the status of a Physical Server";
-  skos:hasTopConcept <https://w3id.org/devops-infra/kos/physical-server-status/active>,
-    <https://w3id.org/devops-infra/kos/physical-server-status/build>, <https://w3id.org/devops-infra/kos/physical-server-status/error>,
-    <https://w3id.org/devops-infra/kos/physical-server-status/hard-reboot>, <https://w3id.org/devops-infra/kos/physical-server-status/reboot>,
-    <https://w3id.org/devops-infra/kos/physical-server-status/shutoff>, <https://w3id.org/devops-infra/kos/physical-server-status/unknown>;
+  skos:hasTopConcept <http://w3id.org/devops-infra/kos/physical-server-status/active>,
+    <http://w3id.org/devops-infra/kos/physical-server-status/build>, <http://w3id.org/devops-infra/kos/physical-server-status/error>,
+    <http://w3id.org/devops-infra/kos/physical-server-status/hard-reboot>, <http://w3id.org/devops-infra/kos/physical-server-status/reboot>,
+    <http://w3id.org/devops-infra/kos/physical-server-status/shutoff>, <http://w3id.org/devops-infra/kos/physical-server-status/unknown>;
   skos:notation "physical-server-status" .
 
-<https://w3id.org/devops-infra/kos/physical-server-status/active> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/physical-server-status>;
+<http://w3id.org/devops-infra/kos/physical-server-status/active> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/physical-server-status>;
   skos:notation "active";
   skos:prefLabel "active" .
 
-<https://w3id.org/devops-infra/kos/physical-server-status/build> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/physical-server-status>;
+<http://w3id.org/devops-infra/kos/physical-server-status/build> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/physical-server-status>;
   skos:notation "build";
   skos:prefLabel "build" .
 
-<https://w3id.org/devops-infra/kos/physical-server-status/error> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/physical-server-status>;
+<http://w3id.org/devops-infra/kos/physical-server-status/error> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/physical-server-status>;
   skos:notation "error";
   skos:prefLabel "error" .
 
-<https://w3id.org/devops-infra/kos/physical-server-status/shutoff> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/physical-server-status>;
+<http://w3id.org/devops-infra/kos/physical-server-status/shutoff> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/physical-server-status>;
   skos:notation "shutoff";
   skos:prefLabel "shutoff" .
 
-<https://w3id.org/devops-infra/kos/physical-server-status/hard-reboot> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/physical-server-status>;
+<http://w3id.org/devops-infra/kos/physical-server-status/hard-reboot> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/physical-server-status>;
   skos:notation "hard-reboot";
   skos:prefLabel "hard reboot" .
 
-<https://w3id.org/devops-infra/kos/physical-server-status/reboot> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/physical-server-status>;
+<http://w3id.org/devops-infra/kos/physical-server-status/reboot> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/physical-server-status>;
   skos:notation "reboot";
   skos:prefLabel "reboot" .
 
-<https://w3id.org/devops-infra/kos/physical-server-status/unknown> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/physical-server-status>;
+<http://w3id.org/devops-infra/kos/physical-server-status/unknown> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/physical-server-status>;
   skos:notation "unknown";
   skos:prefLabel "unknown" .
 
-<https://w3id.org/devops-infra/kos/virtual-server-status> a skos:ConceptScheme;
+<http://w3id.org/devops-infra/kos/virtual-server-status> a skos:ConceptScheme;
   skos:definition "It identifies the status of a Virtual Server";
-  skos:hasTopConcept <https://w3id.org/devops-infra/kos/virtual-server-status/active>,
-    <https://w3id.org/devops-infra/kos/virtual-server-status/build>, <https://w3id.org/devops-infra/kos/virtual-server-status/error>,
-    <https://w3id.org/devops-infra/kos/virtual-server-status/shutoff>;
+  skos:hasTopConcept <http://w3id.org/devops-infra/kos/virtual-server-status/active>,
+    <http://w3id.org/devops-infra/kos/virtual-server-status/build>, <http://w3id.org/devops-infra/kos/virtual-server-status/error>,
+    <http://w3id.org/devops-infra/kos/virtual-server-status/shutoff>;
   skos:notation "virtual-server-status" .
 
-<https://w3id.org/devops-infra/kos/virtual-server-status/active> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/virtual-server-status>;
+<http://w3id.org/devops-infra/kos/virtual-server-status/active> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/virtual-server-status>;
   skos:notation "active";
   skos:prefLabel "active" .
 
-<https://w3id.org/devops-infra/kos/virtual-server-status/build> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/virtual-server-status>;
+<http://w3id.org/devops-infra/kos/virtual-server-status/build> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/virtual-server-status>;
   skos:notation "build";
   skos:prefLabel "build" .
 
-<https://w3id.org/devops-infra/kos/virtual-server-status/error> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/virtual-server-status>;
+<http://w3id.org/devops-infra/kos/virtual-server-status/error> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/virtual-server-status>;
   skos:notation "error";
   skos:prefLabel "error" .
 
-<https://w3id.org/devops-infra/kos/virtual-server-status/shutoff> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/virtual-server-status>;
+<http://w3id.org/devops-infra/kos/virtual-server-status/shutoff> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/virtual-server-status>;
   skos:notation "shutoff";
   skos:prefLabel "shutoff" .
 
-<https://w3id.org/devops-infra/kos/software-type> a skos:ConceptScheme;
+<http://w3id.org/devops-infra/kos/software-type> a skos:ConceptScheme;
   skos:definition "It identifies types of software";
-  skos:hasTopConcept <https://w3id.org/devops-infra/kos/software-type/application>,
-    <https://w3id.org/devops-infra/kos/software-type/database>, <https://w3id.org/devops-infra/kos/software-type/other>,
-    <https://w3id.org/devops-infra/kos/software-type/webcontainer>;
+  skos:hasTopConcept <http://w3id.org/devops-infra/kos/software-type/application>,
+    <http://w3id.org/devops-infra/kos/software-type/database>, <http://w3id.org/devops-infra/kos/software-type/other>,
+    <http://w3id.org/devops-infra/kos/software-type/webcontainer>;
   skos:notation "software-type" .
 
-<https://w3id.org/devops-infra/kos/software-type/database> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/software-type>;
+<http://w3id.org/devops-infra/kos/software-type/database> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/software-type>;
   skos:notation "database";
   skos:prefLabel "database" .
 
-<https://w3id.org/devops-infra/kos/software-type/webcontainer> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/software-type>;
+<http://w3id.org/devops-infra/kos/software-type/webcontainer> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/software-type>;
   skos:notation "webcontainer";
   skos:prefLabel "webcontainer" .
 
-<https://w3id.org/devops-infra/kos/software-type/application> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/software-type>;
+<http://w3id.org/devops-infra/kos/software-type/application> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/software-type>;
   skos:notation "application";
   skos:prefLabel "application" .
 
-<https://w3id.org/devops-infra/kos/software-type/other> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/software-type>;
+<http://w3id.org/devops-infra/kos/software-type/other> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/software-type>;
   skos:notation "other";
   skos:prefLabel "other" .
 
-<https://w3id.org/devops-infra/kos/file-type> a skos:ConceptScheme;
+<http://w3id.org/devops-infra/kos/file-type> a skos:ConceptScheme;
   skos:definition "It identifies types of scripts";
-  skos:hasTopConcept <https://w3id.org/devops-infra/kos/file-type/playbook>, <https://w3id.org/devops-infra/kos/file-type/python>,
-    <https://w3id.org/devops-infra/kos/file-type/shell>;
+  skos:hasTopConcept <http://w3id.org/devops-infra/kos/file-type/playbook>, <http://w3id.org/devops-infra/kos/file-type/python>,
+    <http://w3id.org/devops-infra/kos/file-type/shell>;
   skos:notation "file-type" .
 
-<https://w3id.org/devops-infra/kos/file-type/shell> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/file-type>;
+<http://w3id.org/devops-infra/kos/file-type/shell> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/file-type>;
   skos:notation "shell";
   skos:prefLabel "shell" .
 
-<https://w3id.org/devops-infra/kos/file-type/python> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/file-type>;
+<http://w3id.org/devops-infra/kos/file-type/python> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/file-type>;
   skos:notation "python";
   skos:prefLabel "python" .
 
-<https://w3id.org/devops-infra/kos/file-type/playbook> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/file-type>;
+<http://w3id.org/devops-infra/kos/file-type/playbook> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/file-type>;
   skos:notation "playbook";
   skos:prefLabel "playbook" .
 
-<https://w3id.org/devops-infra/kos/db-type> a skos:ConceptScheme;
+<http://w3id.org/devops-infra/kos/db-type> a skos:ConceptScheme;
   skos:definition "It identifies the type of database";
-  skos:hasTopConcept <https://w3id.org/devops-infra/kos/db-type/master>, <https://w3id.org/devops-infra/kos/db-type/read>,
-    <https://w3id.org/devops-infra/kos/db-type/single>, <https://w3id.org/devops-infra/kos/db-type/drmaster>;
+  skos:hasTopConcept <http://w3id.org/devops-infra/kos/db-type/master>, <http://w3id.org/devops-infra/kos/db-type/read>,
+    <http://w3id.org/devops-infra/kos/db-type/single>, <http://w3id.org/devops-infra/kos/db-type/drmaster>;
   a skos:ConceptScheme;
-  skos:hasTopConcept <https://w3id.org/devops-infra/kos/db-type/slave>;
+  skos:hasTopConcept <http://w3id.org/devops-infra/kos/db-type/slave>;
   skos:notation "db-type" .
 
-<https://w3id.org/devops-infra/kos/db-type/master> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/db-type>;
+<http://w3id.org/devops-infra/kos/db-type/master> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/db-type>;
   skos:notation "master";
   skos:prefLabel "master" .
 
-<https://w3id.org/devops-infra/kos/db-type/slave> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/db-type>;
+<http://w3id.org/devops-infra/kos/db-type/slave> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/db-type>;
   skos:notation "slave";
   skos:prefLabel "slave" .
 
-<https://w3id.org/devops-infra/kos/db-type/read> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/db-type>;
+<http://w3id.org/devops-infra/kos/db-type/read> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/db-type>;
   skos:notation "read";
   skos:prefLabel "read" .
 
-<https://w3id.org/devops-infra/kos/db-type/single> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/db-type>;
+<http://w3id.org/devops-infra/kos/db-type/single> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/db-type>;
   skos:notation "single";
   skos:prefLabel "single" .
 
-<https://w3id.org/devops-infra/kos/db-type/drmaster> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/db-type>;
+<http://w3id.org/devops-infra/kos/db-type/drmaster> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/db-type>;
   skos:notation "drmaster";
   skos:prefLabel "DRMaster" .
 
-<https://w3id.org/devops-infra/kos/db-type/drslave> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/db-type>;
+<http://w3id.org/devops-infra/kos/db-type/drslave> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/db-type>;
   skos:notation "drslave";
   skos:prefLabel "DRSlave" .
 
-<https://w3id.org/devops-infra/kos/db-type> skos:hasTopConcept <https://w3id.org/devops-infra/kos/db-type/drslave> .
+<http://w3id.org/devops-infra/kos/db-type> skos:hasTopConcept <http://w3id.org/devops-infra/kos/db-type/drslave> .
 
-<https://w3id.org/devops-infra/kos/db-monitor-type> a skos:ConceptScheme, skos:ConceptScheme;
+<http://w3id.org/devops-infra/kos/db-monitor-type> a skos:ConceptScheme, skos:ConceptScheme;
   skos:definition "It identifies the type of database monitor";
-  skos:hasTopConcept <https://w3id.org/devops-infra/kos/db-monitor-type/master>, <https://w3id.org/devops-infra/kos/db-monitor-type/master-and-slave>,
-    <https://w3id.org/devops-infra/kos/db-monitor-type/slave>;
+  skos:hasTopConcept <http://w3id.org/devops-infra/kos/db-monitor-type/master>, <http://w3id.org/devops-infra/kos/db-monitor-type/master-and-slave>,
+    <http://w3id.org/devops-infra/kos/db-monitor-type/slave>;
   skos:notation "db-monitor-type";
-  skos:hasTopConcept <https://w3id.org/devops-infra/kos/db-monitor-type/read>;
+  skos:hasTopConcept <http://w3id.org/devops-infra/kos/db-monitor-type/read>;
   skos:notation "db-monitor-type";
   a skos:ConceptScheme .
 
-<https://w3id.org/devops-infra/kos/db-monitor-type/master> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/db-monitor-type>;
+<http://w3id.org/devops-infra/kos/db-monitor-type/master> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/db-monitor-type>;
   skos:notation "master";
   skos:prefLabel "master" .
 
-<https://w3id.org/devops-infra/kos/db-monitor-type/slave> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/db-monitor-type>;
+<http://w3id.org/devops-infra/kos/db-monitor-type/slave> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/db-monitor-type>;
   skos:notation "slave";
   skos:prefLabel "slave" .
 
-<https://w3id.org/devops-infra/kos/db-monitor-type/master-and-slave> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/db-monitor-type>;
+<http://w3id.org/devops-infra/kos/db-monitor-type/master-and-slave> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/db-monitor-type>;
   skos:notation "master-and-slave";
   skos:prefLabel "master and slave" .
 
-<https://w3id.org/devops-infra/kos/db-monitor-type/read> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/db-monitor-type>;
+<http://w3id.org/devops-infra/kos/db-monitor-type/read> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/db-monitor-type>;
   skos:notation "read";
   skos:prefLabel "read" .
 
-<https://w3id.org/devops-infra/kos/db-monitor-type/single> a skos:Concept;
-  skos:inScheme <https://w3id.org/devops-infra/kos/db-monitor-type>;
+<http://w3id.org/devops-infra/kos/db-monitor-type/single> a skos:Concept;
+  skos:inScheme <http://w3id.org/devops-infra/kos/db-monitor-type>;
   skos:notation "single";
   skos:prefLabel "single" .
 
-<https://w3id.org/devops-infra/kos/db-monitor-type> skos:hasTopConcept <https://w3id.org/devops-infra/kos/db-monitor-type/single> .
+<http://w3id.org/devops-infra/kos/db-monitor-type> skos:hasTopConcept <http://w3id.org/devops-infra/kos/db-monitor-type/single> .
