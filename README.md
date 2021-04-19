@@ -1,6 +1,6 @@
 # DevOps Infrastructure Ontology Network
 
-The DevOps infrastructure ontology network describes the domain of DevOps infrastructure. It is published at https://w3id.org/devops-infra
+The DevOps infrastructure ontology network describes the domain of DevOps infrastructure. It is published at http://w3id.org/devops-infra
 
 # Purpose and scope of the ontology network
 
