@@ -1,5 +1,7 @@
 # DevOps Infrastructure Ontology Network
 
+[![DOI](https://zenodo.org/badge/325636796.svg)](https://zenodo.org/badge/latestdoi/325636796)
+
 The DevOps infrastructure ontology network describes the domain of DevOps infrastructure. It is published at http://w3id.org/devops-infra
 
 # Purpose and scope of the ontology network
