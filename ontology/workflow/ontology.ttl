@@ -1,0 +1,361 @@
+@prefix : <http://w3id.org/devops-infra/workflow#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://w3id.org/devops-infra/workflow> .
+
+<http://w3id.org/devops-infra/workflow> rdf:type owl:Ontology ;
+                                         owl:versionIRI <http://w3id.org/devops-infra/workflow/1.0.0> ;
+                                         owl:imports <http://w3id.org/devops-infra/core> ,
+                                                     <http://www.w3.org/2004/02/skos/core> ;
+                                         <http://purl.org/dc/elements/1.1/creator> "David Chaves-Fraga (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                   "Hu Peng (Huawei Research Ireland)" ,
+                                                                                   "Jhon Toledo (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                   "José Mora (Huawei Research Ireland)" ,
+                                                                                   "Julián Arenas-Guerrero (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                   "Mingxue Wang (Huawei Research Ireland)" ,
+                                                                                   "Nicholas Burrett (Huawei Research Ireland)" ,
+                                                                                   "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                   "Puchao Zhang (Huawei Research Ireland)" ,
+                                                                                   "Raúl Alcázar (Ontology Engineering Group - Universidad Politécnica de Madrid)" ;
+                                         <http://purl.org/dc/elements/1.1/identifier> "http://w3id.org/devops-infra/workflow" ;
+                                         <http://purl.org/dc/elements/1.1/title> "Ontology for the representation of workflows in a DevOps environment"@en ;
+                                         <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/workflow.owl" ;
+                                         <http://purl.org/dc/terms/issued> "2021-06-02" ;
+                                         <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" ;
+                                         <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopswf" ;
+                                         <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/workflow#" ;
+                                         rdfs:comment "This ontology defines the terms that can be used to represent the workflows (and their corresponding actions) that are commonly used in a DevOps environment, so as to provide support to tasks related to account management, patch upgrades, scaling up of services, service deployments, etc. This ontology is part of the devops-infra ontology network that has been created in the context of a collaboration between the Ontology Engineering Group at Universidad Politécnica de Madrid and Huawei Research Ireland"@en ;
+                                         owl:versionInfo "First official release"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasFormat
+<http://purl.org/dc/terms/hasFormat> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://w3id.org/devops-infra/workflow#action
+:action rdf:type owl:ObjectProperty ;
+        rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                            owl:hasValue <http://w3id.org/devops-infra/kos/action-type>
+                                          ]
+                                        ) ;
+                     rdf:type owl:Class
+                   ] ;
+        rdfs:comment "The type of a action that the task is performing, according to the corresponding SKOS Concept Scheme on task actions"@en ;
+        rdfs:label "action"@en .
+
+
+###  http://w3id.org/devops-infra/workflow#consistsOf
+:consistsOf rdf:type owl:ObjectProperty ;
+            rdfs:domain :Workflow ;
+            rdfs:range [ rdf:type owl:Class ;
+                         owl:unionOf ( :Task
+                                       :Workflow
+                                     )
+                       ] ;
+            rdfs:comment "A Workflow may consist of or make use of several other Workflows or Tasks"@en ;
+            rdfs:label "consists Of"@en .
+
+
+###  http://w3id.org/devops-infra/workflow#input
+:input rdf:type owl:ObjectProperty ;
+       rdfs:domain [ rdf:type owl:Class ;
+                     owl:unionOf ( :Task
+                                   :Workflow
+                                 )
+                   ] ;
+       rdfs:range :Variable ;
+       rdfs:comment "A Workflow or a Task may have one or several input variables"@en ;
+       rdfs:label "input"@en .
+
+
+###  http://w3id.org/devops-infra/workflow#item
+:item rdf:type owl:ObjectProperty ;
+      rdfs:domain :Variable ;
+      rdfs:range <http://w3id.org/devops-infra/core#ConfigurationItem> ;
+      rdfs:comment "A variable used as an input or output of a workflow or task may refer to any Configuration Item, as defined in the Devops-Infra ontology network (more specifically, in the core ontology)"@en ;
+      rdfs:label "item"@en .
+
+
+###  http://w3id.org/devops-infra/workflow#onComplete
+:onComplete rdf:type owl:ObjectProperty ;
+            rdfs:domain :DirectWorkflowTask ;
+            rdfs:range :DirectWorkflowTask ;
+            rdfs:comment "This property points to the next direct workflow tasks to execute if the result of the execution of this task is completed, independently of whether it is successful or not"@en ;
+            rdfs:label "on Complete"@en .
+
+
+###  http://w3id.org/devops-infra/workflow#onError
+:onError rdf:type owl:ObjectProperty ;
+         rdfs:domain :DirectWorkflowTask ;
+         rdfs:range :DirectWorkflowTask ;
+         rdfs:comment "This property points to the next direct workflow tasks to execute if the result of the execution of this task is erroneous"@en ;
+         rdfs:label "on Error"@en .
+
+
+###  http://w3id.org/devops-infra/workflow#onSuccess
+:onSuccess rdf:type owl:ObjectProperty ;
+           rdfs:domain :DirectWorkflowTask ;
+           rdfs:range :DirectWorkflowTask ;
+           rdfs:comment "This property points to the next direct workflow tasks to execute if the result of the execution of this task is successfull"@en ;
+           rdfs:label "on Success"@en .
+
+
+###  http://w3id.org/devops-infra/workflow#output
+:output rdf:type owl:ObjectProperty ;
+        rdfs:domain [ rdf:type owl:Class ;
+                      owl:unionOf ( :Task
+                                    :Workflow
+                                  )
+                    ] ;
+        rdfs:range :Variable ;
+        rdfs:comment "A Workflow or Task may have one or several output variables"@en ;
+        rdfs:label "output"@en .
+
+
+###  http://w3id.org/devops-infra/workflow#outputOnError
+:outputOnError rdf:type owl:ObjectProperty ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :Task
+                                           :Workflow
+                                         )
+                           ] ;
+               rdfs:range :Variable ;
+               rdfs:comment "A Workflow or Task may have one or several outputs that are generated when its execution generates an error"@en ;
+               rdfs:label "output on error"@en .
+
+
+###  http://w3id.org/devops-infra/workflow#requires
+:requires rdf:type owl:ObjectProperty ;
+          rdfs:domain :ReverseWorkflowTask ;
+          rdfs:range :ReverseWorkflowTask ;
+          rdfs:comment "A reverse workflow task may require any number of other reverse workflow tasks to be completed"@en ;
+          rdfs:label "requires"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://w3id.org/devops-infra/workflow#context
+:context rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Variable ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Context in which the variable value is maintained. It may be global to the whole workflow execution or specific to an individual task or a set of tasks"@en ;
+         rdfs:label "context"@en .
+
+
+###  http://w3id.org/devops-infra/workflow#valueorExpression
+:valueorExpression rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Variable ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Value or expression that allows obtaining the value during runtime for any variable that may act as input or output of a workflow or task"@en ;
+                   rdfs:label "value or expression"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://w3id.org/devops-infra/core#Resource
+<http://w3id.org/devops-infra/core#Resource> rdf:type owl:Class .
+
+
+###  http://w3id.org/devops-infra/workflow#DirectWorkflow
+:DirectWorkflow rdf:type owl:Class ;
+                rdfs:subClassOf :Workflow ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :consistsOf ;
+                                  owl:allValuesFrom [ rdf:type owl:Class ;
+                                                      owl:unionOf ( :DirectWorkflow
+                                                                    :DirectWorkflowTask
+                                                                  )
+                                                    ]
+                                ] ;
+                rdfs:comment "Instance of a business product running/deployed on a specific infrastructure (e.g., TerraForm)"@en ;
+                rdfs:label "Business Product Instance"@en .
+
+
+###  http://w3id.org/devops-infra/workflow#DirectWorkflowTask
+:DirectWorkflowTask rdf:type owl:Class ;
+                    rdfs:subClassOf :Task ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :onComplete ;
+                                      owl:allValuesFrom :DirectWorkflowTask
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :onError ;
+                                      owl:allValuesFrom :DirectWorkflowTask
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :onSuccess ;
+                                      owl:allValuesFrom :DirectWorkflowTask
+                                    ] ;
+                    rdfs:comment "For a Business Product, this is the specific offer that is done in a catalogue. A Business Product may have several Product Offering associated to them, and an offering may be described in commercial terms. In this ontology, we do not restrict/propose any specific set of attributes to be used for such description, since each organisation may have different attributes to define their offering."@en ;
+                    rdfs:label "Product Offering"@en .
+
+
+###  http://w3id.org/devops-infra/workflow#ReverseWorkflow
+:ReverseWorkflow rdf:type owl:Class ;
+                 rdfs:subClassOf :Workflow ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :consistsOf ;
+                                   owl:allValuesFrom [ rdf:type owl:Class ;
+                                                       owl:unionOf ( :ReverseWorkflow
+                                                                     :ReverseWorkflowTask
+                                                                   )
+                                                     ]
+                                 ] ;
+                 rdfs:comment "A Microservice is a type of Service that runs a unique process and communicates through a well-defined, lightweight mechanism, such as a container, to serve a business goal."@en ;
+                 rdfs:label "Microservice"@en .
+
+
+###  http://w3id.org/devops-infra/workflow#ReverseWorkflowTask
+:ReverseWorkflowTask rdf:type owl:Class ;
+                     rdfs:subClassOf :Task ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :requires ;
+                                       owl:allValuesFrom :ReverseWorkflowTask
+                                     ] ;
+                     rdfs:comment "A specific version of a Business Product that is being offered through a Product Offering"@en ;
+                     rdfs:label "Product Version"@en .
+
+
+###  http://w3id.org/devops-infra/workflow#Task
+:Task rdf:type owl:Class ;
+      rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :input ;
+                        owl:allValuesFrom :Variable
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :output ;
+                        owl:allValuesFrom :Variable
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :outputOnError ;
+                        owl:allValuesFrom :Variable
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :action ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                             owl:hasValue <http://w3id.org/devops-infra/kos/action-type>
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ]
+                      ] ;
+      rdfs:comment "Instance of a MicroService running/deployed on a specific infrastructure (e.g., TerraForm)"@en ;
+      rdfs:label "Microservice Instance"@en .
+
+
+###  http://w3id.org/devops-infra/workflow#Variable
+:Variable rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :action ;
+                            owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                       owl:hasValue <http://w3id.org/devops-infra/kos/action-type>
+                                                                     ]
+                                                                   ) ;
+                                                rdf:type owl:Class
+                                              ]
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :item ;
+                            owl:allValuesFrom <http://w3id.org/devops-infra/core#ConfigurationItem>
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :context ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :valueorExpression ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:string
+                          ] ;
+          rdfs:comment "A Service that provides support to one or more business products. It may make use (call) other services or microservices."@en ;
+          rdfs:label "Service"@en .
+
+
+###  http://w3id.org/devops-infra/workflow#Workflow
+:Workflow rdf:type owl:Class ;
+          rdfs:subClassOf <http://w3id.org/devops-infra/core#Resource> ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :consistsOf ;
+                            owl:allValuesFrom [ rdf:type owl:Class ;
+                                                owl:unionOf ( :Task
+                                                              :Workflow
+                                                            )
+                                              ]
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :input ;
+                            owl:allValuesFrom :Variable
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :output ;
+                            owl:allValuesFrom :Variable
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :outputOnError ;
+                            owl:allValuesFrom :Variable
+                          ] ;
+          rdfs:comment "A Business Product that is offered in the catalogue of an organisation (e.g., a content delivery network, an application, etc.)"@en ;
+          rdfs:label "Business Product"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://w3id.org/devops-infra/kos/action-type
+<http://w3id.org/devops-infra/kos/action-type> rdf:type owl:NamedIndividual ,
+                                                        <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
