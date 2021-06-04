@@ -121,6 +121,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://w3id.org/devops-infra/workflow#action">
+        <rdfs:domain rdf:resource="http://w3id.org/devops-infra/workflow#Task"/>
         <rdfs:range>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -347,8 +348,8 @@
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Instance of a business product running/deployed on a specific infrastructure (e.g., TerraForm)</rdfs:comment>
-        <rdfs:label xml:lang="en">Business Product Instance</rdfs:label>
+        <rdfs:comment xml:lang="en">A Direct Workflow consists of tasks combined in a graph where every next task starts after another one depending on produced result. So direct workflow has a notion of transition. Direct workflow is considered to be completed if there aren’t any transitions left that could be used to jump to next tasks.</rdfs:comment>
+        <rdfs:label xml:lang="en">Direct Workflow</rdfs:label>
     </owl:Class>
     
 
@@ -376,8 +377,8 @@
                 <owl:allValuesFrom rdf:resource="http://w3id.org/devops-infra/workflow#DirectWorkflowTask"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">For a Business Product, this is the specific offer that is done in a catalogue. A Business Product may have several Product Offering associated to them, and an offering may be described in commercial terms. In this ontology, we do not restrict/propose any specific set of attributes to be used for such description, since each organisation may have different attributes to define their offering.</rdfs:comment>
-        <rdfs:label xml:lang="en">Product Offering</rdfs:label>
+        <rdfs:comment xml:lang="en">A Task in a Direct Workflow, which may indicate the next tasks to be done once it is completed, with success or with errors</rdfs:comment>
+        <rdfs:label xml:lang="en">Direct Workflow Task</rdfs:label>
     </owl:Class>
     
 
@@ -400,8 +401,8 @@
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A Microservice is a type of Service that runs a unique process and communicates through a well-defined, lightweight mechanism, such as a container, to serve a business goal.</rdfs:comment>
-        <rdfs:label xml:lang="en">Microservice</rdfs:label>
+        <rdfs:comment xml:lang="en">In reverse workflow all relationships in workflow task graph are dependencies. In order to run this type of workflow we need to specify a task that needs to be completed, it can be conventionally called ‘target task’. When a workflow engine starts a workflow it recursively identifies all the dependencies that need to be completed first.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reverse Workflow</rdfs:label>
     </owl:Class>
     
 
@@ -417,8 +418,8 @@
                 <owl:allValuesFrom rdf:resource="http://w3id.org/devops-infra/workflow#ReverseWorkflowTask"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A specific version of a Business Product that is being offered through a Product Offering</rdfs:comment>
-        <rdfs:label xml:lang="en">Product Version</rdfs:label>
+        <rdfs:comment xml:lang="en">A task in a reverse workflow, which may indicate the tasks that are required to be finished before this one starts</rdfs:comment>
+        <rdfs:label xml:lang="en">Reverse Workflow Task</rdfs:label>
     </owl:Class>
     
 
@@ -463,8 +464,8 @@
                 </owl:onClass>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Instance of a MicroService running/deployed on a specific infrastructure (e.g., TerraForm)</rdfs:comment>
-        <rdfs:label xml:lang="en">Microservice Instance</rdfs:label>
+        <rdfs:comment xml:lang="en">Tasks define specific computational steps in a workflow. When the workflow engine processes entities described in the workflow text it schedules tasks for execution</rdfs:comment>
+        <rdfs:label xml:lang="en">Task</rdfs:label>
     </owl:Class>
     
 
@@ -509,8 +510,8 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A Service that provides support to one or more business products. It may make use (call) other services or microservices.</rdfs:comment>
-        <rdfs:label xml:lang="en">Service</rdfs:label>
+        <rdfs:comment xml:lang="en">A Variable may be used as an input or output of a Workflow or a Task. It is defined in a context, it has some value or can be described with an expression, and may refer to one or several Configuration Items</rdfs:comment>
+        <rdfs:label xml:lang="en">Variable</rdfs:label>
     </owl:Class>
     
 
@@ -551,8 +552,8 @@
                 <owl:allValuesFrom rdf:resource="http://w3id.org/devops-infra/workflow#Variable"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A Business Product that is offered in the catalogue of an organisation (e.g., a content delivery network, an application, etc.)</rdfs:comment>
-        <rdfs:label xml:lang="en">Business Product</rdfs:label>
+        <rdfs:comment xml:lang="en">A Workflow is a process that can be described in a various number of ways and that can do some job interesting to the end user. Each workflow consists of tasks (at least one) describing what exact steps should be made during workflow execution.</rdfs:comment>
+        <rdfs:label xml:lang="en">Workflow</rdfs:label>
     </owl:Class>
     
 

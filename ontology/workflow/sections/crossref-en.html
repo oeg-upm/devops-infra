@@ -4,107 +4,136 @@ This section provides details for each class and property defined by Ontology fo
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
-         <a href="#Workflow" title="http://w3id.org/devops-infra/workflow#Workflow">Business Product</a>
-      </li>
-      <li>
          <a href="#DirectWorkflow"
-            title="http://w3id.org/devops-infra/workflow#DirectWorkflow">Business Product Instance</a>
-      </li>
-      <li>
-         <a href="#ReverseWorkflow"
-            title="http://w3id.org/devops-infra/workflow#ReverseWorkflow">Microservice</a>
-      </li>
-      <li>
-         <a href="#Task" title="http://w3id.org/devops-infra/workflow#Task">Microservice Instance</a>
+            title="http://w3id.org/devops-infra/workflow#DirectWorkflow">Direct Workflow</a>
       </li>
       <li>
          <a href="#DirectWorkflowTask"
-            title="http://w3id.org/devops-infra/workflow#DirectWorkflowTask">Product Offering</a>
+            title="http://w3id.org/devops-infra/workflow#DirectWorkflowTask">Direct Workflow Task</a>
+      </li>
+      <li>
+         <a href="#ReverseWorkflow"
+            title="http://w3id.org/devops-infra/workflow#ReverseWorkflow">Reverse Workflow</a>
       </li>
       <li>
          <a href="#ReverseWorkflowTask"
-            title="http://w3id.org/devops-infra/workflow#ReverseWorkflowTask">Product Version</a>
+            title="http://w3id.org/devops-infra/workflow#ReverseWorkflowTask">Reverse Workflow Task</a>
       </li>
       <li>
-         <a href="#Variable" title="http://w3id.org/devops-infra/workflow#Variable">Service</a>
+         <a href="#Task" title="http://w3id.org/devops-infra/workflow#Task">Task</a>
+      </li>
+      <li>
+         <a href="#Variable" title="http://w3id.org/devops-infra/workflow#Variable">Variable</a>
+      </li>
+      <li>
+         <a href="#Workflow" title="http://w3id.org/devops-infra/workflow#Workflow">Workflow</a>
       </li>
    </ul>
-   <div class="entity" id="Workflow">
-      <h3>Business Product<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/workflow#Workflow</p>
-      <div class="comment">
-         <span class="markdown">A Business Product that is offered in the catalogue of an organisation (e.g., a content delivery network, an application, etc.)</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#DirectWorkflow"
-               title="http://w3id.org/devops-infra/workflow#DirectWorkflow">Business Product Instance</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ReverseWorkflow"
-               title="http://w3id.org/devops-infra/workflow#ReverseWorkflow">Microservice</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#consistsOf" title="http://w3id.org/devops-infra/workflow#consistsOf">consists Of</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="DirectWorkflow">
-      <h3>Business Product Instance<sup class="type-c" title="class">c</sup>
+      <h3>Direct Workflow<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/workflow#DirectWorkflow</p>
       <div class="comment">
-         <span class="markdown">Instance of a business product running/deployed on a specific infrastructure (e.g., TerraForm)</span>
+         <span class="markdown">A Direct Workflow consists of tasks combined in a graph where every next task starts after another one depending on produced result. So direct workflow has a notion of transition. Direct workflow is considered to be completed if there aren’t any transitions left that could be used to jump to next tasks.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Workflow" title="http://w3id.org/devops-infra/workflow#Workflow">Business Product</a>
+            <a href="#Workflow" title="http://w3id.org/devops-infra/workflow#Workflow">Workflow</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
+   <div class="entity" id="DirectWorkflowTask">
+      <h3>Direct Workflow Task<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/workflow#DirectWorkflowTask</p>
+      <div class="comment">
+         <span class="markdown">A Task in a Direct Workflow, which may indicate the next tasks to be done once it is completed, with success or with errors</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Task" title="http://w3id.org/devops-infra/workflow#Task">Task</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#onComplete" title="http://w3id.org/devops-infra/workflow#onComplete">on Complete</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#onError" title="http://w3id.org/devops-infra/workflow#onError">on Error</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#onSuccess" title="http://w3id.org/devops-infra/workflow#onSuccess">on Success</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#onComplete" title="http://w3id.org/devops-infra/workflow#onComplete">on Complete</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#onError" title="http://w3id.org/devops-infra/workflow#onError">on Error</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#onSuccess" title="http://w3id.org/devops-infra/workflow#onSuccess">on Success</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="ReverseWorkflow">
-      <h3>Microservice<sup class="type-c" title="class">c</sup>
+      <h3>Reverse Workflow<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/workflow#ReverseWorkflow</p>
       <div class="comment">
-         <span class="markdown">A Microservice is a type of Service that runs a unique process and communicates through a well-defined, lightweight mechanism, such as a container, to serve a business goal.</span>
+         <span class="markdown">In reverse workflow all relationships in workflow task graph are dependencies. In order to run this type of workflow we need to specify a task that needs to be completed, it can be conventionally called ‘target task’. When a workflow engine starts a workflow it recursively identifies all the dependencies that need to be completed first.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Workflow" title="http://w3id.org/devops-infra/workflow#Workflow">Business Product</a>
+            <a href="#Workflow" title="http://w3id.org/devops-infra/workflow#Workflow">Workflow</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
+   <div class="entity" id="ReverseWorkflowTask">
+      <h3>Reverse Workflow Task<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/workflow#ReverseWorkflowTask</p>
+      <div class="comment">
+         <span class="markdown">A task in a reverse workflow, which may indicate the tasks that are required to be finished before this one starts</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Task" title="http://w3id.org/devops-infra/workflow#Task">Task</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#requires" title="http://w3id.org/devops-infra/workflow#requires">requires</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#requires" title="http://w3id.org/devops-infra/workflow#requires">requires</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="Task">
-      <h3>Microservice Instance<sup class="type-c" title="class">c</sup>
+      <h3>Task<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/workflow#Task</p>
       <div class="comment">
-         <span class="markdown">Instance of a MicroService running/deployed on a specific infrastructure (e.g., TerraForm)</span>
+         <span class="markdown">Tasks define specific computational steps in a workflow. When the workflow engine processes entities described in the workflow text it schedules tasks for execution</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -115,82 +144,27 @@ This section provides details for each class and property defined by Ontology fo
          <dt>has sub-classes</dt>
          <dd>
             <a href="#DirectWorkflowTask"
-               title="http://w3id.org/devops-infra/workflow#DirectWorkflowTask">Product Offering</a>
+               title="http://w3id.org/devops-infra/workflow#DirectWorkflowTask">Direct Workflow Task</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ReverseWorkflowTask"
-               title="http://w3id.org/devops-infra/workflow#ReverseWorkflowTask">Product Version</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="DirectWorkflowTask">
-      <h3>Product Offering<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/workflow#DirectWorkflowTask</p>
-      <div class="comment">
-         <span class="markdown">For a Business Product, this is the specific offer that is done in a catalogue. A Business Product may have several Product Offering associated to them, and an offering may be described in commercial terms. In this ontology, we do not restrict/propose any specific set of attributes to be used for such description, since each organisation may have different attributes to define their offering.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#Task" title="http://w3id.org/devops-infra/workflow#Task">Microservice Instance</a>
+               title="http://w3id.org/devops-infra/workflow#ReverseWorkflowTask">Reverse Workflow Task</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#onComplete" title="http://w3id.org/devops-infra/workflow#onComplete">on Complete</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#onError" title="http://w3id.org/devops-infra/workflow#onError">on Error</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#onSuccess" title="http://w3id.org/devops-infra/workflow#onSuccess">on Success</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#onComplete" title="http://w3id.org/devops-infra/workflow#onComplete">on Complete</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#onError" title="http://w3id.org/devops-infra/workflow#onError">on Error</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#onSuccess" title="http://w3id.org/devops-infra/workflow#onSuccess">on Success</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="ReverseWorkflowTask">
-      <h3>Product Version<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/devops-infra/workflow#ReverseWorkflowTask</p>
-      <div class="comment">
-         <span class="markdown">A specific version of a Business Product that is being offered through a Product Offering</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#Task" title="http://w3id.org/devops-infra/workflow#Task">Microservice Instance</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#requires" title="http://w3id.org/devops-infra/workflow#requires">requires</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#requires" title="http://w3id.org/devops-infra/workflow#requires">requires</a>
+            <a href="#action" title="http://w3id.org/devops-infra/workflow#action">action</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="Variable">
-      <h3>Service<sup class="type-c" title="class">c</sup>
+      <h3>Variable<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/devops-infra/workflow#Variable</p>
       <div class="comment">
-         <span class="markdown">A Service that provides support to one or more business products. It may make use (call) other services or microservices.</span>
+         <span class="markdown">A Variable may be used as an input or output of a Workflow or a Task. It is defined in a context, it has some value or can be described with an expression, and may refer to one or several Configuration Items</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -209,6 +183,37 @@ This section provides details for each class and property defined by Ontology fo
             <sup class="type-op" title="object property">op</sup>, <a href="#output" title="http://w3id.org/devops-infra/workflow#output">output</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#outputOnError"
                title="http://w3id.org/devops-infra/workflow#outputOnError">output on error</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Workflow">
+      <h3>Workflow<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/devops-infra/workflow#Workflow</p>
+      <div class="comment">
+         <span class="markdown">A Workflow is a process that can be described in a various number of ways and that can do some job interesting to the end user. Each workflow consists of tasks (at least one) describing what exact steps should be made during workflow execution.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://w3id.org/devops-infra/core#Resource">resource</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#DirectWorkflow"
+               title="http://w3id.org/devops-infra/workflow#DirectWorkflow">Direct Workflow</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ReverseWorkflow"
+               title="http://w3id.org/devops-infra/workflow#ReverseWorkflow">Reverse Workflow</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#consistsOf" title="http://w3id.org/devops-infra/workflow#consistsOf">consists Of</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -260,6 +265,11 @@ This section provides details for each class and property defined by Ontology fo
       </div>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Task" title="http://w3id.org/devops-infra/workflow#Task">Task</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span> 
@@ -283,15 +293,15 @@ This section provides details for each class and property defined by Ontology fo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Workflow" title="http://w3id.org/devops-infra/workflow#Workflow">Business Product</a>
+               <a href="#Workflow" title="http://w3id.org/devops-infra/workflow#Workflow">Workflow</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Task" title="http://w3id.org/devops-infra/workflow#Task">Microservice Instance</a>
+               <a href="#Task" title="http://w3id.org/devops-infra/workflow#Task">Task</a>
                <sup class="type-c" title="class">c</sup> 
                <span class="logic">or</span> 
-               <a href="#Workflow" title="http://w3id.org/devops-infra/workflow#Workflow">Business Product</a>
+               <a href="#Workflow" title="http://w3id.org/devops-infra/workflow#Workflow">Workflow</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -311,15 +321,15 @@ This section provides details for each class and property defined by Ontology fo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Task" title="http://w3id.org/devops-infra/workflow#Task">Microservice Instance</a>
+               <a href="#Task" title="http://w3id.org/devops-infra/workflow#Task">Task</a>
                <sup class="type-c" title="class">c</sup> 
                <span class="logic">or</span> 
-               <a href="#Workflow" title="http://w3id.org/devops-infra/workflow#Workflow">Business Product</a>
+               <a href="#Workflow" title="http://w3id.org/devops-infra/workflow#Workflow">Workflow</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Variable" title="http://w3id.org/devops-infra/workflow#Variable">Service</a>
+               <a href="#Variable" title="http://w3id.org/devops-infra/workflow#Variable">Variable</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -339,7 +349,7 @@ This section provides details for each class and property defined by Ontology fo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Variable" title="http://w3id.org/devops-infra/workflow#Variable">Service</a>
+               <a href="#Variable" title="http://w3id.org/devops-infra/workflow#Variable">Variable</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -365,13 +375,13 @@ This section provides details for each class and property defined by Ontology fo
             <dt>has domain</dt>
             <dd>
                <a href="#DirectWorkflowTask"
-                  title="http://w3id.org/devops-infra/workflow#DirectWorkflowTask">Product Offering</a>
+                  title="http://w3id.org/devops-infra/workflow#DirectWorkflowTask">Direct Workflow Task</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <a href="#DirectWorkflowTask"
-                  title="http://w3id.org/devops-infra/workflow#DirectWorkflowTask">Product Offering</a>
+                  title="http://w3id.org/devops-infra/workflow#DirectWorkflowTask">Direct Workflow Task</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -392,13 +402,13 @@ This section provides details for each class and property defined by Ontology fo
             <dt>has domain</dt>
             <dd>
                <a href="#DirectWorkflowTask"
-                  title="http://w3id.org/devops-infra/workflow#DirectWorkflowTask">Product Offering</a>
+                  title="http://w3id.org/devops-infra/workflow#DirectWorkflowTask">Direct Workflow Task</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <a href="#DirectWorkflowTask"
-                  title="http://w3id.org/devops-infra/workflow#DirectWorkflowTask">Product Offering</a>
+                  title="http://w3id.org/devops-infra/workflow#DirectWorkflowTask">Direct Workflow Task</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -419,13 +429,13 @@ This section provides details for each class and property defined by Ontology fo
             <dt>has domain</dt>
             <dd>
                <a href="#DirectWorkflowTask"
-                  title="http://w3id.org/devops-infra/workflow#DirectWorkflowTask">Product Offering</a>
+                  title="http://w3id.org/devops-infra/workflow#DirectWorkflowTask">Direct Workflow Task</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <a href="#DirectWorkflowTask"
-                  title="http://w3id.org/devops-infra/workflow#DirectWorkflowTask">Product Offering</a>
+                  title="http://w3id.org/devops-infra/workflow#DirectWorkflowTask">Direct Workflow Task</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -445,15 +455,15 @@ This section provides details for each class and property defined by Ontology fo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Task" title="http://w3id.org/devops-infra/workflow#Task">Microservice Instance</a>
+               <a href="#Task" title="http://w3id.org/devops-infra/workflow#Task">Task</a>
                <sup class="type-c" title="class">c</sup> 
                <span class="logic">or</span> 
-               <a href="#Workflow" title="http://w3id.org/devops-infra/workflow#Workflow">Business Product</a>
+               <a href="#Workflow" title="http://w3id.org/devops-infra/workflow#Workflow">Workflow</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Variable" title="http://w3id.org/devops-infra/workflow#Variable">Service</a>
+               <a href="#Variable" title="http://w3id.org/devops-infra/workflow#Variable">Variable</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -473,15 +483,15 @@ This section provides details for each class and property defined by Ontology fo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Task" title="http://w3id.org/devops-infra/workflow#Task">Microservice Instance</a>
+               <a href="#Task" title="http://w3id.org/devops-infra/workflow#Task">Task</a>
                <sup class="type-c" title="class">c</sup> 
                <span class="logic">or</span> 
-               <a href="#Workflow" title="http://w3id.org/devops-infra/workflow#Workflow">Business Product</a>
+               <a href="#Workflow" title="http://w3id.org/devops-infra/workflow#Workflow">Workflow</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Variable" title="http://w3id.org/devops-infra/workflow#Variable">Service</a>
+               <a href="#Variable" title="http://w3id.org/devops-infra/workflow#Variable">Variable</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -502,13 +512,13 @@ This section provides details for each class and property defined by Ontology fo
             <dt>has domain</dt>
             <dd>
                <a href="#ReverseWorkflowTask"
-                  title="http://w3id.org/devops-infra/workflow#ReverseWorkflowTask">Product Version</a>
+                  title="http://w3id.org/devops-infra/workflow#ReverseWorkflowTask">Reverse Workflow Task</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <a href="#ReverseWorkflowTask"
-                  title="http://w3id.org/devops-infra/workflow#ReverseWorkflowTask">Product Version</a>
+                  title="http://w3id.org/devops-infra/workflow#ReverseWorkflowTask">Reverse Workflow Task</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -539,7 +549,7 @@ This section provides details for each class and property defined by Ontology fo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Variable" title="http://w3id.org/devops-infra/workflow#Variable">Service</a>
+               <a href="#Variable" title="http://w3id.org/devops-infra/workflow#Variable">Variable</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -563,7 +573,7 @@ This section provides details for each class and property defined by Ontology fo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Variable" title="http://w3id.org/devops-infra/workflow#Variable">Service</a>
+               <a href="#Variable" title="http://w3id.org/devops-infra/workflow#Variable">Variable</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>

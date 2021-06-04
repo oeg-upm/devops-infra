@@ -65,6 +65,7 @@
 # 
 # http://w3id.org/devops-infra/workflow#action
 <http://w3id.org/devops-infra/workflow#action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/devops-infra/workflow#action> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/devops-infra/workflow#Task> .
 <http://w3id.org/devops-infra/workflow#action> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
 _:genid1 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid4 .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
@@ -225,8 +226,8 @@ _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/workflow#DirectWorkflowTask> .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://w3id.org/devops-infra/workflow#DirectWorkflow> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of a business product running/deployed on a specific infrastructure (e.g., TerraForm)"@en .
-<http://w3id.org/devops-infra/workflow#DirectWorkflow> <http://www.w3.org/2000/01/rdf-schema#label> "Business Product Instance"@en .
+<http://w3id.org/devops-infra/workflow#DirectWorkflow> <http://www.w3.org/2000/01/rdf-schema#comment> "A Direct Workflow consists of tasks combined in a graph where every next task starts after another one depending on produced result. So direct workflow has a notion of transition. Direct workflow is considered to be completed if there aren’t any transitions left that could be used to jump to next tasks."@en .
+<http://w3id.org/devops-infra/workflow#DirectWorkflow> <http://www.w3.org/2000/01/rdf-schema#label> "Direct Workflow"@en .
 # 
 # http://w3id.org/devops-infra/workflow#DirectWorkflowTask
 <http://w3id.org/devops-infra/workflow#DirectWorkflowTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -243,8 +244,8 @@ _:genid22 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/workflow#onSuccess> .
 _:genid23 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/workflow#DirectWorkflowTask> .
-<http://w3id.org/devops-infra/workflow#DirectWorkflowTask> <http://www.w3.org/2000/01/rdf-schema#comment> "For a Business Product, this is the specific offer that is done in a catalogue. A Business Product may have several Product Offering associated to them, and an offering may be described in commercial terms. In this ontology, we do not restrict/propose any specific set of attributes to be used for such description, since each organisation may have different attributes to define their offering."@en .
-<http://w3id.org/devops-infra/workflow#DirectWorkflowTask> <http://www.w3.org/2000/01/rdf-schema#label> "Product Offering"@en .
+<http://w3id.org/devops-infra/workflow#DirectWorkflowTask> <http://www.w3.org/2000/01/rdf-schema#comment> "A Task in a Direct Workflow, which may indicate the next tasks to be done once it is completed, with success or with errors"@en .
+<http://w3id.org/devops-infra/workflow#DirectWorkflowTask> <http://www.w3.org/2000/01/rdf-schema#label> "Direct Workflow Task"@en .
 # 
 # http://w3id.org/devops-infra/workflow#ReverseWorkflow
 <http://w3id.org/devops-infra/workflow#ReverseWorkflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -261,8 +262,8 @@ _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
 _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/devops-infra/workflow#ReverseWorkflowTask> .
 _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://w3id.org/devops-infra/workflow#ReverseWorkflow> <http://www.w3.org/2000/01/rdf-schema#comment> "A Microservice is a type of Service that runs a unique process and communicates through a well-defined, lightweight mechanism, such as a container, to serve a business goal."@en .
-<http://w3id.org/devops-infra/workflow#ReverseWorkflow> <http://www.w3.org/2000/01/rdf-schema#label> "Microservice"@en .
+<http://w3id.org/devops-infra/workflow#ReverseWorkflow> <http://www.w3.org/2000/01/rdf-schema#comment> "In reverse workflow all relationships in workflow task graph are dependencies. In order to run this type of workflow we need to specify a task that needs to be completed, it can be conventionally called ‘target task’. When a workflow engine starts a workflow it recursively identifies all the dependencies that need to be completed first."@en .
+<http://w3id.org/devops-infra/workflow#ReverseWorkflow> <http://www.w3.org/2000/01/rdf-schema#label> "Reverse Workflow"@en .
 # 
 # http://w3id.org/devops-infra/workflow#ReverseWorkflowTask
 <http://w3id.org/devops-infra/workflow#ReverseWorkflowTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -271,8 +272,8 @@ _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/workflow#requires> .
 _:genid28 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/workflow#ReverseWorkflowTask> .
-<http://w3id.org/devops-infra/workflow#ReverseWorkflowTask> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific version of a Business Product that is being offered through a Product Offering"@en .
-<http://w3id.org/devops-infra/workflow#ReverseWorkflowTask> <http://www.w3.org/2000/01/rdf-schema#label> "Product Version"@en .
+<http://w3id.org/devops-infra/workflow#ReverseWorkflowTask> <http://www.w3.org/2000/01/rdf-schema#comment> "A task in a reverse workflow, which may indicate the tasks that are required to be finished before this one starts"@en .
+<http://w3id.org/devops-infra/workflow#ReverseWorkflowTask> <http://www.w3.org/2000/01/rdf-schema#label> "Reverse Workflow Task"@en .
 # 
 # http://w3id.org/devops-infra/workflow#Task
 <http://w3id.org/devops-infra/workflow#Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -305,8 +306,8 @@ _:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/
 _:genid35 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/devops-infra/kos/action-type> .
 _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/devops-infra/workflow#Task> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of a MicroService running/deployed on a specific infrastructure (e.g., TerraForm)"@en .
-<http://w3id.org/devops-infra/workflow#Task> <http://www.w3.org/2000/01/rdf-schema#label> "Microservice Instance"@en .
+<http://w3id.org/devops-infra/workflow#Task> <http://www.w3.org/2000/01/rdf-schema#comment> "Tasks define specific computational steps in a workflow. When the workflow engine processes entities described in the workflow text it schedules tasks for execution"@en .
+<http://w3id.org/devops-infra/workflow#Task> <http://www.w3.org/2000/01/rdf-schema#label> "Task"@en .
 # 
 # http://w3id.org/devops-infra/workflow#Variable
 <http://w3id.org/devops-infra/workflow#Variable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -339,8 +340,8 @@ _:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid44 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/workflow#valueorExpression> .
 _:genid44 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid44 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
-<http://w3id.org/devops-infra/workflow#Variable> <http://www.w3.org/2000/01/rdf-schema#comment> "A Service that provides support to one or more business products. It may make use (call) other services or microservices."@en .
-<http://w3id.org/devops-infra/workflow#Variable> <http://www.w3.org/2000/01/rdf-schema#label> "Service"@en .
+<http://w3id.org/devops-infra/workflow#Variable> <http://www.w3.org/2000/01/rdf-schema#comment> "A Variable may be used as an input or output of a Workflow or a Task. It is defined in a context, it has some value or can be described with an expression, and may refer to one or several Configuration Items"@en .
+<http://w3id.org/devops-infra/workflow#Variable> <http://www.w3.org/2000/01/rdf-schema#label> "Variable"@en .
 # 
 # http://w3id.org/devops-infra/workflow#Workflow
 <http://w3id.org/devops-infra/workflow#Workflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -369,8 +370,8 @@ _:genid50 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-
 _:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/devops-infra/workflow#outputOnError> .
 _:genid51 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/devops-infra/workflow#Variable> .
-<http://w3id.org/devops-infra/workflow#Workflow> <http://www.w3.org/2000/01/rdf-schema#comment> "A Business Product that is offered in the catalogue of an organisation (e.g., a content delivery network, an application, etc.)"@en .
-<http://w3id.org/devops-infra/workflow#Workflow> <http://www.w3.org/2000/01/rdf-schema#label> "Business Product"@en .
+<http://w3id.org/devops-infra/workflow#Workflow> <http://www.w3.org/2000/01/rdf-schema#comment> "A Workflow is a process that can be described in a various number of ways and that can do some job interesting to the end user. Each workflow consists of tasks (at least one) describing what exact steps should be made during workflow execution."@en .
+<http://w3id.org/devops-infra/workflow#Workflow> <http://www.w3.org/2000/01/rdf-schema#label> "Workflow"@en .
 # 
 # 
 # 
