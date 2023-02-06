@@ -29,7 +29,7 @@
         <terms:hasFormat>http://w3id.org/devops-infra/hardware.owl</terms:hasFormat>
         <terms:issued>2021-04-15</terms:issued>
         <terms:license>https://creativecommons.org/licenses/by/4.0</terms:license>
-        <vann:preferredNamespacePrefix>devopsnet</vann:preferredNamespacePrefix>
+        <vann:preferredNamespacePrefix>devopshw</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>http://w3id.org/devops-infra/hardware#</vann:preferredNamespaceUri>
         <rdfs:comment>This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland</rdfs:comment>
         <owl:versionInfo xml:lang="en">First official release</owl:versionInfo>

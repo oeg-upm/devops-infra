@@ -285,7 +285,7 @@
     "@value" : "https://creativecommons.org/licenses/by/4.0"
   } ],
   "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
-    "@value" : "devopsnet"
+    "@value" : "devopshw"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
     "@value" : "http://w3id.org/devops-infra/hardware#"

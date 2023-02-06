@@ -17,7 +17,7 @@
 <http://w3id.org/devops-infra/hardware> <http://purl.org/dc/terms/hasFormat> "http://w3id.org/devops-infra/hardware.owl" .
 <http://w3id.org/devops-infra/hardware> <http://purl.org/dc/terms/issued> "2021-04-15" .
 <http://w3id.org/devops-infra/hardware> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" .
-<http://w3id.org/devops-infra/hardware> <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopsnet" .
+<http://w3id.org/devops-infra/hardware> <http://purl.org/vocab/vann/preferredNamespacePrefix> "devopshw" .
 <http://w3id.org/devops-infra/hardware> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/devops-infra/hardware#" .
 <http://w3id.org/devops-infra/hardware> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology has been created in the context of a collaboration between the Ontology Engineering Group and Huawei Research Ireland" .
 <http://w3id.org/devops-infra/hardware> <http://www.w3.org/2002/07/owl#versionInfo> "First official release"@en .
